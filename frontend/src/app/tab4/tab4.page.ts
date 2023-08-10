@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
-
+import { WebSocketService } from '../websocket-service';
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss']
 })
 export class Tab4Component {
+  constructor(private webSocketService:WebSocketService){}
   pin: string = "";
   pinDisplayValue: string = "";
-
+  porcone:number =10;
+  area1=1;
+  ngOnInit(){{
+    this.webSocketService.getMessages().subscribe((message) => {
+      console.log("messaggio ricevuto",message)
+    });
+  }
+}
   appendToPin(digit: string) {
     if (this.pin.length < 6) {
       this.pin += digit;
@@ -21,6 +29,19 @@ export class Tab4Component {
     this.updatePinDisplay();
   }
 
+getMessage(){
+  this.webSocketService.getMessages().subscribe((message) => {
+    console.log("messaggio ricevuto",message)
+
+  });
+}
+sendMessage() {
+  this.webSocketService.sendMessage(this.porcone);
+}
+accendiArea1(){
+  this.webSocketService.sendMessage(this.area1);
+
+}
   sendPin() {
     // Qui puoi gestire l'invio del PIN, ad esempio, chiamare un servizio o eseguire una logica specifica
     console.log('PIN inviato:', this.pin);
