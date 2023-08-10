@@ -1,0 +1,237 @@
+
+// menu
+
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  
+  ion-menu::part(container) {
+  
+    box-shadow: 4px 0px 16px rgba(255, 0, 0, 0.5);
+  }
+  // modale
+
+  ion-modal {
+    margin-top: 3%;
+    margin-left: 39%;
+    height: 650px;
+    width: 407px;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: rgb(14 116 144);
+    --color: white;
+  }
+
+  ion-button {
+    --background: #D72E34;
+    --background-hover: #D72E34;
+    --background-activated: #D72E34e;
+    --background-focused: #D72E34;
+  
+    --color: white;
+  
+    --border-radius: 100px;
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+  .dock {
+
+    display: flex;
+    background-color: #d9d9d9;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 68px;
+    width: 700px;
+    border-radius: 100px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+  }
+  
+  .dock-item {
+    margin: 0 10px;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon-circle img {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  
+  .dock-item:hover .icon-circle {
+    transform: scale(1.05);
+  }
+  
+.rettangolo-zona{
+  width: 1062px; 
+  height: 534px; 
+  background-color: red;
+  margin-left: 3.5%;
+  border-radius: 20px;
+}
+
+.fotoprofilo{
+  display: flex;
+}
+
+.accordion{
+  margin-left: -78%;
+    width: 450px;
+}
+
+.close{
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+}
+
+.info{
+  color: #D72E34;
+  text-align: right;
+}
+
+.nome{
+  display: flex;
+  justify-content: center;
+}
+
+.sfondo{
+  width: 1340px;
+  height: 800px;
+  background-color: white;
+}
+
+.orario{
+    display: flex;
+    justify-content: center;
+}
+
+
+.profilo{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fototonda{
+  border-radius: 50px;
+    margin-top: -2%;
+    width: 3%;
+}
+
+.fotorotondamenu{
+  margin-left: 3%;
+  width: 14%;
+  border-radius: 50px;
+}
+
+.power{
+  width: 5%;
+  margin-left: 3%;
+}
+
+.centro{
+  margin-bottom: 7%;
+  display: flex;
+  align-items: center;
+}
+
+.contenitore{
+  margin-left: 5%;
+}
+
+.aree{
+  background-color: #D72E34;
+    margin-left: 16%;
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+}
+.testoreset{
+  margin-top: -10%;
+  
+}
+
+.rettangolo{
+    margin-left: 3.5%;
+    width: 1062px;
+    height: 534px;
+    border-radius: 20px;
+    background: #D9D9D9;
+}
+
+.rettangolino{
+  margin-left: 6%;
+  width: 91px;
+  height: 195px;
+  border-radius: 100px;
+  background: #D9D9D9;
+  margin-left: 3.5%;
+}
+
+
+.cerchio{
+  background: white;
+  width: 60px;
+  height: 60px;
+  margin-left: -5.6%;
+  margin-right: 2%;
+  border-radius: 100px;
+  margin-bottom: 7%;
+}
+
+.cerchiodue{
+  background: white;
+  width: 60px;
+  height: 60px;
+  margin-left: -6.5%;
+  margin-right: 2%;
+  border-radius: 100px;
+  margin-bottom: -6%;
+}
+
+.spegni{
+  position: absolute;
+  margin-left: -8%;
+  width: 100px;
+  height: 50px;
+  z-index: 2;
+  margin-top: -5.4%;
+}
+
+.accendi{
+  position: absolute;
+  margin-left: -8%;
+  width: 100px;
+  height: 50px;
+  z-index: 2;
+  margin-top: 1.2%;
+}

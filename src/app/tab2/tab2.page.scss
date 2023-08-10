@@ -1,0 +1,354 @@
+.primopiano{
+    z-index: 1;
+}
+
+
+.testo{
+    z-index: 2;
+    position: absolute;
+    margin-top: 49.7%;
+    margin-left: 53.8%;
+}
+
+.text{
+    z-index: 2;
+    position: absolute;
+    margin-top: 49.7%;
+    margin-left: 41.8%;
+
+}
+
+.cancella{
+
+    border-radius: 100px;
+    margin-left: 52%;
+    margin-top: 49%;
+    z-index: 1;
+    position: absolute;
+    background-color: #D72E34;
+    width: 132px;
+    height: 38px;
+}
+
+.avanti{
+    border-radius: 100px;
+    margin-left: 39%;
+    margin-top: 49%;
+    z-index: 1;
+    position: absolute;
+    background-color: #D72E34;
+    width: 132px;
+    height: 38px;
+}
+
+.tastierino{
+    margin-top: -1%;
+}
+
+.linee{
+    margin-top: -15px;
+}
+
+.linea{
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 20.5%;
+
+}
+
+.lineadue{
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 26.5%;
+
+}
+
+.lineatre{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 39.5%;
+    margin-top: 26.5%;
+
+}
+
+.lineaquattro{ 
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 27.5%;
+}
+
+.lineacinque{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 34.5%;
+
+}
+
+.lineasei{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 41.5%;
+}
+
+.lineasette{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 53.5%;
+    margin-top: 20.5%;
+}
+
+.lineaotto{
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 53.5%;
+    margin-top: 27.5%;
+}
+
+.lineanove{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 53.5%;
+    margin-top: 34.5%;
+
+}
+
+.lineadieci{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 1px;
+    height: 63px;
+    position: absolute;
+    margin-left: 53.5%;
+    margin-top: 41.5%;
+
+}
+
+.lineaundici{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 54.5%;
+    margin-top: 26.5%;
+
+}
+
+.lineadodici{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 39.5%;
+    margin-top: 33.5%;
+
+}
+
+.lineatredici{
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 33.5%;
+
+}
+
+.lineaquattordici{
+
+    background-color:#D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 54.5%;
+    margin-top: 33.5%;
+
+}
+
+.lineaquindici{
+
+    background-color:#D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 54.5%;
+    margin-top: 40.5%;
+
+}
+
+.lineasedici{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 40.5%;
+
+}
+
+.lineadiciassette{
+
+    background-color: #D72E34;
+    z-index: 1;
+    width: 73px;
+    height: 1px;
+    position: absolute;
+    margin-left: 39.5%;
+    margin-top: 40.5%;
+
+}
+
+
+
+
+.sfondo{
+    position: absolute;
+}
+
+.pin{
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    margin-left: 585px;
+    margin-top: 12%;
+    width: 170px;
+    height: 40px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.codice{
+    color: black;
+    margin-left: 654px;
+    margin-top: 13%;
+    position: absolute;
+    z-index: 1;
+
+}
+
+
+.uno{
+    margin-left: 565px;
+    margin-top: 21%;
+    position: absolute;
+    color: black;
+}
+
+.due{
+    margin-left: 665px;
+    margin-top: 21%;
+    position: absolute;
+    color: black;
+}
+
+.tre{
+    margin-left: 765px;
+    margin-top: 21%;
+    position: absolute;
+    color: black;
+}
+
+.quattro{
+    margin-left: 565px;
+    margin-top: 28.5%;
+    position: absolute;
+    color: black;
+}
+
+.cinque{
+    margin-left: 665px;
+    margin-top: 28.5%;
+    position: absolute;
+    color: black;
+
+}
+
+.sei{
+    margin-left: 765px;
+    margin-top: 28.5%;
+    position: absolute;
+    color: black;
+
+}
+
+.sette{
+    margin-left: 565px;
+    margin-top: 35%;
+    position: absolute;
+    color: black;
+
+}
+
+.otto{
+    margin-left: 665px;
+    margin-top: 35%;
+    position: absolute;
+    color: black;
+
+
+}
+
+.nove{
+    margin-left: 765px;
+    margin-top: 35%;
+    position: absolute;
+    color: black;
+
+}
+
+.zero{
+
+    margin-left: 665px;
+    margin-top: 42%;
+    position: absolute;
+    color: black;
+
+}

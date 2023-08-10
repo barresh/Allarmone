@@ -1,0 +1,7 @@
+{
+  "name": "novaXX",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

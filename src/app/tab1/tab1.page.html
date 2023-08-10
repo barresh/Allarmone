@@ -1,0 +1,205 @@
+<!-- menu -->
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <img class="fotorotondamenu" src="../../assets/img/Mahmood-Il-fatto-Quotidiano-intervista 1.png" alt="">
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">Account</ion-content>
+  <ion-content class="ion-padding">Reset Allarme</ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding"></ion-content>
+  <ion-content class="ion-padding">Versione 1.0.0</ion-content>
+  
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
+  <div class="ion-page" id="main-content">
+
+    <!-- toolbar -->
+
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+
+          <ion-col class="orario">24 Luglio 2023 10:47</ion-col>
+
+            <ion-col class="profilo">
+            <img id="open-modal" expand="block" class="fototonda" src="../../assets/img/Mahmood-Il-fatto-Quotidiano-intervista 1.png" alt="">
+            </ion-col>
+
+            <!-- modale -->
+
+          <ion-modal #modal trigger="open-modal">
+            <ng-template>
+              <ion-content>
+
+                <div class="custom-modal-content">
+
+                  <div style="height: 150px; margin-top: 10%;">
+                    <div style="display: flex; justify-content: center;">
+                    <ion-avatar style="height: 111px; width: 111px;" slot="start">
+                      <ion-img class="fotoprofilo" src="../../assets/img/Mahmood-Il-fatto-Quotidiano-intervista 1.png"></ion-img>
+                    </ion-avatar>
+                    </div>
+                    <ion-row class="nome">
+                      <p>Alessandro Mahmoud</p>
+                    </ion-row>
+                  </div>  
+                  <ion-row style="margin-top: 10%;">
+                    <ion-col style="margin-left: 20px;"> 
+                  <p>Nome</p> 
+                  <p>Cognome</p>
+                  <p>Indirizzo</p>
+                  <p>Data di nascita</p>
+                  <p>E-mail</p>
+                  <p>Password</p>
+                  </ion-col>
+          
+                <ion-col style="margin-right: 20px;" class="info"> 
+                <p>Alessandro</p>
+                <p>Mahmoud</p>
+                <p>Via Guerrieri, 17</p>
+                <p>21/12/2012</p>
+                <p>alessandromahmoud@gmail.com</p>
+                <p>**********</p>
+                </ion-col>
+                </ion-row>
+                <ion-row class="close">
+                  <ion-button (click)="modal.dismiss()" >CHIUDI </ion-button>
+                </ion-row>
+                        
+              </div> 
+              </ion-content>
+            </ng-template>
+          </ion-modal>
+
+      </ion-toolbar>
+   
+      <!-- parte centrale -->
+
+    <div class="centro">
+      <!-- bottoni accendi/spegni -->
+     
+        <div class="rettangolino"></div> 
+        <div class="cerchio"></div>
+          <button (click)="('')" >
+            <ion-icon class="spegni" name="power" color="success"></ion-icon> 
+          </button>
+        <div class="cerchiodue"></div>
+          <button (click)="('')">
+            <ion-icon class="accendi" name="power" color="danger"></ion-icon> 
+          </button>
+      <!-- scheda informazioni -->
+      <div class="rettangolo" *ngIf="mostraContenutoIcon1">
+        <ion-accordion-group expand="inset">
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>Area 1</ion-label>
+            </ion-item>
+            <div class="ion-padding" style="color: black;" slot="content">descrizione area</div>
+          </ion-accordion>
+          <ion-accordion value="second">
+            <ion-item slot="header" color="light">
+              <ion-label>Area 2</ion-label>
+            </ion-item>
+            <div class="ion-padding" style="color: black;" slot="content">descrizione area</div>
+          </ion-accordion>
+          <ion-accordion value="third">
+            <ion-item slot="header" color="light">
+              <ion-label>Area 3</ion-label>
+            </ion-item>
+            <div class="ion-padding" style="color: black;" slot="content">descrizione area</div>
+          </ion-accordion>
+        </ion-accordion-group>
+       
+      </div>
+      
+
+      <div class="rettangolo-zona" *ngIf="mostraContenutoIcon2">
+        <ion-accordion-group expand="inset">
+          <ion-accordion value="first">
+            <ion-item slot="header" color="light">
+              <ion-label>Zona 1</ion-label>
+            </ion-item>
+            <div class="ion-padding" style="color: black;" slot="content">descrizione zona</div>
+          </ion-accordion>
+          <ion-accordion value="second">
+            <ion-item slot="header" color="light">
+              <ion-label>Zona 2</ion-label>
+            </ion-item>
+            <div class="ion-padding" style="color: black;" slot="content">descrizione zona</div>
+          </ion-accordion>
+          <ion-accordion value="third">
+            <ion-item slot="header" color="light">
+              <ion-label>Zona 3</ion-label>
+            </ion-item>
+            <div class="ion-padding" style="color: black;" slot="content">descrizione zona</div>
+          </ion-accordion>
+        </ion-accordion-group>
+      </div>
+    
+     </div>
+
+    <div class="dock">
+    <div class="dock-item" (click)="mostraContenuto('icon1')">
+      <div class="icon-circle">
+        <img src="../../assets/img/aree.png" alt="App Icon">
+      </div>
+    </div>
+    <div class="dock-item" (click)="mostraContenuto('icon2')">
+      <div class="icon-circle">
+        <img src="../../assets/img/zone.png" alt="App Icon">
+      </div>
+    </div>
+    <div class="dock-item">
+      <div class="icon-circle">
+        <img src="../../assets/img/eventi.png" alt="App Icon">
+      </div>
+    </div>
+    <div class="dock-item">
+      <div class="icon-circle">
+        <img src="icon-2.png" alt="App Icon">
+      </div>
+    </div>
+    <div class="dock-item">
+      <div class="icon-circle">
+        <img src="icon-2.png" alt="App Icon">
+      </div>
+    </div>
+    <div class="dock-item">
+      <div class="icon-circle">
+        <img src="../../assets/img/strumenti.png" alt="App Icon">
+      </div>
+    </div>
+    <div class="dock-item">
+      <div class="icon-circle">
+        <img src="../../assets/img/setting.png" alt="App Icon">
+      </div>
+    </div>
+    
+</div>
+
+    
+    
+  </div>
+
+  <div class="sfondo"></div>

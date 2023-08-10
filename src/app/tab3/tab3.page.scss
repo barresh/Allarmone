@@ -1,0 +1,194 @@
+.sfondo{
+    // position: absolute;
+    width: 1340px;
+    height: 800px;
+    background-color: white;
+}
+
+
+.elementi{
+    display: flex;
+    justify-content: center;
+}
+
+/* Disabilita l'effetto di evidenziazione blu */
+.elementi input,
+.elementi button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* Nascondi il testo predefinito dell'input di tipo file */
+.custom-file-upload input[type="file"] {
+    display: none;
+  }
+  
+  /* Stile visuale per l'elemento di caricamento personalizzato */
+  .custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 6%;
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    border-radius: 100px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  
+/* Cambia il colore del testo nelle label */
+.elementi label {
+    color: black; /* Cambia il colore del testo desiderato, ad esempio "black" per il nero */
+  }
+  
+
+
+.user{
+    margin-top: 6%;
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    border-radius: 100%;
+    background-color: #D9D9D9;
+}
+
+.inserire{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+    
+}
+
+.inseriredue{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20.5%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.inseriretre{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 24%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.inserirequattro{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 27.5%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.inserirecinque{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 31%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.inseriresei{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 34.5%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.inseriresette{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 38%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.inserireotto{
+    margin-left: -12.3%;
+    margin-top: 17%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 41.5%;
+    z-index: 1;
+    border: 2.5px;
+    border-color: #D72E34;
+    width: 329px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.registrati{
+   
+    margin-top: 50%;
+    z-index: 1;
+    background-color: #D72E34;
+    width: 132px;
+    height: 39px;
+    position: absolute;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+.testoregistrati{
+    position: absolute;
+    z-index: 2;
+    margin-top: 50.7%;
+
+}

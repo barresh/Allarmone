@@ -1,0 +1,51 @@
+<div class="sfondobianco">
+  
+<div class="tastierino">
+  <div class="centrapin">
+    <div id="pinDisplay">{{ pinDisplayValue }}</div>
+  </div>   
+  
+  <div class="linee">
+    <div class="linea"></div>
+    <div class="lineadue"></div>
+    <div class="lineatre"></div>
+    <div class="lineaquattro"></div>
+    <div class="lineacinque"></div>
+    <div class="lineasei"></div>
+    <div class="lineasette"></div>
+    <div class="lineaotto"></div>
+    <div class="lineanove"></div>
+    <div class="lineadieci"></div>
+    <div class="lineaundici"></div>
+    <div class="lineadodici"></div>
+    <div class="lineatredici"></div>
+    <div class="lineaquattordici"></div>
+    <div class="lineaquindici"></div>
+    <div class="lineasedici"></div>
+    <div class="lineadiciassette"></div>
+    </div>
+
+<div id="keyboard">
+  <button class="key" (click)="appendToPin('1')">1</button>
+  <button class="key" (click)="appendToPin('2')">2</button>
+  <button class="key" (click)="appendToPin('3')">3</button>
+  <button class="key" (click)="appendToPin('4')">4</button>
+  <button class="key" (click)="appendToPin('5')">5</button>
+  <button class="key" (click)="appendToPin('6')">6</button>
+  <button class="key" (click)="appendToPin('7')">7</button>
+  <button class="key" (click)="appendToPin('8')">8</button>
+  <button class="key" (click)="appendToPin('9')">9</button>
+  <button class="key"></button>
+  <button class="key" (click)="appendToPin('0')">0</button>
+ 
+</div>
+
+
+
+<div class="bottoni">
+  <button class="cancella" (click)="deleteFromPin()">CANCELLA</button>
+  <div style="width: 30px;"></div>
+  <button class="invia" (click)="sendPin()">INVIA</button>
+</div>
+</div>
+</div>
