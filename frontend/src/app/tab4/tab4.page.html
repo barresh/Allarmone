@@ -45,7 +45,41 @@
 <div class="bottoni">
   <button class="cancella" (click)="deleteFromPin()">CANCELLA</button>
   <div style="width: 30px;"></div>
-  <button class="invia" (click)="sendPin()">INVIA</button>
+  <button class="invia" [disabled]="pin.length == 1|| pin.length == 2 || pin.length == 3 || pin.length == 5 || pin.length == 0" (click)="sendPin()">INVIA</button>
 </div>
+<button id="open-modal" expand="block" class="reset">Rest PIN</button>
+
+
+<ion-modal #modal trigger="open-modal">
+  
+  <ng-template class="nuovopin">
+
+    <div class="codiceutente">Codice utente</div>
+  <div style="margin-top: -10%;">
+    <div style="margin-top: 7%;" class="centrapin">
+    <div style="margin-top: 6%; margin-bottom: 4%;" id="pinDisplay">{{ pinDisplayValue }}</div>
+    </div> 
+    
+    <div class="keyboard-2">
+      <button class="key" (click)="appendToPin('1')">1</button>
+      <button class="key" (click)="appendToPin('2')">2</button>
+      <button class="key" (click)="appendToPin('3')">3</button>
+      <button class="key" (click)="appendToPin('4')">4</button>
+      <button class="key" (click)="appendToPin('5')">5</button>
+      <button class="key" (click)="appendToPin('6')">6</button>
+      <button class="key" (click)="appendToPin('7')">7</button>
+      <button class="key" (click)="appendToPin('8')">8</button>
+      <button class="key" (click)="appendToPin('9')">9</button>
+      <button class="key"></button>
+      <button class="key" (click)="appendToPin('0')">0</button>  
+    </div>
+  </div>
+  <div class="bottoni">
+    <button style="margin-top: -15%;" class="cancella" (click)="deleteFromPin()">CANCELLA</button>
+    <div style="width: 30px;"></div>
+    <button style="margin-top: -15%;" class="invia" [disabled]="pin.length == 1|| pin.length == 2 || pin.length == 3 || pin.length == 5 || pin.length == 0" (click)="sendPin()">INVIA</button>
+  </div>
+  </ng-template>
+</ion-modal>
 </div>
 </div>

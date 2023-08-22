@@ -1,12 +1,20 @@
 import { Component } from "@angular/core";
 import { WebSocketService } from "../websocket-service";
+import { Component } from '@angular/core';
+import { WebSocketService } from '../websocket-service';
+
+
+
 @Component({
   selector: "app-tab4",
   templateUrl: "./tab4.page.html",
   styleUrls: ["./tab4.page.scss"],
 })
+
 export class Tab4Component {
   constructor(private webSocketService: WebSocketService) {}
+
+  constructor(private webSocketService:WebSocketService){}
   pin: string = "";
   pinDisplayValue: string = "";
   porcone: number = 10;
@@ -17,6 +25,15 @@ export class Tab4Component {
         console.log("messaggio ricevuto", message);
       });
     }
+  porcone:number =10;
+  area1=1;
+  generatedPin = '111111';
+
+
+  ngOnInit(){{
+    this.webSocketService.getMessages().subscribe((message) => {
+      console.log("messaggio ricevuto",message)
+    });
   }
   appendToPin(digit: string) {
     if (this.pin.length < 6) {
@@ -47,8 +64,15 @@ export class Tab4Component {
     // Resetta il PIN dopo l'invio
 
     this.sendMessage();
+    if (this.pin === this.generatedPin) {
+      console.log('PIN corretto!');
+      this.webSocketService.setAuthenticated(true); // Imposta lo stato di autenticazione a true
+    } else {
+      console.log('PIN errato!');
+    }
     this.resetPin();
   }
+  
 
   resetPin() {
     this.pin = "";
@@ -58,4 +82,7 @@ export class Tab4Component {
   updatePinDisplay() {
     this.pinDisplayValue = "*".repeat(this.pin.length);
   }
+
+  
 }
+
