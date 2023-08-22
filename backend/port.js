@@ -1,6 +1,6 @@
 const { SerialPort } = require("serialport");
 const port = new SerialPort({
-  path: "/dev/ttyACM0",
+  path: "/dev/tty",
   baudRate: 57600,
 });
 
