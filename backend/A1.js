@@ -2,7 +2,7 @@
 const portone = require("./port");
 const port = portone.port;
 const server = require("./server");
-const a6 = require("./a6");
+const a6 = require("./A6");
 console.log("a1", server);
 var payload = [
   0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d,
@@ -560,5 +560,5 @@ function validaCodice() {
     console.log("a6", codiceCorretto);
   });
 }
-function validaCodce() {}
+function validaCodce() { }
 exports.validaCodice = validaCodice;
