@@ -48,7 +48,7 @@ function hex2asci(hexx) {
     str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
   return str;
 }
-flagAggiornato=0;
+flagAggiornato = 0;
 function entrata() {
   port.on("readable", function () {
     bufferino = port.read().toString("hex");
@@ -75,6 +75,7 @@ function entrata() {
     var lunghezzasommahex = sommahex.length;
     sommahex = sommahex.slice(lunghezzasommahex - 2, lunghezzasommahex);
     if (sommahex == checksum) {
+      console.log("mittente", mittente);
       if (mittente == "11") {
         if (destinatario == "ff") {
           if (payload == "26") {
@@ -13298,8 +13299,6 @@ function entrata() {
       }
     }
   });
-  flagAggiornato=1;
-  exports.flagAggiornato= flagAggiornato;
 }
 
 exports.entrata = entrata;
