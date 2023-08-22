@@ -20,6 +20,15 @@ body {
     justify-content: center; 
     align-items: center; 
   }
+
+  .reset{
+    background: none;
+    color: #D72E34;
+    margin-top: 1%;
+    margin-left: 48%;
+    display: flex;
+    justify-content: center;
+  }
   
   .tastierino {
     background-image: url('../../assets/img/codice sblocco/bacground 1.png'); 
@@ -59,8 +68,24 @@ body {
     grid-gap: 10px;
   }
 
+  .keyboard-2 {
+    margin-bottom: 7%;
+    display: flex; 
+    justify-content: center;  
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+  }
+
 .tastiera{
     position: absolute;
+}
+
+.codiceutente{
+  display: flex;
+  justify-content: center;
+  color: #D72E34;
+  margin-top: 7%;
 }
 
 .pin{
