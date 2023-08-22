@@ -12,7 +12,7 @@ const hexToString = (hex) => {
   return str;
 };
 flagAggiornato = a6.flagAggiornato;
-
+var codiceGiusto = "";
 a6.entrata();
 aggiornamentostato = a6.aggiornamentostato;
 console.log("arriva", a6.aggiornamentostato);
@@ -21,18 +21,24 @@ wss.on("connection", (ws) => {
   // Ricevi i messaggi dal client Angular
   ws.on("message", (message) => {
     console.log("Messaggio ricevuto dal client Angular:", message);
-    var chironi = message.toString("hex");
-    var chironone = hexToString(chironi);
-    console.log(chironone);
-    console.log("flag", flagAggiornato);
+    var passaggio = message.toString("hex");
+    var codiceGiusto = hexToString(passaggio);
+    console.log("codiceGiusto", codiceGiusto);
     var response = { type: "update", content: a6.aggiornamentostato };
-    console.log("capiamo", response);
     ws.send(JSON.stringify(response));
-    if (chironone == 10) {
-      a1.sirenempiccia();
+    if (codiceGiusto.slice(1, 4) === "pin") {
+      console.log("entra nell'if");
+      codiceApi = codiceGiusto.slice(4, codiceGiusto.length - 1);
+      exports.codiceApi = codiceApi;
+      a1.validaCodice();
     }
   });
   ws.on("close", () => {
     console.log("Client disconnected");
   });
 });
+function mandaPin() {
+  codiceApi.exports = codiceApi;
+  console.log("vediamolo", codiceApi);
+}
+exports.mandaPin = mandaPin;
