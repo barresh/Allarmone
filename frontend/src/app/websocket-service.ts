@@ -7,9 +7,14 @@ import { webSocket, WebSocketSubject } from "rxjs/webSocket";
 })
 export class WebSocketService {
   private socket$: WebSocketSubject<any>;
+  isAuthenticated: boolean = false;
 
   constructor() {
     this.socket$ = webSocket("ws://localhost:8080"); // Sostituisci con l'URL del tuo server
+  }
+
+  setAuthenticated(authenticated: boolean) {
+    this.isAuthenticated = authenticated;
   }
 
   sendMessage(message: any) {

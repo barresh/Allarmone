@@ -1,6 +1,9 @@
 //mittente
 const portone = require("./port");
 const port = portone.port;
+const server = require("./server");
+const a6 = require("./a6");
+console.log("a1", server);
 var payload = [
   0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d,
   0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x15, 0x16, 0x17, 0x18, 0x19,
@@ -9,7 +12,7 @@ var mittente = 0x60;
 var destinatario = 0x11;
 var aree = [0x01, 0x02, 0x03, 0x04, 0x0f];
 var codice = [0x11, 0x11, 0xff];
-var codiceModificato = [];
+var codiceModificato = [0x88, 0x88, 0xff];
 var numeroUscita = []; //serve per payload in uscita 0a
 var tipiDefault = [
   0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11,
@@ -53,24 +56,7 @@ const secondi = [
 const settimana = [0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06];
 var i;
 //payload 1
-var validitaCodice = new Buffer(7);
-validitaCodice[0] = mittente;
-validitaCodice[1] = destinatario;
-validitaCodice[2] = payload[0];
-validitaCodice[3] = codice[0];
-validitaCodice[4] = codice[1];
-validitaCodice[5] = codice[2];
-sommaValidita = (
-  validitaCodice[0] +
-  validitaCodice[1] +
-  validitaCodice[2] +
-  validitaCodice[3] +
-  validitaCodice[4] +
-  validitaCodice[5]
-)
-  .toString(16)
-  .slice(1, 3);
-validitaCodice[6] = ("0x" + sommaValidita).toString(16);
+
 //payload 2
 var configurazioneImpianto = new Buffer(4);
 configurazioneImpianto[0] = mittente;
@@ -180,30 +166,6 @@ var sommaReset = (
   .slice(1, 3);
 resetAllarmi[6] = "0x" + sommaReset;
 //payload 8
-var variazioneCodice = new Buffer(10);
-variazioneCodice[0] = mittente;
-variazioneCodice[1] = destinatario;
-variazioneCodice[2] = payload[7];
-variazioneCodice[3] = codice[0];
-variazioneCodice[4] = codice[1];
-variazioneCodice[5] = codice[2];
-variazioneCodice[6] = codiceModificato[0];
-variazioneCodice[7] = codiceModificato[1];
-variazioneCodice[8] = codiceModificato[2];
-var sommaVariazione = (
-  variazioneCodice[0] +
-  variazioneCodice[1] +
-  variazioneCodice[2] +
-  variazioneCodice[3] +
-  variazioneCodice[4] +
-  variazioneCodice[5] +
-  variazioneCodice[6] +
-  variazioneCodice[7] +
-  variazioneCodice[8]
-)
-  .toString(16)
-  .slice(1, 3);
-variazioneCodice[9] = "0x" + sommaVariazione;
 //payload 9
 var tamperAperto = new Buffer(4);
 tamperAperto[0] = mittente;
@@ -550,10 +512,43 @@ var sommaAggiornamentoData = (
   .toString(16)
   .slice(1, 3);
 aggiornamentoData[13] = "0x" + sommaAggiornamentoData;
-function sirenempiccia() {
+function validaCodice() {
+  var validitaCodice = new Buffer(7);
+  codiceApi = server.codiceApi;
+  validitaCodice[0] = mittente;
+  validitaCodice[1] = destinatario;
+  validitaCodice[2] = payload[0];
+  validitaCodice[3] = "0x" + codiceApi.slice(0, 2);
+  validitaCodice[4] = "0x" + codiceApi.slice(2, 4);
+  console.log("a1codice", codiceApi);
+  if (!!server.codiceApi.slice(4, 6)) {
+    validitaCodice[5] = "0x" + server.codiceApi.slice(4, 6);
+  } else {
+    validitaCodice[5] = "0xff";
+  }
+  console.log(
+    "validitaCodice",
+    validitaCodice[3],
+    validitaCodice[4],
+    validitaCodice[5]
+  );
+  sommaValidita = (
+    validitaCodice[0] +
+    validitaCodice[1] +
+    validitaCodice[2] +
+    validitaCodice[3] +
+    validitaCodice[4] +
+    validitaCodice[5]
+  ).toString(16);
+  if (sommaValidita.length == 3) {
+    sommaValidita = sommaValidita.slice(1, 3);
+  }
+  console.log("sommaValidita", sommaValidita);
+  validitaCodice[6] = "0x" + sommaValidita;
+
   port.open(function (error) {
     console.log("CST port open");
-    port.write(accensione, function (err, result) {
+    port.write(validitaCodice, function (err, result) {
       if (err) {
         console.log("Error while sending message : " + err);
       }
@@ -561,6 +556,9 @@ function sirenempiccia() {
         console.log("Response received after sending message : " + result);
       }
     });
+    codiceCorretto = a6.codiceCorretto;
+    console.log("a6", codiceCorretto);
   });
 }
-exports.sirenempiccia = sirenempiccia;
+function validaCodce() {}
+exports.validaCodice = validaCodice;
