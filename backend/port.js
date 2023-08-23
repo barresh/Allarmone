@@ -1,6 +1,6 @@
 const { SerialPort } = require("serialport");
 const port = new SerialPort({
-  path: "/dev/cu.usbmodem20603763594B1",
+  path: "/dev/ttyACM0",
   baudRate: 57600,
 });
 
