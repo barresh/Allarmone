@@ -2,7 +2,7 @@ const portone = require("./port");
 const port = portone.port;
 const hexToDecimal = (hex) => parseInt(hex, 16);
 //buffer con il quale ascolto
-
+var esito = 0;
 var bufferino;
 //array dello stato delle zone
 var arrayzone = [];
@@ -13295,11 +13295,30 @@ function entrata() {
               console.log(risultato);
             }
           }
+        } else if (destinatario == "60") {
+          if (payload == "01") {
+            console.log("qui arriviamo");
+            esitoPositivo();
+          }
+          if (payload == "02") {
+            esitoNegativo();
+          }
         }
       }
     }
   });
 }
-
+function mandaEsito() {
+  exports.esito = esito;
+}
+function esitoPositivo() {
+  esito = 1;
+  mandaEsito();
+}
+function esitoNegativo() {
+  esito = 0;
+  mandaEsito();
+}
 exports.entrata = entrata;
 exports.port = port;
+exports.esito=esito;
