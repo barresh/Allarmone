@@ -37,7 +37,7 @@ wss.on("connection", (ws) => {
     }
     if (codiceGiusto.slice(0, 7) == "accendi") {
       console.log("entra nell'if");
-      codiceApi = codiceGiusto.slice(8, codiceGiusto.length - 1);
+      codiceApi = codiceGiusto.slice(8, codiceGiusto.length);
       exports.codiceApi = codiceApi;
       a1.accendiZone();
       esito = a6.esito;
