@@ -26,7 +26,8 @@ wss.on("connection", (ws) => {
     console.log("codiceGiusto", codiceGiusto);
     var response = { type: "update", content: a6.aggiornamentostato };
     ws.send(JSON.stringify(a6.esito));
-    if (codiceGiusto.slice(1, 4) === "pin") {
+    console.log("codiceGiustoSlice0,3", codiceGiusto.slice(0, 3));
+    if (codiceGiusto.slice(0, 3) == "pin") {
       console.log("entra nell'if");
       codiceApi = codiceGiusto.slice(4, codiceGiusto.length - 1);
       exports.codiceApi = codiceApi;
