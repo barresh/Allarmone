@@ -71,26 +71,7 @@ var sommaConfigurazione = (
   .slice(1, 3);
 configurazioneImpianto[3] = "0x" + sommaConfigurazione;
 //payload 3
-var accensione = new Buffer(8);
-accensione[0] = mittente;
-accensione[1] = destinatario;
-accensione[2] = payload[2];
-accensione[3] = codice[0];
-accensione[4] = codice[1];
-accensione[5] = codice[2];
-accensione[6] = aree[4];
-var sommaAccensione = (
-  accensione[0] +
-  accensione[1] +
-  accensione[2] +
-  accensione[3] +
-  accensione[4] +
-  accensione[5] +
-  accensione[6]
-)
-  .toString(16)
-  .slice(1, 3);
-accensione[7] = "0x" + sommaAccensione;
+
 //PAYLOAD 4
 var inclusione = new Buffer(8);
 inclusione[0] = mittente;
@@ -560,5 +541,33 @@ function validaCodice() {
     console.log("a6", codiceCorretto);
   });
 }
-function validaCodce() { }
+function accendiZone() {
+  var accensione = new Buffer(8);
+  accensione[0] = mittente;
+  accensione[1] = destinatario;
+  accensione[2] = payload[2];
+  accensione[3] = "0x" + codiceApi.slice(0, 2);
+  accensione[4] = "0x" + codiceApi.slice(2, 4);
+  console.log("a1codice", codiceApi);
+  if (!!server.codiceApi.slice(4, 6)) {
+    accensione[5] = "0x" + server.codiceApi.slice(4, 6);
+  } else {
+    accensione[5] = "0xff";
+  }
+  accensione[6] = aree[4];
+  var sommaAccensione = (
+    accensione[0] +
+    accensione[1] +
+    accensione[2] +
+    accensione[3] +
+    accensione[4] +
+    accensione[5] +
+    accensione[6]
+  ).toString(16);
+  if (sommaAccensione.length == 3) {
+    sommaAccensione = sommaValidita.slice(1, 3);
+  }
+  accensione[7] = "0x" + sommaAccensione;
+}
 exports.validaCodice = validaCodice;
+exports.accendiZone = accendiZone;
