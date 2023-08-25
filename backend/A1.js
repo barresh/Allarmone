@@ -543,6 +543,7 @@ function validaCodice() {
 }
 function accendiZone() {
   var accensione = new Buffer(8);
+  server.codiceApi = codiceApi;
   accensione[0] = mittente;
   accensione[1] = destinatario;
   accensione[2] = payload[2];
@@ -568,6 +569,19 @@ function accendiZone() {
     sommaAccensione = sommaAccensione.slice(1, 3);
   }
   accensione[7] = "0x" + sommaAccensione;
+  port.open(function (error) {
+    console.log("CST port open");
+    port.write(accensione, function (err, result) {
+      if (err) {
+        console.log("Error while sending message : " + err);
+      }
+      if (result) {
+        console.log("Response received after sending message : " + result);
+      }
+    });
+    codiceCorretto = a6.codiceCorretto;
+    console.log("a6", codiceCorretto);
+  });
 }
 exports.validaCodice = validaCodice;
 exports.accendiZone = accendiZone;
