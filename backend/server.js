@@ -39,7 +39,7 @@ wss.on("connection", (ws) => {
       console.log("entra nell'if");
       console.log(
         "vediamocomeslico",
-        codiceGiusto.slice(8, codiceGiusto.length)
+        codiceGiusto.slice(7, codiceGiusto.length)
       );
       codiceApi = codiceGiusto.slice(8, codiceGiusto.length);
       exports.codiceApi = codiceApi;
