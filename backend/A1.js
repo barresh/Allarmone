@@ -565,7 +565,7 @@ function accendiZone() {
     accensione[6]
   ).toString(16);
   if (sommaAccensione.length == 3) {
-    sommaAccensione = sommaValidita.slice(1, 3);
+    sommaAccensione = sommaAccensione.slice(1, 3);
   }
   accensione[7] = "0x" + sommaAccensione;
 }
