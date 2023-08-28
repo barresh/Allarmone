@@ -572,6 +572,7 @@ function accendiZone() {
   port.open(function (error) {
     console.log("CST port open");
     port.write(accensione, function (err, result) {
+      console.log("sto scrivendo", accensione);
       if (err) {
         console.log("Error while sending message : " + err);
       }
