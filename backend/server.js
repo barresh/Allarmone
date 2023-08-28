@@ -39,7 +39,7 @@ wss.on("connection", (ws) => {
         "vediamocomeslico",
         codiceGiusto.slice(7, codiceGiusto.length)
       );
-      codiceApi = codiceGiusto.slice(8, codiceGiusto.length);
+      codiceApi = codiceGiusto.slice(7, codiceGiusto.length);
       exports.codiceApi = codiceApi;
       a1.accendiZone();
       esito = a6.esito;
