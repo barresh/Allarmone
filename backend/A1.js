@@ -543,7 +543,7 @@ function validaCodice() {
 }
 function accendiZone() {
   var accensione = new Buffer(8);
-  server.codiceApi = codiceApi;
+  codiceApi = server.codiceApi;
   accensione[0] = mittente;
   accensione[1] = destinatario;
   accensione[2] = payload[2];

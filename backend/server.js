@@ -28,15 +28,13 @@ wss.on("connection", (ws) => {
     ws.send(JSON.stringify(a6.esito));
     console.log("codiceGiustoSlice0,7", codiceGiusto.slice(0, 7));
     if (codiceGiusto.slice(0, 3) == "pin") {
-      console.log("entra nell'if");
-      codiceApi = codiceGiusto.slice(4, codiceGiusto.length - 1);
+      codiceApi = codiceGiusto.slice(4, codiceGiusto.length);
       exports.codiceApi = codiceApi;
       a1.validaCodice();
       esito = a6.esito;
       console.log("esito:", a6.esito);
     }
     if (codiceGiusto.slice(0, 7) == "accendi") {
-      console.log("entra nell'if");
       console.log(
         "vediamocomeslico",
         codiceGiusto.slice(7, codiceGiusto.length)
