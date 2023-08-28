@@ -547,8 +547,8 @@ function accendiZone() {
   accensione[0] = mittente;
   accensione[1] = destinatario;
   accensione[2] = payload[2];
-  accensione[3] = "0x" + codiceApi.slice(0, 2);
-  accensione[4] = "0x" + codiceApi.slice(2, 4);
+  accensione[3] = 0x12;
+  accensione[4] = 0x34;
   console.log("a1codice", codiceApi);
   if (!!server.codiceApi.slice(4, 6)) {
     accensione[5] = "0x" + server.codiceApi.slice(4, 6);
