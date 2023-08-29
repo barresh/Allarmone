@@ -13299,12 +13299,14 @@ function entrata() {
         } else if (destinatario == "60") {
           if (payload == "01") {
             console.log("qui arriviamo");
-            esito=1;
-            server. ws.send(JSON.stringify(this.esito));
+            esito = 1;
+            console.log("esito di conferma", esito);
+            server.ws.send(JSON.stringify(this.esito));
           }
           if (payload == "02") {
-            esito=0;
-            server. ws.send(JSON.stringify(this.esito));
+            esito = 0;
+            console.log("esito di conferma", esito);
+            server.ws.send(JSON.stringify(this.esito));
           }
         }
       }
