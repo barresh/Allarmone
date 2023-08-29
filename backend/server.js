@@ -22,53 +22,12 @@ wss.on("connection", (ws) => {
   ws.on("message", (message) => {
     const arrivo = JSON.parse(message);
     console.log("jsonParsato", arrivo);
+    if (arrivo.pacchetto == 1) {
+      exports.arrivo = arrivo;
+      a1.invia();
+    }
     console.log("Messaggio ricevuto dal client Angular:", message);
-    var passaggio = message.toString("hex");
-    var codiceGiusto = hexToString(passaggio);
-    console.log("codiceGiusto", codiceGiusto);
-    var response = { type: "update", content: a6.aggiornamentostato };
     ws.send(JSON.stringify(a6.esito));
-    console.log("codiceGiustoSlice0,7", codiceGiusto.slice(0, 7));
-    if (codiceGiusto.slice(0, 3) == "pin") {
-      codiceApi = codiceGiusto.slice(4, codiceGiusto.length);
-      exports.codiceApi = codiceApi;
-      a1.validaCodice();
-      esito = a6.esito;
-      console.log("esito:", a6.esito);
-    }
-    if (codiceGiusto.slice(0, 7) == "accendi") {
-      console.log(
-        "vediamocomeslico",
-        codiceGiusto.slice(7, codiceGiusto.length)
-      );
-      codiceApi = codiceGiusto.slice(7, codiceGiusto.length);
-      exports.codiceApi = codiceApi;
-      a1.accendiZone();
-      esito = a6.esito;
-      console.log("esito:", a6.esito);
-    }
-    if (codiceGiusto.slice(0, 9) == "configura") {
-      console.log(
-        "vediamocomeslico",
-        codiceGiusto.slice(9, codiceGiusto.length)
-      );
-      codiceApi = codiceGiusto.slice(9, codiceGiusto.length);
-      exports.codiceApi = codiceApi;
-      a1.trigConfigurazioneImpianto();
-      esito = a6.esito;
-      console.log("esito:", a6.esito);
-    }
-    if (codiceGiusto.slice(0, 10) == "inclusione") {
-      console.log(
-        "vediamocomeslico",
-        codiceGiusto.slice(10, codiceGiusto.length)
-      );
-      codiceApi = codiceGiusto.slice(10, codiceGiusto.length);
-      exports.codiceApi = codiceApi;
-      a1.includere();
-      esito = a6.esito;
-      console.log("esito:", a6.esito);
-    }
   });
   ws.on("close", () => {
     console.log("Client disconnected");

@@ -3,6 +3,7 @@ const portone = require("./port");
 const port = portone.port;
 const server = require("./server");
 const a6 = require("./A6");
+
 console.log("a1", server);
 var payload = [
   0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d,
@@ -459,20 +460,49 @@ var sommaAggiornamentoData = (
   .toString(16)
   .slice(1, 3);
 aggiornamentoData[13] = "0x" + sommaAggiornamentoData;
+function invia() {
+  const arrivo = server.arrivo;
+  console.log("in 1 arriva:", arrivo);
+  if (arrivo.payload == 0x02) {
+    function trigConfigurazioneImpianto() {
+      var configurazioneImpianto = new Buffer(4);
+      configurazioneImpianto[0] = mittente;
+      configurazioneImpianto[1] = destinatario;
+      configurazioneImpianto[2] = payload[1];
+      var sommaConfigurazione = (
+        configurazioneImpianto[0] +
+        configurazioneImpianto[1] +
+        configurazioneImpianto[2]
+      ).toString(16);
+      if (sommaConfigurazione.length == 3) {
+        sommaConfigurazione = sommaConfigurazione.slice(1, 3);
+      }
+      configurazioneImpianto[3] = "0x" + sommaConfigurazione;
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(configurazioneImpianto, function (err, result) {
+          console.log("sto scrivendo", configurazioneImpianto);
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+        codiceCorretto = a6.codiceCorretto;
+        console.log("a6", codiceCorretto);
+      });
+    }
+    trigConfigurazioneImpianto();
+  }
+}
 function validaCodice() {
   var validitaCodice = new Buffer(7);
-  codiceApi = server.codiceApi;
   validitaCodice[0] = mittente;
   validitaCodice[1] = destinatario;
   validitaCodice[2] = payload[0];
-  validitaCodice[3] = "0x" + codiceApi.slice(0, 2);
-  validitaCodice[4] = "0x" + codiceApi.slice(2, 4);
-  console.log("a1codice", codiceApi);
-  if (!!server.codiceApi.slice(4, 6)) {
-    validitaCodice[5] = "0x" + server.codiceApi.slice(4, 6);
-  } else {
-    validitaCodice[5] = "0xff";
-  }
+  validitaCodice[3] = "0x";
+  validitaCodice[4] = "0x";
   console.log(
     "validitaCodice",
     validitaCodice[3],
@@ -509,18 +539,11 @@ function validaCodice() {
 }
 function accendiZone() {
   var accensione = new Buffer(8);
-  codiceApi = server.codiceApi;
   accensione[0] = mittente;
   accensione[1] = destinatario;
   accensione[2] = payload[2];
-  accensione[3] = "0x" + codiceApi.slice(0, 2);
-  accensione[4] = "0x" + codiceApi.slice(2, 4);
-  console.log("a1codice", codiceApi);
-  if (!!server.codiceApi.slice(4, 6)) {
-    accensione[5] = "0x" + server.codiceApi.slice(4, 6);
-  } else {
-    accensione[5] = "0xff";
-  }
+  accensione[3] = "0x";
+  accensione[4] = "0x";
   accensione[6] = aree[4];
   var sommaAccensione = (
     accensione[0] +
@@ -550,49 +573,13 @@ function accendiZone() {
     console.log("a6", codiceCorretto);
   });
 }
-function trigConfigurazioneImpianto() {
-  var configurazioneImpianto = new Buffer(4);
-  codiceApi = server.codiceApi;
-  configurazioneImpianto[0] = mittente;
-  configurazioneImpianto[1] = destinatario;
-  configurazioneImpianto[2] = payload[1];
-  var sommaConfigurazione = (
-    configurazioneImpianto[0] +
-    configurazioneImpianto[1] +
-    configurazioneImpianto[2]
-  ).toString(16);
-  if (sommaConfigurazione.length == 3) {
-    sommaConfigurazione = sommaConfigurazione.slice(1, 3);
-  }
-  configurazioneImpianto[3] = "0x" + sommaConfigurazione;
-  port.open(function (error) {
-    console.log("CST port open");
-    port.write(configurazioneImpianto, function (err, result) {
-      console.log("sto scrivendo", configurazioneImpianto);
-      if (err) {
-        console.log("Error while sending message : " + err);
-      }
-      if (result) {
-        console.log("Response received after sending message : " + result);
-      }
-    });
-    codiceCorretto = a6.codiceCorretto;
-    console.log("a6", codiceCorretto);
-  });
-}
 function includere() {
   var inclusione = new Buffer(8);
-  codiceApi = server.codiceApi;
   inclusione[0] = mittente;
   inclusione[1] = destinatario;
   inclusione[2] = payload[3];
-  inclusione[3] = "0x" + server.codiceApi.slice(0, 2);
-  inclusione[4] = "0x" + server.codiceApi.slice(2, 4);
-  if (!!server.codiceApi.slice(4, 6)) {
-    inclusione[5] = "0x" + server.codiceApi.slice(4, 6);
-  } else {
-    inclusione[5] = "0xff";
-  }
+  inclusione[3] = "0x";
+  inclusione[4] = "0x";
   inclusione[6] = aree[0];
   var sommaInclusione = (
     inclusione[0] +
