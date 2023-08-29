@@ -20,6 +20,7 @@ wss.on("connection", (ws) => {
   console.log("Nuova connessione WebSocket stabilita", a6.aggiornamentostato);
   // Ricevi i messaggi dal client Angular
   ws.on("message", (message) => {
+
     const arrivo = JSON.parse(message);
     console.log("jsonParsato", arrivo);
     exports.arrivo = arrivo;
@@ -31,6 +32,8 @@ wss.on("connection", (ws) => {
       esito = a6.esito;
       ws.send(JSON.stringify(a6.esito));
     }
+    exports.mandaEsito()=mandaEsito();
+
   });
   ws.on("close", () => {
     console.log("Client disconnected");
