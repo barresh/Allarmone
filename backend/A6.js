@@ -1,6 +1,7 @@
 const portone = require("./port");
 const port = portone.port;
 const hexToDecimal = (hex) => parseInt(hex, 16);
+const server = require("./server");
 //buffer con il quale ascolto
 var esito = 0;
 var bufferino;
@@ -13298,10 +13299,12 @@ function entrata() {
         } else if (destinatario == "60") {
           if (payload == "01") {
             console.log("qui arriviamo");
-            esitoPositivo();
+            esito=1;
+            server. ws.send(JSON.stringify(this.esito));
           }
           if (payload == "02") {
-            esitoNegativo();
+            esito=0;
+            server. ws.send(JSON.stringify(this.esito));
           }
         }
       }
@@ -13321,4 +13324,4 @@ function esitoNegativo() {
 }
 exports.entrata = entrata;
 exports.port = port;
-exports.esito=esito;
+exports.esito = esito;

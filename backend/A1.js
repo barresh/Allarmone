@@ -463,6 +463,53 @@ aggiornamentoData[13] = "0x" + sommaAggiornamentoData;
 function invia() {
   const arrivo = server.arrivo;
   console.log("in 1 arriva:", arrivo);
+  if (arrivo.payload == 0x01) {
+    function validaCodice() {
+      var validitaCodice = new Buffer(7);
+      validitaCodice[0] = mittente;
+      validitaCodice[1] = destinatario;
+      validitaCodice[2] = payload[0];
+      validitaCodice[3] = arrivo.pin0;
+      validitaCodice[4] = arrivo.pin1;
+      if (!!arrivo.pin2) {
+        validitaCodice[5] = arrivo.pin2;
+      } else {
+        validitaCodice[5] = 0xff;
+      }
+      console.log(
+        "validitaCodice",
+        validitaCodice[3],
+        validitaCodice[4],
+        validitaCodice[5]
+      );
+      sommaValidita = (
+        validitaCodice[0] +
+        validitaCodice[1] +
+        validitaCodice[2] +
+        validitaCodice[3] +
+        validitaCodice[4] +
+        validitaCodice[5]
+      ).toString(16);
+      if (sommaValidita.length == 3) {
+        sommaValidita = sommaValidita.slice(1, 3);
+      }
+      console.log("sommaValidita", sommaValidita);
+      validitaCodice[6] = "0x" + sommaValidita;
+
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(validitaCodice, function (err, result) {
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+      });
+    }
+    validaCodice();
+  }
   if (arrivo.payload == 0x02) {
     function trigConfigurazioneImpianto() {
       var configurazioneImpianto = new Buffer(4);
@@ -495,47 +542,6 @@ function invia() {
     }
     trigConfigurazioneImpianto();
   }
-}
-function validaCodice() {
-  var validitaCodice = new Buffer(7);
-  validitaCodice[0] = mittente;
-  validitaCodice[1] = destinatario;
-  validitaCodice[2] = payload[0];
-  validitaCodice[3] = "0x";
-  validitaCodice[4] = "0x";
-  console.log(
-    "validitaCodice",
-    validitaCodice[3],
-    validitaCodice[4],
-    validitaCodice[5]
-  );
-  sommaValidita = (
-    validitaCodice[0] +
-    validitaCodice[1] +
-    validitaCodice[2] +
-    validitaCodice[3] +
-    validitaCodice[4] +
-    validitaCodice[5]
-  ).toString(16);
-  if (sommaValidita.length == 3) {
-    sommaValidita = sommaValidita.slice(1, 3);
-  }
-  console.log("sommaValidita", sommaValidita);
-  validitaCodice[6] = "0x" + sommaValidita;
-
-  port.open(function (error) {
-    console.log("CST port open");
-    port.write(validitaCodice, function (err, result) {
-      if (err) {
-        console.log("Error while sending message : " + err);
-      }
-      if (result) {
-        console.log("Response received after sending message : " + result);
-      }
-    });
-    codiceCorretto = a6.codiceCorretto;
-    console.log("a6", codiceCorretto);
-  });
 }
 function accendiZone() {
   var accensione = new Buffer(8);

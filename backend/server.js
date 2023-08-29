@@ -22,9 +22,9 @@ wss.on("connection", (ws) => {
   ws.on("message", (message) => {
     const arrivo = JSON.parse(message);
     console.log("jsonParsato", arrivo);
-      exports.arrivo = arrivo;
-      a1.invia();
-    
+    exports.arrivo = arrivo;
+    a1.invia();
+
     console.log("Messaggio ricevuto dal client Angular:", message);
     ws.send(JSON.stringify(a6.esito));
   });
@@ -32,3 +32,4 @@ wss.on("connection", (ws) => {
     console.log("Client disconnected");
   });
 });
+exports.ws = ws;
