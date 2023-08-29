@@ -469,10 +469,10 @@ function invia() {
       validitaCodice[0] = mittente;
       validitaCodice[1] = destinatario;
       validitaCodice[2] = payload[0];
-      validitaCodice[3] = arrivo.pin.slice(0, 2);
-      validitaCodice[4] = arrivo.pin.slice(2, 4);
+      validitaCodice[3] = "0x" + arrivo.pin.slice(0, 2);
+      validitaCodice[4] = "0x" + arrivo.pin.slice(2, 4);
       if (!!arrivo.pin2.slice(4, 6)) {
-        validitaCodice[5] = arrivo.pin.slice(4, 6);
+        validitaCodice[5] = "0x" + arrivo.pin.slice(4, 6);
       } else {
         validitaCodice[5] = 0xff;
       }
