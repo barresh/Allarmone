@@ -13301,12 +13301,12 @@ function entrata() {
             console.log("qui arriviamo");
             esito = 1;
             console.log("esito di conferma", esito);
-            server.ws.send(JSON.stringify(this.esito));
+            server.wss.send(JSON.stringify(this.esito));
           }
           if (payload == "02") {
             esito = 0;
             console.log("esito di conferma", esito);
-            server.ws.send(JSON.stringify(this.esito));
+            server.wss.send(JSON.stringify(this.esito));
           }
         }
       }

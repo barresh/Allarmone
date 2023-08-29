@@ -32,4 +32,4 @@ wss.on("connection", (ws) => {
     console.log("Client disconnected");
   });
 });
-exports.ws = ws;
+exports.wss = wss;
