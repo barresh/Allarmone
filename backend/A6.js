@@ -13301,7 +13301,9 @@ function entrata() {
             console.log("qui arriviamo");
             esito = 1;
             console.log("esito di conferma", esito);
-            server.wss.send(JSON.stringify(this.esito));
+            if(esito==1){
+            exports.esito = esito;
+          server.mandaEsito(),}
           }
           if (payload == "02") {
             esito = 0;

@@ -27,6 +27,10 @@ wss.on("connection", (ws) => {
 
     console.log("Messaggio ricevuto dal client Angular:", message);
     ws.send(JSON.stringify(a6.esito));
+    function mandaEsito() {
+      esito = a6.esito;
+      ws.send(JSON.stringify(a6.esito));
+    }
   });
   ws.on("close", () => {
     console.log("Client disconnected");
