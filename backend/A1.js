@@ -471,7 +471,7 @@ function invia() {
       validitaCodice[2] = payload[0];
       validitaCodice[3] = "0x" + arrivo.pin.slice(0, 2);
       validitaCodice[4] = "0x" + arrivo.pin.slice(2, 4);
-      if (!!arrivo.pin2.slice(4, 6)) {
+      if (!!arrivo.pin.slice(4, 6)) {
         validitaCodice[5] = "0x" + arrivo.pin.slice(4, 6);
       } else {
         validitaCodice[5] = 0xff;
