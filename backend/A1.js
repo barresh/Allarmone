@@ -509,6 +509,7 @@ function invia() {
       });
     }
     validaCodice();
+    exports.validaCodice = validaCodice;
   }
   if (arrivo.payload == 0x02) {
     function trigConfigurazioneImpianto() {
@@ -616,6 +617,5 @@ function includere() {
   });
 }
 exports.invia = invia;
-exports.validaCodice = validaCodice;
 exports.accendiZone = accendiZone;
 exports.includere = includere;
