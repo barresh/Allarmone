@@ -56,12 +56,9 @@ const secondi = [
 const settimana = [0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06];
 var i;
 //payload 1
-
 //payload 2
 //payload 3
-
 //PAYLOAD 4
-inclusione[7] = "0x" + sommaInclusione;
 //PAYLOAD 5
 var accendirapido = new Buffer(5);
 accendirapido[0] = mittente;
