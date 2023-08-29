@@ -58,40 +58,9 @@ var i;
 //payload 1
 
 //payload 2
-var configurazioneImpianto = new Buffer(4);
-configurazioneImpianto[0] = mittente;
-configurazioneImpianto[1] = destinatario;
-configurazioneImpianto[2] = payload[1];
-var sommaConfigurazione = (
-  configurazioneImpianto[0] +
-  configurazioneImpianto[1] +
-  configurazioneImpianto[2]
-)
-  .toString(16)
-  .slice(1, 3);
-configurazioneImpianto[3] = "0x" + sommaConfigurazione;
 //payload 3
 
 //PAYLOAD 4
-var inclusione = new Buffer(8);
-inclusione[0] = mittente;
-inclusione[1] = destinatario;
-inclusione[2] = payload[3];
-inclusione[3] = codice[0];
-inclusione[4] = codice[1];
-inclusione[5] = codice[2];
-inclusione[6] = aree[0];
-var sommaInclusione = (
-  inclusione[0] +
-  inclusione[1] +
-  inclusione[2] +
-  inclusione[3] +
-  inclusione[4] +
-  inclusione[5] +
-  inclusione[6]
-)
-  .toString(16)
-  .slice(1, 3);
 inclusione[7] = "0x" + sommaInclusione;
 //PAYLOAD 5
 var accendirapido = new Buffer(5);
@@ -584,5 +553,79 @@ function accendiZone() {
     console.log("a6", codiceCorretto);
   });
 }
+function trigConfigurazioneImpianto() {
+  var configurazioneImpianto = new Buffer(4);
+  codiceApi = server.codiceApi;
+  configurazioneImpianto[0] = mittente;
+  configurazioneImpianto[1] = destinatario;
+  configurazioneImpianto[2] = payload[1];
+  var sommaConfigurazione = (
+    configurazioneImpianto[0] +
+    configurazioneImpianto[1] +
+    configurazioneImpianto[2]
+  ).toString(16);
+  if (sommaConfigurazione.length == 3) {
+    sommaConfigurazione = sommaConfigurazione.slice(1, 3);
+  }
+  configurazioneImpianto[3] = "0x" + sommaConfigurazione;
+  port.open(function (error) {
+    console.log("CST port open");
+    port.write(configurazioneImpianto, function (err, result) {
+      console.log("sto scrivendo", configurazioneImpianto);
+      if (err) {
+        console.log("Error while sending message : " + err);
+      }
+      if (result) {
+        console.log("Response received after sending message : " + result);
+      }
+    });
+    codiceCorretto = a6.codiceCorretto;
+    console.log("a6", codiceCorretto);
+  });
+}
+function includere() {
+  var inclusione = new Buffer(8);
+  codiceApi = server.codiceApi;
+  inclusione[0] = mittente;
+  inclusione[1] = destinatario;
+  inclusione[2] = payload[3];
+  inclusione[3] = "0x" + server.codiceApi.slice(0, 2);
+  inclusione[4] = "0x" + server.codiceApi.slice(2, 4);
+  if (!!server.codiceApi.slice(4, 6)) {
+    inclusione[5] = "0x" + server.codiceApi.slice(4, 6);
+  } else {
+    inclusione[5] = "0xff";
+  }
+  inclusione[6] = aree[0];
+  var sommaInclusione = (
+    inclusione[0] +
+    inclusione[1] +
+    inclusione[2] +
+    inclusione[3] +
+    inclusione[4] +
+    inclusione[5] +
+    inclusione[6]
+  ).toString(16);
+  if (sommaInclusione.length == 3) {
+    sommaInclusione = sommaInclusione.slice(1, 3);
+  }
+  inclusione[7] = "0x" + sommaInclusione;
+  port.open(function (error) {
+    console.log("CST port open");
+    port.write(inclusione, function (err, result) {
+      console.log("sto scrivendo", configurazioneImpianto);
+      if (err) {
+        console.log("Error while sending message : " + err);
+      }
+      if (result) {
+        console.log("Response received after sending message : " + result);
+      }
+    });
+    codiceCorretto = a6.codiceCorretto;
+    console.log("a6", codiceCorretto);
+  });
+}
 exports.validaCodice = validaCodice;
 exports.accendiZone = accendiZone;
+exports.trigConfigurazioneImpianto = trigConfigurazioneImpianto;
+exports.includere = includere;
