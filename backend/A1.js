@@ -611,5 +611,4 @@ function includere() {
 }
 exports.validaCodice = validaCodice;
 exports.accendiZone = accendiZone;
-exports.trigConfigurazioneImpianto = trigConfigurazioneImpianto;
 exports.includere = includere;
