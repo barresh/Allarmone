@@ -13303,7 +13303,8 @@ function entrata() {
             console.log("esito di conferma", esito);
             if(esito==1){
             exports.esito = esito;
-          server.mandaEsito(),}
+          server.mandaEsito();
+        }
           }
           if (payload == "02") {
             esito = 0;
