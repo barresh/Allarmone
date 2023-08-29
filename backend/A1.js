@@ -609,6 +609,7 @@ function includere() {
     console.log("a6", codiceCorretto);
   });
 }
+exports.invia = invia;
 exports.validaCodice = validaCodice;
 exports.accendiZone = accendiZone;
 exports.includere = includere;
