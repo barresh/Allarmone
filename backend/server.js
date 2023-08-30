@@ -26,9 +26,9 @@ wss.on("connection", (ws) => {
     a1.invia();
 
     console.log("Messaggio ricevuto dal client Angular:", message);
-    ws.send(JSON.stringify(a6.esito));
     function mandaEsito() {
       esito = a6.esito;
+      console.log("Esito che ti mando:",esito)
       ws.send(JSON.stringify(a6.esito));
     }
     exports.mandaEsito = mandaEsito;

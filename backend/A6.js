@@ -13309,7 +13309,10 @@ function entrata() {
           if (payload == "02") {
             esito = 0;
             console.log("esito di conferma", esito);
-            server.wss.send(JSON.stringify(this.esito));
+            if(esito==0){
+              exports.esito = esito;
+            server.mandaEsito();
+          }
           }
         }
       }
