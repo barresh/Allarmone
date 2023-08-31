@@ -2,13 +2,12 @@ const portone = require("./port");
 const port = portone.port;
 const hexToDecimal = (hex) => parseInt(hex, 16);
 const server = require("./server");
-//buffer con il quale ascolto
 var esito = {
-  areeInserite,
-  areeDisinserite,
-  areeNonInserite,
-  areeReset,
-  motivazione,
+  areeInserite: this.areeInserite,
+  areeDisinserite: this.areeDisinserite,
+  areeNonInserite: this.areeNonInserite,
+  areeReset: this.areeReset,
+  motivazione: this.motivazione,
 };
 var areeInserite = [];
 var areeDisinserite = [];
@@ -7141,76 +7140,83 @@ function entrata() {
             if (colonna5 != "00") {
               if (colonna5bin.slice(7, 8) == 1) {
                 risultato = "area 1 appena inserita";
-                esito.areeInserite[0] = 1;
+                areeInserite[0] = 1;
               }
               if (colonna5bin.slice(6, 7) == 1) {
                 risultato = "area 2 appena inserita";
-                esito.areeInserite[1] = 1;
+                areeInserite[1] = 1;
               }
               if (colonna5bin.slice(5, 6) == 1) {
                 risultato = "area 3 appena inserita";
-                esito.areeInserite[2] = 1;
+                areeInserite[2] = 1;
               }
               if (colonna5bin.slice(4, 5) == 1) {
                 risultato = "area 4 appena inserita";
-                esito.areeInserite[3] = 1;
+                areeInserite[3] = 1;
               }
             }
             if (colonna6 != "00") {
               if (colonna6bin.slice(7, 8) == 1) {
                 risultato = "area 1 non inserita perchè aperta";
-                esito.areeNonInserite[0] = 1;
+                areeNonInserite[0] = 1;
               }
               if (colonna6bin.slice(6, 7) == 1) {
                 risultato = "area 2 non inserita perché aperta";
-                esito.areeNonInserite[1] = 1;
+                areeNonInserite[1] = 1;
               }
               if (colonna6bin.slice(5, 6) == 1) {
                 risultato = "area 3 non inserita perché aperta";
-                esito.areeNonInserite[2] = 1;
+                areeNonInserite[2] = 1;
               }
               if (colonna6bin.slice(4, 5) == 1) {
                 risultato = "area 4 non inserita perché aperta";
-                esito.areeNonInserite[3] = 1;
+                areeNonInserite[3] = 1;
               }
             }
             if (colonna7 != "00") {
               if (colonna7bin.slice(7, 8) == 1) {
                 risultato = "area 1 ha provocato reset";
-                esito.areeReset[0] = 1;
+                areeReset[0] = 1;
               }
               if (colonna7bin.slice(6, 7) == 1) {
                 risultato = "area 2 ha provocato reset";
-                esito.areeReset[1] = 1;
+                areeReset[1] = 1;
               }
               if (colonna7bin.slice(5, 6) == 1) {
                 risultato = "area 3 ha provocato reset";
-                esito.areeReset[2] = 1;
+                areeReset[2] = 1;
               }
               if (colonna7bin.slice(4, 5) == 1) {
                 risultato = "area 4 ha provocato reset";
-                esito.areeReset[3] = 1;
+                areeReset[3] = 1;
               }
               if (colonna8 != "00") {
                 switch (colonna8bin) {
                   case "00000100":
                     risultato = "reset rapina al disinserimento aree";
                     console.log(risultato);
-                    esito.motivazione = risultato;
+                    motivazione = risultato;
                     break;
                   case "00000010":
                     risultato = "reset rapina";
                     console.log(risultato);
-                    esito.motivazione = risultato;
+                    motivazione = risultato;
                     break;
                   case "00000001":
                     risultato = "reset sabotaggio";
                     console.log(risultato);
-                    esito.motivazione = risultato;
+                    motivazione = risultato;
                     break;
                 }
               }
             }
+            esito = {
+              areeInserite: this.areeInserite,
+              areeDisinserite: this.areeDisinserite,
+              areeNonInserite: this.areeNonInserite,
+              areeReset: this.areeReset,
+              motivazione: this.motivazione,
+            };
             exports.esito = esito;
             server.mandaEsito();
           }
