@@ -7117,6 +7117,7 @@ function entrata() {
             var tipoutente;
             var numeroutente;
             var risultato;
+            console.log("non inserito perché aperto:",colonna6bin)
             console.log("ENTRA PAYLOAD GIUSTO");
             if (colonna4 != "00") {
               switch (colonna4bin.slice(0, 3)) {
