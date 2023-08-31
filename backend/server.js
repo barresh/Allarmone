@@ -36,8 +36,8 @@ wss.on("connection", (ws) => {
       console.log("Aggiornamento che ti mando:", aggiornamentostato);
       ws.send(JSON.stringify(a6.aggiornamentostato));
     }
-    exports.mandaEsito = mandaEsito;
     exports.mandaAggiornamento = mandaAggiornamento;
+    exports.mandaEsito = mandaEsito;
   });
   ws.on("close", () => {
     console.log("Client disconnected");
