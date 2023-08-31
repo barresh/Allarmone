@@ -7210,12 +7210,13 @@ function entrata() {
                 }
               }
             }
+            console.log("areeInserite:",areeInserite)
             esito = {
-              areeInserite: this.areeInserite,
-              areeDisinserite: this.areeDisinserite,
-              areeNonInserite: this.areeNonInserite,
-              areeReset: this.areeReset,
-              motivazione: this.motivazione,
+              areeInserite= this.areeInserite,
+              areeDisinserite= this.areeDisinserite,
+              areeNonInserite= this.areeNonInserite,
+              areeReset= this.areeReset,
+              motivazione= this.motivazione,
             };
             exports.esito = esito;
             server.mandaEsito();
