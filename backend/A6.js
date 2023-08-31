@@ -10,6 +10,11 @@ var esito = {
   areeReset,
   motivazione,
 };
+var areeInserite=[];
+var areeDisinserite=[];
+var areeNonInserite=[];
+var areeReset=[];
+var motivazione=[];
 var bufferino;
 //array dello stato delle zone
 var arrayzone = [];
