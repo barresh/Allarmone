@@ -7136,36 +7136,54 @@ function entrata() {
               if (colonna5bin.slice(7, 8) == 1) {
                 risultato = "area 1 appena inserita";
                 areeInserite[0] = 1;
+              } else if (colonna5bin.slice(7, 8) == 0) {
+                areeInserite[0] = 0;
               }
               if (colonna5bin.slice(6, 7) == 1) {
                 risultato = "area 2 appena inserita";
                 areeInserite[1] = 1;
+              } else if (colonna5bin.slice(6, 7) == 0) {
+                areeInserite[1] = 0;
               }
               if (colonna5bin.slice(5, 6) == 1) {
                 risultato = "area 3 appena inserita";
                 areeInserite[2] = 1;
+              }else if (colonna5bin.slice(5, 6) == 0) {
+                areeInserite[2] = 0;
               }
               if (colonna5bin.slice(4, 5) == 1) {
                 risultato = "area 4 appena inserita";
                 areeInserite[3] = 1;
+              }else if (colonna5bin.slice(4, 5) == 0) {
+                risultato = "area 4 appena inserita";
+                areeInserite[3] = 0;
               }
             }
             if (colonna6 != "00") {
               if (colonna6bin.slice(7, 8) == 1) {
                 risultato = "area 1 non inserita perchè aperta";
                 areeNonInserite[0] = 1;
+              } else if (colonna6bin.slice(7, 8) == 0) {
+                areeNonInserite[0] = 0;
               }
               if (colonna6bin.slice(6, 7) == 1) {
                 risultato = "area 2 non inserita perché aperta";
                 areeNonInserite[1] = 1;
+              }else if (colonna6bin.slice(6, 7) == 0) {
+                areeNonInserite[1] = 0;
               }
               if (colonna6bin.slice(5, 6) == 1) {
                 risultato = "area 3 non inserita perché aperta";
                 areeNonInserite[2] = 1;
+              } else if (colonna6bin.slice(5, 6) == 0) {
+                areeNonInserite[2] = 0;
               }
               if (colonna6bin.slice(4, 5) == 1) {
                 risultato = "area 4 non inserita perché aperta";
                 areeNonInserite[3] = 1;
+              }else if (colonna6bin.slice(4, 5) == 0) {
+                risultato = "area 4 non inserita perché aperta";
+                areeNonInserite[3] = 0;
               }
             }
             if (colonna7 != "00") {
