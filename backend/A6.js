@@ -7133,7 +7133,7 @@ function entrata() {
               numeroutente = colonna4bin.slice(4, 7);
               console.log("utente:", tipoutente, numeroutente);
             }
-            if (colonna5 != "00") {
+            
               if (colonna5bin.slice(7, 8) == 1) {
                 risultato = "area 1 appena inserita";
                 areeInserite[0] = 1;
@@ -7159,7 +7159,7 @@ function entrata() {
                 risultato = "area 4 appena inserita";
                 areeInserite[3] = 0;
               }
-            }
+            
         
               if (colonna6bin.slice(7, 8) == 1) {
                 risultato = "area 1 non inserita perchè aperta";
