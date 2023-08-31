@@ -3,7 +3,13 @@ const port = portone.port;
 const hexToDecimal = (hex) => parseInt(hex, 16);
 const server = require("./server");
 //buffer con il quale ascolto
-var esito = 0;
+var esito = {
+  areeInserite,
+  areeDisinserite,
+  areeNonInserite,
+  areeReset,
+  motivazione,
+};
 var bufferino;
 //array dello stato delle zone
 var arrayzone = [];
@@ -7129,77 +7135,78 @@ function entrata() {
             if (colonna5 != "00") {
               if (colonna5bin.slice(7, 8) == 1) {
                 risultato = "area 1 appena inserita";
+                esito.aree[0] = 1;
               }
               if (colonna5bin.slice(6, 7) == 1) {
                 risultato = "area 2 appena inserita";
+                esito.aree[1] = 1;
               }
               if (colonna5bin.slice(5, 6) == 1) {
                 risultato = "area 3 appena inserita";
+                esito.aree[2] = 1;
               }
               if (colonna5bin.slice(4, 5) == 1) {
-                risultato = "area 1 appena inserita";
+                risultato = "area 4 appena inserita";
+                esito.aree[3] = 1;
               }
             }
             if (colonna6 != "00") {
               if (colonna6bin.slice(7, 8) == 1) {
                 risultato = "area 1 non inserita perchè aperta";
+                esito.areeNonInserite[0] = 1;
               }
               if (colonna6bin.slice(6, 7) == 1) {
                 risultato = "area 2 non inserita perché aperta";
+                esito.areeNonInserite[1] = 1;
               }
               if (colonna6bin.slice(5, 6) == 1) {
                 risultato = "area 3 non inserita perché aperta";
+                esito.areeNonInserite[2] = 1;
               }
               if (colonna6bin.slice(4, 5) == 1) {
                 risultato = "area 4 non inserita perché aperta";
+                esito.areeNonInserite[3] = 1;
               }
             }
             if (colonna7 != "00") {
               if (colonna7bin.slice(7, 8) == 1) {
-                risultato = "area 1 ha provocato reser";
+                risultato = "area 1 ha provocato reset";
+                esito.areeReset[0] = 1;
               }
               if (colonna7bin.slice(6, 7) == 1) {
                 risultato = "area 2 ha provocato reset";
+                esito.areeReset[1] = 1;
               }
               if (colonna7bin.slice(5, 6) == 1) {
                 risultato = "area 3 ha provocato reset";
+                esito.areeReset[2] = 1;
               }
               if (colonna7bin.slice(4, 5) == 1) {
                 risultato = "area 4 ha provocato reset";
+                esito.areeReset[3] = 1;
               }
               if (colonna8 != "00") {
                 switch (colonna8bin) {
                   case "00000100":
                     risultato = "reset rapina al disinserimento aree";
                     console.log(risultato);
+                    esito.motivazione = risultato;
                     break;
                   case "00000010":
                     risultato = "reset rapina";
                     console.log(risultato);
+                    esito.motivazione = risultato;
                     break;
                   case "00000001":
                     risultato = "reset sabotaggio";
                     console.log(risultato);
+                    esito.motivazione = risultato;
                     break;
                 }
               }
             }
-            if (colonna8 != "00") {
-              switch (colonna8bin) {
-                case "00000100":
-                  risultato = "reset rapina al disinserimento aree";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "reset rapina";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "reset sabotaggio";
-                  console.log(risultato);
-                  break;
-              }
-            }
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "06") {
             var colonna4 = bufferino.slice(6, 8);
@@ -13301,18 +13308,18 @@ function entrata() {
             console.log("qui arriviamo");
             esito = 1;
             console.log("esito di conferma", esito);
-            if(esito==1){
-            exports.esito = esito;
-          server.mandaEsito();
-        }
+            if (esito == 1) {
+              exports.esito = esito;
+              server.mandaEsito();
+            }
           }
           if (payload == "02") {
             esito = 0;
             console.log("esito di conferma", esito);
-            if(esito==0){
+            if (esito == 0) {
               exports.esito = esito;
-            server.mandaEsito();
-          }
+              server.mandaEsito();
+            }
           }
         }
       }
@@ -13321,14 +13328,6 @@ function entrata() {
 }
 function mandaEsito() {
   exports.esito = esito;
-}
-function esitoPositivo() {
-  esito = 1;
-  mandaEsito();
-}
-function esitoNegativo() {
-  esito = 0;
-  mandaEsito();
 }
 exports.entrata = entrata;
 exports.port = port;
