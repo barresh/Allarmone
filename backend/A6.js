@@ -148,6 +148,7 @@ function entrata() {
             );
             console.log(aggiornamentostato);
             exports.aggiornamentostato = aggiornamentostato;
+            server.mandaAggiornamento();
           }
           if (payload == "01") {
             var completo = bufferino.slice(6, 8);
@@ -7346,7 +7347,7 @@ function entrata() {
               motivazione,
             ) {
               return {
-                areeDisnserite: areeInserite,
+                areeDisinserite: areeInserite,
                 areeReset: areeReset,
                 motivazione: motivazione,
               };

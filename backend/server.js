@@ -28,10 +28,16 @@ wss.on("connection", (ws) => {
     console.log("Messaggio ricevuto dal client Angular:", message);
     function mandaEsito() {
       esito = a6.esito;
-      console.log("Esito che ti mando:",esito)
+      console.log("Esito che ti mando:", esito);
       ws.send(JSON.stringify(a6.esito));
     }
+    function mandaAggiornamento() {
+      aggiornamentostato = a6.aggiornamentostato;
+      console.log("Aggiornamento che ti mando:", aggiornamentostato);
+      ws.send(JSON.stringify(a6.aggiornamentostato));
+    }
     exports.mandaEsito = mandaEsito;
+    exports.mandaAggiornamento = mandaAggiornamento;
   });
   ws.on("close", () => {
     console.log("Client disconnected");
