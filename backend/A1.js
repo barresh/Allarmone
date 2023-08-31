@@ -561,6 +561,7 @@ function invia() {
         accensione[5] = 0xff;
       }
       console.log("accensione", accensione[3], accensione[4], accensione[5]);
+      accensione[6] = "0x" + arrivo.aree;
       sommaAccensione = (
         accensione[0] +
         accensione[1] +
@@ -574,7 +575,6 @@ function invia() {
         sommaAccensione = sommaAccensione.slice(1, 3);
       }
       console.log("sommaAccensione", sommaAccensione);
-      accensione[6] = "0x" + arrivo.aree;
       accensione[7] = "0x" + sommaAccensione;
 
       port.open(function (error) {
