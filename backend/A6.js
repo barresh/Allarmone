@@ -7247,6 +7247,118 @@ function entrata() {
             exports.esito = esito;
             server.mandaEsito();
           }
+          if (payload == "05") {
+            var colonna4 = bufferino.slice(6, 8);
+            var colonna5 = bufferino.slice(8, 10);
+            var colonna6 = bufferino.slice(10, 12);
+            var colonna7 = bufferino.slice(12, 14);
+            var colonna8 = bufferino.slice(14, 16);
+            var colonna4bin = hex2bin(colonna4);
+            var colonna5bin = hex2bin(colonna5);
+            var colonna6bin = hex2bin(colonna6);
+            var colonna7bin = hex2bin(colonna7);
+            var colonna8bin = hex2bin(colonna8);
+            var tipoutente;
+            var numeroutente;
+            var risultato;
+            console.log("non inserito perché aperto:",colonna6bin)
+            console.log("ENTRA PAYLOAD GIUSTO");
+            if (colonna4 != "00") {
+              switch (colonna4bin.slice(0, 3)) {
+                case "0010":
+                  tipoutente = "codice";
+                case "0100":
+                  tipoutente = "spinotto";
+                case "0110":
+                  tipoutente = "comunicatore";
+                case "1000":
+                  tipoutente = "chiave esterna";
+              }
+              numeroutente = colonna4bin.slice(4, 7);
+              console.log("utente:", tipoutente, numeroutente);
+            }
+            
+              if (colonna5bin.slice(7, 8) == 1) {
+                risultato = "area 1 appena inserita";
+                areeInserite[0] = 1;
+              } else if (colonna5bin.slice(7, 8) == 0) {
+                areeInserite[0] = 0;
+              }
+              if (colonna5bin.slice(6, 7) == 1) {
+                risultato = "area 2 appena inserita";
+                areeInserite[1] = 1;
+              } else if (colonna5bin.slice(6, 7) == 0) {
+                areeInserite[1] = 0;
+              }
+              if (colonna5bin.slice(5, 6) == 1) {
+                risultato = "area 3 appena inserita";
+                areeInserite[2] = 1;
+              }else if (colonna5bin.slice(5, 6) == 0) {
+                areeInserite[2] = 0;
+              }
+              if (colonna5bin.slice(4, 5) == 1) {
+                risultato = "area 4 appena inserita";
+                areeInserite[3] = 1;
+              }else if (colonna5bin.slice(4, 5) == 0) {
+                risultato = "area 4 appena inserita";
+                areeInserite[3] = 0;
+              }            
+            if (colonna7 != "00") {
+              if (colonna7bin.slice(7, 8) == 1) {
+                risultato = "area 1 ha provocato reset";
+                areeReset[0] = 1;
+              }
+              if (colonna7bin.slice(6, 7) == 1) {
+                risultato = "area 2 ha provocato reset";
+                areeReset[1] = 1;
+              }
+              if (colonna7bin.slice(5, 6) == 1) {
+                risultato = "area 3 ha provocato reset";
+                areeReset[2] = 1;
+              }
+              if (colonna7bin.slice(4, 5) == 1) {
+                risultato = "area 4 ha provocato reset";
+                areeReset[3] = 1;
+              }
+              if (colonna8 != "00") {
+                switch (colonna8bin) {
+                  case "00000100":
+                    risultato = "reset rapina al disinserimento aree";
+                    console.log(risultato);
+                    motivazione = risultato;
+                    break;
+                  case "00000010":
+                    risultato = "reset rapina";
+                    console.log(risultato);
+                    motivazione = risultato;
+                    break;
+                  case "00000001":
+                    risultato = "reset sabotaggio";
+                    console.log(risultato);
+                    motivazione = risultato;
+                    break;
+                }
+              }
+            }
+            function riempiEsito(
+              areeInserite,
+              areeReset,
+              motivazione,
+            ) {
+              return {
+                areeDisnserite: areeInserite,
+                areeReset: areeReset,
+                motivazione: motivazione,
+              };
+            }
+            let esito = riempiEsito(
+              areeInserite,
+              areeReset,
+              motivazione,
+            );
+            exports.esito = esito;
+            server.mandaEsito();
+          }
           if (payload == "06") {
             var colonna4 = bufferino.slice(6, 8);
             var colonna5 = bufferino.slice(8, 10);
