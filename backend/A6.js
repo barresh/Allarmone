@@ -7212,11 +7212,11 @@ function entrata() {
             }
             console.log("areeInserite:",areeInserite)
             esito = {
-              areeInserite= this.areeInserite,
-              areeDisinserite= this.areeDisinserite,
-              areeNonInserite= this.areeNonInserite,
-              areeReset= this.areeReset,
-              motivazione= this.motivazione,
+              areeInserite= areeInserite,
+              areeDisinserite= areeDisinserite,
+              areeNonInserite= areeNonInserite,
+              areeReset= areeReset,
+              motivazione=motivazione,
             };
             exports.esito = esito;
             server.mandaEsito();
