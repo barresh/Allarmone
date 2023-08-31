@@ -10,11 +10,11 @@ var esito = {
   areeReset,
   motivazione,
 };
-var areeInserite=[];
-var areeDisinserite=[];
-var areeNonInserite=[];
-var areeReset=[];
-var motivazione=[];
+var areeInserite = [];
+var areeDisinserite = [];
+var areeNonInserite = [];
+var areeReset = [];
+var motivazione = [];
 var bufferino;
 //array dello stato delle zone
 var arrayzone = [];
@@ -7123,6 +7123,7 @@ function entrata() {
             var tipoutente;
             var numeroutente;
             var risultato;
+            console.log("ENTRA PAYLOAD GIUSTO");
             if (colonna4 != "00") {
               switch (colonna4bin.slice(0, 3)) {
                 case "0010":
