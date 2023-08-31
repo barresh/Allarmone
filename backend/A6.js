@@ -7141,19 +7141,19 @@ function entrata() {
             if (colonna5 != "00") {
               if (colonna5bin.slice(7, 8) == 1) {
                 risultato = "area 1 appena inserita";
-                esito.aree[0] = 1;
+                esito.areeInserite[0] = 1;
               }
               if (colonna5bin.slice(6, 7) == 1) {
                 risultato = "area 2 appena inserita";
-                esito.aree[1] = 1;
+                esito.areeInserite[1] = 1;
               }
               if (colonna5bin.slice(5, 6) == 1) {
                 risultato = "area 3 appena inserita";
-                esito.aree[2] = 1;
+                esito.areeInserite[2] = 1;
               }
               if (colonna5bin.slice(4, 5) == 1) {
                 risultato = "area 4 appena inserita";
-                esito.aree[3] = 1;
+                esito.areeInserite[3] = 1;
               }
             }
             if (colonna6 != "00") {
