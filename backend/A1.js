@@ -631,5 +631,4 @@ function includere() {
   });
 }
 exports.invia = invia;
-exports.accendiZone = accendiZone;
 exports.includere = includere;
