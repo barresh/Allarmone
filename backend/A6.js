@@ -3,11 +3,6 @@ const port = portone.port;
 const hexToDecimal = (hex) => parseInt(hex, 16);
 const server = require("./server");
 var esito = {
-  areeInserite: this.areeInserite,
-  areeDisinserite: this.areeDisinserite,
-  areeNonInserite: this.areeNonInserite,
-  areeReset: this.areeReset,
-  motivazione: this.motivazione,
 };
 var areeInserite = [];
 var areeDisinserite = [];
@@ -7211,13 +7206,25 @@ function entrata() {
               }
             }
             console.log("areeInserite:",areeInserite)
-            esito = {
-              areeInserite= areeInserite,
-              areeDisinserite= areeDisinserite,
-              areeNonInserite= areeNonInserite,
-              areeReset= areeReset,
-              motivazione=motivazione,
-            };
+            function riempiEsito(
+              areeInserite,
+              areeNonInserite,
+              areeReset,
+              motivazione,
+            ) {
+              return {
+                areeInserite: areeInserite,
+                areeNonInserite: areeNonInserite,
+                areeReset: areeReset,
+                motivazione: motivazione,
+              };
+            }
+            let esito = riempiEsito(
+              areeInserite,
+              areeNonInserite,
+              areeReset,
+              motivazione,
+            );
             exports.esito = esito;
             server.mandaEsito();
           }
