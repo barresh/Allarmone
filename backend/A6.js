@@ -7160,7 +7160,7 @@ function entrata() {
                 areeInserite[3] = 0;
               }
             }
-            if (colonna6 != "00") {
+        
               if (colonna6bin.slice(7, 8) == 1) {
                 risultato = "area 1 non inserita perchè aperta";
                 areeNonInserite[0] = 1;
@@ -7186,7 +7186,7 @@ function entrata() {
                 risultato = "area 4 non inserita perché aperta";
                 areeNonInserite[3] = 0;
               }
-            }
+            
             if (colonna7 != "00") {
               if (colonna7bin.slice(7, 8) == 1) {
                 risultato = "area 1 ha provocato reset";
