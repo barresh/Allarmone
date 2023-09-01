@@ -539,11 +539,10 @@ function invia() {
             console.log("Response received after sending message : " + result);
           }
         });
-        codiceCorretto = a6.codiceCorretto;
-        console.log("a6", codiceCorretto);
       });
     }
     trigConfigurazioneImpianto();
+    exports.trigConfigurazioneImpianto = trigConfigurazioneImpianto;
   }
   if (arrivo.payload == 0x03) {
     function accendiAree() {
@@ -553,14 +552,11 @@ function invia() {
       accensione[2] = payload[2];
       accensione[3] = "0x" + arrivo.pin.slice(0, 2);
       accensione[4] = "0x" + arrivo.pin.slice(2, 4);
-      console.log("qui arriva questo", arrivo.pin);
-      console.log("QUI AGGIUNGE 0X ai primi due", accensione[3]);
       if (!!arrivo.pin.slice(4, 6)) {
         accensione[5] = "0x" + arrivo.pin.slice(4, 6);
       } else {
         accensione[5] = 0xff;
       }
-      console.log("accensione", accensione[3], accensione[4], accensione[5]);
       accensione[6] = "0x" + arrivo.aree;
       sommaAccensione = (
         accensione[0] +
@@ -592,43 +588,48 @@ function invia() {
     accendiAree();
     exports.accendiAree = accendiAree;
   }
+  if (arrivo.payload == 0x04) {
+    function includere() {
+      var inclusione = new Buffer(8);
+      inclusione[0] = mittente;
+      inclusione[1] = destinatario;
+      inclusione[2] = payload[3];
+      inclusione[3] = "0x" + arrivo.pin.slice(0, 2);
+      inclusione[4] = "0x" + arrivo.pin.slice(0, 4);
+      if (!!arrivo.pin.slice(4, 6)) {
+        inclusione[5] = "0x" + arrivo.pin.slice(4, 6);
+      } else {
+        inclusione[5] = 0xff;
+      }
+      inclusione[6] = "0x" + arrivo.aree;
+      var sommaInclusione = (
+        inclusione[0] +
+        inclusione[1] +
+        inclusione[2] +
+        inclusione[3] +
+        inclusione[4] +
+        inclusione[5] +
+        inclusione[6]
+      ).toString(16);
+      if (sommaInclusione.length == 3) {
+        sommaInclusione = sommaInclusione.slice(1, 3);
+      }
+      inclusione[7] = "0x" + sommaInclusione;
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(inclusione, function (err, result) {
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+      });
+    }
+    includere();
+    exports.includere = includere;
+  }
 }
 
-function includere() {
-  var inclusione = new Buffer(8);
-  inclusione[0] = mittente;
-  inclusione[1] = destinatario;
-  inclusione[2] = payload[3];
-  inclusione[3] = "0x";
-  inclusione[4] = "0x";
-  inclusione[6] = aree[0];
-  var sommaInclusione = (
-    inclusione[0] +
-    inclusione[1] +
-    inclusione[2] +
-    inclusione[3] +
-    inclusione[4] +
-    inclusione[5] +
-    inclusione[6]
-  ).toString(16);
-  if (sommaInclusione.length == 3) {
-    sommaInclusione = sommaInclusione.slice(1, 3);
-  }
-  inclusione[7] = "0x" + sommaInclusione;
-  port.open(function (error) {
-    console.log("CST port open");
-    port.write(inclusione, function (err, result) {
-      console.log("sto scrivendo", configurazioneImpianto);
-      if (err) {
-        console.log("Error while sending message : " + err);
-      }
-      if (result) {
-        console.log("Response received after sending message : " + result);
-      }
-    });
-    codiceCorretto = a6.codiceCorretto;
-    console.log("a6", codiceCorretto);
-  });
-}
 exports.invia = invia;
-exports.includere = includere;
