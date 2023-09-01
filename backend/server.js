@@ -4,6 +4,7 @@ const a6 = require("./A6");
 const a1 = require("./A1");
 a6.entrata();
 console.log("arriva", a6.aggiornamentostato);
+
 wss.on("connection", (ws) => {
   console.log("connessione WebSocket stabilita");
   // Ricevi i messaggi dal client Angular
@@ -11,7 +12,9 @@ wss.on("connection", (ws) => {
     const arrivo = JSON.parse(message);
     console.log("jsonParsato", arrivo);
     exports.arrivo = arrivo;
-    a1.invia();
+    if (arrivo.pacchetto == 1) {
+      a1.invia();
+    }
     console.log("Messaggio ricevuto dal client Angular:", message);
     function mandaEsito() {
       esito = a6.esito;
