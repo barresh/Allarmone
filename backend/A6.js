@@ -2,8 +2,7 @@ const portone = require("./port");
 const port = portone.port;
 const hexToDecimal = (hex) => parseInt(hex, 16);
 const server = require("./server");
-var esito = {
-};
+var esito = {};
 var areeInserite = [];
 var areeDisinserite = [];
 var areeNonInserite = [];
@@ -148,7 +147,6 @@ function entrata() {
             );
             console.log(aggiornamentostato);
             exports.aggiornamentostato = aggiornamentostato;
-            server.mandaAggiornamento();
           }
           if (payload == "01") {
             var completo = bufferino.slice(6, 8);
@@ -6904,6 +6902,67 @@ function entrata() {
                 arraytelecombatt[15] = 0;
               }
             }
+            function riempiEsito(
+              arrayaree,
+              arrayareeinserite,
+              arrayzoneinallarme,
+              arrayareeinallarme,
+              arrayareeinmemoriaallarme,
+              arrayzoneinmemoria,
+              arrayzoneescluse,
+              arrayzonerapine,
+              arrayzonetampap,
+              arrayzoneradiomr,
+              arrayzonetampap,
+              arrayzoneradiobatt,
+              arraytelecombatt,
+              arrayareereset,
+              arrayzoneallarmetamper,
+              arrayzonemr,
+              arrayzonebatt
+            ) {
+              return {
+                arrayaree: arrayaree,
+                arrayareeinserite: arrayareeinserite,
+                arrayzoneinallarme: arrayzoneinallarme,
+                arrayareeinallarme: arrayareeinallarme,
+                arrayareeinmemoriaallarme: arrayareeinmemoriaallarme,
+                arrayzoneinmemoria: arrayzoneinmemoria,
+                arrayzoneescluse: arrayzoneescluse,
+                arrayzonerapine: arrayzonerapine,
+                arrayzonetampap: arrayzonetampap,
+                arrayzoneradiomr: arrayzoneradiomr,
+                arrayzoneradiobatt: arrayzoneradiobatt,
+                arraytelecombatt: arraytelecombatt,
+                arrayareereset: arrayareereset,
+                arrayzoneallarmetamper: arrayzoneallarmetamper,
+                arrayzonemr: arrayzonemr,
+                arrayzonebatt: arrayzonebatt,
+              };
+            }
+            let esito = riempiEsito(
+              arrayaree,
+              arrayareeinserite,
+              arrayzoneinallarme,
+              arrayareeinallarme,
+              arrayareeinmemoriaallarme,
+              arrayzoneinmemoria,
+              arrayzoneescluse,
+              arrayzonerapine,
+              arrayzonetampap,
+              arrayzoneradiomr,
+              arrayzonetampap,
+              arrayzoneradiobatt,
+              arraytelecombatt,
+              arrayareereset,
+              arrayzoneallarmetamper,
+              arrayzonemr,
+              arrayzonebatt
+            );
+            exports.esito;
+            if (!!esito) {
+              server.mandaEsito();
+            }
           }
           if (payload == "02") {
             var colonna10 = bufferino.slice(18, 20);
@@ -7118,7 +7177,7 @@ function entrata() {
             var tipoutente;
             var numeroutente;
             var risultato;
-            console.log("non inserito perché aperto:",colonna6bin)
+            console.log("non inserito perché aperto:", colonna6bin);
             console.log("ENTRA PAYLOAD GIUSTO");
             if (colonna4 != "00") {
               switch (colonna4bin.slice(0, 3)) {
@@ -7134,60 +7193,59 @@ function entrata() {
               numeroutente = colonna4bin.slice(4, 7);
               console.log("utente:", tipoutente, numeroutente);
             }
-            
-              if (colonna5bin.slice(7, 8) == 1) {
-                risultato = "area 1 appena inserita";
-                areeInserite[0] = 1;
-              } else if (colonna5bin.slice(7, 8) == 0) {
-                areeInserite[0] = 0;
-              }
-              if (colonna5bin.slice(6, 7) == 1) {
-                risultato = "area 2 appena inserita";
-                areeInserite[1] = 1;
-              } else if (colonna5bin.slice(6, 7) == 0) {
-                areeInserite[1] = 0;
-              }
-              if (colonna5bin.slice(5, 6) == 1) {
-                risultato = "area 3 appena inserita";
-                areeInserite[2] = 1;
-              }else if (colonna5bin.slice(5, 6) == 0) {
-                areeInserite[2] = 0;
-              }
-              if (colonna5bin.slice(4, 5) == 1) {
-                risultato = "area 4 appena inserita";
-                areeInserite[3] = 1;
-              }else if (colonna5bin.slice(4, 5) == 0) {
-                risultato = "area 4 appena inserita";
-                areeInserite[3] = 0;
-              }
-            
-        
-              if (colonna6bin.slice(7, 8) == 1) {
-                risultato = "area 1 non inserita perchè aperta";
-                areeNonInserite[0] = 1;
-              } else if (colonna6bin.slice(7, 8) == 0) {
-                areeNonInserite[0] = 0;
-              }
-              if (colonna6bin.slice(6, 7) == 1) {
-                risultato = "area 2 non inserita perché aperta";
-                areeNonInserite[1] = 1;
-              }else if (colonna6bin.slice(6, 7) == 0) {
-                areeNonInserite[1] = 0;
-              }
-              if (colonna6bin.slice(5, 6) == 1) {
-                risultato = "area 3 non inserita perché aperta";
-                areeNonInserite[2] = 1;
-              } else if (colonna6bin.slice(5, 6) == 0) {
-                areeNonInserite[2] = 0;
-              }
-              if (colonna6bin.slice(4, 5) == 1) {
-                risultato = "area 4 non inserita perché aperta";
-                areeNonInserite[3] = 1;
-              }else if (colonna6bin.slice(4, 5) == 0) {
-                risultato = "area 4 non inserita perché aperta";
-                areeNonInserite[3] = 0;
-              }
-            
+
+            if (colonna5bin.slice(7, 8) == 1) {
+              risultato = "area 1 appena inserita";
+              areeInserite[0] = 1;
+            } else if (colonna5bin.slice(7, 8) == 0) {
+              areeInserite[0] = 0;
+            }
+            if (colonna5bin.slice(6, 7) == 1) {
+              risultato = "area 2 appena inserita";
+              areeInserite[1] = 1;
+            } else if (colonna5bin.slice(6, 7) == 0) {
+              areeInserite[1] = 0;
+            }
+            if (colonna5bin.slice(5, 6) == 1) {
+              risultato = "area 3 appena inserita";
+              areeInserite[2] = 1;
+            } else if (colonna5bin.slice(5, 6) == 0) {
+              areeInserite[2] = 0;
+            }
+            if (colonna5bin.slice(4, 5) == 1) {
+              risultato = "area 4 appena inserita";
+              areeInserite[3] = 1;
+            } else if (colonna5bin.slice(4, 5) == 0) {
+              risultato = "area 4 appena inserita";
+              areeInserite[3] = 0;
+            }
+
+            if (colonna6bin.slice(7, 8) == 1) {
+              risultato = "area 1 non inserita perchè aperta";
+              areeNonInserite[0] = 1;
+            } else if (colonna6bin.slice(7, 8) == 0) {
+              areeNonInserite[0] = 0;
+            }
+            if (colonna6bin.slice(6, 7) == 1) {
+              risultato = "area 2 non inserita perché aperta";
+              areeNonInserite[1] = 1;
+            } else if (colonna6bin.slice(6, 7) == 0) {
+              areeNonInserite[1] = 0;
+            }
+            if (colonna6bin.slice(5, 6) == 1) {
+              risultato = "area 3 non inserita perché aperta";
+              areeNonInserite[2] = 1;
+            } else if (colonna6bin.slice(5, 6) == 0) {
+              areeNonInserite[2] = 0;
+            }
+            if (colonna6bin.slice(4, 5) == 1) {
+              risultato = "area 4 non inserita perché aperta";
+              areeNonInserite[3] = 1;
+            } else if (colonna6bin.slice(4, 5) == 0) {
+              risultato = "area 4 non inserita perché aperta";
+              areeNonInserite[3] = 0;
+            }
+
             if (colonna7 != "00") {
               if (colonna7bin.slice(7, 8) == 1) {
                 risultato = "area 1 ha provocato reset";
@@ -7225,12 +7283,12 @@ function entrata() {
                 }
               }
             }
-            console.log("areeInserite:",areeInserite)
+            console.log("areeInserite:", areeInserite);
             function riempiEsito(
               areeInserite,
               areeNonInserite,
               areeReset,
-              motivazione,
+              motivazione
             ) {
               return {
                 areeInserite: areeInserite,
@@ -7243,7 +7301,7 @@ function entrata() {
               areeInserite,
               areeNonInserite,
               areeReset,
-              motivazione,
+              motivazione
             );
             exports.esito = esito;
             server.mandaEsito();
@@ -7262,7 +7320,7 @@ function entrata() {
             var tipoutente;
             var numeroutente;
             var risultato;
-            console.log("non inserito perché aperto:",colonna6bin)
+            console.log("non inserito perché aperto:", colonna6bin);
             console.log("ENTRA PAYLOAD GIUSTO");
             if (colonna4 != "00") {
               switch (colonna4bin.slice(0, 3)) {
@@ -7278,32 +7336,32 @@ function entrata() {
               numeroutente = colonna4bin.slice(4, 7);
               console.log("utente:", tipoutente, numeroutente);
             }
-            
-              if (colonna5bin.slice(7, 8) == 1) {
-                risultato = "area 1 appena inserita";
-                areeInserite[0] = 1;
-              } else if (colonna5bin.slice(7, 8) == 0) {
-                areeInserite[0] = 0;
-              }
-              if (colonna5bin.slice(6, 7) == 1) {
-                risultato = "area 2 appena inserita";
-                areeInserite[1] = 1;
-              } else if (colonna5bin.slice(6, 7) == 0) {
-                areeInserite[1] = 0;
-              }
-              if (colonna5bin.slice(5, 6) == 1) {
-                risultato = "area 3 appena inserita";
-                areeInserite[2] = 1;
-              }else if (colonna5bin.slice(5, 6) == 0) {
-                areeInserite[2] = 0;
-              }
-              if (colonna5bin.slice(4, 5) == 1) {
-                risultato = "area 4 appena inserita";
-                areeInserite[3] = 1;
-              }else if (colonna5bin.slice(4, 5) == 0) {
-                risultato = "area 4 appena inserita";
-                areeInserite[3] = 0;
-              }            
+
+            if (colonna5bin.slice(7, 8) == 1) {
+              risultato = "area 1 appena inserita";
+              areeInserite[0] = 1;
+            } else if (colonna5bin.slice(7, 8) == 0) {
+              areeInserite[0] = 0;
+            }
+            if (colonna5bin.slice(6, 7) == 1) {
+              risultato = "area 2 appena inserita";
+              areeInserite[1] = 1;
+            } else if (colonna5bin.slice(6, 7) == 0) {
+              areeInserite[1] = 0;
+            }
+            if (colonna5bin.slice(5, 6) == 1) {
+              risultato = "area 3 appena inserita";
+              areeInserite[2] = 1;
+            } else if (colonna5bin.slice(5, 6) == 0) {
+              areeInserite[2] = 0;
+            }
+            if (colonna5bin.slice(4, 5) == 1) {
+              risultato = "area 4 appena inserita";
+              areeInserite[3] = 1;
+            } else if (colonna5bin.slice(4, 5) == 0) {
+              risultato = "area 4 appena inserita";
+              areeInserite[3] = 0;
+            }
             if (colonna7 != "00") {
               if (colonna7bin.slice(7, 8) == 1) {
                 risultato = "area 1 ha provocato reset";
@@ -7341,22 +7399,14 @@ function entrata() {
                 }
               }
             }
-            function riempiEsito(
-              areeInserite,
-              areeReset,
-              motivazione,
-            ) {
+            function riempiEsito(areeInserite, areeReset, motivazione) {
               return {
                 areeDisinserite: areeInserite,
                 areeReset: areeReset,
                 motivazione: motivazione,
               };
             }
-            let esito = riempiEsito(
-              areeInserite,
-              areeReset,
-              motivazione,
-            );
+            let esito = riempiEsito(areeInserite, areeReset, motivazione);
             exports.esito = esito;
             server.mandaEsito();
           }
@@ -13478,9 +13528,7 @@ function entrata() {
     }
   });
 }
-function mandaEsito() {
-  exports.esito = esito;
-}
+
 exports.entrata = entrata;
 exports.port = port;
 exports.esito = esito;
