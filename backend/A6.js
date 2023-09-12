@@ -6975,172 +6975,172 @@ function entrata() {
             var colonna13bin = hex2bin(colonna13);
             var risultato;
             switch (colonna10bin) {
-              case "10000000":
+              case colonna10bin.slice(0,1)==1:
                 risultato = "uscita 8 abilitata";
                 console.log(risultato);
                 break;
-              case "01000000":
+              case colonna10bin.slice(1,2)==1:
                 risultato = "uscita 7 abilitata";
                 console.log(risultato);
                 break;
-              case "00100000":
+              case colonna10bin.slice(2,3)==1:
                 risultato = "uscita 6 abilitata";
                 console.log(risultato);
                 break;
-              case "00010000":
+              case colonna10bin.slice(3,4)==1:
                 risultato = "uscita 5 abilitata";
                 console.log(risultato);
                 break;
-              case "00001000":
+              case colonna10bin.slice(4,5)==1:
                 risultato = "uscita 4 abilitata";
                 console.log(risultato);
                 break;
-              case "00000100":
+              case colonna10bin.slice(5,6)==1:
                 risultato = "uscita 3 abilitata";
                 console.log(risultato);
                 break;
-              case "00000010":
+              case colonna10bin.slice(6,7)==1:
                 risultato = "uscita 2 abilitata";
                 console.log(risultato);
                 break;
-              case "00000001":
+              case colonna10bin.slice(7,8)==1:
                 risultato = "uscita 1 abilitata";
                 console.log(risultato);
                 break;
             }
 
             switch (colonna11bin) {
-              case "10000000":
+              case colonna11bin.slice(0,1)==1:
                 risultato = "uscita 16 abilitata";
                 console.log(risultato);
                 break;
-              case "01000000":
+              case colonna11bin.slice(1,2)==1:
                 risultato = "uscita 15 abilitata";
                 console.log(risultato);
                 break;
-              case "00100000":
+              case colonna11bin.slice(2,3)==1:
                 risultato = "uscita 14 abilitata";
                 console.log(risultato);
                 break;
-              case "00010000":
+              case colonna11bin.slice(3,4)==1:
                 risultato = "uscita 13 abilitata";
                 console.log(risultato);
                 break;
-              case "00001000":
+              case colonna11bin.slice(4,5)==1:
                 risultato = "uscita 12 abilitata";
                 console.log(risultato);
                 break;
-              case "00000100":
+              case colonna11bin.slice(5,6)==1:
                 risultato = "uscita 11 abilitata";
                 console.log(risultato);
                 break;
-              case "00000010":
+              case colonna11bin.slice(6,7)==1:
                 risultato = "uscita 10 abilitata";
                 console.log(risultato);
                 break;
-              case "00000001":
+              case colonna11bin.slice(7,8)==1:
                 risultato = "uscita 9 abilitata";
                 console.log(risultato);
                 break;
             }
             switch (colonna12bin) {
-              case "10000000":
+              case colonna12bin.slice(0,1)==1:
                 risultato = "uscita 8 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "01000000":
+              case colonna12bin.slice(1,2)==1:
                 risultato = "uscita 7 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00100000":
+              case colonna12bin.slice(2,3)==1:
                 risultato = "uscita 6 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00010000":
+              case colonna12bin.slice(3,4)==1:
                 risultato = "uscita 5 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00001000":
+              case colonna12bin.slice(4,5)==1:
                 risultato = "uscita 4 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00000100":
+              case colonna12bin.slice(5,6)==1:
                 risultato = "uscita 3 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00000010":
+              case colonna12bin.slice(6,7)==1:
                 risultato = "uscita 2 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00000001":
+              case colonna12bin.slice(7,8)==1:
                 risultato = "uscita 1 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
             }
             switch (colonna13bin) {
-              case "10000000":
+              case colonna13bin.slice(0,1)==1:
                 risultato = "uscita 16 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "01000000":
+              case colonna13bin.slice(1,2)==1:
                 risultato = "uscita 15 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00100000":
+              case colonna13bin.slice(2,3)==1:
                 risultato = "uscita 14 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00010000":
+              case colonna13bin.slice(3,4)==1:
                 risultato = "uscita 13 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00001000":
+              case colonna13bin.slice(4,5)==1:
                 risultato = "uscita 12 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00000100":
+              case colonna13bin.slice(5,6)==1:
                 risultato = "uscita 11 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00000010":
+              case colonna13bin.slice(6,7)==1:
                 risultato = "uscita 10 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
-              case "00000001":
+              case colonna13bin.slice(7,8)==1:
                 risultato = "uscita 9 con funzionamento manuale o da squillo";
                 console.log(risultato);
                 break;
             }
             switch (colonna16bin) {
-              case "10000000":
+              case colonna16bin.slice(0,1)==1:
                 risultato = "zona 8 abilitata";
                 console.log(risultato);
                 break;
-              case "01000000":
+              case colonna16bin.slice(1,2)==1:
                 risultato = "zona 7 abilitata";
                 console.log(risultato);
                 break;
-              case "00100000":
+              case colonna16bin.slice(2,3)==1:
                 risultato = "zona 6 abilitata";
                 console.log(risultato);
                 break;
-              case "00010000":
+              case colonna16bin.slice(3,4)==1:
                 risultato = "zona 5 abilitata";
                 console.log(risultato);
                 break;
-              case "00001000":
+              case colonna16bin.slice(4,5)==1:
                 risultato = "zona 4 abilitata";
                 console.log(risultato);
                 break;
-              case "00000100":
+              case colonna16bin.slice(5,6)==1:
                 risultato = "zona 3 abilitata";
                 console.log(risultato);
                 break;
-              case "00000010":
+              case colonna16bin.slice(6,7)==1:
                 risultato = "zona 2 abilitata";
                 console.log(risultato);
                 break;
-              case "00000001":
+              case colonna16bin.slice(7,8)==1:
                 risultato = "zona 1 abilitata";
                 console.log(risultato);
                 break;
