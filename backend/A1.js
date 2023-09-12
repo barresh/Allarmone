@@ -453,6 +453,56 @@ function invia() {
   const arrivo = server.arrivo;
   console.log("in 1 arriva:", arrivo);
   if (arrivo.payload == 0x01) {
+    if (
+      a6.esito.areeInserite[0] == 1 ||
+      a6.esito.areeInserite[1] == 1 ||
+      a6.esito.areeInserite[2] == 1 ||
+      a6.esito.areeInserite[3] == 1
+    ) {
+      function accendiAree() {
+        var accensione = new Buffer(8);
+        accensione[0] = mittente;
+        accensione[1] = destinatario;
+        accensione[2] = payload[2];
+        accensione[3] = "0x" + arrivo.pin.slice(0, 2);
+        accensione[4] = "0x" + arrivo.pin.slice(2, 4);
+        if (!!arrivo.pin.slice(4, 6)) {
+          accensione[5] = "0x" + arrivo.pin.slice(4, 6);
+        } else {
+          accensione[5] = 0xff;
+        }
+        accensione[6] = "0x" + arrivo.aree;
+        sommaAccensione = (
+          accensione[0] +
+          accensione[1] +
+          accensione[2] +
+          accensione[3] +
+          accensione[4] +
+          accensione[5] +
+          accensione[6]
+        ).toString(16);
+        if (sommaAccensione.length == 3) {
+          sommaAccensione = sommaAccensione.slice(1, 3);
+        }
+        console.log("sommaAccensione", sommaAccensione);
+        accensione[7] = "0x" + sommaAccensione;
+
+        port.open(function (error) {
+          console.log("CST port open");
+          port.write(accensione, function (err, result) {
+            if (err) {
+              console.log("Error while sending message : " + err);
+            }
+            if (result) {
+              console.log(
+                "Response received after sending message : " + result
+              );
+            }
+          });
+        });
+      }
+      accendiaree();
+    }
     function validaCodice() {
       var validitaCodice = new Buffer(7);
       validitaCodice[0] = mittente;
