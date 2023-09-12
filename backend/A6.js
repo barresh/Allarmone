@@ -7450,18 +7450,23 @@ function entrata() {
             } else {
               zoneD[0] = 0;
             }
-            console.log("zoneAbilitatw",zoneAbilitate);
-            console.log("zoneA",zoneA);
-            console.log("zoneB",zoneB);
-            console.log("zoneD",zoneC);
-            console.log("zoneD",zoneD);
-            function riempiEsito(
-              zoneAbilitate,
-              zoneA,
-              zoneB,
-              zoneC,
-              zoneD,
-            ) {
+            function binarioInArray(binario, destinazione) {
+              for (let i = 0; i < binario.length; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }
+            binarioInArray(colonna16bin, zoneAbilitate);
+            binarioInArray(colonna17bin, zoneA);
+            binarioInArray(colonna18bin, zoneB);
+            binarioInArray(colonna19bin, zoneC);
+            binarioInArray(colonna20bin, zoneD);
+            console.log("zoneAbilitatw", zoneAbilitate);
+            console.log("zoneA", zoneA);
+            console.log("zoneB", zoneB);
+            console.log("zoneD", zoneC);
+            console.log("zoneD", zoneD);
+            function riempiEsito(zoneAbilitate, zoneA, zoneB, zoneC, zoneD) {
               return {
                 zoneAbilitate: zoneAbilitate,
                 zoneA: zoneA,
@@ -7470,13 +7475,7 @@ function entrata() {
                 zoneD: zoneD,
               };
             }
-            let esito = riempiEsito(
-              zoneAbilitate,
-              zoneA,
-              zoneB,
-              zoneC,
-              zoneD
-            );
+            let esito = riempiEsito(zoneAbilitate, zoneA, zoneB, zoneC, zoneD);
             exports.esito = esito;
             if (esito) {
               server.mandaEsito();
