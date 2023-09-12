@@ -7304,8 +7304,9 @@ function entrata() {
               motivazione
             );
             exports.esito = esito;
-            server.mandaEsito();
+            
           }
+          server.mandaEsito();
           if (payload == "05") {
             var colonna4 = bufferino.slice(6, 8);
             var colonna5 = bufferino.slice(8, 10);
