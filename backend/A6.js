@@ -6982,6 +6982,11 @@ function entrata() {
             var colonna16bin = hex2bin(colonna16);
             var risultato;
             var usciteAbilitate = [];
+            var zoneAbilitate = [];
+            var zoneA = [];
+            var zoneB = [];
+            var zoneC = [];
+            var zoneD = [];
             var usciteConFunzionamentoManuale = [];
             console.log("prima cifra versione fw", colonna4);
             console.log("seconda cifra versione fw", colonna5);
