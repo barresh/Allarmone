@@ -6964,6 +6964,12 @@ function entrata() {
             }
           }
           if (payload == "02") {
+            var colonna4=bufferino.slice(6,8);
+            var colonna5=bufferino.slice(8,10);
+            var colonna6=bufferino.slice(10,12);
+            var colonna7=bufferino.slice(12,14);
+            var colonna8=bufferino.slice(14,16);
+            var colonna9 =bufferino.slice(16,18);
             var colonna10 = bufferino.slice(18, 20);
             var colonna11 = bufferino.slice(20, 22);
             var colonna12 = bufferino.slice(22, 24);
@@ -6975,6 +6981,12 @@ function entrata() {
             var colonna13bin = hex2bin(colonna13);
             var colonna16bin = hex2bin(colonna16);
             var risultato;
+            console.log("prima cifra versione fw",colonna4);
+            console.log("seconda cifra versione fw",colonna5);
+            console.log("prima cifra numero seriale della centrale",colonna6);
+            console.log("seconda cifra numero seriale della centrale",colonna7);
+            console.log("terza cifra numero seriale della centrale",colonna8);
+            console.log("quarta cifra numero seriale della centrale",colonna9);
             switch (colonna10bin) {
               case colonna10bin.slice(0,1)==1:
                 risultato = "uscita 8 abilitata";
