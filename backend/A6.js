@@ -7455,6 +7455,32 @@ function entrata() {
             console.log("zoneB",zoneB);
             console.log("zoneD",zoneC);
             console.log("zoneD",zoneD);
+            function riempiEsito(
+              zoneAbilitate,
+              zoneA,
+              zoneB,
+              zoneC,
+              zoneD,
+            ) {
+              return {
+                zoneAbilitate: zoneAbilitate,
+                zoneA: zoneA,
+                zoneB: zoneB,
+                zoneC: zoneC,
+                zoneD: zoneD,
+              };
+            }
+            let esito = riempiEsito(
+              zoneAbilitate,
+              zoneA,
+              zoneB,
+              zoneC,
+              zoneD
+            );
+            exports.esito = esito;
+            if (esito) {
+              server.mandaEsito();
+            }
           }
           if (payload == "04") {
             var colonna4 = bufferino.slice(6, 8);
