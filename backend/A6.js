@@ -7258,7 +7258,7 @@ function entrata() {
               }
             }
             function binarioInArray2(binario, destinazione) {
-              for (let i = 7; i < binario.length; i++) {
+              for (let i = 7; i < 16; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
                 console.log(destinazione[i]);
               }
