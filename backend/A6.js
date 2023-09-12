@@ -6900,67 +6900,67 @@ function entrata() {
                 arraytelecombatt[14] = 0;
                 arraytelecombatt[15] = 0;
               }
-            }
-            function riempiEsito(
-              arrayaree,
-              arrayareeinserite,
-              arrayzoneinallarme,
-              arrayareeinallarme,
-              arrayareeinmemoriaallarme,
-              arrayzoneinmemoria,
-              arrayzoneescluse,
-              arrayzonerapine,
-              arrayzonetampap,
-              arrayzoneradiomr,
-              arrayzonetampap,
-              arrayzoneradiobatt,
-              arraytelecombatt,
-              arrayareereset,
-              arrayzoneallarmetamper,
-              arrayzonemr,
-              arrayzonebatt
-            ) {
-              return {
-                arrayaree: arrayaree,
-                arrayareeinserite: arrayareeinserite,
-                arrayzoneinallarme: arrayzoneinallarme,
-                arrayareeinallarme: arrayareeinallarme,
-                arrayareeinmemoriaallarme: arrayareeinmemoriaallarme,
-                arrayzoneinmemoria: arrayzoneinmemoria,
-                arrayzoneescluse: arrayzoneescluse,
-                arrayzonerapine: arrayzonerapine,
-                arrayzonetampap: arrayzonetampap,
-                arrayzoneradiomr: arrayzoneradiomr,
-                arrayzoneradiobatt: arrayzoneradiobatt,
-                arraytelecombatt: arraytelecombatt,
-                arrayareereset: arrayareereset,
-                arrayzoneallarmetamper: arrayzoneallarmetamper,
-                arrayzonemr: arrayzonemr,
-                arrayzonebatt: arrayzonebatt,
-              };
-            }
-            let esito = riempiEsito(
-              arrayaree,
-              arrayareeinserite,
-              arrayzoneinallarme,
-              arrayareeinallarme,
-              arrayareeinmemoriaallarme,
-              arrayzoneinmemoria,
-              arrayzoneescluse,
-              arrayzonerapine,
-              arrayzonetampap,
-              arrayzoneradiomr,
-              arrayzonetampap,
-              arrayzoneradiobatt,
-              arraytelecombatt,
-              arrayareereset,
-              arrayzoneallarmetamper,
-              arrayzonemr,
-              arrayzonebatt
-            );
-            exports.esito;
-            if (esito) {
-              server.mandaEsito();
+              function riempiEsito(
+                arrayaree,
+                arrayareeinserite,
+                arrayzoneinallarme,
+                arrayareeinallarme,
+                arrayareeinmemoriaallarme,
+                arrayzoneinmemoria,
+                arrayzoneescluse,
+                arrayzonerapine,
+                arrayzonetampap,
+                arrayzoneradiomr,
+                arrayzonetampap,
+                arrayzoneradiobatt,
+                arraytelecombatt,
+                arrayareereset,
+                arrayzoneallarmetamper,
+                arrayzonemr,
+                arrayzonebatt
+              ) {
+                return {
+                  arrayaree: arrayaree,
+                  arrayareeinserite: arrayareeinserite,
+                  arrayzoneinallarme: arrayzoneinallarme,
+                  arrayareeinallarme: arrayareeinallarme,
+                  arrayareeinmemoriaallarme: arrayareeinmemoriaallarme,
+                  arrayzoneinmemoria: arrayzoneinmemoria,
+                  arrayzoneescluse: arrayzoneescluse,
+                  arrayzonerapine: arrayzonerapine,
+                  arrayzonetampap: arrayzonetampap,
+                  arrayzoneradiomr: arrayzoneradiomr,
+                  arrayzoneradiobatt: arrayzoneradiobatt,
+                  arraytelecombatt: arraytelecombatt,
+                  arrayareereset: arrayareereset,
+                  arrayzoneallarmetamper: arrayzoneallarmetamper,
+                  arrayzonemr: arrayzonemr,
+                  arrayzonebatt: arrayzonebatt,
+                };
+              }
+              let esito = riempiEsito(
+                arrayaree,
+                arrayareeinserite,
+                arrayzoneinallarme,
+                arrayareeinallarme,
+                arrayareeinmemoriaallarme,
+                arrayzoneinmemoria,
+                arrayzoneescluse,
+                arrayzonerapine,
+                arrayzonetampap,
+                arrayzoneradiomr,
+                arrayzonetampap,
+                arrayzoneradiobatt,
+                arraytelecombatt,
+                arrayareereset,
+                arrayzoneallarmetamper,
+                arrayzonemr,
+                arrayzonebatt
+              );
+              exports.esito;
+              if (esito) {
+                server.mandaEsito();
+              }
             }
           }
           if (payload == "02") {
@@ -6974,8 +6974,8 @@ function entrata() {
             var colonna11 = bufferino.slice(20, 22);
             var colonna12 = bufferino.slice(22, 24);
             var colonna13 = bufferino.slice(24, 26);
-            var colonna14=bufferino.slice(26,28);
-            var colonna15=bufferino.slice(28,30);
+            var colonna14 = bufferino.slice(26, 28);
+            var colonna15 = bufferino.slice(28, 30);
             var colonna16 = bufferino.slice(30, 32);
             var colonna17 = bufferino.slice(32, 34);
             var colonna18 = bufferino.slice(34, 36);
@@ -7065,7 +7065,7 @@ function entrata() {
             var risultato;
             var usciteAbilitate = [];
             var zoneAbilitate = [];
-            var areeAbilitate=[];
+            var areeAbilitate = [];
             var zoneA = [];
             var zoneB = [];
             var zoneC = [];
@@ -7121,7 +7121,8 @@ function entrata() {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
                 console.log(destinazione[i]);
               }
-            }function binarioInArray8(binario, destinazione) {
+            }
+            function binarioInArray8(binario, destinazione) {
               for (let i = 56; i < 64; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
                 console.log(destinazione[i]);
@@ -7134,50 +7135,57 @@ function entrata() {
             binarioInArray2(colonna11bin, usciteAbilitate);
             binarioInArray(colonna16bin, zoneAbilitate);
             binarioInArray2(colonna21bin, zoneAbilitate);
-            binarioInArray3(colonna26bin,zoneAbilitate);
-            binarioInArray4(colonna31bin,zoneAbilitate);
-            binarioInArray5(colonna36bin,zoneAbilitate);
-            binarioInArray6(colonna41bin,zoneAbilitate);
-            binarioInArray7(colonna46bin,zoneAbilitate);
-            binarioInArray8(colonna51bin,zoneAbilitate);
+            binarioInArray3(colonna26bin, zoneAbilitate);
+            binarioInArray4(colonna31bin, zoneAbilitate);
+            binarioInArray5(colonna36bin, zoneAbilitate);
+            binarioInArray6(colonna41bin, zoneAbilitate);
+            binarioInArray7(colonna46bin, zoneAbilitate);
+            binarioInArray8(colonna51bin, zoneAbilitate);
             binarioInArray(colonna17bin, zoneA);
             binarioInArray2(colonna22bin, zoneA);
-            binarioInArray3(colonna27bin,zoneA);
-            binarioInArray4(colonna32bin,zoneA);
-            binarioInArray5(colonna37bin,zoneA);
-            binarioInArray6(colonna42bin,zoneA);
-            binarioInArray7(colonna47bin,zoneA);
-            binarioInArray8(colonna52bin,zoneA);
+            binarioInArray3(colonna27bin, zoneA);
+            binarioInArray4(colonna32bin, zoneA);
+            binarioInArray5(colonna37bin, zoneA);
+            binarioInArray6(colonna42bin, zoneA);
+            binarioInArray7(colonna47bin, zoneA);
+            binarioInArray8(colonna52bin, zoneA);
             binarioInArray(colonna18bin, zoneB);
             binarioInArray2(colonna23bin, zoneB);
-            binarioInArray3(colonna28bin,zoneB);
-            binarioInArray4(colonna33bin,zoneB);
-            binarioInArray5(colonna38bin,zoneB);
-            binarioInArray6(colonna43bin,zoneB);
-            binarioInArray7(colonna48bin,zoneB);
-            binarioInArray8(colonna53bin,zoneB);
+            binarioInArray3(colonna28bin, zoneB);
+            binarioInArray4(colonna33bin, zoneB);
+            binarioInArray5(colonna38bin, zoneB);
+            binarioInArray6(colonna43bin, zoneB);
+            binarioInArray7(colonna48bin, zoneB);
+            binarioInArray8(colonna53bin, zoneB);
             binarioInArray(colonna19bin, zoneC);
             binarioInArray2(colonna24bin, zoneC);
-            binarioInArray3(colonna29bin,zoneC);
-            binarioInArray4(colonna34bin,zoneC);
-            binarioInArray5(colonna39bin,zoneC);
-            binarioInArray6(colonna44bin,zoneC);
-            binarioInArray7(colonna49bin,zoneC);
-            binarioInArray8(colonna54bin,zoneC);
+            binarioInArray3(colonna29bin, zoneC);
+            binarioInArray4(colonna34bin, zoneC);
+            binarioInArray5(colonna39bin, zoneC);
+            binarioInArray6(colonna44bin, zoneC);
+            binarioInArray7(colonna49bin, zoneC);
+            binarioInArray8(colonna54bin, zoneC);
             binarioInArray(colonna20bin, zoneD);
             binarioInArray2(colonna25bin, zoneD);
-            binarioInArray3(colonna30bin,zoneD);
-            binarioInArray4(colonna35bin,zoneD);
-            binarioInArray5(colonna40bin,zoneD);
-            binarioInArray6(colonna45bin,zoneD);
-            binarioInArray7(colonna50bin,zoneD);
-            binarioInArray8(colonna55bin,zoneD);
+            binarioInArray3(colonna30bin, zoneD);
+            binarioInArray4(colonna35bin, zoneD);
+            binarioInArray5(colonna40bin, zoneD);
+            binarioInArray6(colonna45bin, zoneD);
+            binarioInArray7(colonna50bin, zoneD);
+            binarioInArray8(colonna55bin, zoneD);
             console.log("zoneAbilitate", zoneAbilitate);
             console.log("zoneA", zoneA);
             console.log("zoneB", zoneB);
             console.log("zoneD", zoneC);
             console.log("zoneD", zoneD);
-            function riempiEsito(usciteAbilitate, zoneAbilitate, zoneA, zoneB, zoneC, zoneD) {
+            function riempiEsito(
+              usciteAbilitate,
+              zoneAbilitate,
+              zoneA,
+              zoneB,
+              zoneC,
+              zoneD
+            ) {
               return {
                 usciteAbilitate: usciteAbilitate,
                 zoneAbilitate: zoneAbilitate,
@@ -7187,7 +7195,14 @@ function entrata() {
                 zoneD: zoneD,
               };
             }
-            let esito = riempiEsito(usciteAbilitate, zoneAbilitate, zoneA, zoneB, zoneC, zoneD);
+            let esito = riempiEsito(
+              usciteAbilitate,
+              zoneAbilitate,
+              zoneA,
+              zoneB,
+              zoneC,
+              zoneD
+            );
             exports.esito = esito;
             if (esito) {
               server.mandaEsito();
