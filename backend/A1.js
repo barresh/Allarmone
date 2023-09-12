@@ -472,7 +472,8 @@ function invia() {
         } else {
           accensione[5] = 0xff;
         }
-        accensione[6] = "0x" + arrivo.aree;
+
+        accensione[6] = 0x0f;
         sommaAccensione = (
           accensione[0] +
           accensione[1] +
