@@ -7451,7 +7451,7 @@ function entrata() {
               zoneD[0] = 0;
             }
             console.log("zoneAbilitatw",zoneAbilitate);
-            console.log("zoneA",zoneAbilitate);
+            console.log("zoneA",zoneA);
             console.log("zoneB",zoneB);
             console.log("zoneD",zoneC);
             console.log("zoneD",zoneD);

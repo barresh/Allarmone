@@ -7,6 +7,7 @@ console.log("arriva", a6.aggiornamentostato);
 
 wss.on("connection", (ws) => {
   console.log("connessione WebSocket stabilita");
+  a1.trigConfigurazioneImpianto();
   // Ricevi i messaggi dal client Angular
   ws.on("message", (message) => {
     const arrivo = JSON.parse(message);
