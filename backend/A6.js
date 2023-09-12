@@ -6973,6 +6973,7 @@ function entrata() {
             var colonna11bin = hex2bin(colonna11);
             var colonna12bin = hex2bin(colonna12);
             var colonna13bin = hex2bin(colonna13);
+            var colonna16bin = hex2bin(colonna16);
             var risultato;
             switch (colonna10bin) {
               case colonna10bin.slice(0,1)==1:
