@@ -20,11 +20,10 @@ wss.on("connection", (ws) => {
       console.log("Esito che ti mando:", esito);
       ws.send(JSON.stringify(a6.esito));
     }
-
+    exports.mandaEsito = mandaEsito;
     console.log("Messaggio ricevuto dal client Angular:", message);
   });
   ws.on("close", () => {
     console.log("Client disconnected");
   });
 });
-exports.mandaEsito = mandaEsito;
