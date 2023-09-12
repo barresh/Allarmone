@@ -6964,12 +6964,12 @@ function entrata() {
             }
           }
           if (payload == "02") {
-            var colonna4=bufferino.slice(6,8);
-            var colonna5=bufferino.slice(8,10);
-            var colonna6=bufferino.slice(10,12);
-            var colonna7=bufferino.slice(12,14);
-            var colonna8=bufferino.slice(14,16);
-            var colonna9 =bufferino.slice(16,18);
+            var colonna4 = bufferino.slice(6, 8);
+            var colonna5 = bufferino.slice(8, 10);
+            var colonna6 = bufferino.slice(10, 12);
+            var colonna7 = bufferino.slice(12, 14);
+            var colonna8 = bufferino.slice(14, 16);
+            var colonna9 = bufferino.slice(16, 18);
             var colonna10 = bufferino.slice(18, 20);
             var colonna11 = bufferino.slice(20, 22);
             var colonna12 = bufferino.slice(22, 24);
@@ -6981,183 +6981,467 @@ function entrata() {
             var colonna13bin = hex2bin(colonna13);
             var colonna16bin = hex2bin(colonna16);
             var risultato;
-            console.log("prima cifra versione fw",colonna4);
-            console.log("seconda cifra versione fw",colonna5);
-            console.log("prima cifra numero seriale della centrale",colonna6);
-            console.log("seconda cifra numero seriale della centrale",colonna7);
-            console.log("terza cifra numero seriale della centrale",colonna8);
-            console.log("quarta cifra numero seriale della centrale",colonna9);
-            switch (colonna10bin) {
-              case colonna10bin.slice(0,1)==1:
-                risultato = "uscita 8 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(1,2)==1:
-                risultato = "uscita 7 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(2,3)==1:
-                risultato = "uscita 6 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(3,4)==1:
-                risultato = "uscita 5 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(4,5)==1:
-                risultato = "uscita 4 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(5,6)==1:
-                risultato = "uscita 3 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(6,7)==1:
-                risultato = "uscita 2 abilitata";
-                console.log(risultato);
-                break;
-              case colonna10bin.slice(7,8)==1:
-                risultato = "uscita 1 abilitata";
-                console.log(risultato);
-                break;
+            var usciteAbilitate = [];
+            var usciteConFunzionamentoManuale = [];
+            console.log("prima cifra versione fw", colonna4);
+            console.log("seconda cifra versione fw", colonna5);
+            console.log("prima cifra numero seriale della centrale", colonna6);
+            console.log(
+              "seconda cifra numero seriale della centrale",
+              colonna7
+            );
+            console.log("terza cifra numero seriale della centrale", colonna8);
+            console.log("quarta cifra numero seriale della centrale", colonna9);
+            if (colonna10bin.slice(0, 1) == 1) {
+              risultato = "uscita 8 abilitata";
+              console.log(risultato);
+              usciteAbilitate[7] = 1;
+            } else {
+              risulato = "uscita 8 non abilitata";
+              usciteAbilitate[7] = 0;
+            }
+            if (colonna10bin.slice(1, 2) == 1) {
+              risultato = "uscita 7 abilitata";
+              console.log(risultato);
+              usciteAbilitate[6] = 1;
+            } else {
+              risulato = "uscita 7 non abilitata";
+              usciteAbilitate[6] = 0;
+            }
+            if (colonna10bin.slice(2, 3) == 1) {
+              risultato = "uscita 6 abilitata";
+              console.log(risultato);
+              usciteAbilitate[5] = 1;
+            } else {
+              risulato = "uscita 6 non abilitata";
+              usciteAbilitate[5] = 0;
+            }
+            if (colonna10bin.slice(3, 4) == 1) {
+              risultato = "uscita 5 abilitata";
+              console.log(risultato);
+              usciteAbilitate[4] = 1;
+            } else {
+              risulato = "uscita 5 non abilitata";
+              usciteAbilitate[4] = 0;
+            }
+            if (colonna10bin.slice(4, 5) == 1) {
+              risultato = "uscita 4 abilitata";
+              console.log(risultato);
+              usciteAbilitate[3] = 1;
+            } else {
+              risulato = "uscita 4 non abilitata";
+              usciteAbilitate[3] = 0;
+            }
+            if (colonna10bin.slice(5, 6) == 1) {
+              risultato = "uscita 3 abilitata";
+              console.log(risultato);
+              usciteAbilitate[2] = 1;
+            } else {
+              risulato = "uscita 3 non abilitata";
+              usciteAbilitate[2] = 0;
+            }
+            if (colonna10bin.slice(6, 7) == 1) {
+              risultato = "uscita 2 abilitata";
+              usciteAbilitate[1] = 1;
+              console.log(risultato);
+            } else {
+              risulato = "uscita 2 non abilitata";
+              usciteAbilitate[1] = 0;
+            }
+            if (colonna10bin.slice(7, 8) == 1) {
+              risultato = "uscita 1 abilitata";
+              console.log(risultato);
+              usciteAbilitate[0] = 1;
+            } else {
+              risulato = "uscita 1 non abilitata";
+              usciteAbilitate[0] = 0;
             }
 
-            switch (colonna11bin) {
-              case colonna11bin.slice(0,1)==1:
-                risultato = "uscita 16 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(1,2)==1:
-                risultato = "uscita 15 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(2,3)==1:
-                risultato = "uscita 14 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(3,4)==1:
-                risultato = "uscita 13 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(4,5)==1:
-                risultato = "uscita 12 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(5,6)==1:
-                risultato = "uscita 11 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(6,7)==1:
-                risultato = "uscita 10 abilitata";
-                console.log(risultato);
-                break;
-              case colonna11bin.slice(7,8)==1:
-                risultato = "uscita 9 abilitata";
-                console.log(risultato);
-                break;
+            if (colonna11bin.slice(0, 1) == 1) {
+              risultato = "uscita 16 abilitata";
+              console.log(risultato);
+              usciteAbilitate[15] = 1;
+            } else {
+              risulato = "uscita 16 non abilitata";
+              usciteAbilitate[15] = 0;
             }
-            switch (colonna12bin) {
-              case colonna12bin.slice(0,1)==1:
-                risultato = "uscita 8 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(1,2)==1:
-                risultato = "uscita 7 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(2,3)==1:
-                risultato = "uscita 6 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(3,4)==1:
-                risultato = "uscita 5 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(4,5)==1:
-                risultato = "uscita 4 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(5,6)==1:
-                risultato = "uscita 3 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(6,7)==1:
-                risultato = "uscita 2 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna12bin.slice(7,8)==1:
-                risultato = "uscita 1 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
+            if (colonna11bin.slice(1, 2) == 1) {
+              risultato = "uscita 15 abilitata";
+              console.log(risultato);
+              usciteAbilitate[14] = 1;
+            } else {
+              risulato = "uscita 15 non abilitata";
+              usciteAbilitate[14] = 0;
             }
-            switch (colonna13bin) {
-              case colonna13bin.slice(0,1)==1:
-                risultato = "uscita 16 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(1,2)==1:
-                risultato = "uscita 15 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(2,3)==1:
-                risultato = "uscita 14 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(3,4)==1:
-                risultato = "uscita 13 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(4,5)==1:
-                risultato = "uscita 12 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(5,6)==1:
-                risultato = "uscita 11 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(6,7)==1:
-                risultato = "uscita 10 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
-              case colonna13bin.slice(7,8)==1:
-                risultato = "uscita 9 con funzionamento manuale o da squillo";
-                console.log(risultato);
-                break;
+            if (colonna11bin.slice(2, 3) == 1) {
+              risultato = "uscita 14 abilitata";
+              console.log(risultato);
+              usciteAbilitate[13] = 1;
+            } else {
+              risulato = "uscita 14 non abilitata";
+              usciteAbilitate[13] = 0;
             }
-            switch (colonna16bin) {
-              case colonna16bin.slice(0,1)==1:
-                risultato = "zona 8 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(1,2)==1:
-                risultato = "zona 7 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(2,3)==1:
-                risultato = "zona 6 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(3,4)==1:
-                risultato = "zona 5 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(4,5)==1:
-                risultato = "zona 4 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(5,6)==1:
-                risultato = "zona 3 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(6,7)==1:
-                risultato = "zona 2 abilitata";
-                console.log(risultato);
-                break;
-              case colonna16bin.slice(7,8)==1:
-                risultato = "zona 1 abilitata";
-                console.log(risultato);
-                break;
+            if (colonna11bin.slice(3, 4) == 1) {
+              risultato = "uscita 13 abilitata";
+              console.log(risultato);
+              usciteAbilitate[12] = 1;
+            } else {
+              risulato = "uscita 13 non abilitata";
+              usciteAbilitate[12] = 0;
             }
+            if (colonna11bin.slice(4, 5) == 1) {
+              risultato = "uscita 12 abilitata";
+              console.log(risultato);
+              usciteAbilitate[11] = 1;
+            } else {
+              risulato = "uscita 12 non abilitata";
+              usciteAbilitate[11] = 0;
+            }
+            if (colonna11bin.slice(5, 6) == 1) {
+              risultato = "uscita 11 abilitata";
+              console.log(risultato);
+              usciteAbilitate[10] = 1;
+            } else {
+              risulato = "uscita 11 non abilitata";
+              usciteAbilitate[10] = 0;
+            }
+            if (colonna11bin.slice(6, 7) == 1) {
+              risultato = "uscita 10 abilitata";
+              usciteAbilitate[9] = 1;
+              console.log(risultato);
+            } else {
+              risulato = "uscita 10 non abilitata";
+              usciteAbilitate[9] = 0;
+            }
+            if (colonna11bin.slice(7, 8) == 1) {
+              risultato = "uscita 9 abilitata";
+              console.log(risultato);
+              usciteAbilitate[8] = 1;
+            } else {
+              risulato = "uscita 9 non abilitata";
+              usciteAbilitate[8] = 0;
+            }
+
+            if (colonna12bin.slice(0, 1) == 1) {
+              risultato = "uscita 8 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[7] = 1;
+            } else {
+              usciteConFunzionamentoManuale[7] = 0;
+            }
+            if (colonna12bin.slice(1, 2) == 1) {
+              risultato = "uscita 7 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[6] = 1;
+            } else {
+              usciteConFunzionamentoManuale[6] = 0;
+            }
+            if (colonna12bin.slice(2, 3) == 1) {
+              risultato = "uscita 6 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[5] = 1;
+            } else {
+              usciteConFunzionamentoManuale[5] = 0;
+            }
+            if (colonna12bin.slice(3, 4) == 1) {
+              risultato = "uscita 5 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[4] = 1;
+            } else {
+              usciteConFunzionamentoManuale[4] = 0;
+            }
+            if (colonna12bin.slice(4, 5) == 1) {
+              risultato = "uscita 4 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[3] = 1;
+            } else {
+              usciteConFunzionamentoManuale[3] = 0;
+            }
+            if (colonna12bin.slice(5, 6) == 1) {
+              risultato = "uscita 3 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[2] = 1;
+            } else {
+              usciteConFunzionamentoManuale[2] = 0;
+            }
+            if (colonna12bin.slice(6, 7) == 1) {
+              risultato = "uscita 2 con funzionamento manuale o da squillo";
+              usciteConFunzionamentoManuale[1] = 1;
+              console.log(risultato);
+            } else {
+              usciteConFunzionamentoManuale[1] = 0;
+            }
+            if (colonna12bin.slice(7, 8) == 1) {
+              risultato = "uscita 1 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[0] = 1;
+            } else {
+              usciteConFunzionamentoManuale[0] = 0;
+            }
+
+            if (colonna13bin.slice(0, 1) == 1) {
+              risultato = "uscita 16 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[15] = 1;
+            } else {
+              usciteConFunzionamentoManuale[15] = 0;
+            }
+            if (colonna13bin.slice(1, 2) == 1) {
+              risultato = "uscita 15 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[14] = 1;
+            } else {
+              usciteConFunzionamentoManuale[14] = 0;
+            }
+            if (colonna13bin.slice(2, 3) == 1) {
+              risultato = "uscita 14 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[13] = 1;
+            } else {
+              usciteConFunzionamentoManuale[13] = 0;
+            }
+            if (colonna13bin.slice(3, 4) == 1) {
+              risultato = "uscita 13 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[12] = 1;
+            } else {
+              usciteConFunzionamentoManuale[12] = 0;
+            }
+            if (colonna13bin.slice(4, 5) == 1) {
+              risultato = "uscita 12 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[11] = 1;
+            } else {
+              usciteConFunzionamentoManuale[11] = 0;
+            }
+            if (colonna13bin.slice(5, 6) == 1) {
+              risultato = "uscita 11 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[10] = 1;
+            } else {
+              usciteConFunzionamentoManuale[10] = 0;
+            }
+            if (colonna13bin.slice(6, 7) == 1) {
+              risultato = "uscita 10 con funzionamento manuale o da squillo";
+              usciteConFunzionamentoManuale[9] = 1;
+              console.log(risultato);
+            } else {
+              usciteConFunzionamentoManuale[9] = 0;
+            }
+            if (colonna13bin.slice(7, 8) == 1) {
+              risultato = "uscita 9 con funzionamento manuale o da squillo";
+              console.log(risultato);
+              usciteConFunzionamentoManuale[8] = 1;
+            } else {
+              usciteConFunzionamentoManuale[8] = 0;
+            }
+
+            if (colonna16bin.slice(0, 1) == 1) {
+              zoneAbilitate[7] = 1;
+            } else {
+              zoneAbilitate[7] = 0;
+            }
+            if (colonna16bin.slice(1, 2) == 1) {
+              zoneAbilitate[6] = 1;
+            } else {
+              zoneAbilitate[6] = 0;
+            }
+            if (colonna16bin.slice(2, 3) == 1) {
+              zoneAbilitate[5] = 1;
+            } else {
+              zoneAbilitate[5] = 0;
+            }
+            if (colonna16bin.slice(3, 4) == 1) {
+              zoneAbilitate[4] = 1;
+            } else {
+              zoneAbilitate[4] = 0;
+            }
+            if (colonna16bin.slice(4, 5) == 1) {
+              zoneAbilitate[3] = 1;
+            } else {
+              zoneAbilitate[3] = 0;
+            }
+            if (colonna16bin.slice(5, 6) == 1) {
+              zoneAbilitate[2] = 1;
+            } else {
+              zoneAbilitate[2] = 0;
+            }
+            if (colonna16bin.slice(6, 7) == 1) {
+              zoneAbilitate[1] = 1;
+            } else {
+              zoneAbilitate[1] = 0;
+            }
+            if (colonna16bin.slice(7, 8) == 1) {
+              zoneAbilitate[0] = 1;
+            } else {
+              zoneAbilitate[0] = 0;
+            }
+
+            if (colonna17bin.slice(0, 1) == 1) {
+              zoneA[7] = 1;
+            } else {
+              zoneA[7] = 0;
+            }
+            if (colonna17bin.slice(1, 2) == 1) {
+              zoneA[6] = 1;
+            } else {
+              zoneA[6] = 0;
+            }
+            if (colonna17bin.slice(2, 3) == 1) {
+              zoneA[5] = 1;
+            } else {
+              zoneA[5] = 0;
+            }
+            if (colonna17bin.slice(3, 4) == 1) {
+              zoneA[4] = 1;
+            } else {
+              zoneA[4] = 0;
+            }
+            if (colonna17bin.slice(4, 5) == 1) {
+              zoneA[3] = 1;
+            } else {
+              zoneA[3] = 0;
+            }
+            if (colonna17bin.slice(5, 6) == 1) {
+              zoneA[2] = 1;
+            } else {
+              zoneA[2] = 0;
+            }
+            if (colonna17bin.slice(6, 7) == 1) {
+              zoneA[1] = 1;
+            } else {
+              zoneA[1] = 0;
+            }
+            if (colonna17bin.slice(7, 8) == 1) {
+              zoneA[0] = 1;
+            } else {
+              zoneA[0] = 0;
+            }
+            if (colonna18bin.slice(0, 1) == 1) {
+              zoneB[7] = 1;
+            } else {
+              zoneB[7] = 0;
+            }
+            if (colonna18bin.slice(1, 2) == 1) {
+              zoneB[6] = 1;
+            } else {
+              zoneB[6] = 0;
+            }
+            if (colonna18bin.slice(2, 3) == 1) {
+              zoneB[5] = 1;
+            } else {
+              zoneB[5] = 0;
+            }
+            if (colonna18bin.slice(3, 4) == 1) {
+              zoneB[4] = 1;
+            } else {
+              zoneB[4] = 0;
+            }
+            if (colonna18bin.slice(4, 5) == 1) {
+              zoneB[3] = 1;
+            } else {
+              zoneB[3] = 0;
+            }
+            if (colonna18bin.slice(5, 6) == 1) {
+              zoneB[2] = 1;
+            } else {
+              zoneB[2] = 0;
+            }
+            if (colonna18bin.slice(6, 7) == 1) {
+              zoneB[1] = 1;
+            } else {
+              zoneB[1] = 0;
+            }
+            if (colonna18bin.slice(7, 8) == 1) {
+              zoneB[0] = 1;
+            } else {
+              zoneB[0] = 0;
+            }
+            if (colonna19bin.slice(0, 1) == 1) {
+              zoneC[7] = 1;
+            } else {
+              zoneC[7] = 0;
+            }
+            if (colonna19bin.slice(1, 2) == 1) {
+              zoneC[6] = 1;
+            } else {
+              zoneC[6] = 0;
+            }
+            if (colonna19bin.slice(2, 3) == 1) {
+              zoneC[5] = 1;
+            } else {
+              zoneC[5] = 0;
+            }
+            if (colonna19bin.slice(3, 4) == 1) {
+              zoneC[4] = 1;
+            } else {
+              zoneC[4] = 0;
+            }
+            if (colonna19bin.slice(4, 5) == 1) {
+              zoneC[3] = 1;
+            } else {
+              zoneC[3] = 0;
+            }
+            if (colonna19bin.slice(5, 6) == 1) {
+              zoneC[2] = 1;
+            } else {
+              zoneC[2] = 0;
+            }
+            if (colonna19bin.slice(6, 7) == 1) {
+              zoneC[1] = 1;
+            } else {
+              zoneC[1] = 0;
+            }
+            if (colonna19bin.slice(7, 8) == 1) {
+              zoneC[0] = 1;
+            } else {
+              zoneC[0] = 0;
+            }
+            if (colonna20bin.slice(0, 1) == 1) {
+              zoneD[7] = 1;
+            } else {
+              zoneD[7] = 0;
+            }
+            if (colonna20bin.slice(1, 2) == 1) {
+              zoneD[6] = 1;
+            } else {
+              zoneD[6] = 0;
+            }
+            if (colonna20bin.slice(2, 3) == 1) {
+              zoneD[5] = 1;
+            } else {
+              zoneD[5] = 0;
+            }
+            if (colonna20bin.slice(3, 4) == 1) {
+              zoneD[4] = 1;
+            } else {
+              zoneD[4] = 0;
+            }
+            if (colonna20bin.slice(4, 5) == 1) {
+              zoneD[3] = 1;
+            } else {
+              zoneD[3] = 0;
+            }
+            if (colonna20bin.slice(5, 6) == 1) {
+              zoneD[2] = 1;
+            } else {
+              zoneD[2] = 0;
+            }
+            if (colonna20bin.slice(6, 7) == 1) {
+              zoneD[1] = 1;
+            } else {
+              zoneD[1] = 0;
+            }
+            if (colonna20bin.slice(7, 8) == 1) {
+              zoneD[0] = 1;
+            } else {
+              zoneD[0] = 0;
+            }
+            console.log("zoneAbilitatw",zoneAbilitate);
+            console.log("zoneA",zoneAbilitate);
+            console.log("zoneB",zoneB);
+            console.log("zoneD",zoneC);
+            console.log("zoneD",zoneD);
           }
           if (payload == "04") {
             var colonna4 = bufferino.slice(6, 8);
