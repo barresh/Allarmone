@@ -6979,6 +6979,7 @@ function entrata() {
             var colonna18 = bufferino.slice(34, 36);
             var colonna19 = bufferino.slice(36, 38);
             var colonna20 = bufferino.slice(38, 40);
+            var colonna21=bufferino.slice(40,42)
             var colonna10bin = hex2bin(colonna10);
             var colonna11bin = hex2bin(colonna11);
             var colonna12bin = hex2bin(colonna12);
@@ -6988,6 +6989,7 @@ function entrata() {
             var colonna18bin = hex2bin(colonna18);
             var colonna19bin = hex2bin(colonna19);
             var colonna20bin = hex2bin(colonna20);
+            var colonna21bin = hex2bin(colonna21);
             var risultato;
             var usciteAbilitate = [];
             var zoneAbilitate = [];
