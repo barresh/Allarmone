@@ -454,10 +454,11 @@ function invia() {
   console.log("in 1 arriva:", arrivo);
   if (arrivo.payload == 0x01) {
     if (
-      a6.esito.areeInserite[0] == 1 ||
-      a6.esito.areeInserite[1] == 1 ||
-      a6.esito.areeInserite[2] == 1 ||
-      a6.esito.areeInserite[3] == 1
+      a6.esito &&
+      (a6.esito.areeInserite[0] == 1 ||
+        a6.esito.areeInserite[1] == 1 ||
+        a6.esito.areeInserite[2] == 1 ||
+        a6.esito.areeInserite[3] == 1)
     ) {
       function accendiAree() {
         var accensione = new Buffer(8);
