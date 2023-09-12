@@ -7409,7 +7409,9 @@ function entrata() {
             }
             let esito = riempiEsito(areeInserite, areeReset, motivazione);
             exports.esito = esito;
-            server.mandaEsito();
+            if(esito){
+              server.mandaEsito();
+            }
           }
           if (payload == "06") {
             var colonna4 = bufferino.slice(6, 8);
