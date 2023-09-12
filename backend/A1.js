@@ -502,7 +502,7 @@ function invia() {
           });
         });
       }
-      accendiaree();
+      accendiAree();
     }
     function validaCodice() {
       var validitaCodice = new Buffer(7);
