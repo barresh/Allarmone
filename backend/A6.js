@@ -7255,7 +7255,14 @@ function entrata() {
                 console.log(destinazione[i]);
               }
             }
+            function binarioInArray2(binario, destinazione) {
+              for (let i = 7; i < binario.length; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }
             binarioInArray(colonna16bin, zoneAbilitate);
+            binarioInArray2(colonna21bin, zoneAbilitate);
             binarioInArray(colonna17bin, zoneA);
             binarioInArray(colonna18bin, zoneB);
             binarioInArray(colonna19bin, zoneC);
