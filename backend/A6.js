@@ -7048,6 +7048,35 @@ function entrata() {
                 console.log(destinazione[i]);
               }
             }
+            function binarioInArray4(binario, destinazione) {
+              for (let i = 24; i < 32; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }
+            function binarioInArray5(binario, destinazione) {
+              for (let i = 32; i < 40; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }
+            function binarioInArray6(binario, destinazione) {
+              for (let i = 40; i < 48; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }
+            function binarioInArray7(binario, destinazione) {
+              for (let i = 48; i < 56; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }function binarioInArray8(binario, destinazione) {
+              for (let i = 56; i < 64; i++) {
+                destinazione[i] = binario[i] === "1" ? 1 : 0;
+                console.log(destinazione[i]);
+              }
+            }
             binarioInArray(colonna14bin, areeAbilitate);
             binarioInArray(colonna12bin, usciteConFunzionamentoManuale);
             binarioInArray2(colonna13bin, usciteConFunzionamentoManuale);
@@ -7056,18 +7085,43 @@ function entrata() {
             binarioInArray(colonna16bin, zoneAbilitate);
             binarioInArray2(colonna21bin, zoneAbilitate);
             binarioInArray3(colonna26bin,zoneAbilitate);
+            binarioInArray4(colonna31bin,zoneAbilitate);
+            binarioInArray5(colonna36bin,zoneAbilitate);
+            binarioInArray6(colonna41bin,zoneAbilitate);
+            binarioInArray7(colonna46bin,zoneAbilitate);
+            binarioInArray8(colonna51bin,zoneAbilitate);
             binarioInArray(colonna17bin, zoneA);
             binarioInArray2(colonna22bin, zoneA);
             binarioInArray3(colonna27bin,zoneA);
+            binarioInArray4(colonna32bin,zoneA);
+            binarioInArray5(colonna37bin,zoneA);
+            binarioInArray6(colonna42bin,zoneA);
+            binarioInArray7(colonna47bin,zoneA);
+            binarioInArray8(colonna52bin,zoneA);
             binarioInArray(colonna18bin, zoneB);
             binarioInArray2(colonna23bin, zoneB);
             binarioInArray3(colonna28bin,zoneB);
+            binarioInArray4(colonna33bin,zoneB);
+            binarioInArray5(colonna38bin,zoneB);
+            binarioInArray6(colonna43bin,zoneB);
+            binarioInArray7(colonna48bin,zoneB);
+            binarioInArray8(colonna53bin,zoneB);
             binarioInArray(colonna19bin, zoneC);
             binarioInArray2(colonna24bin, zoneC);
             binarioInArray3(colonna29bin,zoneC);
+            binarioInArray4(colonna34bin,zoneC);
+            binarioInArray5(colonna39bin,zoneC);
+            binarioInArray6(colonna44bin,zoneC);
+            binarioInArray7(colonna49bin,zoneC);
+            binarioInArray8(colonna54bin,zoneC);
             binarioInArray(colonna20bin, zoneD);
             binarioInArray2(colonna25bin, zoneD);
             binarioInArray3(colonna30bin,zoneD);
+            binarioInArray4(colonna35bin,zoneD);
+            binarioInArray5(colonna40bin,zoneD);
+            binarioInArray6(colonna45bin,zoneD);
+            binarioInArray7(colonna50bin,zoneD);
+            binarioInArray8(colonna55bin,zoneD);
             console.log("zoneAbilitate", zoneAbilitate);
             console.log("zoneA", zoneA);
             console.log("zoneB", zoneB);
