@@ -6960,9 +6960,9 @@ function entrata() {
               arrayzonebatt
             );
             exports.esito;
-            if (esito) {
+           
               server.mandaEsito();
-            }
+            
           }
           if (payload == "02") {
             var colonna4 = bufferino.slice(6, 8);
