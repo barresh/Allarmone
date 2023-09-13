@@ -6958,7 +6958,7 @@ function entrata() {
               arrayzonemr,
               arrayzonebatt
             );
-            exports.esito;
+            exports.esito=esito;
             console.log("vediamo questo esito", esito);
             server.mandaEsito();
           }
