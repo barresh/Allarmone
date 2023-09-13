@@ -6960,7 +6960,7 @@ function entrata() {
               arrayzonebatt
             );
             exports.esito;
-           
+           console.log("vediamo questo esito",esito)
               server.mandaEsito();
             
           }
