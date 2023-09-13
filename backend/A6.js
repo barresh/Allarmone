@@ -6900,7 +6900,6 @@ function entrata() {
                 arraytelecombatt[14] = 0;
                 arraytelecombatt[15] = 0;
               }
-              
             }
             function riempiEsito(
               arrayaree,
@@ -6960,11 +6959,10 @@ function entrata() {
               arrayzonebatt
             );
             exports.esito;
-           console.log("vediamo questo esito",esito)
-              server.mandaEsito();
-            
+            console.log("vediamo questo esito", esito);
+            server.mandaEsito();
           }
-          if (payload == "02") {
+          if (payload == 02) {
             var colonna4 = bufferino.slice(6, 8);
             var colonna5 = bufferino.slice(8, 10);
             var colonna6 = bufferino.slice(10, 12);
@@ -13584,4 +13582,3 @@ function entrata() {
 
 exports.entrata = entrata;
 exports.port = port;
-exports.esito = esito;
