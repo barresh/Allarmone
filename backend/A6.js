@@ -6900,67 +6900,68 @@ function entrata() {
                 arraytelecombatt[14] = 0;
                 arraytelecombatt[15] = 0;
               }
-              function riempiEsito(
-                arrayaree,
-                arrayareeinserite,
-                arrayzoneinallarme,
-                arrayareeinallarme,
-                arrayareeinmemoriaallarme,
-                arrayzoneinmemoria,
-                arrayzoneescluse,
-                arrayzonerapine,
-                arrayzonetampap,
-                arrayzoneradiomr,
-                arrayzonetampap,
-                arrayzoneradiobatt,
-                arraytelecombatt,
-                arrayareereset,
-                arrayzoneallarmetamper,
-                arrayzonemr,
-                arrayzonebatt
-              ) {
-                return {
-                  arrayaree: arrayaree,
-                  arrayareeinserite: arrayareeinserite,
-                  arrayzoneinallarme: arrayzoneinallarme,
-                  arrayareeinallarme: arrayareeinallarme,
-                  arrayareeinmemoriaallarme: arrayareeinmemoriaallarme,
-                  arrayzoneinmemoria: arrayzoneinmemoria,
-                  arrayzoneescluse: arrayzoneescluse,
-                  arrayzonerapine: arrayzonerapine,
-                  arrayzonetampap: arrayzonetampap,
-                  arrayzoneradiomr: arrayzoneradiomr,
-                  arrayzoneradiobatt: arrayzoneradiobatt,
-                  arraytelecombatt: arraytelecombatt,
-                  arrayareereset: arrayareereset,
-                  arrayzoneallarmetamper: arrayzoneallarmetamper,
-                  arrayzonemr: arrayzonemr,
-                  arrayzonebatt: arrayzonebatt,
-                };
-              }
-              let esito = riempiEsito(
-                arrayaree,
-                arrayareeinserite,
-                arrayzoneinallarme,
-                arrayareeinallarme,
-                arrayareeinmemoriaallarme,
-                arrayzoneinmemoria,
-                arrayzoneescluse,
-                arrayzonerapine,
-                arrayzonetampap,
-                arrayzoneradiomr,
-                arrayzonetampap,
-                arrayzoneradiobatt,
-                arraytelecombatt,
-                arrayareereset,
-                arrayzoneallarmetamper,
-                arrayzonemr,
-                arrayzonebatt
-              );
-              exports.esito;
-              if (esito) {
-                server.mandaEsito();
-              }
+              
+            }
+            function riempiEsito(
+              arrayaree,
+              arrayareeinserite,
+              arrayzoneinallarme,
+              arrayareeinallarme,
+              arrayareeinmemoriaallarme,
+              arrayzoneinmemoria,
+              arrayzoneescluse,
+              arrayzonerapine,
+              arrayzonetampap,
+              arrayzoneradiomr,
+              arrayzonetampap,
+              arrayzoneradiobatt,
+              arraytelecombatt,
+              arrayareereset,
+              arrayzoneallarmetamper,
+              arrayzonemr,
+              arrayzonebatt
+            ) {
+              return {
+                arrayaree: arrayaree,
+                arrayareeinserite: arrayareeinserite,
+                arrayzoneinallarme: arrayzoneinallarme,
+                arrayareeinallarme: arrayareeinallarme,
+                arrayareeinmemoriaallarme: arrayareeinmemoriaallarme,
+                arrayzoneinmemoria: arrayzoneinmemoria,
+                arrayzoneescluse: arrayzoneescluse,
+                arrayzonerapine: arrayzonerapine,
+                arrayzonetampap: arrayzonetampap,
+                arrayzoneradiomr: arrayzoneradiomr,
+                arrayzoneradiobatt: arrayzoneradiobatt,
+                arraytelecombatt: arraytelecombatt,
+                arrayareereset: arrayareereset,
+                arrayzoneallarmetamper: arrayzoneallarmetamper,
+                arrayzonemr: arrayzonemr,
+                arrayzonebatt: arrayzonebatt,
+              };
+            }
+            let esito = riempiEsito(
+              arrayaree,
+              arrayareeinserite,
+              arrayzoneinallarme,
+              arrayareeinallarme,
+              arrayareeinmemoriaallarme,
+              arrayzoneinmemoria,
+              arrayzoneescluse,
+              arrayzonerapine,
+              arrayzonetampap,
+              arrayzoneradiomr,
+              arrayzonetampap,
+              arrayzoneradiobatt,
+              arraytelecombatt,
+              arrayareereset,
+              arrayzoneallarmetamper,
+              arrayzonemr,
+              arrayzonebatt
+            );
+            exports.esito;
+            if (esito) {
+              server.mandaEsito();
             }
           }
           if (payload == "02") {
@@ -7180,6 +7181,7 @@ function entrata() {
             console.log("zoneD", zoneD);
             function riempiEsito(
               usciteAbilitate,
+              usciteConFunzionamentoManuale,
               zoneAbilitate,
               zoneA,
               zoneB,
@@ -7188,6 +7190,7 @@ function entrata() {
             ) {
               return {
                 usciteAbilitate: usciteAbilitate,
+                usciteConFunzionamentoManuale: usciteConFunzionamentoManuale,
                 zoneAbilitate: zoneAbilitate,
                 zoneA: zoneA,
                 zoneB: zoneB,
@@ -7197,6 +7200,7 @@ function entrata() {
             }
             let esito = riempiEsito(
               usciteAbilitate,
+              usciteConFunzionamentoManuale,
               zoneAbilitate,
               zoneA,
               zoneB,
