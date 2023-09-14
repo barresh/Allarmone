@@ -314,80 +314,7 @@ function entrata() {
                   risultato = "codice install abilitato";
                   console.log(risultato);
                   c_inst_auth_on = true;
-                  switch (colonna18bin.slice(0, 1)) {
-                    case "1":
-                      console.log("zona 8 aperta");
-                      arrayzone[7] = 1;
-                      break;
-                    case "0":
-                      arrayzone[7] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(1, 2)) {
-                    case "1":
-                      console.log("zona 7 aperta");
-                      arrayzone[6] = 1;
-                      break;
-                    case "0":
-                      arrayzone[6] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(2, 3)) {
-                    case "1":
-                      console.log("zona 6 aperta");
-                      arrayzone[5] = 1;
-                      break;
-                    case "0":
-                      arrayzone[5] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(3, 4)) {
-                    case "1":
-                      console.log("zona 5 aperta");
-                      arrayzone[4] = 1;
-                      break;
-                    case "0":
-                      arrayzone[4] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(4, 5)) {
-                    case "1":
-                      console.log("zona 4 aperta");
-                      arrayzone[3] = 1;
-                      break;
-                    case "0":
-                      arrayzone[3] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(5, 6)) {
-                    case "1":
-                      console.log("zona 3 aperta");
-                      arrayzone[2] = 1;
-                      break;
-                    case "0":
-                      arrayzone[2] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(6, 7)) {
-                    case "1":
-                      console.log("zona 2 aperta");
-                      arrayzone[1] = 1;
-                      break;
-                    case "0":
-                      arrayzone[1] = 0;
-                      break;
-                  }
-                  switch (colonna18bin.slice(7, 8)) {
-                    case "1":
-                      console.log("zona 1 aperta");
-                      arrayzone[0] = 1;
-                      console.log(arrayzone);
-                      break;
-                    case "0":
-                      arrayzone[0] = 0;
-                      console.log(arrayzone);
-                      break;
-                  }
+                  binarioInArray(colonna18bin, arrayzone);
                   break;
                 case "00000100":
                   risultato = "centrale in test";
@@ -1067,310 +994,23 @@ function entrata() {
             binarioInArray8(colonna12bin, zoneIncluse);
           }
           if (payload == "0A") {
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna4bin = hex2bin(colonna4);
-            if (colonna4 != "00") {
-              switch (colonna4bin) {
-                case "10000000":
-                  risultato = "zona rapina 8";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 7";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 6";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 5";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 4";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 3";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 2";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 1";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna5 != "00") {
-              switch (colonna5bin) {
-                case "10000000":
-                  risultato = "zona rapina 16";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 15";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 14";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 13";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 12";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 11";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 10";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 9";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin) {
-                case "10000000":
-                  risultato = "zona rapina 24";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 23";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 22";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 21";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 20";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 19";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 18";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 17";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin) {
-                case "10000000":
-                  risultato = "zona rapina 32";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 31";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 30";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 29";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 28";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 27";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 26";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 25";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin) {
-                case "10000000":
-                  risultato = "zona rapina 40";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 39";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 38";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 37";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 36";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 35";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 34";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 33";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin) {
-                case "10000000":
-                  risultato = "zona rapina 48";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 47";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 46";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 45";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 44";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 43";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 42";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 41";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin) {
-                case "10000000":
-                  risultato = "zona rapina 56";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 55";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 54";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 53";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 52";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 51";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 50";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 49";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin) {
-                case "10000000":
-                  risultato = "zona rapina 64";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona rapina 63";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona rapina 62";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona rapina 61";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona rapina 60";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona rapina 59";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona rapina 58";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona rapina 57";
-                  console.log(risultato);
-                  break;
-              }
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            binarioInArray(colonna4bin, arrayzonerapine);
+            binarioInArray2(colonna5bin, arrayzonerapine);
+            binarioInArray3(colonna6bin, arrayzonerapine);
+            binarioInArray4(colonna7bin, arrayzonerapine);
+            binarioInArray5(colonna8bin, arrayzonerapine);
+            binarioInArray6(colonna9bin, arrayzonerapine);
+            binarioInArray7(colonna10bin, arrayzonerapine);
+            binarioInArray8(colonna11bin, arrayzonerapine);
           }
           if (payload == "0B") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
@@ -1414,54 +1054,11 @@ function entrata() {
             }
           }
           if (payload == "0D") {
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna4bin = hex2bin(colonna4);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            if (colonna5 != "00") {
-              switch (colonna5bin.slice(7, 8)) {
-                case "1":
-                  console.log("area 1 ha agito il reset");
-                  arrayareereset[0] = 1;
-                  break;
-                case "0":
-                  console.log("area 1 non ha agito il reset");
-                  arrayareereset[0] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(6, 7)) {
-                case "1":
-                  console.log("area 2 ha agito il reset");
-                  arrayareereset[1] = 1;
-                  break;
-                case "0":
-                  console.log("area 2 non ha agito il reset");
-                  arrayareereset[1] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(5, 6)) {
-                case "1":
-                  console.log("area 3 ha agito il reset");
-                  arrayareereset[2] = 1;
-                  break;
-                case "0":
-                  console.log("area 3 non ha agito il reset");
-                  arrayareereset[2] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(4, 5)) {
-                case "1":
-                  console.log("area 4 ha agito il reset");
-                  arrayareereset[3] = 1;
-                  break;
-                case "0":
-                  console.log("area 4 non ha agito il reset");
-                  arrayareereset[3] = 0;
-                  break;
-              }
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            binarioInArray(colonna5bin, arrayareereset);
             if (colonna6 != "06") {
               switch (colonna6bin) {
                 case "00000100":
@@ -1834,9 +1431,8 @@ function entrata() {
             //DA CAPIRE COLONNA 4
           }
           if (payload == "2F") {
-            var blocco = bufferino.slice(6, 8);
             const result = bufferino.match(/.{1,2}/g) ?? [];
-            switch (blocco) {
+            switch (result[3]) {
               case "00":
                 //dato 1 era 8,10
                 var nomesms =
