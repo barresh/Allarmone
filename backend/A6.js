@@ -7031,49 +7031,41 @@ function entrata() {
             function binarioInArray(binario, destinazione) {
               for (let i = 0; i < binario.length; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray2(binario, destinazione) {
               for (let i = 8; i < 16; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray3(binario, destinazione) {
               for (let i = 16; i < 24; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray4(binario, destinazione) {
               for (let i = 24; i < 32; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray5(binario, destinazione) {
               for (let i = 32; i < 40; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray6(binario, destinazione) {
               for (let i = 40; i < 48; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray7(binario, destinazione) {
               for (let i = 48; i < 56; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             function binarioInArray8(binario, destinazione) {
               for (let i = 56; i < 64; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
-                console.log(destinazione[i]);
               }
             }
             binarioInArray(colonna14bin, areeAbilitate);
@@ -7145,7 +7137,8 @@ function entrata() {
                 zoneD: zoneD,
               };
             }
-            let esito = riempiEsito(
+            if(esito){
+              esito.push = riempiEsito(
               usciteAbilitate,
               usciteConFunzionamentoManuale,
               zoneAbilitate,
@@ -7153,7 +7146,17 @@ function entrata() {
               zoneB,
               zoneC,
               zoneD
-            );
+            );}else{
+              let esito = riempiEsito(
+                usciteAbilitate,
+                usciteConFunzionamentoManuale,
+                zoneAbilitate,
+                zoneA,
+                zoneB,
+                zoneC,
+                zoneD
+              );
+            }
             exports.esito = esito;
             if (esito) {
               server.mandaEsito();
