@@ -9,6 +9,9 @@ var areeNonInserite = [];
 var areeReset = [];
 var motivazione = [];
 var bufferino;
+var zoneEscluse = [];
+var zoneIncluse = [];
+var arrayzonetamp = [];
 //array dello stato delle zone
 var arrayzone = [];
 var arrayaree = [];
@@ -57,6 +60,47 @@ function hex2asci(hexx) {
   for (var i = 0; i < hex.length; i += 2)
     str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
   return str;
+}
+
+function binarioInArray(binario, destinazione) {
+  for (let i = 0; i < binario.length; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray2(binario, destinazione) {
+  for (let i = 8; i < 16; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray3(binario, destinazione) {
+  for (let i = 16; i < 24; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray4(binario, destinazione) {
+  for (let i = 24; i < 32; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray5(binario, destinazione) {
+  for (let i = 32; i < 40; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray6(binario, destinazione) {
+  for (let i = 40; i < 48; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray7(binario, destinazione) {
+  for (let i = 48; i < 56; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
+}
+function binarioInArray8(binario, destinazione) {
+  for (let i = 56; i < 64; i++) {
+    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  }
 }
 flagAggiornato = 0;
 function entrata() {
@@ -418,47 +462,6 @@ function entrata() {
                   console.log("timer disabilitato");
                   break;
               }
-
-              function binarioInArray(binario, destinazione) {
-                for (let i = 0; i < binario.length; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray2(binario, destinazione) {
-                for (let i = 8; i < 16; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray3(binario, destinazione) {
-                for (let i = 16; i < 24; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray4(binario, destinazione) {
-                for (let i = 24; i < 32; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray5(binario, destinazione) {
-                for (let i = 32; i < 40; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray6(binario, destinazione) {
-                for (let i = 40; i < 48; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray7(binario, destinazione) {
-                for (let i = 48; i < 56; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
-              function binarioInArray8(binario, destinazione) {
-                for (let i = 56; i < 64; i++) {
-                  destinazione[i] = binario[i] === "1" ? 1 : 0;
-                }
-              }
               binarioInArray(stato4bin, mancanzaRispostaEspansione);
               binarioInArray(stato5bin, mancanzaRispostaEspansioneRadio);
               binarioInArray(colonna13bin, uscite);
@@ -626,6 +629,7 @@ function entrata() {
               mancanzaRispostaEspansione,
               arrayaree,
               arrayareeinserite,
+              arrayzoneinserite,
               arrayzoneinallarme,
               arrayareeinallarme,
               arrayareeinmemoriaallarme,
@@ -648,6 +652,7 @@ function entrata() {
                 mancanzaRispostaEspansione: mancanzaRispostaEspansione,
                 arrayaree: arrayaree,
                 arrayareeinserite: arrayareeinserite,
+                arrayzoneinserite: arrayzoneinserite,
                 arrayzoneinallarme: arrayzoneinallarme,
                 arrayareeinallarme: arrayareeinallarme,
                 arrayareeinmemoriaallarme: arrayareeinmemoriaallarme,
@@ -670,6 +675,7 @@ function entrata() {
               mancanzaRispostaEspansione,
               arrayaree,
               arrayareeinserite,
+              arrayzoneinserite,
               arrayzoneinallarme,
               arrayareeinallarme,
               arrayareeinmemoriaallarme,
@@ -757,46 +763,6 @@ function entrata() {
               "quarta cifra numero seriale della centrale",
               result[8]
             );
-            function binarioInArray(binario, destinazione) {
-              for (let i = 0; i < binario.length; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray2(binario, destinazione) {
-              for (let i = 8; i < 16; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray3(binario, destinazione) {
-              for (let i = 16; i < 24; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray4(binario, destinazione) {
-              for (let i = 24; i < 32; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray5(binario, destinazione) {
-              for (let i = 32; i < 40; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray6(binario, destinazione) {
-              for (let i = 40; i < 48; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray7(binario, destinazione) {
-              for (let i = 48; i < 56; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
-            function binarioInArray8(binario, destinazione) {
-              for (let i = 56; i < 64; i++) {
-                destinazione[i] = binario[i] === "1" ? 1 : 0;
-              }
-            }
             binarioInArray(colonna14bin, areeAbilitate);
             binarioInArray(colonna12bin, usciteConFunzionamentoManuale);
             binarioInArray2(colonna13bin, usciteConFunzionamentoManuale);
@@ -883,126 +849,51 @@ function entrata() {
             }
           }
           if (payload == "04") {
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna4bin = hex2bin(colonna4);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
             var tipoutente;
             var numeroutente;
             var risultato;
             console.log("non inserito perché aperto:", colonna6bin);
             console.log("ENTRA PAYLOAD GIUSTO");
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 3)) {
-                case "0010":
-                  tipoutente = "codice";
-                case "0100":
-                  tipoutente = "spinotto";
-                case "0110":
-                  tipoutente = "comunicatore";
-                case "1000":
-                  tipoutente = "chiave esterna";
-              }
-              numeroutente = colonna4bin.slice(4, 7);
-              console.log("utente:", tipoutente, numeroutente);
+            switch (colonna4bin.slice(0, 3)) {
+              case "0010":
+                tipoutente = "codice";
+              case "0100":
+                tipoutente = "spinotto";
+              case "0110":
+                tipoutente = "comunicatore";
+              case "1000":
+                tipoutente = "chiave esterna";
+            }
+            numeroutente = colonna4bin.slice(4, 7);
+            console.log("utente:", tipoutente, numeroutente);
+            binarioInArray(colonna5bin, areeInserite);
+            binarioInArray(colonna6bin, areeNonInserite);
+            binarioInArray(colonna7bin, areeReset);
+
+            switch (colonna8bin) {
+              case "00000100":
+                risultato = "reset rapina al disinserimento aree";
+                console.log(risultato);
+                motivazione = risultato;
+                break;
+              case "00000010":
+                risultato = "reset rapina";
+                console.log(risultato);
+                motivazione = risultato;
+                break;
+              case "00000001":
+                risultato = "reset sabotaggio";
+                console.log(risultato);
+                motivazione = risultato;
+                break;
             }
 
-            if (colonna5bin.slice(7, 8) == 1) {
-              risultato = "area 1 appena inserita";
-              areeInserite[0] = 1;
-            } else if (colonna5bin.slice(7, 8) == 0) {
-              areeInserite[0] = 0;
-            }
-            if (colonna5bin.slice(6, 7) == 1) {
-              risultato = "area 2 appena inserita";
-              areeInserite[1] = 1;
-            } else if (colonna5bin.slice(6, 7) == 0) {
-              areeInserite[1] = 0;
-            }
-            if (colonna5bin.slice(5, 6) == 1) {
-              risultato = "area 3 appena inserita";
-              areeInserite[2] = 1;
-            } else if (colonna5bin.slice(5, 6) == 0) {
-              areeInserite[2] = 0;
-            }
-            if (colonna5bin.slice(4, 5) == 1) {
-              risultato = "area 4 appena inserita";
-              areeInserite[3] = 1;
-            } else if (colonna5bin.slice(4, 5) == 0) {
-              risultato = "area 4 appena inserita";
-              areeInserite[3] = 0;
-            }
-
-            if (colonna6bin.slice(7, 8) == 1) {
-              risultato = "area 1 non inserita perchè aperta";
-              areeNonInserite[0] = 1;
-            } else if (colonna6bin.slice(7, 8) == 0) {
-              areeNonInserite[0] = 0;
-            }
-            if (colonna6bin.slice(6, 7) == 1) {
-              risultato = "area 2 non inserita perché aperta";
-              areeNonInserite[1] = 1;
-            } else if (colonna6bin.slice(6, 7) == 0) {
-              areeNonInserite[1] = 0;
-            }
-            if (colonna6bin.slice(5, 6) == 1) {
-              risultato = "area 3 non inserita perché aperta";
-              areeNonInserite[2] = 1;
-            } else if (colonna6bin.slice(5, 6) == 0) {
-              areeNonInserite[2] = 0;
-            }
-            if (colonna6bin.slice(4, 5) == 1) {
-              risultato = "area 4 non inserita perché aperta";
-              areeNonInserite[3] = 1;
-            } else if (colonna6bin.slice(4, 5) == 0) {
-              risultato = "area 4 non inserita perché aperta";
-              areeNonInserite[3] = 0;
-            }
-
-            if (colonna7 != "00") {
-              if (colonna7bin.slice(7, 8) == 1) {
-                risultato = "area 1 ha provocato reset";
-                areeReset[0] = 1;
-              }
-              if (colonna7bin.slice(6, 7) == 1) {
-                risultato = "area 2 ha provocato reset";
-                areeReset[1] = 1;
-              }
-              if (colonna7bin.slice(5, 6) == 1) {
-                risultato = "area 3 ha provocato reset";
-                areeReset[2] = 1;
-              }
-              if (colonna7bin.slice(4, 5) == 1) {
-                risultato = "area 4 ha provocato reset";
-                areeReset[3] = 1;
-              }
-              if (colonna8 != "00") {
-                switch (colonna8bin) {
-                  case "00000100":
-                    risultato = "reset rapina al disinserimento aree";
-                    console.log(risultato);
-                    motivazione = risultato;
-                    break;
-                  case "00000010":
-                    risultato = "reset rapina";
-                    console.log(risultato);
-                    motivazione = risultato;
-                    break;
-                  case "00000001":
-                    risultato = "reset sabotaggio";
-                    console.log(risultato);
-                    motivazione = risultato;
-                    break;
-                }
-              }
-            }
-            console.log("areeInserite:", areeInserite);
             function riempiEsito(
               areeInserite,
               areeNonInserite,
@@ -1028,97 +919,47 @@ function entrata() {
             }
           }
           if (payload == "05") {
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna4bin = hex2bin(colonna4);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
             var tipoutente;
             var numeroutente;
             var risultato;
             console.log("non inserito perché aperto:", colonna6bin);
             console.log("ENTRA PAYLOAD GIUSTO");
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 3)) {
-                case "0010":
-                  tipoutente = "codice";
-                case "0100":
-                  tipoutente = "spinotto";
-                case "0110":
-                  tipoutente = "comunicatore";
-                case "1000":
-                  tipoutente = "chiave esterna";
-              }
-              numeroutente = colonna4bin.slice(4, 7);
-              console.log("utente:", tipoutente, numeroutente);
+            switch (colonna4bin.slice(0, 3)) {
+              case "0010":
+                tipoutente = "codice";
+              case "0100":
+                tipoutente = "spinotto";
+              case "0110":
+                tipoutente = "comunicatore";
+              case "1000":
+                tipoutente = "chiave esterna";
             }
-
-            if (colonna5bin.slice(7, 8) == 1) {
-              risultato = "area 1 appena inserita";
-              areeInserite[0] = 1;
-            } else if (colonna5bin.slice(7, 8) == 0) {
-              areeInserite[0] = 0;
-            }
-            if (colonna5bin.slice(6, 7) == 1) {
-              risultato = "area 2 appena inserita";
-              areeInserite[1] = 1;
-            } else if (colonna5bin.slice(6, 7) == 0) {
-              areeInserite[1] = 0;
-            }
-            if (colonna5bin.slice(5, 6) == 1) {
-              risultato = "area 3 appena inserita";
-              areeInserite[2] = 1;
-            } else if (colonna5bin.slice(5, 6) == 0) {
-              areeInserite[2] = 0;
-            }
-            if (colonna5bin.slice(4, 5) == 1) {
-              risultato = "area 4 appena inserita";
-              areeInserite[3] = 1;
-            } else if (colonna5bin.slice(4, 5) == 0) {
-              risultato = "area 4 appena inserita";
-              areeInserite[3] = 0;
-            }
-            if (colonna7 != "00") {
-              if (colonna7bin.slice(7, 8) == 1) {
-                risultato = "area 1 ha provocato reset";
-                areeReset[0] = 1;
-              }
-              if (colonna7bin.slice(6, 7) == 1) {
-                risultato = "area 2 ha provocato reset";
-                areeReset[1] = 1;
-              }
-              if (colonna7bin.slice(5, 6) == 1) {
-                risultato = "area 3 ha provocato reset";
-                areeReset[2] = 1;
-              }
-              if (colonna7bin.slice(4, 5) == 1) {
-                risultato = "area 4 ha provocato reset";
-                areeReset[3] = 1;
-              }
-              if (colonna8 != "00") {
-                switch (colonna8bin) {
-                  case "00000100":
-                    risultato = "reset rapina al disinserimento aree";
-                    console.log(risultato);
-                    motivazione = risultato;
-                    break;
-                  case "00000010":
-                    risultato = "reset rapina";
-                    console.log(risultato);
-                    motivazione = risultato;
-                    break;
-                  case "00000001":
-                    risultato = "reset sabotaggio";
-                    console.log(risultato);
-                    motivazione = risultato;
-                    break;
-                }
-              }
+            numeroutente = colonna4bin.slice(4, 7);
+            console.log("utente:", tipoutente, numeroutente);
+            binarioInArray(colonna5bin, areeInserite);
+            binarioInArray(colonna6bin, areeReset);
+            switch (colonna8bin) {
+              case "00000100":
+                risultato = "reset rapina al disinserimento aree";
+                console.log(risultato);
+                motivazione = risultato;
+                break;
+              case "00000010":
+                risultato = "reset rapina";
+                console.log(risultato);
+                motivazione = risultato;
+                break;
+              case "00000001":
+                risultato = "reset sabotaggio";
+                console.log(risultato);
+                motivazione = risultato;
+                break;
             }
             function riempiEsito(areeInserite, areeReset, motivazione) {
               return {
@@ -1134,330 +975,35 @@ function entrata() {
             }
           }
           if (payload == "06") {
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna4bin = hex2bin(colonna4);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            if (colonna4 != "00") {
-              switch (colonna4bin) {
-                case "10000000":
-                  risultato = "zone all mem 8";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 7";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 6";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 5";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 4";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 3";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 2";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 1";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna5 != "00") {
-              switch (colonna5bin) {
-                case "10000000":
-                  risultato = "zone all mem 16";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 15";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 14";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 13";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 12";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 11";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 10";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 9";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin) {
-                case "10000000":
-                  risultato = "zone all mem 24";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 23";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 22";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 21";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 20";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 19";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 18";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 17";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin) {
-                case "10000000":
-                  risultato = "zone all mem 32";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 31";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 30";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 29";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 28";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 27";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 26";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 25";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin) {
-                case "10000000":
-                  risultato = "zone all mem 40";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 39";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 38";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 37";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 36";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 35";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 34";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 33";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin) {
-                case "10000000":
-                  risultato = "zone all mem 48";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 47";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 46";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 45";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 44";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 43";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 42";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 41";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin) {
-                case "10000000":
-                  risultato = "zone all mem 56";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 55";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 54";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 53";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 52";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 51";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 50";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 49";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin) {
-                case "10000000":
-                  risultato = "zone all mem 64";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zone all mem 63";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zone all mem 62";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zone all mem 61";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zone all mem 60";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zone all mem 59";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zone all mem 58";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zone all mem 57";
-                  console.log(risultato);
-                  break;
-              }
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            binarioInArray(colonna4bin, zoneAllMem);
+            binarioInArray2(colonna5bin, zoneAllMem);
+            binarioInArray3(colonna6bin, zoneAllMem);
+            binarioInArray4(colonna7bin, zoneAllMem);
+            binarioInArray5(colonna8bin, zoneAllMem);
+            binarioInArray6(colonna9bin, zoneAllMem);
+            binarioInArray7(colonna10bin, zoneAllMem);
+            binarioInArray8(colonna11bin, zoneAllMem);
           }
           if (payload == "08") {
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna12 = bufferino.slice(22, 24);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna12bin = hex2bin(colonna12);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna4bin = hex2bin(colonna4);
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            var colonna12bin = hex2bin(result[11]);
             var tipoutente;
             var numeroutente;
             var risultato;
@@ -1475,619 +1021,50 @@ function entrata() {
               numeroutente = colonna4bin.slice(4, 7);
               console.log("utente:", tipoutente, numeroutente);
             }
-            if (colonna5 != "00") {
-              switch (colonna5bin) {
-                case "10000000":
-                  risultato = "zona esclusa 8";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 7";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 6";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 5";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 4";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 3";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 2";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 1";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin) {
-                case "10000000":
-                  risultato = "zona esclusa 16";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 15";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 14";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 13";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 12";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 11";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 10";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 9";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin) {
-                case "10000000":
-                  risultato = "zona esclusa 24";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 23";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 22";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 21";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 20";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 19";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 18";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 17";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin) {
-                case "10000000":
-                  risultato = "zona esclusa 32";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 31";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 30";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 29";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 28";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 27";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 26";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 25";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin) {
-                case "10000000":
-                  risultato = "zona esclusa 40";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 39";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 38";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 37";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 36";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 35";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 34";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 33";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin) {
-                case "10000000":
-                  risultato = "zona esclusa 48";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 47";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 46";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 45";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 44";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 43";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 42";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 41";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin) {
-                case "10000000":
-                  risultato = "zona esclusa 56";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 55";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 54";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 53";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 52";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 51";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 50";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 49";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna12 != "00") {
-              switch (colonna12bin) {
-                case "10000000":
-                  risultato = "zona esclusa 64";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona esclusa 63";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona esclusa 62";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona esclusa 61";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona esclusa 60";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona esclusa 59";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona esclusa 58";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona esclusa 57";
-                  console.log(risultato);
-                  break;
-              }
-            }
+            binarioInArray(colonna5bin, zoneEscluse);
+            binarioInArray2(colonna6bin, zoneEscluse);
+            binarioInArray3(colonna7bin, zoneEscluse);
+            binarioInArray4(colonna8bin, zoneEscluse);
+            binarioInArray5(colonna9bin, zoneEscluse);
+            binarioInArray6(colonna10bin, zoneEscluse);
+            binarioInArray7(colonna11bin, zoneEscluse);
+            binarioInArray8(colonna12bin, zoneEscluse);
           }
           if (payload == "09") {
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna12 = bufferino.slice(22, 24);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna12bin = hex2bin(colonna12);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna4bin = hex2bin(colonna4);
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            var colonna12bin = hex2bin(result[11]);
             var tipoutente;
             var numeroutente;
             var risultato;
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 3)) {
-                case "0010":
-                  tipoutente = "codice";
-                case "0100":
-                  tipoutente = "spinotto";
-                case "0110":
-                  tipoutente = "comunicatore";
-                case "1000":
-                  tipoutente = "chiave esterna";
-              }
-              numeroutente = colonna4bin.slice(4, 7);
-              console.log("utente:", tipoutente, numeroutente);
+            switch (colonna4bin.slice(0, 3)) {
+              case "0010":
+                tipoutente = "codice";
+              case "0100":
+                tipoutente = "spinotto";
+              case "0110":
+                tipoutente = "comunicatore";
+              case "1000":
+                tipoutente = "chiave esterna";
             }
-            if (colonna5 != "00") {
-              switch (colonna5bin) {
-                case "10000000":
-                  risultato = "zona inclusa 8";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 7";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 6";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 5";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 4";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 3";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 2";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 1";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin) {
-                case "10000000":
-                  risultato = "zona inclusa 16";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 15";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 14";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 13";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 12";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 11";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 10";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 9";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin) {
-                case "10000000":
-                  risultato = "zona inclusa 24";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 23";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 22";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 21";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 20";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 19";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 18";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 17";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin) {
-                case "10000000":
-                  risultato = "zona inclusa 32";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 31";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 30";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 29";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 28";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 27";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 26";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 25";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin) {
-                case "10000000":
-                  risultato = "zona inclusa 40";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 39";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 38";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 37";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 36";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 35";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 34";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 33";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin) {
-                case "10000000":
-                  risultato = "zona inclusa 48";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 47";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 46";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 45";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 44";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 43";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 42";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 41";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin) {
-                case "10000000":
-                  risultato = "zona inclusa 56";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 55";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 54";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 53";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 52";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 51";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 50";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 49";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna12 != "00") {
-              switch (colonna12bin) {
-                case "10000000":
-                  risultato = "zona inclusa 64";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona inclusa 63";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona inclusa 62";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona inclusa 61";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona inclusa 60";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona inclusa 59";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona inclusa 58";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona inclusa 57";
-                  console.log(risultato);
-                  break;
-              }
-            }
+            numeroutente = colonna4bin.slice(4, 7);
+            console.log("utente:", tipoutente, numeroutente);
+
+            binarioInArray(colonna5bin, zoneIncluse);
+            binarioInArray2(colonna6bin, zoneIncluse);
+            binarioInArray3(colonna7bin, zoneIncluse);
+            binarioInArray4(colonna8bin, zoneIncluse);
+            binarioInArray5(colonna9bin, zoneIncluse);
+            binarioInArray6(colonna10bin, zoneIncluse);
+            binarioInArray7(colonna11bin, zoneIncluse);
+            binarioInArray8(colonna12bin, zoneIncluse);
           }
           if (payload == "0A") {
             var colonna5 = bufferino.slice(8, 10);
@@ -2396,310 +1373,23 @@ function entrata() {
             }
           }
           if (payload == "0B") {
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna4bin = hex2bin(colonna4);
-            if (colonna4 != "00") {
-              switch (colonna4bin) {
-                case "10000000":
-                  risultato = "zona tamp 8";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 7";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 6";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 5";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 4";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 3";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 2";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 1";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna5 != "00") {
-              switch (colonna5bin) {
-                case "10000000":
-                  risultato = "zona tamp 16";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 15";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 14";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 13";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 12";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 11";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 10";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 9";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin) {
-                case "10000000":
-                  risultato = "zona tamp 24";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 23";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 22";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 21";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 20";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 19";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 18";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 17";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin) {
-                case "10000000":
-                  risultato = "zona tamp 32";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 31";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 30";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 29";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 28";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 27";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 26";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 25";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin) {
-                case "10000000":
-                  risultato = "zona tamp 40";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 39";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 38";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 37";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 36";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 35";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 34";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 33";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin) {
-                case "10000000":
-                  risultato = "zona tamp 48";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 47";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 46";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 45";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 44";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 43";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 42";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 41";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin) {
-                case "10000000":
-                  risultato = "zona tamp 56";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 55";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 54";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 53";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 52";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 51";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 50";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 49";
-                  console.log(risultato);
-                  break;
-              }
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin) {
-                case "10000000":
-                  risultato = "zona tamp 64";
-                  console.log(risultato);
-                  break;
-                case "01000000":
-                  risultato = "zona tamp 63";
-                  console.log(risultato);
-                  break;
-                case "00100000":
-                  risultato = "zona tamp 62";
-                  console.log(risultato);
-                  break;
-                case "00010000":
-                  risultato = "zona tamp 61";
-                  console.log(risultato);
-                  break;
-                case "00001000":
-                  risultato = "zona tamp 60";
-                  console.log(risultato);
-                  break;
-                case "00000100":
-                  risultato = "zona tamp 59";
-                  console.log(risultato);
-                  break;
-                case "00000010":
-                  risultato = "zona tamp 58";
-                  console.log(risultato);
-                  break;
-                case "00000001":
-                  risultato = "zona tamp 57";
-                  console.log(risultato);
-                  break;
-              }
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            binarioInArray(colonna4bin, arrayzonetamp);
+            binarioInArray2(colonna5bin, arrayzonetamp);
+            binarioInArray3(colonna6bin, arrayzonetamp);
+            binarioInArray4(colonna7bin, arrayzonetamp);
+            binarioInArray5(colonna8bin, arrayzonetamp);
+            binarioInArray6(colonna9bin, arrayzonetamp);
+            binarioInArray7(colonna10bin, arrayzonetamp);
+            binarioInArray8(colonna11bin, arrayzonetamp);
           }
           if (payload == "0C") {
             risultato = "notifica cancellazione memoria allarme";
@@ -3145,480 +1835,258 @@ function entrata() {
           }
           if (payload == "2F") {
             var blocco = bufferino.slice(6, 8);
+            const result = bufferino.match(/.{1,2}/g) ?? [];
             switch (blocco) {
               case "00":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
+                //dato 1 era 8,10
                 var nomesms =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomecentrale =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 console.log("nomesms:", nomesms);
                 console.log("nomesms:", nomecentrale);
                 break;
               case "01":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
                 var nomeAreaA =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeAreaB =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeAreaC =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeAreaD =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 console.log("nomeAreaA:", nomeAreaA);
                 console.log("nomeAreaB:", nomeAreaB);
                 console.log("nomeAreaC:", nomeAreaC);
                 console.log("nomeAreaD:", nomeAreaD);
                 break;
               case "02":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
-                var dato65 = bufferino.slice(136, 138);
-                var dato66 = bufferino.slice(138, 140);
-                var dato67 = bufferino.slice(140, 142);
-                var dato68 = bufferino.slice(142, 144);
-                var dato69 = bufferino.slice(144, 146);
-                var dato70 = bufferino.slice(146, 148);
-                var dato71 = bufferino.slice(148, 150);
-                var dato72 = bufferino.slice(150, 152);
-                var dato73 = bufferino.slice(152, 154);
-                var dato74 = bufferino.slice(154, 156);
-                var dato75 = bufferino.slice(156, 158);
-                var dato76 = bufferino.slice(158, 160);
-                var dato77 = bufferino.slice(160, 162);
-                var dato78 = bufferino.slice(162, 164);
-                var dato79 = bufferino.slice(164, 166);
-                var dato80 = bufferino.slice(166, 168);
-                var dato81 = bufferino.slice(168, 170);
-                var dato82 = bufferino.slice(170, 172);
-                var dato83 = bufferino.slice(172, 174);
-                var dato84 = bufferino.slice(174, 176);
-                var dato85 = bufferino.slice(176, 178);
-                var dato86 = bufferino.slice(178, 180);
-                var dato87 = bufferino.slice(180, 182);
-                var dato88 = bufferino.slice(182, 184);
-                var dato89 = bufferino.slice(184, 186);
-                var dato90 = bufferino.slice(186, 188);
-                var dato91 = bufferino.slice(188, 190);
-                var dato92 = bufferino.slice(190, 192);
-                var dato93 = bufferino.slice(192, 194);
-                var dato94 = bufferino.slice(194, 196);
-                var dato95 = bufferino.slice(196, 198);
-                var dato96 = bufferino.slice(198, 200);
-                var dato97 = bufferino.slice(200, 202);
-                var dato98 = bufferino.slice(202, 204);
-                var dato99 = bufferino.slice(204, 206);
-                var dato100 = bufferino.slice(206, 208);
-                var dato101 = bufferino.slice(208, 210);
-                var dato102 = bufferino.slice(210, 212);
-                var dato103 = bufferino.slice(212, 214);
-                var dato104 = bufferino.slice(214, 216);
-                var dato105 = bufferino.slice(216, 218);
-                var dato106 = bufferino.slice(218, 220);
-                var dato107 = bufferino.slice(220, 222);
-                var dato108 = bufferino.slice(222, 224);
-                var dato109 = bufferino.slice(224, 226);
-                var dato110 = bufferino.slice(226, 228);
-                var dato111 = bufferino.slice(228, 230);
-                var dato112 = bufferino.slice(230, 232);
-                var dato113 = bufferino.slice(232, 234);
-                var dato114 = bufferino.slice(234, 236);
-                var dato115 = bufferino.slice(236, 238);
-                var dato116 = bufferino.slice(238, 240);
-                var dato117 = bufferino.slice(240, 242);
-                var dato118 = bufferino.slice(242, 244);
-                var dato119 = bufferino.slice(244, 246);
-                var dato120 = bufferino.slice(246, 248);
-                var dato121 = bufferino.slice(248, 250);
-                var dato122 = bufferino.slice(250, 252);
-                var dato123 = bufferino.slice(252, 254);
-                var dato124 = bufferino.slice(254, 256);
-                var dato125 = bufferino.slice(256, 258);
-                var dato126 = bufferino.slice(258, 260);
-                var dato127 = bufferino.slice(260, 262);
-                var dato128 = bufferino.slice(262, 264);
                 var nomeUtenteTastiera1 =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeUtenteTastiera2 =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeUtenteTastiera3 =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeUtenteTastiera4 =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 var nomeUtenteTastiera5 =
-                  hex2asci(dato65) +
-                  hex2asci(dato66) +
-                  hex2asci(dato67) +
-                  hex2asci(dato68) +
-                  hex2asci(dato69) +
-                  hex2asci(dato70) +
-                  hex2asci(dato71) +
-                  hex2asci(dato72) +
-                  hex2asci(dato73) +
-                  hex2asci(dato74) +
-                  hex2asci(dato75) +
-                  hex2asci(dato76) +
-                  hex2asci(dato77) +
-                  hex2asci(dato78) +
-                  hex2asci(dato79) +
-                  hex2asci(dato80);
+                  hex2asci(result[68]) +
+                  hex2asci(result[69]) +
+                  hex2asci(result[70]) +
+                  hex2asci(result[71]) +
+                  hex2asci(result[72]) +
+                  hex2asci(result[73]) +
+                  hex2asci(result[74]) +
+                  hex2asci(result[75]) +
+                  hex2asci(result[76]) +
+                  hex2asci(result[77]) +
+                  hex2asci(result[78]) +
+                  hex2asci(result[79]) +
+                  hex2asci(result[80]) +
+                  hex2asci(result[81]) +
+                  hex2asci(result[82]) +
+                  hex2asci(result[83]);
                 var nomeUtenteTastiera6 =
-                  hex2asci(dato81) +
-                  hex2asci(dato82) +
-                  hex2asci(dato83) +
-                  hex2asci(dato84) +
-                  hex2asci(dato85) +
-                  hex2asci(dato86) +
-                  hex2asci(dato87) +
-                  hex2asci(dato88) +
-                  hex2asci(dato89) +
-                  hex2asci(dato90) +
-                  hex2asci(dato91) +
-                  hex2asci(dato92) +
-                  hex2asci(dato93) +
-                  hex2asci(dato94) +
-                  hex2asci(dato95) +
-                  hex2asci(dato96);
+                  hex2asci(result[84]) +
+                  hex2asci(result[85]) +
+                  hex2asci(result[86]) +
+                  hex2asci(result[87]) +
+                  hex2asci(result[88]) +
+                  hex2asci(result[89]) +
+                  hex2asci(result[90]) +
+                  hex2asci(result[91]) +
+                  hex2asci(result[92]) +
+                  hex2asci(result[93]) +
+                  hex2asci(result[94]) +
+                  hex2asci(result[95]) +
+                  hex2asci(result[96]) +
+                  hex2asci(result[97]) +
+                  hex2asci(result[98]) +
+                  hex2asci(result[99]);
                 var nomeUtenteTastiera7 =
-                  hex2asci(dato97) +
-                  hex2asci(dato98) +
-                  hex2asci(dato99) +
-                  hex2asci(dato100) +
-                  hex2asci(dato101) +
-                  hex2asci(dato102) +
-                  hex2asci(dato103) +
-                  hex2asci(dato104) +
-                  hex2asci(dato105) +
-                  hex2asci(dato106) +
-                  hex2asci(dato107) +
-                  hex2asci(dato108) +
-                  hex2asci(dato109) +
-                  hex2asci(dato110) +
-                  hex2asci(dato111) +
-                  hex2asci(dato112);
+                  hex2asci(result[100]) +
+                  hex2asci(result[101]) +
+                  hex2asci(result[102]) +
+                  hex2asci(result[103]) +
+                  hex2asci(result[104]) +
+                  hex2asci(result[105]) +
+                  hex2asci(result[106]) +
+                  hex2asci(result[107]) +
+                  hex2asci(result[108]) +
+                  hex2asci(result[109]) +
+                  hex2asci(result[110]) +
+                  hex2asci(result[111]) +
+                  hex2asci(result[112]) +
+                  hex2asci(result[113]) +
+                  hex2asci(result[114]) +
+                  hex2asci(result[115]);
                 var nomeUtenteTastiera8 =
-                  hex2asci(dato113) +
-                  hex2asci(dato114) +
-                  hex2asci(dato115) +
-                  hex2asci(dato116) +
-                  hex2asci(dato117) +
-                  hex2asci(dato118) +
-                  hex2asci(dato119) +
-                  hex2asci(dato120) +
-                  hex2asci(dato121) +
-                  hex2asci(dato122) +
-                  hex2asci(dato123) +
-                  hex2asci(dato124) +
-                  hex2asci(dato125) +
-                  hex2asci(dato126) +
-                  hex2asci(dato127) +
-                  hex2asci(dato128);
+                  hex2asci(result[116]) +
+                  hex2asci(result[117]) +
+                  hex2asci(result[118]) +
+                  hex2asci(result[119]) +
+                  hex2asci(result[120]) +
+                  hex2asci(result[121]) +
+                  hex2asci(result[122]) +
+                  hex2asci(result[123]) +
+                  hex2asci(result[124]) +
+                  hex2asci(result[125]) +
+                  hex2asci(result[126]) +
+                  hex2asci(result[127]) +
+                  hex2asci(result[128]) +
+                  hex2asci(result[129]) +
+                  hex2asci(result[130]) +
+                  hex2asci(result[131]);
                 console.log("nomeUtenteTastiera1", nomeUtenteTastiera1);
                 console.log("nomeUtenteTastiera2", nomeUtenteTastiera2);
                 console.log("nomeUtenteTastiera3", nomeUtenteTastiera3);
@@ -3629,270 +2097,142 @@ function entrata() {
                 console.log("nomeUtenteTastiera8", nomeUtenteTastiera8);
                 break;
               case "03":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
-                var dato65 = bufferino.slice(136, 138);
-                var dato66 = bufferino.slice(138, 140);
-                var dato67 = bufferino.slice(140, 142);
-                var dato68 = bufferino.slice(142, 144);
-                var dato69 = bufferino.slice(144, 146);
-                var dato70 = bufferino.slice(146, 148);
-                var dato71 = bufferino.slice(148, 150);
-                var dato72 = bufferino.slice(150, 152);
-                var dato73 = bufferino.slice(152, 154);
-                var dato74 = bufferino.slice(154, 156);
-                var dato75 = bufferino.slice(156, 158);
-                var dato76 = bufferino.slice(158, 160);
-                var dato77 = bufferino.slice(160, 162);
-                var dato78 = bufferino.slice(162, 164);
-                var dato79 = bufferino.slice(164, 166);
-                var dato80 = bufferino.slice(166, 168);
-                var dato81 = bufferino.slice(168, 170);
-                var dato82 = bufferino.slice(170, 172);
-                var dato83 = bufferino.slice(172, 174);
-                var dato84 = bufferino.slice(174, 176);
-                var dato85 = bufferino.slice(176, 178);
-                var dato86 = bufferino.slice(178, 180);
-                var dato87 = bufferino.slice(180, 182);
-                var dato88 = bufferino.slice(182, 184);
-                var dato89 = bufferino.slice(184, 186);
-                var dato90 = bufferino.slice(186, 188);
-                var dato91 = bufferino.slice(188, 190);
-                var dato92 = bufferino.slice(190, 192);
-                var dato93 = bufferino.slice(192, 194);
-                var dato94 = bufferino.slice(194, 196);
-                var dato95 = bufferino.slice(196, 198);
-                var dato96 = bufferino.slice(198, 200);
-                var dato97 = bufferino.slice(200, 202);
-                var dato98 = bufferino.slice(202, 204);
-                var dato99 = bufferino.slice(204, 206);
-                var dato100 = bufferino.slice(206, 208);
-                var dato101 = bufferino.slice(208, 210);
-                var dato102 = bufferino.slice(210, 212);
-                var dato103 = bufferino.slice(212, 214);
-                var dato104 = bufferino.slice(214, 216);
-                var dato105 = bufferino.slice(216, 218);
-                var dato106 = bufferino.slice(218, 220);
-                var dato107 = bufferino.slice(220, 222);
-                var dato108 = bufferino.slice(222, 224);
-                var dato109 = bufferino.slice(224, 226);
-                var dato110 = bufferino.slice(226, 228);
-                var dato111 = bufferino.slice(228, 230);
-                var dato112 = bufferino.slice(230, 232);
-                var dato113 = bufferino.slice(232, 234);
-                var dato114 = bufferino.slice(234, 236);
-                var dato115 = bufferino.slice(236, 238);
-                var dato116 = bufferino.slice(238, 240);
-                var dato117 = bufferino.slice(240, 242);
-                var dato118 = bufferino.slice(242, 244);
-                var dato119 = bufferino.slice(244, 246);
-                var dato120 = bufferino.slice(246, 248);
-                var dato121 = bufferino.slice(248, 250);
-                var dato122 = bufferino.slice(250, 252);
-                var dato123 = bufferino.slice(252, 254);
-                var dato124 = bufferino.slice(254, 256);
-                var dato125 = bufferino.slice(256, 258);
-                var dato126 = bufferino.slice(258, 260);
-                var dato127 = bufferino.slice(260, 262);
-                var dato128 = bufferino.slice(262, 264);
                 var nomeUtenteTastiera9 =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeUtenteTastiera10 =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeUtenteTastiera11 =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeUtenteTastiera12 =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 var nomeUtenteTastiera13 =
-                  hex2asci(dato65) +
-                  hex2asci(dato66) +
-                  hex2asci(dato67) +
-                  hex2asci(dato68) +
-                  hex2asci(dato69) +
-                  hex2asci(dato70) +
-                  hex2asci(dato71) +
-                  hex2asci(dato72) +
-                  hex2asci(dato73) +
-                  hex2asci(dato74) +
-                  hex2asci(dato75) +
-                  hex2asci(dato76) +
-                  hex2asci(dato77) +
-                  hex2asci(dato78) +
-                  hex2asci(dato79) +
-                  hex2asci(dato80);
+                  hex2asci(result[68]) +
+                  hex2asci(result[69]) +
+                  hex2asci(result[70]) +
+                  hex2asci(result[71]) +
+                  hex2asci(result[72]) +
+                  hex2asci(result[73]) +
+                  hex2asci(result[74]) +
+                  hex2asci(result[75]) +
+                  hex2asci(result[76]) +
+                  hex2asci(result[77]) +
+                  hex2asci(result[78]) +
+                  hex2asci(result[79]) +
+                  hex2asci(result[80]) +
+                  hex2asci(result[81]) +
+                  hex2asci(result[82]) +
+                  hex2asci(result[83]);
                 var nomeUtenteTastiera14 =
-                  hex2asci(dato81) +
-                  hex2asci(dato82) +
-                  hex2asci(dato83) +
-                  hex2asci(dato84) +
-                  hex2asci(dato85) +
-                  hex2asci(dato86) +
-                  hex2asci(dato87) +
-                  hex2asci(dato88) +
-                  hex2asci(dato89) +
-                  hex2asci(dato90) +
-                  hex2asci(dato91) +
-                  hex2asci(dato92) +
-                  hex2asci(dato93) +
-                  hex2asci(dato94) +
-                  hex2asci(dato95) +
-                  hex2asci(dato96);
+                  hex2asci(result[84]) +
+                  hex2asci(result[85]) +
+                  hex2asci(result[86]) +
+                  hex2asci(result[87]) +
+                  hex2asci(result[88]) +
+                  hex2asci(result[89]) +
+                  hex2asci(result[90]) +
+                  hex2asci(result[91]) +
+                  hex2asci(result[92]) +
+                  hex2asci(result[93]) +
+                  hex2asci(result[94]) +
+                  hex2asci(result[95]) +
+                  hex2asci(result[96]) +
+                  hex2asci(result[97]) +
+                  hex2asci(result[98]) +
+                  hex2asci(result[99]);
                 var nomeUtenteTastiera15 =
-                  hex2asci(dato97) +
-                  hex2asci(dato98) +
-                  hex2asci(dato99) +
-                  hex2asci(dato100) +
-                  hex2asci(dato101) +
-                  hex2asci(dato102) +
-                  hex2asci(dato103) +
-                  hex2asci(dato104) +
-                  hex2asci(dato105) +
-                  hex2asci(dato106) +
-                  hex2asci(dato107) +
-                  hex2asci(dato108) +
-                  hex2asci(dato109) +
-                  hex2asci(dato110) +
-                  hex2asci(dato111) +
-                  hex2asci(dato112);
+                  hex2asci(result[100]) +
+                  hex2asci(result[101]) +
+                  hex2asci(result[102]) +
+                  hex2asci(result[103]) +
+                  hex2asci(result[104]) +
+                  hex2asci(result[105]) +
+                  hex2asci(result[106]) +
+                  hex2asci(result[107]) +
+                  hex2asci(result[108]) +
+                  hex2asci(result[109]) +
+                  hex2asci(result[110]) +
+                  hex2asci(result[111]) +
+                  hex2asci(result[112]) +
+                  hex2asci(result[113]) +
+                  hex2asci(result[114]) +
+                  hex2asci(result[115]);
                 var nomeUtenteTastiera16 =
-                  hex2asci(dato113) +
-                  hex2asci(dato114) +
-                  hex2asci(dato115) +
-                  hex2asci(dato116) +
-                  hex2asci(dato117) +
-                  hex2asci(dato118) +
-                  hex2asci(dato119) +
-                  hex2asci(dato120) +
-                  hex2asci(dato121) +
-                  hex2asci(dato122) +
-                  hex2asci(dato123) +
-                  hex2asci(dato124) +
-                  hex2asci(dato125) +
-                  hex2asci(dato126) +
-                  hex2asci(dato127) +
-                  hex2asci(dato128);
+                  hex2asci(result[116]) +
+                  hex2asci(result[117]) +
+                  hex2asci(result[118]) +
+                  hex2asci(result[119]) +
+                  hex2asci(result[120]) +
+                  hex2asci(result[121]) +
+                  hex2asci(result[122]) +
+                  hex2asci(result[123]) +
+                  hex2asci(result[124]) +
+                  hex2asci(result[125]) +
+                  hex2asci(result[126]) +
+                  hex2asci(result[127]) +
+                  hex2asci(result[128]) +
+                  hex2asci(result[129]) +
+                  hex2asci(result[130]) +
+                  hex2asci(result[131]);
                 console.log("nomeUtenteTastiera9", nomeUtenteTastiera9);
                 console.log("nomeUtenteTastiera10", nomeUtenteTastiera10);
                 console.log("nomeUtenteTastiera11", nomeUtenteTastiera11);
@@ -3903,270 +2243,142 @@ function entrata() {
                 console.log("nomeUtenteTastiera16", nomeUtenteTastiera16);
                 break;
               case "04":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
-                var dato65 = bufferino.slice(136, 138);
-                var dato66 = bufferino.slice(138, 140);
-                var dato67 = bufferino.slice(140, 142);
-                var dato68 = bufferino.slice(142, 144);
-                var dato69 = bufferino.slice(144, 146);
-                var dato70 = bufferino.slice(146, 148);
-                var dato71 = bufferino.slice(148, 150);
-                var dato72 = bufferino.slice(150, 152);
-                var dato73 = bufferino.slice(152, 154);
-                var dato74 = bufferino.slice(154, 156);
-                var dato75 = bufferino.slice(156, 158);
-                var dato76 = bufferino.slice(158, 160);
-                var dato77 = bufferino.slice(160, 162);
-                var dato78 = bufferino.slice(162, 164);
-                var dato79 = bufferino.slice(164, 166);
-                var dato80 = bufferino.slice(166, 168);
-                var dato81 = bufferino.slice(168, 170);
-                var dato82 = bufferino.slice(170, 172);
-                var dato83 = bufferino.slice(172, 174);
-                var dato84 = bufferino.slice(174, 176);
-                var dato85 = bufferino.slice(176, 178);
-                var dato86 = bufferino.slice(178, 180);
-                var dato87 = bufferino.slice(180, 182);
-                var dato88 = bufferino.slice(182, 184);
-                var dato89 = bufferino.slice(184, 186);
-                var dato90 = bufferino.slice(186, 188);
-                var dato91 = bufferino.slice(188, 190);
-                var dato92 = bufferino.slice(190, 192);
-                var dato93 = bufferino.slice(192, 194);
-                var dato94 = bufferino.slice(194, 196);
-                var dato95 = bufferino.slice(196, 198);
-                var dato96 = bufferino.slice(198, 200);
-                var dato97 = bufferino.slice(200, 202);
-                var dato98 = bufferino.slice(202, 204);
-                var dato99 = bufferino.slice(204, 206);
-                var dato100 = bufferino.slice(206, 208);
-                var dato101 = bufferino.slice(208, 210);
-                var dato102 = bufferino.slice(210, 212);
-                var dato103 = bufferino.slice(212, 214);
-                var dato104 = bufferino.slice(214, 216);
-                var dato105 = bufferino.slice(216, 218);
-                var dato106 = bufferino.slice(218, 220);
-                var dato107 = bufferino.slice(220, 222);
-                var dato108 = bufferino.slice(222, 224);
-                var dato109 = bufferino.slice(224, 226);
-                var dato110 = bufferino.slice(226, 228);
-                var dato111 = bufferino.slice(228, 230);
-                var dato112 = bufferino.slice(230, 232);
-                var dato113 = bufferino.slice(232, 234);
-                var dato114 = bufferino.slice(234, 236);
-                var dato115 = bufferino.slice(236, 238);
-                var dato116 = bufferino.slice(238, 240);
-                var dato117 = bufferino.slice(240, 242);
-                var dato118 = bufferino.slice(242, 244);
-                var dato119 = bufferino.slice(244, 246);
-                var dato120 = bufferino.slice(246, 248);
-                var dato121 = bufferino.slice(248, 250);
-                var dato122 = bufferino.slice(250, 252);
-                var dato123 = bufferino.slice(252, 254);
-                var dato124 = bufferino.slice(254, 256);
-                var dato125 = bufferino.slice(256, 258);
-                var dato126 = bufferino.slice(258, 260);
-                var dato127 = bufferino.slice(260, 262);
-                var dato128 = bufferino.slice(262, 264);
                 var nomeUtenteSpinotto1 =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeUtenteSpinotto2 =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeUtenteSpinotto3 =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeUtenteSpinotto4 =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 var nomeUtenteSpinotto5 =
-                  hex2asci(dato65) +
-                  hex2asci(dato66) +
-                  hex2asci(dato67) +
-                  hex2asci(dato68) +
-                  hex2asci(dato69) +
-                  hex2asci(dato70) +
-                  hex2asci(dato71) +
-                  hex2asci(dato72) +
-                  hex2asci(dato73) +
-                  hex2asci(dato74) +
-                  hex2asci(dato75) +
-                  hex2asci(dato76) +
-                  hex2asci(dato77) +
-                  hex2asci(dato78) +
-                  hex2asci(dato79) +
-                  hex2asci(dato80);
+                  hex2asci(result[68]) +
+                  hex2asci(result[69]) +
+                  hex2asci(result[70]) +
+                  hex2asci(result[71]) +
+                  hex2asci(result[72]) +
+                  hex2asci(result[73]) +
+                  hex2asci(result[74]) +
+                  hex2asci(result[75]) +
+                  hex2asci(result[76]) +
+                  hex2asci(result[77]) +
+                  hex2asci(result[78]) +
+                  hex2asci(result[79]) +
+                  hex2asci(result[80]) +
+                  hex2asci(result[81]) +
+                  hex2asci(result[82]) +
+                  hex2asci(result[83]);
                 var nomeUtenteSpinotto6 =
-                  hex2asci(dato81) +
-                  hex2asci(dato82) +
-                  hex2asci(dato83) +
-                  hex2asci(dato84) +
-                  hex2asci(dato85) +
-                  hex2asci(dato86) +
-                  hex2asci(dato87) +
-                  hex2asci(dato88) +
-                  hex2asci(dato89) +
-                  hex2asci(dato90) +
-                  hex2asci(dato91) +
-                  hex2asci(dato92) +
-                  hex2asci(dato93) +
-                  hex2asci(dato94) +
-                  hex2asci(dato95) +
-                  hex2asci(dato96);
+                  hex2asci(result[84]) +
+                  hex2asci(result[85]) +
+                  hex2asci(result[86]) +
+                  hex2asci(result[87]) +
+                  hex2asci(result[88]) +
+                  hex2asci(result[89]) +
+                  hex2asci(result[90]) +
+                  hex2asci(result[91]) +
+                  hex2asci(result[92]) +
+                  hex2asci(result[93]) +
+                  hex2asci(result[94]) +
+                  hex2asci(result[95]) +
+                  hex2asci(result[96]) +
+                  hex2asci(result[97]) +
+                  hex2asci(result[98]) +
+                  hex2asci(result[99]);
                 var nomeUtenteSpinotto7 =
-                  hex2asci(dato97) +
-                  hex2asci(dato98) +
-                  hex2asci(dato99) +
-                  hex2asci(dato100) +
-                  hex2asci(dato101) +
-                  hex2asci(dato102) +
-                  hex2asci(dato103) +
-                  hex2asci(dato104) +
-                  hex2asci(dato105) +
-                  hex2asci(dato106) +
-                  hex2asci(dato107) +
-                  hex2asci(dato108) +
-                  hex2asci(dato109) +
-                  hex2asci(dato110) +
-                  hex2asci(dato111) +
-                  hex2asci(dato112);
+                  hex2asci(result[100]) +
+                  hex2asci(result[101]) +
+                  hex2asci(result[102]) +
+                  hex2asci(result[103]) +
+                  hex2asci(result[104]) +
+                  hex2asci(result[105]) +
+                  hex2asci(result[106]) +
+                  hex2asci(result[107]) +
+                  hex2asci(result[108]) +
+                  hex2asci(result[109]) +
+                  hex2asci(result[110]) +
+                  hex2asci(result[111]) +
+                  hex2asci(result[112]) +
+                  hex2asci(result[113]) +
+                  hex2asci(result[114]) +
+                  hex2asci(result[115]);
                 var nomeUtenteSpinotto8 =
-                  hex2asci(dato113) +
-                  hex2asci(dato114) +
-                  hex2asci(dato115) +
-                  hex2asci(dato116) +
-                  hex2asci(dato117) +
-                  hex2asci(dato118) +
-                  hex2asci(dato119) +
-                  hex2asci(dato120) +
-                  hex2asci(dato121) +
-                  hex2asci(dato122) +
-                  hex2asci(dato123) +
-                  hex2asci(dato124) +
-                  hex2asci(dato125) +
-                  hex2asci(dato126) +
-                  hex2asci(dato127) +
-                  hex2asci(dato128);
+                  hex2asci(result[116]) +
+                  hex2asci(result[117]) +
+                  hex2asci(result[118]) +
+                  hex2asci(result[119]) +
+                  hex2asci(result[120]) +
+                  hex2asci(result[121]) +
+                  hex2asci(result[122]) +
+                  hex2asci(result[123]) +
+                  hex2asci(result[124]) +
+                  hex2asci(result[125]) +
+                  hex2asci(result[126]) +
+                  hex2asci(result[127]) +
+                  hex2asci(result[128]) +
+                  hex2asci(result[129]) +
+                  hex2asci(result[130]) +
+                  hex2asci(result[131]);
                 console.log("nomeUtenteSpinotto1", nomeUtenteSpinotto1);
                 console.log("nomeUtenteSpinotto2", nomeUtenteSpinotto2);
                 console.log("nomeUtenteSpinotto3", nomeUtenteSpinotto3);
@@ -4177,270 +2389,142 @@ function entrata() {
                 console.log("nomeUtenteSpinotto8", nomeUtenteSpinotto8);
                 break;
               case "05":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
-                var dato65 = bufferino.slice(136, 138);
-                var dato66 = bufferino.slice(138, 140);
-                var dato67 = bufferino.slice(140, 142);
-                var dato68 = bufferino.slice(142, 144);
-                var dato69 = bufferino.slice(144, 146);
-                var dato70 = bufferino.slice(146, 148);
-                var dato71 = bufferino.slice(148, 150);
-                var dato72 = bufferino.slice(150, 152);
-                var dato73 = bufferino.slice(152, 154);
-                var dato74 = bufferino.slice(154, 156);
-                var dato75 = bufferino.slice(156, 158);
-                var dato76 = bufferino.slice(158, 160);
-                var dato77 = bufferino.slice(160, 162);
-                var dato78 = bufferino.slice(162, 164);
-                var dato79 = bufferino.slice(164, 166);
-                var dato80 = bufferino.slice(166, 168);
-                var dato81 = bufferino.slice(168, 170);
-                var dato82 = bufferino.slice(170, 172);
-                var dato83 = bufferino.slice(172, 174);
-                var dato84 = bufferino.slice(174, 176);
-                var dato85 = bufferino.slice(176, 178);
-                var dato86 = bufferino.slice(178, 180);
-                var dato87 = bufferino.slice(180, 182);
-                var dato88 = bufferino.slice(182, 184);
-                var dato89 = bufferino.slice(184, 186);
-                var dato90 = bufferino.slice(186, 188);
-                var dato91 = bufferino.slice(188, 190);
-                var dato92 = bufferino.slice(190, 192);
-                var dato93 = bufferino.slice(192, 194);
-                var dato94 = bufferino.slice(194, 196);
-                var dato95 = bufferino.slice(196, 198);
-                var dato96 = bufferino.slice(198, 200);
-                var dato97 = bufferino.slice(200, 202);
-                var dato98 = bufferino.slice(202, 204);
-                var dato99 = bufferino.slice(204, 206);
-                var dato100 = bufferino.slice(206, 208);
-                var dato101 = bufferino.slice(208, 210);
-                var dato102 = bufferino.slice(210, 212);
-                var dato103 = bufferino.slice(212, 214);
-                var dato104 = bufferino.slice(214, 216);
-                var dato105 = bufferino.slice(216, 218);
-                var dato106 = bufferino.slice(218, 220);
-                var dato107 = bufferino.slice(220, 222);
-                var dato108 = bufferino.slice(222, 224);
-                var dato109 = bufferino.slice(224, 226);
-                var dato110 = bufferino.slice(226, 228);
-                var dato111 = bufferino.slice(228, 230);
-                var dato112 = bufferino.slice(230, 232);
-                var dato113 = bufferino.slice(232, 234);
-                var dato114 = bufferino.slice(234, 236);
-                var dato115 = bufferino.slice(236, 238);
-                var dato116 = bufferino.slice(238, 240);
-                var dato117 = bufferino.slice(240, 242);
-                var dato118 = bufferino.slice(242, 244);
-                var dato119 = bufferino.slice(244, 246);
-                var dato120 = bufferino.slice(246, 248);
-                var dato121 = bufferino.slice(248, 250);
-                var dato122 = bufferino.slice(250, 252);
-                var dato123 = bufferino.slice(252, 254);
-                var dato124 = bufferino.slice(254, 256);
-                var dato125 = bufferino.slice(256, 258);
-                var dato126 = bufferino.slice(258, 260);
-                var dato127 = bufferino.slice(260, 262);
-                var dato128 = bufferino.slice(262, 264);
                 var nomeUtenteSpinotto9 =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeUtenteSpinotto10 =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeUtenteSpinotto11 =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeUtenteSpinotto12 =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 var nomeUtenteSpinotto13 =
-                  hex2asci(dato65) +
-                  hex2asci(dato66) +
-                  hex2asci(dato67) +
-                  hex2asci(dato68) +
-                  hex2asci(dato69) +
-                  hex2asci(dato70) +
-                  hex2asci(dato71) +
-                  hex2asci(dato72) +
-                  hex2asci(dato73) +
-                  hex2asci(dato74) +
-                  hex2asci(dato75) +
-                  hex2asci(dato76) +
-                  hex2asci(dato77) +
-                  hex2asci(dato78) +
-                  hex2asci(dato79) +
-                  hex2asci(dato80);
+                  hex2asci(result[68]) +
+                  hex2asci(result[69]) +
+                  hex2asci(result[70]) +
+                  hex2asci(result[71]) +
+                  hex2asci(result[72]) +
+                  hex2asci(result[73]) +
+                  hex2asci(result[74]) +
+                  hex2asci(result[75]) +
+                  hex2asci(result[76]) +
+                  hex2asci(result[77]) +
+                  hex2asci(result[78]) +
+                  hex2asci(result[79]) +
+                  hex2asci(result[80]) +
+                  hex2asci(result[81]) +
+                  hex2asci(result[82]) +
+                  hex2asci(result[83]);
                 var nomeUtenteSpinotto14 =
-                  hex2asci(dato81) +
-                  hex2asci(dato82) +
-                  hex2asci(dato83) +
-                  hex2asci(dato84) +
-                  hex2asci(dato85) +
-                  hex2asci(dato86) +
-                  hex2asci(dato87) +
-                  hex2asci(dato88) +
-                  hex2asci(dato89) +
-                  hex2asci(dato90) +
-                  hex2asci(dato91) +
-                  hex2asci(dato92) +
-                  hex2asci(dato93) +
-                  hex2asci(dato94) +
-                  hex2asci(dato95) +
-                  hex2asci(dato96);
+                  hex2asci(result[84]) +
+                  hex2asci(result[85]) +
+                  hex2asci(result[86]) +
+                  hex2asci(result[87]) +
+                  hex2asci(result[88]) +
+                  hex2asci(result[89]) +
+                  hex2asci(result[90]) +
+                  hex2asci(result[91]) +
+                  hex2asci(result[92]) +
+                  hex2asci(result[93]) +
+                  hex2asci(result[94]) +
+                  hex2asci(result[95]) +
+                  hex2asci(result[96]) +
+                  hex2asci(result[97]) +
+                  hex2asci(result[98]) +
+                  hex2asci(result[99]);
                 var nomeUtenteSpinotto15 =
-                  hex2asci(dato97) +
-                  hex2asci(dato98) +
-                  hex2asci(dato99) +
-                  hex2asci(dato100) +
-                  hex2asci(dato101) +
-                  hex2asci(dato102) +
-                  hex2asci(dato103) +
-                  hex2asci(dato104) +
-                  hex2asci(dato105) +
-                  hex2asci(dato106) +
-                  hex2asci(dato107) +
-                  hex2asci(dato108) +
-                  hex2asci(dato109) +
-                  hex2asci(dato110) +
-                  hex2asci(dato111) +
-                  hex2asci(dato112);
+                  hex2asci(result[100]) +
+                  hex2asci(result[101]) +
+                  hex2asci(result[102]) +
+                  hex2asci(result[103]) +
+                  hex2asci(result[104]) +
+                  hex2asci(result[105]) +
+                  hex2asci(result[106]) +
+                  hex2asci(result[107]) +
+                  hex2asci(result[108]) +
+                  hex2asci(result[109]) +
+                  hex2asci(result[110]) +
+                  hex2asci(result[111]) +
+                  hex2asci(result[112]) +
+                  hex2asci(result[113]) +
+                  hex2asci(result[114]) +
+                  hex2asci(result[115]);
                 var nomeUtenteSpinotto16 =
-                  hex2asci(dato113) +
-                  hex2asci(dato114) +
-                  hex2asci(dato115) +
-                  hex2asci(dato116) +
-                  hex2asci(dato117) +
-                  hex2asci(dato118) +
-                  hex2asci(dato119) +
-                  hex2asci(dato120) +
-                  hex2asci(dato121) +
-                  hex2asci(dato122) +
-                  hex2asci(dato123) +
-                  hex2asci(dato124) +
-                  hex2asci(dato125) +
-                  hex2asci(dato126) +
-                  hex2asci(dato127) +
-                  hex2asci(dato128);
+                  hex2asci(result[116]) +
+                  hex2asci(result[117]) +
+                  hex2asci(result[118]) +
+                  hex2asci(result[119]) +
+                  hex2asci(result[120]) +
+                  hex2asci(result[121]) +
+                  hex2asci(result[122]) +
+                  hex2asci(result[123]) +
+                  hex2asci(result[124]) +
+                  hex2asci(result[125]) +
+                  hex2asci(result[126]) +
+                  hex2asci(result[127]) +
+                  hex2asci(result[128]) +
+                  hex2asci(result[129]) +
+                  hex2asci(result[130]) +
+                  hex2asci(result[131]);
                 console.log("nomeUtenteSpinotto9", nomeUtenteSpinotto9);
                 console.log("nomeUtenteSpinotto10", nomeUtenteSpinotto10);
                 console.log("nomeUtenteSpinotto11", nomeUtenteSpinotto11);
@@ -4451,270 +2535,142 @@ function entrata() {
                 console.log("nomeUtenteSpinotto16", nomeUtenteSpinotto16);
                 break;
               case "06":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
-                var dato65 = bufferino.slice(136, 138);
-                var dato66 = bufferino.slice(138, 140);
-                var dato67 = bufferino.slice(140, 142);
-                var dato68 = bufferino.slice(142, 144);
-                var dato69 = bufferino.slice(144, 146);
-                var dato70 = bufferino.slice(146, 148);
-                var dato71 = bufferino.slice(148, 150);
-                var dato72 = bufferino.slice(150, 152);
-                var dato73 = bufferino.slice(152, 154);
-                var dato74 = bufferino.slice(154, 156);
-                var dato75 = bufferino.slice(156, 158);
-                var dato76 = bufferino.slice(158, 160);
-                var dato77 = bufferino.slice(160, 162);
-                var dato78 = bufferino.slice(162, 164);
-                var dato79 = bufferino.slice(164, 166);
-                var dato80 = bufferino.slice(166, 168);
-                var dato81 = bufferino.slice(168, 170);
-                var dato82 = bufferino.slice(170, 172);
-                var dato83 = bufferino.slice(172, 174);
-                var dato84 = bufferino.slice(174, 176);
-                var dato85 = bufferino.slice(176, 178);
-                var dato86 = bufferino.slice(178, 180);
-                var dato87 = bufferino.slice(180, 182);
-                var dato88 = bufferino.slice(182, 184);
-                var dato89 = bufferino.slice(184, 186);
-                var dato90 = bufferino.slice(186, 188);
-                var dato91 = bufferino.slice(188, 190);
-                var dato92 = bufferino.slice(190, 192);
-                var dato93 = bufferino.slice(192, 194);
-                var dato94 = bufferino.slice(194, 196);
-                var dato95 = bufferino.slice(196, 198);
-                var dato96 = bufferino.slice(198, 200);
-                var dato97 = bufferino.slice(200, 202);
-                var dato98 = bufferino.slice(202, 204);
-                var dato99 = bufferino.slice(204, 206);
-                var dato100 = bufferino.slice(206, 208);
-                var dato101 = bufferino.slice(208, 210);
-                var dato102 = bufferino.slice(210, 212);
-                var dato103 = bufferino.slice(212, 214);
-                var dato104 = bufferino.slice(214, 216);
-                var dato105 = bufferino.slice(216, 218);
-                var dato106 = bufferino.slice(218, 220);
-                var dato107 = bufferino.slice(220, 222);
-                var dato108 = bufferino.slice(222, 224);
-                var dato109 = bufferino.slice(224, 226);
-                var dato110 = bufferino.slice(226, 228);
-                var dato111 = bufferino.slice(228, 230);
-                var dato112 = bufferino.slice(230, 232);
-                var dato113 = bufferino.slice(232, 234);
-                var dato114 = bufferino.slice(234, 236);
-                var dato115 = bufferino.slice(236, 238);
-                var dato116 = bufferino.slice(238, 240);
-                var dato117 = bufferino.slice(240, 242);
-                var dato118 = bufferino.slice(242, 244);
-                var dato119 = bufferino.slice(244, 246);
-                var dato120 = bufferino.slice(246, 248);
-                var dato121 = bufferino.slice(248, 250);
-                var dato122 = bufferino.slice(250, 252);
-                var dato123 = bufferino.slice(252, 254);
-                var dato124 = bufferino.slice(254, 256);
-                var dato125 = bufferino.slice(256, 258);
-                var dato126 = bufferino.slice(258, 260);
-                var dato127 = bufferino.slice(260, 262);
-                var dato128 = bufferino.slice(262, 264);
                 var nomeUscita1 =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeUscita2 =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeUscita3 =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeUscita4 =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 var nomeUscita5 =
-                  hex2asci(dato65) +
-                  hex2asci(dato66) +
-                  hex2asci(dato67) +
-                  hex2asci(dato68) +
-                  hex2asci(dato69) +
-                  hex2asci(dato70) +
-                  hex2asci(dato71) +
-                  hex2asci(dato72) +
-                  hex2asci(dato73) +
-                  hex2asci(dato74) +
-                  hex2asci(dato75) +
-                  hex2asci(dato76) +
-                  hex2asci(dato77) +
-                  hex2asci(dato78) +
-                  hex2asci(dato79) +
-                  hex2asci(dato80);
+                  hex2asci(result[68]) +
+                  hex2asci(result[69]) +
+                  hex2asci(result[70]) +
+                  hex2asci(result[71]) +
+                  hex2asci(result[72]) +
+                  hex2asci(result[73]) +
+                  hex2asci(result[74]) +
+                  hex2asci(result[75]) +
+                  hex2asci(result[76]) +
+                  hex2asci(result[77]) +
+                  hex2asci(result[78]) +
+                  hex2asci(result[79]) +
+                  hex2asci(result[80]) +
+                  hex2asci(result[81]) +
+                  hex2asci(result[82]) +
+                  hex2asci(result[83]);
                 var nomeUscita6 =
-                  hex2asci(dato81) +
-                  hex2asci(dato82) +
-                  hex2asci(dato83) +
-                  hex2asci(dato84) +
-                  hex2asci(dato85) +
-                  hex2asci(dato86) +
-                  hex2asci(dato87) +
-                  hex2asci(dato88) +
-                  hex2asci(dato89) +
-                  hex2asci(dato90) +
-                  hex2asci(dato91) +
-                  hex2asci(dato92) +
-                  hex2asci(dato93) +
-                  hex2asci(dato94) +
-                  hex2asci(dato95) +
-                  hex2asci(dato96);
+                  hex2asci(result[84]) +
+                  hex2asci(result[85]) +
+                  hex2asci(result[86]) +
+                  hex2asci(result[87]) +
+                  hex2asci(result[88]) +
+                  hex2asci(result[89]) +
+                  hex2asci(result[90]) +
+                  hex2asci(result[91]) +
+                  hex2asci(result[92]) +
+                  hex2asci(result[93]) +
+                  hex2asci(result[94]) +
+                  hex2asci(result[95]) +
+                  hex2asci(result[96]) +
+                  hex2asci(result[97]) +
+                  hex2asci(result[98]) +
+                  hex2asci(result[99]);
                 var nomeUscita7 =
-                  hex2asci(dato97) +
-                  hex2asci(dato98) +
-                  hex2asci(dato99) +
-                  hex2asci(dato100) +
-                  hex2asci(dato101) +
-                  hex2asci(dato102) +
-                  hex2asci(dato103) +
-                  hex2asci(dato104) +
-                  hex2asci(dato105) +
-                  hex2asci(dato106) +
-                  hex2asci(dato107) +
-                  hex2asci(dato108) +
-                  hex2asci(dato109) +
-                  hex2asci(dato110) +
-                  hex2asci(dato111) +
-                  hex2asci(dato112);
+                  hex2asci(result[100]) +
+                  hex2asci(result[101]) +
+                  hex2asci(result[102]) +
+                  hex2asci(result[103]) +
+                  hex2asci(result[104]) +
+                  hex2asci(result[105]) +
+                  hex2asci(result[106]) +
+                  hex2asci(result[107]) +
+                  hex2asci(result[108]) +
+                  hex2asci(result[109]) +
+                  hex2asci(result[110]) +
+                  hex2asci(result[111]) +
+                  hex2asci(result[112]) +
+                  hex2asci(result[113]) +
+                  hex2asci(result[114]) +
+                  hex2asci(result[115]);
                 var nomeUscita8 =
-                  hex2asci(dato113) +
-                  hex2asci(dato114) +
-                  hex2asci(dato115) +
-                  hex2asci(dato116) +
-                  hex2asci(dato117) +
-                  hex2asci(dato118) +
-                  hex2asci(dato119) +
-                  hex2asci(dato120) +
-                  hex2asci(dato121) +
-                  hex2asci(dato122) +
-                  hex2asci(dato123) +
-                  hex2asci(dato124) +
-                  hex2asci(dato125) +
-                  hex2asci(dato126) +
-                  hex2asci(dato127) +
-                  hex2asci(dato128);
+                  hex2asci(result[116]) +
+                  hex2asci(result[117]) +
+                  hex2asci(result[118]) +
+                  hex2asci(result[119]) +
+                  hex2asci(result[120]) +
+                  hex2asci(result[121]) +
+                  hex2asci(result[122]) +
+                  hex2asci(result[123]) +
+                  hex2asci(result[124]) +
+                  hex2asci(result[125]) +
+                  hex2asci(result[126]) +
+                  hex2asci(result[127]) +
+                  hex2asci(result[128]) +
+                  hex2asci(result[129]) +
+                  hex2asci(result[130]) +
+                  hex2asci(result[131]);
                 console.log("nomeUscita1", nomeUscita1);
                 console.log("nomeUscita2", nomeUscita2);
                 console.log("nomeUscita3", nomeUscita3);
@@ -4725,270 +2681,142 @@ function entrata() {
                 console.log("nomeUscita8", nomeUscita8);
                 break;
               case "07":
-                var dato1 = bufferino.slice(8, 10);
-                var dato2 = bufferino.slice(10, 12);
-                var dato3 = bufferino.slice(12, 14);
-                var dato4 = bufferino.slice(14, 16);
-                var dato5 = bufferino.slice(16, 18);
-                var dato6 = bufferino.slice(18, 20);
-                var dato7 = bufferino.slice(20, 22);
-                var dato8 = bufferino.slice(22, 24);
-                var dato9 = bufferino.slice(24, 26);
-                var dato10 = bufferino.slice(26, 28);
-                var dato11 = bufferino.slice(28, 30);
-                var dato12 = bufferino.slice(30, 32);
-                var dato13 = bufferino.slice(32, 34);
-                var dato14 = bufferino.slice(34, 36);
-                var dato15 = bufferino.slice(36, 38);
-                var dato16 = bufferino.slice(38, 40);
-                var dato17 = bufferino.slice(40, 42);
-                var dato18 = bufferino.slice(42, 44);
-                var dato19 = bufferino.slice(44, 46);
-                var dato20 = bufferino.slice(46, 48);
-                var dato21 = bufferino.slice(48, 50);
-                var dato22 = bufferino.slice(50, 52);
-                var dato23 = bufferino.slice(52, 54);
-                var dato24 = bufferino.slice(54, 56);
-                var dato25 = bufferino.slice(56, 58);
-                var dato26 = bufferino.slice(58, 60);
-                var dato27 = bufferino.slice(60, 62);
-                var dato28 = bufferino.slice(62, 64);
-                var dato29 = bufferino.slice(64, 66);
-                var dato30 = bufferino.slice(66, 68);
-                var dato31 = bufferino.slice(68, 70);
-                var dato32 = bufferino.slice(70, 72);
-                var dato33 = bufferino.slice(72, 74);
-                var dato34 = bufferino.slice(74, 76);
-                var dato35 = bufferino.slice(76, 78);
-                var dato36 = bufferino.slice(78, 80);
-                var dato37 = bufferino.slice(80, 82);
-                var dato38 = bufferino.slice(82, 84);
-                var dato39 = bufferino.slice(84, 86);
-                var dato40 = bufferino.slice(86, 88);
-                var dato41 = bufferino.slice(88, 90);
-                var dato42 = bufferino.slice(90, 92);
-                var dato43 = bufferino.slice(92, 94);
-                var dato44 = bufferino.slice(94, 96);
-                var dato45 = bufferino.slice(96, 98);
-                var dato46 = bufferino.slice(98, 100);
-                var dato47 = bufferino.slice(100, 102);
-                var dato48 = bufferino.slice(102, 104);
-                var dato49 = bufferino.slice(104, 106);
-                var dato50 = bufferino.slice(106, 108);
-                var dato51 = bufferino.slice(108, 110);
-                var dato52 = bufferino.slice(110, 112);
-                var dato53 = bufferino.slice(112, 114);
-                var dato54 = bufferino.slice(114, 116);
-                var dato55 = bufferino.slice(116, 118);
-                var dato56 = bufferino.slice(118, 120);
-                var dato57 = bufferino.slice(120, 122);
-                var dato58 = bufferino.slice(122, 124);
-                var dato59 = bufferino.slice(124, 126);
-                var dato60 = bufferino.slice(126, 128);
-                var dato61 = bufferino.slice(128, 130);
-                var dato62 = bufferino.slice(130, 132);
-                var dato63 = bufferino.slice(132, 134);
-                var dato64 = bufferino.slice(134, 136);
-                var dato65 = bufferino.slice(136, 138);
-                var dato66 = bufferino.slice(138, 140);
-                var dato67 = bufferino.slice(140, 142);
-                var dato68 = bufferino.slice(142, 144);
-                var dato69 = bufferino.slice(144, 146);
-                var dato70 = bufferino.slice(146, 148);
-                var dato71 = bufferino.slice(148, 150);
-                var dato72 = bufferino.slice(150, 152);
-                var dato73 = bufferino.slice(152, 154);
-                var dato74 = bufferino.slice(154, 156);
-                var dato75 = bufferino.slice(156, 158);
-                var dato76 = bufferino.slice(158, 160);
-                var dato77 = bufferino.slice(160, 162);
-                var dato78 = bufferino.slice(162, 164);
-                var dato79 = bufferino.slice(164, 166);
-                var dato80 = bufferino.slice(166, 168);
-                var dato81 = bufferino.slice(168, 170);
-                var dato82 = bufferino.slice(170, 172);
-                var dato83 = bufferino.slice(172, 174);
-                var dato84 = bufferino.slice(174, 176);
-                var dato85 = bufferino.slice(176, 178);
-                var dato86 = bufferino.slice(178, 180);
-                var dato87 = bufferino.slice(180, 182);
-                var dato88 = bufferino.slice(182, 184);
-                var dato89 = bufferino.slice(184, 186);
-                var dato90 = bufferino.slice(186, 188);
-                var dato91 = bufferino.slice(188, 190);
-                var dato92 = bufferino.slice(190, 192);
-                var dato93 = bufferino.slice(192, 194);
-                var dato94 = bufferino.slice(194, 196);
-                var dato95 = bufferino.slice(196, 198);
-                var dato96 = bufferino.slice(198, 200);
-                var dato97 = bufferino.slice(200, 202);
-                var dato98 = bufferino.slice(202, 204);
-                var dato99 = bufferino.slice(204, 206);
-                var dato100 = bufferino.slice(206, 208);
-                var dato101 = bufferino.slice(208, 210);
-                var dato102 = bufferino.slice(210, 212);
-                var dato103 = bufferino.slice(212, 214);
-                var dato104 = bufferino.slice(214, 216);
-                var dato105 = bufferino.slice(216, 218);
-                var dato106 = bufferino.slice(218, 220);
-                var dato107 = bufferino.slice(220, 222);
-                var dato108 = bufferino.slice(222, 224);
-                var dato109 = bufferino.slice(224, 226);
-                var dato110 = bufferino.slice(226, 228);
-                var dato111 = bufferino.slice(228, 230);
-                var dato112 = bufferino.slice(230, 232);
-                var dato113 = bufferino.slice(232, 234);
-                var dato114 = bufferino.slice(234, 236);
-                var dato115 = bufferino.slice(236, 238);
-                var dato116 = bufferino.slice(238, 240);
-                var dato117 = bufferino.slice(240, 242);
-                var dato118 = bufferino.slice(242, 244);
-                var dato119 = bufferino.slice(244, 246);
-                var dato120 = bufferino.slice(246, 248);
-                var dato121 = bufferino.slice(248, 250);
-                var dato122 = bufferino.slice(250, 252);
-                var dato123 = bufferino.slice(252, 254);
-                var dato124 = bufferino.slice(254, 256);
-                var dato125 = bufferino.slice(256, 258);
-                var dato126 = bufferino.slice(258, 260);
-                var dato127 = bufferino.slice(260, 262);
-                var dato128 = bufferino.slice(262, 264);
                 var nomeUscita9 =
-                  hex2asci(dato1) +
-                  hex2asci(dato2) +
-                  hex2asci(dato3) +
-                  hex2asci(dato4) +
-                  hex2asci(dato5) +
-                  hex2asci(dato6) +
-                  hex2asci(dato7) +
-                  hex2asci(dato8) +
-                  hex2asci(dato9) +
-                  hex2asci(dato10) +
-                  hex2asci(dato11) +
-                  hex2asci(dato12) +
-                  hex2asci(dato13) +
-                  hex2asci(dato14) +
-                  hex2asci(dato15) +
-                  hex2asci(dato16);
+                  hex2asci(result[4]) +
+                  hex2asci(result[5]) +
+                  hex2asci(result[6]) +
+                  hex2asci(result[7]) +
+                  hex2asci(result[8]) +
+                  hex2asci(result[9]) +
+                  hex2asci(result[10]) +
+                  hex2asci(result[11]) +
+                  hex2asci(result[12]) +
+                  hex2asci(result[13]) +
+                  hex2asci(result[14]) +
+                  hex2asci(result[15]) +
+                  hex2asci(result[16]) +
+                  hex2asci(result[17]) +
+                  hex2asci(result[18]) +
+                  hex2asci(result[19]);
                 var nomeUscita10 =
-                  hex2asci(dato17) +
-                  hex2asci(dato18) +
-                  hex2asci(dato19) +
-                  hex2asci(dato20) +
-                  hex2asci(dato21) +
-                  hex2asci(dato22) +
-                  hex2asci(dato23) +
-                  hex2asci(dato24) +
-                  hex2asci(dato25) +
-                  hex2asci(dato26) +
-                  hex2asci(dato27) +
-                  hex2asci(dato28) +
-                  hex2asci(dato29) +
-                  hex2asci(dato30) +
-                  hex2asci(dato31) +
-                  hex2asci(dato32);
+                  hex2asci(result[20]) +
+                  hex2asci(result[21]) +
+                  hex2asci(result[22]) +
+                  hex2asci(result[23]) +
+                  hex2asci(result[24]) +
+                  hex2asci(result[25]) +
+                  hex2asci(result[26]) +
+                  hex2asci(result[27]) +
+                  hex2asci(result[28]) +
+                  hex2asci(result[29]) +
+                  hex2asci(result[30]) +
+                  hex2asci(result[31]) +
+                  hex2asci(result[32]) +
+                  hex2asci(result[33]) +
+                  hex2asci(result[34]) +
+                  hex2asci(result[35]);
                 var nomeUscita11 =
-                  hex2asci(dato33) +
-                  hex2asci(dato34) +
-                  hex2asci(dato35) +
-                  hex2asci(dato36) +
-                  hex2asci(dato37) +
-                  hex2asci(dato38) +
-                  hex2asci(dato39) +
-                  hex2asci(dato40) +
-                  hex2asci(dato41) +
-                  hex2asci(dato42) +
-                  hex2asci(dato43) +
-                  hex2asci(dato44) +
-                  hex2asci(dato45) +
-                  hex2asci(dato46) +
-                  hex2asci(dato47) +
-                  hex2asci(dato48);
+                  hex2asci(result[36]) +
+                  hex2asci(result[37]) +
+                  hex2asci(result[38]) +
+                  hex2asci(result[39]) +
+                  hex2asci(result[40]) +
+                  hex2asci(result[41]) +
+                  hex2asci(result[42]) +
+                  hex2asci(result[43]) +
+                  hex2asci(result[44]) +
+                  hex2asci(result[45]) +
+                  hex2asci(result[46]) +
+                  hex2asci(result[47]) +
+                  hex2asci(result[48]) +
+                  hex2asci(result[49]) +
+                  hex2asci(result[50]) +
+                  hex2asci(result[51]);
                 var nomeUscita12 =
-                  hex2asci(dato49) +
-                  hex2asci(dato50) +
-                  hex2asci(dato51) +
-                  hex2asci(dato52) +
-                  hex2asci(dato53) +
-                  hex2asci(dato54) +
-                  hex2asci(dato55) +
-                  hex2asci(dato56) +
-                  hex2asci(dato57) +
-                  hex2asci(dato58) +
-                  hex2asci(dato59) +
-                  hex2asci(dato60) +
-                  hex2asci(dato61) +
-                  hex2asci(dato62) +
-                  hex2asci(dato63) +
-                  hex2asci(dato64);
+                  hex2asci(result[52]) +
+                  hex2asci(result[53]) +
+                  hex2asci(result[54]) +
+                  hex2asci(result[55]) +
+                  hex2asci(result[56]) +
+                  hex2asci(result[57]) +
+                  hex2asci(result[58]) +
+                  hex2asci(result[59]) +
+                  hex2asci(result[60]) +
+                  hex2asci(result[61]) +
+                  hex2asci(result[62]) +
+                  hex2asci(result[63]) +
+                  hex2asci(result[64]) +
+                  hex2asci(result[65]) +
+                  hex2asci(result[66]) +
+                  hex2asci(result[67]);
                 var nomeUscita13 =
-                  hex2asci(dato65) +
-                  hex2asci(dato66) +
-                  hex2asci(dato67) +
-                  hex2asci(dato68) +
-                  hex2asci(dato69) +
-                  hex2asci(dato70) +
-                  hex2asci(dato71) +
-                  hex2asci(dato72) +
-                  hex2asci(dato73) +
-                  hex2asci(dato74) +
-                  hex2asci(dato75) +
-                  hex2asci(dato76) +
-                  hex2asci(dato77) +
-                  hex2asci(dato78) +
-                  hex2asci(dato79) +
-                  hex2asci(dato80);
+                  hex2asci(result[68]) +
+                  hex2asci(result[69]) +
+                  hex2asci(result[70]) +
+                  hex2asci(result[71]) +
+                  hex2asci(result[72]) +
+                  hex2asci(result[73]) +
+                  hex2asci(result[74]) +
+                  hex2asci(result[75]) +
+                  hex2asci(result[76]) +
+                  hex2asci(result[77]) +
+                  hex2asci(result[78]) +
+                  hex2asci(result[79]) +
+                  hex2asci(result[80]) +
+                  hex2asci(result[81]) +
+                  hex2asci(result[82]) +
+                  hex2asci(result[83]);
                 var nomeUscita14 =
-                  hex2asci(dato81) +
-                  hex2asci(dato82) +
-                  hex2asci(dato83) +
-                  hex2asci(dato84) +
-                  hex2asci(dato85) +
-                  hex2asci(dato86) +
-                  hex2asci(dato87) +
-                  hex2asci(dato88) +
-                  hex2asci(dato89) +
-                  hex2asci(dato90) +
-                  hex2asci(dato91) +
-                  hex2asci(dato92) +
-                  hex2asci(dato93) +
-                  hex2asci(dato94) +
-                  hex2asci(dato95) +
-                  hex2asci(dato96);
+                  hex2asci(result[84]) +
+                  hex2asci(result[85]) +
+                  hex2asci(result[86]) +
+                  hex2asci(result[87]) +
+                  hex2asci(result[88]) +
+                  hex2asci(result[89]) +
+                  hex2asci(result[90]) +
+                  hex2asci(result[91]) +
+                  hex2asci(result[92]) +
+                  hex2asci(result[93]) +
+                  hex2asci(result[94]) +
+                  hex2asci(result[95]) +
+                  hex2asci(result[96]) +
+                  hex2asci(result[97]) +
+                  hex2asci(result[98]) +
+                  hex2asci(result[99]);
                 var nomeUscita15 =
-                  hex2asci(dato97) +
-                  hex2asci(dato98) +
-                  hex2asci(dato99) +
-                  hex2asci(dato100) +
-                  hex2asci(dato101) +
-                  hex2asci(dato102) +
-                  hex2asci(dato103) +
-                  hex2asci(dato104) +
-                  hex2asci(dato105) +
-                  hex2asci(dato106) +
-                  hex2asci(dato107) +
-                  hex2asci(dato108) +
-                  hex2asci(dato109) +
-                  hex2asci(dato110) +
-                  hex2asci(dato111) +
-                  hex2asci(dato112);
+                  hex2asci(result[100]) +
+                  hex2asci(result[101]) +
+                  hex2asci(result[102]) +
+                  hex2asci(result[103]) +
+                  hex2asci(result[104]) +
+                  hex2asci(result[105]) +
+                  hex2asci(result[106]) +
+                  hex2asci(result[107]) +
+                  hex2asci(result[108]) +
+                  hex2asci(result[109]) +
+                  hex2asci(result[110]) +
+                  hex2asci(result[111]) +
+                  hex2asci(result[112]) +
+                  hex2asci(result[113]) +
+                  hex2asci(result[114]) +
+                  hex2asci(result[115]);
                 var nomeUscita16 =
-                  hex2asci(dato113) +
-                  hex2asci(dato114) +
-                  hex2asci(dato115) +
-                  hex2asci(dato116) +
-                  hex2asci(dato117) +
-                  hex2asci(dato118) +
-                  hex2asci(dato119) +
-                  hex2asci(dato120) +
-                  hex2asci(dato121) +
-                  hex2asci(dato122) +
-                  hex2asci(dato123) +
-                  hex2asci(dato124) +
-                  hex2asci(dato125) +
-                  hex2asci(dato126) +
-                  hex2asci(dato127) +
-                  hex2asci(dato128);
+                  hex2asci(result[116]) +
+                  hex2asci(result[117]) +
+                  hex2asci(result[118]) +
+                  hex2asci(result[119]) +
+                  hex2asci(result[120]) +
+                  hex2asci(result[121]) +
+                  hex2asci(result[122]) +
+                  hex2asci(result[123]) +
+                  hex2asci(result[124]) +
+                  hex2asci(result[125]) +
+                  hex2asci(result[126]) +
+                  hex2asci(result[127]) +
+                  hex2asci(result[128]) +
+                  hex2asci(result[129]) +
+                  hex2asci(result[130]) +
+                  hex2asci(result[131]);
                 console.log("nomeUscita9", nomeUscita9);
                 console.log("nomeUscita10", nomeUscita10);
                 console.log("nomeUscita11", nomeUscita11);
@@ -5061,702 +2889,23 @@ function entrata() {
           if (payload == "35") {
             risultato = "allarme tamper zone";
             console.log(risultato);
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna4bin = hex2bin(colonna4);
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 1 allarme amper");
-                  arrayzoneallarmetamper[0] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[0] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 2 allarmetamper");
-                  arrayzoneallarmetamper[1] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[1] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 3 allarmetamper");
-                  arrayzoneallarmetamper[2] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[2] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 4 allarmetamper");
-                  arrayzoneallarmetamper[3] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[3] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 5 allarmetamper");
-                  arrayzoneallarmetamper[4] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[4] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 6 allarmetamper");
-                  arrayzoneallarmetamper[5] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[5] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 7 allarmetamper");
-                  arrayzoneallarmetamper[6] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[6] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 8 allarmetamper");
-                  arrayzoneallarmetamper[7] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[7] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna4 == "00") {
-              arrayzoneallarmetamper[0] = 0;
-              arrayzoneallarmetamper[1] = 0;
-              arrayzoneallarmetamper[2] = 0;
-              arrayzoneallarmetamper[3] = 0;
-              arrayzoneallarmetamper[4] = 0;
-              arrayzoneallarmetamper[5] = 0;
-              arrayzoneallarmetamper[6] = 0;
-              arrayzoneallarmetamper[7] = 0;
-            }
-            if (colonna5 != "00") {
-              switch (colonna5bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 9 allarme amper");
-                  arrayzoneallarmetamper[8] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[8] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 10 allarmetamper");
-                  arrayzoneallarmetamper[9] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[9] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 11 allarmetamper");
-                  arrayzoneallarmetamper[10] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[10] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 12 allarmetamper");
-                  arrayzoneallarmetamper[11] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[11] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 13 allarmetamper");
-                  arrayzoneallarmetamper[12] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[12] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 14 allarmetamper");
-                  arrayzoneallarmetamper[13] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[13] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 15 allarmetamper");
-                  arrayzoneallarmetamper[14] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[14] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 16 allarmetamper");
-                  arrayzoneallarmetamper[15] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[15] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna5 == "00") {
-              arrayzoneallarmetamper[8] = 0;
-              arrayzoneallarmetamper[9] = 0;
-              arrayzoneallarmetamper[10] = 0;
-              arrayzoneallarmetamper[11] = 0;
-              arrayzoneallarmetamper[12] = 0;
-              arrayzoneallarmetamper[13] = 0;
-              arrayzoneallarmetamper[14] = 0;
-              arrayzoneallarmetamper[15] = 0;
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 17 allarmetamper");
-                  arrayzoneallarmetamper[16] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[16] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 18 allarmetamper");
-                  arrayzoneallarmetamper[17] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[17] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 19 allarmetamper");
-                  arrayzoneallarmetamper[18] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[18] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 20 allarmetamper");
-                  arrayzoneallarmetamper[19] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[19] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 21 allarmetamper");
-                  arrayzoneallarmetamper[20] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[20] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 22 allarmetamper");
-                  arrayzoneallarmetamper[21] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[21] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 23 allarmetamper");
-                  arrayzoneallarmetamper[22] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[22] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 24 allarmetamper");
-                  arrayzoneallarmetamper[23] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[23] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna6 == "00") {
-              arrayzoneallarmetamper[16] = 0;
-              arrayzoneallarmetamper[17] = 0;
-              arrayzoneallarmetamper[18] = 0;
-              arrayzoneallarmetamper[19] = 0;
-              arrayzoneallarmetamper[20] = 0;
-              arrayzoneallarmetamper[21] = 0;
-              arrayzoneallarmetamper[22] = 0;
-              arrayzoneallarmetamper[23] = 0;
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 25 allarmetamper");
-                  arrayzoneallarmetamper[24] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[24] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 26 allarmetamper");
-                  arrayzoneallarmetamper[25] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[25] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 27 allarmetamper");
-                  arrayzoneallarmetamper[26] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[26] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 28 allarmetamper");
-                  arrayzoneallarmetamper[27] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[27] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 29 allarmetamper");
-                  arrayzoneallarmetamper[28] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[28] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 30 allarmetamper");
-                  arrayzoneallarmetamper[29] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[29] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 31 allarmetamper");
-                  arrayzoneallarmetamper[30] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[30] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 32 allarmetamper");
-                  arrayzoneallarmetamper[31] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[31] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna7 == "00") {
-              arrayzoneallarmetamper[24] = 0;
-              arrayzoneallarmetamper[25] = 0;
-              arrayzoneallarmetamper[26] = 0;
-              arrayzoneallarmetamper[27] = 0;
-              arrayzoneallarmetamper[28] = 0;
-              arrayzoneallarmetamper[29] = 0;
-              arrayzoneallarmetamper[30] = 0;
-              arrayzoneallarmetamper[31] = 0;
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 33 allarmetamper");
-                  arrayzoneallarmetamper[32] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[32] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 34 allarmetamper");
-                  arrayzoneallarmetamper[33] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[33] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 35 allarmetamper");
-                  arrayzoneallarmetamper[34] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[34] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 36 allarmetamper");
-                  arrayzoneallarmetamper[35] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[35] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 37 allarmetamper");
-                  arrayzoneallarmetamper[36] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[36] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 38 allarmetamper");
-                  arrayzoneallarmetamper[37] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[37] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 39 allarmetamper");
-                  arrayzoneallarmetamper[38] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[38] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 40 allarmetamper");
-                  arrayzoneallarmetamper[39] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[39] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna8 == "00") {
-              arrayzoneallarmetamper[32] = 0;
-              arrayzoneallarmetamper[33] = 0;
-              arrayzoneallarmetamper[34] = 0;
-              arrayzoneallarmetamper[35] = 0;
-              arrayzoneallarmetamper[36] = 0;
-              arrayzoneallarmetamper[37] = 0;
-              arrayzoneallarmetamper[38] = 0;
-              arrayzoneallarmetamper[39] = 0;
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 41 allarmetamper");
-                  arrayzoneallarmetamper[40] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[40] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 42 allarmetamper");
-                  arrayzoneallarmetamper[41] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[41] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 43 allarmetamper");
-                  arrayzoneallarmetamper[42] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[42] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 44 allarmetamper");
-                  arrayzoneallarmetamper[43] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[43] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 45 allarmetamper");
-                  arrayzoneallarmetamper[44] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[44] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 46 allarmetamper");
-                  arrayzoneallarmetamper[45] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[45] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 47 allarmetamper");
-                  arrayzoneallarmetamper[46] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[46] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 48 allarmetamper");
-                  arrayzoneallarmetamper[47] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[47] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna9 == "00") {
-              arrayzoneallarmetamper[40] = 0;
-              arrayzoneallarmetamper[41] = 0;
-              arrayzoneallarmetamper[42] = 0;
-              arrayzoneallarmetamper[43] = 0;
-              arrayzoneallarmetamper[44] = 0;
-              arrayzoneallarmetamper[45] = 0;
-              arrayzoneallarmetamper[46] = 0;
-              arrayzoneallarmetamper[47] = 0;
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 49 allarmetamper");
-                  arrayzoneallarmetamper[48] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[48] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 50 allarmetamper");
-                  arrayzoneallarmetamper[49] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[49] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 51 allarmetamper");
-                  arrayzoneallarmetamper[50] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[50] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 52 allarmetamper");
-                  arrayzoneallarmetamper[51] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[51] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 53 allarmetamper");
-                  arrayzoneallarmetamper[52] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[52] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 54 allarmetamper");
-                  arrayzoneallarmetamper[53] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[53] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 55 allarmetamper");
-                  arrayzoneallarmetamper[54] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[54] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 56 allarmetamper");
-                  arrayzoneallarmetamper[55] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[55] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna10 == "00") {
-              arrayzoneallarmetamper[48] = 0;
-              arrayzoneallarmetamper[49] = 0;
-              arrayzoneallarmetamper[50] = 0;
-              arrayzoneallarmetamper[51] = 0;
-              arrayzoneallarmetamper[52] = 0;
-              arrayzoneallarmetamper[53] = 0;
-              arrayzoneallarmetamper[54] = 0;
-              arrayzoneallarmetamper[55] = 0;
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 57 allarmetamper");
-                  arrayzoneallarmetamper[56] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[56] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 58 allarmetamper");
-                  arrayzoneallarmetamper[57] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[57] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 59 allarmetamper");
-                  arrayzoneallarmetamper[58] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[58] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 60 allarmetamper");
-                  arrayzoneallarmetamper[59] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[59] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 61 allarmetamper");
-                  arrayzoneallarmetamper[60] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[60] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 62 allarmetamper");
-                  arrayzoneallarmetamper[61] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[61] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 63 allarmetamper");
-                  arrayzoneallarmetamper[62] = 1;
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[62] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 64 allarmetamper");
-                  arrayzoneallarmetamper[63] = 1;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-                case "0":
-                  arrayzoneallarmetamper[63] = 0;
-                  console.log("arrayzoneallarmetamper", arrayzoneallarmetamper);
-                  break;
-              }
-            } else if (colonna11 == "00") {
-              arrayzoneallarmetamper[56] = 0;
-              arrayzoneallarmetamper[57] = 0;
-              arrayzoneallarmetamper[58] = 0;
-              arrayzoneallarmetamper[59] = 0;
-              arrayzoneallarmetamper[60] = 0;
-              arrayzoneallarmetamper[61] = 0;
-              arrayzoneallarmetamper[62] = 0;
-              arrayzoneallarmetamper[63] = 0;
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            binarioInArray(colonna4bin, arrayzoneallarmetamper);
+            binarioInArray2(colonna5bin, arrayzoneallarmetamper);
+            binarioInArray3(colonna6bin, arrayzoneallarmetamper);
+            binarioInArray4(colonna7bin, arrayzoneallarmetamper);
+            binarioInArray5(colonna8bin, arrayzoneallarmetamper);
+            binarioInArray6(colonna9bin, arrayzoneallarmetamper);
+            binarioInArray7(colonna10bin, arrayzoneallarmetamper);
+            binarioInArray8(colonna11bin, arrayzoneallarmetamper);
           }
           if (payload == "36") {
             risultato = "allarme mancata risposta espansione radio";
@@ -5782,1402 +2931,44 @@ function entrata() {
           if (payload == "38") {
             risultato = "manca risposta zone radio";
             console.log(risultato);
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna4bin = hex2bin(colonna4);
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 1 mr");
-                  arrayzonemr[0] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[0] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 2 mr");
-                  arrayzoneamr[1] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[1] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 3 mr");
-                  arrayzonemr[2] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[2] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 4 mr");
-                  arrayzonemr[3] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[3] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 5 mr");
-                  arrayzonemr[4] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[4] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 6 mr");
-                  arrayzonemr[5] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[5] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 7 mr");
-                  arrayzonemr[6] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[6] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 8 mr");
-                  arrayzonemr[7] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[7] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna4 == "00") {
-              arrayzonemr[0] = 0;
-              arrayzonemr[1] = 0;
-              arrayzonemr[2] = 0;
-              arrayzonemr[3] = 0;
-              arrayzonemr[4] = 0;
-              arrayzonemr[5] = 0;
-              arrayzonemr[6] = 0;
-              arrayzonemr[7] = 0;
-            }
-            if (colonna5 != "00") {
-              switch (colonna5bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 9 mr");
-                  arrayzonemr[8] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[8] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 10 mr");
-                  arrayzoneamr[9] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[9] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 11 mr");
-                  arrayzonemr[10] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[10] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 12 mr");
-                  arrayzonemr[11] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[11] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 13 mr");
-                  arrayzonemr[12] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[12] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 14 mr");
-                  arrayzonemr[13] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[13] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 15 mr");
-                  arrayzonemr[14] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[14] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 16 mr");
-                  arrayzonemr[15] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[15] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna5 == "00") {
-              arrayzonemr[8] = 0;
-              arrayzonemr[9] = 0;
-              arrayzonemr[10] = 0;
-              arrayzonemr[11] = 0;
-              arrayzonemr[12] = 0;
-              arrayzonemr[13] = 0;
-              arrayzonemr[14] = 0;
-              arrayzonemr[15] = 0;
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 17 mr");
-                  arrayzonemr[16] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[16] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 18 mr");
-                  arrayzonemr[17] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[17] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 19 mr");
-                  arrayzonemr[18] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[18] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 20 mr");
-                  arrayzonemr[19] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[19] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 21 mr");
-                  arrayzonemr[20] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[20] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 22 mr");
-                  arrayzonemr[21] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[21] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 23 mr");
-                  arrayzonemr[22] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[22] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 24 mr");
-                  arrayzonemr[23] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[23] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna6 == "00") {
-              arrayzonemr[16] = 0;
-              arrayzonemr[17] = 0;
-              arrayzonemr[18] = 0;
-              arrayzonemr[19] = 0;
-              arrayzonemr[20] = 0;
-              arrayzonemr[21] = 0;
-              arrayzonemr[22] = 0;
-              arrayzonemr[23] = 0;
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 25 mr");
-                  arrayzonemr[24] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[24] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 26 mr");
-                  arrayzonemr[25] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[25] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 27 mr");
-                  arrayzonemr[26] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[26] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 28 mr");
-                  arrayzonemr[27] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[27] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 29 mr");
-                  arrayzonemr[28] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[28] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 30 mr");
-                  arrayzonemr[29] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[29] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 31 mr");
-                  arrayzonemr[30] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[30] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 32 mr");
-                  arrayzonemr[31] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[31] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna7 == "00") {
-              arrayzonemr[24] = 0;
-              arrayzonemr[25] = 0;
-              arrayzonemr[26] = 0;
-              arrayzonemr[27] = 0;
-              arrayzonemr[28] = 0;
-              arrayzonemr[29] = 0;
-              arrayzonemr[30] = 0;
-              arrayzonemr[31] = 0;
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 33 mr");
-                  arrayzonemr[32] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[32] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 34 mr");
-                  arrayzonemr[33] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[33] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 35 mr");
-                  arrayzonemr[34] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[34] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 36 mr");
-                  arrayzonemr[35] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[35] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 37 mr");
-                  arrayzonemr[36] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[36] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 38 mr");
-                  arrayzonemr[37] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[37] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 39 mr");
-                  arrayzonemr[38] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[38] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 40 mr");
-                  arrayzonemr[39] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[39] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna8 == "00") {
-              arrayzonemr[32] = 0;
-              arrayzonemr[33] = 0;
-              arrayzonemr[34] = 0;
-              arrayzonemr[35] = 0;
-              arrayzonemr[36] = 0;
-              arrayzonemr[37] = 0;
-              arrayzonemr[38] = 0;
-              arrayzonemr[39] = 0;
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 41 mr");
-                  arrayzonemr[40] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[40] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 42 mr");
-                  arrayzonemr[41] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[41] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 43 mr");
-                  arrayzonemr[42] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[42] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 44 mr");
-                  arrayzonemr[43] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[43] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 45 mr");
-                  arrayzonemr[44] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[44] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 46 mr");
-                  arrayzonemr[45] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[45] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 47 mr");
-                  arrayzonemr[46] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[46] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 48 mr");
-                  arrayzonemr[47] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[47] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna9 == "00") {
-              arrayzonemr[40] = 0;
-              arrayzonemr[41] = 0;
-              arrayzonemr[42] = 0;
-              arrayzonemr[43] = 0;
-              arrayzonemr[44] = 0;
-              arrayzonemr[45] = 0;
-              arrayzonemr[46] = 0;
-              arrayzonemr[47] = 0;
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 49 mr");
-                  arrayzonemr[48] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[48] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 50 mr");
-                  arrayzonemr[49] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[49] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 51 mr");
-                  arrayzonemr[50] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[50] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 52 mr");
-                  arrayzonemr[51] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[51] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 53 mr");
-                  arrayzonemr[52] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[52] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 54 mr");
-                  arrayzonemr[53] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[53] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 55 mr");
-                  arrayzonemr[54] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[54] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 56 mr");
-                  arrayzonemr[55] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[55] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna10 == "00") {
-              arrayzonemr[48] = 0;
-              arrayzonemr[49] = 0;
-              arrayzonemr[50] = 0;
-              arrayzonemr[51] = 0;
-              arrayzonemr[52] = 0;
-              arrayzonemr[53] = 0;
-              arrayzonemr[54] = 0;
-              arrayzonemr[55] = 0;
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 57 mr");
-                  arrayzonemr[56] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[56] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 58 mr");
-                  arrayzonemr[57] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[57] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 59 mr");
-                  arrayzonemr[58] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[58] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 60 mr");
-                  arrayzonemr[59] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[59] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 61 mr");
-                  arrayzonemr[60] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[60] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 62 mr");
-                  arrayzonemr[61] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[61] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 63 mr");
-                  arrayzonemr[62] = 1;
-                  break;
-                case "0":
-                  arrayzonemr[62] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 64 mr");
-                  arrayzonemr[63] = 1;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-                case "0":
-                  arrayzonemr[63] = 0;
-                  console.log("arrayzonemr", arrayzonemr);
-                  break;
-              }
-            } else if (colonna11 == "00") {
-              arrayzonemr[56] = 0;
-              arrayzonemr[57] = 0;
-              arrayzonemr[58] = 0;
-              arrayzonemr[59] = 0;
-              arrayzonemr[60] = 0;
-              arrayzonemr[61] = 0;
-              arrayzonemr[62] = 0;
-              arrayzonemr[63] = 0;
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            binarioInArray(colonna4bin, arrayzonemr);
+            binarioInArray2(colonna5bin, arrayzonemr);
+            binarioInArray3(colonna6bin, arrayzonemr);
+            binarioInArray4(colonna7bin, arrayzonemr);
+            binarioInArray5(colonna8bin, arrayzonemr);
+            binarioInArray6(colonna9bin, arrayzonemr);
+            binarioInArray7(colonna10bin, arrayzonemr);
+            binarioInArray8(colonna11bin, arrayzonemr);
           }
           if (payload == "3B") {
             risultato = "guasto batteria scarica zone radio";
             console.log(risultato);
-            var colonna5 = bufferino.slice(8, 10);
-            var colonna6 = bufferino.slice(10, 12);
-            var colonna7 = bufferino.slice(12, 14);
-            var colonna8 = bufferino.slice(14, 16);
-            var colonna9 = bufferino.slice(16, 18);
-            var colonna10 = bufferino.slice(18, 20);
-            var colonna11 = bufferino.slice(20, 22);
-            var colonna4 = bufferino.slice(6, 8);
-            var colonna5bin = hex2bin(colonna5);
-            var colonna6bin = hex2bin(colonna6);
-            var colonna7bin = hex2bin(colonna7);
-            var colonna8bin = hex2bin(colonna8);
-            var colonna9bin = hex2bin(colonna9);
-            var colonna10bin = hex2bin(colonna10);
-            var colonna11bin = hex2bin(colonna11);
-            var colonna4bin = hex2bin(colonna4);
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 1 batt");
-                  arrayzonebatt[0] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[0] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 2 batt");
-                  arrayzoneabatt[1] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[1] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 3 batt");
-                  arrayzonebatt[2] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[2] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 4 batt");
-                  arrayzonebatt[3] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[3] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 5 batt");
-                  arrayzonebatt[4] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[4] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 6 batt");
-                  arrayzonebatt[5] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[5] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 7 batt");
-                  arrayzonebatt[6] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[6] = 0;
-                  break;
-              }
-              switch (colonna4bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 8 batt");
-                  arrayzonebatt[7] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[7] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna4 == "00") {
-              arrayzonebatt[0] = 0;
-              arrayzonebatt[1] = 0;
-              arrayzonebatt[2] = 0;
-              arrayzonebatt[3] = 0;
-              arrayzonebatt[4] = 0;
-              arrayzonebatt[5] = 0;
-              arrayzonebatt[6] = 0;
-              arrayzonebatt[7] = 0;
-            }
-            if (colonna5 != "00") {
-              switch (colonna5bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 9 batt");
-                  arrayzonebatt[8] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[8] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 10 batt");
-                  arrayzoneabatt[9] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[9] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 11 batt");
-                  arrayzonebatt[10] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[10] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 12 batt");
-                  arrayzonebatt[11] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[11] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 13 batt");
-                  arrayzonebatt[12] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[12] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 14 batt");
-                  arrayzonebatt[13] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[13] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 15 batt");
-                  arrayzonebatt[14] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[14] = 0;
-                  break;
-              }
-              switch (colonna5bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 16 batt");
-                  arrayzonebatt[15] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[15] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna5 == "00") {
-              arrayzonebatt[8] = 0;
-              arrayzonebatt[9] = 0;
-              arrayzonebatt[10] = 0;
-              arrayzonebatt[11] = 0;
-              arrayzonebatt[12] = 0;
-              arrayzonebatt[13] = 0;
-              arrayzonebatt[14] = 0;
-              arrayzonebatt[15] = 0;
-            }
-            if (colonna6 != "00") {
-              switch (colonna6bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 17 batt");
-                  arrayzonebatt[16] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[16] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 18 batt");
-                  arrayzonebatt[17] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[17] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 19 batt");
-                  arrayzonebatt[18] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[18] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 20 batt");
-                  arrayzonebatt[19] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[19] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 21 batt");
-                  arrayzonebatt[20] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[20] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 22 batt");
-                  arrayzonebatt[21] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[21] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 23 batt");
-                  arrayzonebatt[22] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[22] = 0;
-                  break;
-              }
-              switch (colonna6bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 24 batt");
-                  arrayzonebatt[23] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[23] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna6 == "00") {
-              arrayzonebatt[16] = 0;
-              arrayzonebatt[17] = 0;
-              arrayzonebatt[18] = 0;
-              arrayzonebatt[19] = 0;
-              arrayzonebatt[20] = 0;
-              arrayzonebatt[21] = 0;
-              arrayzonebatt[22] = 0;
-              arrayzonebatt[23] = 0;
-            }
-            if (colonna7 != "00") {
-              switch (colonna7bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 25 batt");
-                  arrayzonebatt[24] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[24] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 26 batt");
-                  arrayzonebatt[25] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[25] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 27 batt");
-                  arrayzonebatt[26] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[26] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 28 batt");
-                  arrayzonebatt[27] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[27] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 29 batt");
-                  arrayzonebatt[28] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[28] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 30 batt");
-                  arrayzonebatt[29] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[29] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 31 batt");
-                  arrayzonebatt[30] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[30] = 0;
-                  break;
-              }
-              switch (colonna7bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 32 batt");
-                  arrayzonebatt[31] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[31] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna7 == "00") {
-              arrayzonebatt[24] = 0;
-              arrayzonebatt[25] = 0;
-              arrayzonebatt[26] = 0;
-              arrayzonebatt[27] = 0;
-              arrayzonebatt[28] = 0;
-              arrayzonebatt[29] = 0;
-              arrayzonebatt[30] = 0;
-              arrayzonebatt[31] = 0;
-            }
-            if (colonna8 != "00") {
-              switch (colonna8bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 33 batt");
-                  arrayzonebatt[32] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[32] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 34 batt");
-                  arrayzonebatt[33] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[33] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 35 batt");
-                  arrayzonebatt[34] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[34] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 36 batt");
-                  arrayzonebatt[35] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[35] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 37 batt");
-                  arrayzonebatt[36] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[36] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 38 batt");
-                  arrayzonebatt[37] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[37] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 39 batt");
-                  arrayzonebatt[38] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[38] = 0;
-                  break;
-              }
-              switch (colonna8bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 40 batt");
-                  arrayzonebatt[39] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[39] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna8 == "00") {
-              arrayzonebatt[32] = 0;
-              arrayzonebatt[33] = 0;
-              arrayzonebatt[34] = 0;
-              arrayzonebatt[35] = 0;
-              arrayzonebatt[36] = 0;
-              arrayzonebatt[37] = 0;
-              arrayzonebatt[38] = 0;
-              arrayzonebatt[39] = 0;
-            }
-            if (colonna9 != "00") {
-              switch (colonna9bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 41 batt");
-                  arrayzonebatt[40] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[40] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 42 batt");
-                  arrayzonebatt[41] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[41] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 43 batt");
-                  arrayzonebatt[42] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[42] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 44 batt");
-                  arrayzonebatt[43] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[43] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 45 batt");
-                  arrayzonebatt[44] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[44] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 46 batt");
-                  arrayzonebatt[45] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[45] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 47 batt");
-                  arrayzonebatt[46] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[46] = 0;
-                  break;
-              }
-              switch (colonna9bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 48 batt");
-                  arrayzonebatt[47] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[47] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna9 == "00") {
-              arrayzonebatt[40] = 0;
-              arrayzonebatt[41] = 0;
-              arrayzonebatt[42] = 0;
-              arrayzonebatt[43] = 0;
-              arrayzonebatt[44] = 0;
-              arrayzonebatt[45] = 0;
-              arrayzonebatt[46] = 0;
-              arrayzonebatt[47] = 0;
-            }
-            if (colonna10 != "00") {
-              switch (colonna10bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 49 batt");
-                  arrayzonebatt[48] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[48] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 50 batt");
-                  arrayzonebatt[49] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[49] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 51 batt");
-                  arrayzonebatt[50] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[50] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 52 batt");
-                  arrayzonebatt[51] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[51] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 53 batt");
-                  arrayzonebatt[52] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[52] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 54 batt");
-                  arrayzonebatt[53] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[53] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 55 batt");
-                  arrayzonebatt[54] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[54] = 0;
-                  break;
-              }
-              switch (colonna10bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 56 batt");
-                  arrayzonebatt[55] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[55] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna10 == "00") {
-              arrayzonebatt[48] = 0;
-              arrayzonebatt[49] = 0;
-              arrayzonebatt[50] = 0;
-              arrayzonebatt[51] = 0;
-              arrayzonebatt[52] = 0;
-              arrayzonebatt[53] = 0;
-              arrayzonebatt[54] = 0;
-              arrayzonebatt[55] = 0;
-            }
-            if (colonna11 != "00") {
-              switch (colonna11bin.slice(7, 8)) {
-                case "1":
-                  console.log("zona 57 batt");
-                  arrayzonebatt[56] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[56] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(6, 7)) {
-                case "1":
-                  console.log("zona 58 batt");
-                  arrayzonebatt[57] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[57] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(5, 6)) {
-                case "1":
-                  console.log("zona 59 batt");
-                  arrayzonebatt[58] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[58] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(4, 5)) {
-                case "1":
-                  console.log("zona 60 batt");
-                  arrayzonebatt[59] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[59] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(3, 4)) {
-                case "1":
-                  console.log("zona 61 batt");
-                  arrayzonebatt[60] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[60] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(2, 3)) {
-                case "1":
-                  console.log("zona 62 batt");
-                  arrayzonebatt[61] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[61] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(1, 2)) {
-                case "1":
-                  console.log("zona 63 batt");
-                  arrayzonebatt[62] = 1;
-                  break;
-                case "0":
-                  arrayzonebatt[62] = 0;
-                  break;
-              }
-              switch (colonna11bin.slice(0, 1)) {
-                case "1":
-                  console.log("zona 64 batt");
-                  arrayzonebatt[63] = 1;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-                case "0":
-                  arrayzonebatt[63] = 0;
-                  console.log("arrayzonebatt", arrayzonebatt);
-                  break;
-              }
-            } else if (colonna11 == "00") {
-              arrayzonebatt[56] = 0;
-              arrayzonebatt[57] = 0;
-              arrayzonebatt[58] = 0;
-              arrayzonebatt[59] = 0;
-              arrayzonebatt[60] = 0;
-              arrayzonebatt[61] = 0;
-              arrayzonebatt[62] = 0;
-              arrayzonebatt[63] = 0;
-            }
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var colonna4bin = hex2bin(result[3]);
+            var colonna5bin = hex2bin(result[4]);
+            var colonna6bin = hex2bin(result[5]);
+            var colonna7bin = hex2bin(result[6]);
+            var colonna8bin = hex2bin(result[7]);
+            var colonna9bin = hex2bin(result[8]);
+            var colonna10bin = hex2bin(result[9]);
+            var colonna11bin = hex2bin(result[10]);
+            binarioInArray(colonna4bin, arrayzonebatt);
+            binarioInArray2(colonna5bin, arrayzonebatt);
+            binarioInArray3(colonna6bin, arrayzonebatt);
+            binarioInArray4(colonna7bin, arrayzonebatt);
+            binarioInArray5(colonna8bin, arrayzonebatt);
+            binarioInArray6(colonna9bin, arrayzonebatt);
+            binarioInArray7(colonna10bin, arrayzonebatt);
+            binarioInArray8(colonna11bin, arrayzonebatt);
           }
           if (payload == "3C") {
             risultato = "notifica rapina generata da radiocomando";
@@ -7251,6 +3042,5 @@ function entrata() {
     }
   });
 }
-
 exports.entrata = entrata;
 exports.port = port;
