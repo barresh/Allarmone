@@ -13,6 +13,8 @@ var bufferino;
 var arrayzone = [];
 var arrayaree = [];
 var arrayareeinserite = [];
+var mancanzaRispostaEspansione = [];
+var mancanzaRispostaEspansioneRadio = [];
 var uscite = [];
 var areeAperte = [];
 var zoneAperte = [];
