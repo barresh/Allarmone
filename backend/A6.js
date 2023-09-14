@@ -6958,12 +6958,11 @@ function entrata() {
               arrayzonemr,
               arrayzonebatt
             );
-            exports.esito=esito;
-            console.log("vediamo questo esito", esito);
+            exports.esito = esito;
             server.mandaEsito();
           }
           if (payload == 02) {
-            const result = bufferino.match(/.{1,2}/g) ?? []
+            const result = bufferino.match(/.{1,2}/g) ?? [];
             var colonna10bin = hex2bin(result[4]);
             var colonna11bin = hex2bin(result[5]);
             var colonna12bin = hex2bin(result[6]);
@@ -7027,7 +7026,10 @@ function entrata() {
               result[6]
             );
             console.log("terza cifra numero seriale della centrale", result[7]);
-            console.log("quarta cifra numero seriale della centrale", result[8]);
+            console.log(
+              "quarta cifra numero seriale della centrale",
+              result[8]
+            );
             function binarioInArray(binario, destinazione) {
               for (let i = 0; i < binario.length; i++) {
                 destinazione[i] = binario[i] === "1" ? 1 : 0;
@@ -7137,16 +7139,17 @@ function entrata() {
                 zoneD: zoneD,
               };
             }
-            if(esito){
+            if (esito) {
               esito.push = riempiEsito(
-              usciteAbilitate,
-              usciteConFunzionamentoManuale,
-              zoneAbilitate,
-              zoneA,
-              zoneB,
-              zoneC,
-              zoneD
-            );}else{
+                usciteAbilitate,
+                usciteConFunzionamentoManuale,
+                zoneAbilitate,
+                zoneA,
+                zoneB,
+                zoneC,
+                zoneD
+              );
+            } else {
               let esito = riempiEsito(
                 usciteAbilitate,
                 usciteConFunzionamentoManuale,
