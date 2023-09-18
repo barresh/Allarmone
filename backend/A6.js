@@ -499,7 +499,7 @@ function entrata() {
               binarioInArray8(colonna95bin, arrayzoneradiobatt);
               binarioInArray(colonna96bin, arraytelecombatt);
               binarioInArray2(colonna97bin, arraytelecombatt);
-              console.log("zoneAperte lunghe:", zoneAperte.length());
+              console.log("zoneAperte lunghe:", zoneAperte.length);
               switch (colonna36bin) {
                 case "01000000":
                   risultato =
