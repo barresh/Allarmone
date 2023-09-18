@@ -83,33 +83,51 @@ function binarioInArray2(binario, destinazione) {
   }
 }
 function binarioInArray3(binario, destinazione) {
-  for (let i = 16; i < 24; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 16;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 function binarioInArray4(binario, destinazione) {
-  for (let i = 24; i < 32; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 24;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 function binarioInArray5(binario, destinazione) {
-  for (let i = 32; i < 40; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 32;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 function binarioInArray6(binario, destinazione) {
-  for (let i = 40; i < 48; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 40;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 function binarioInArray7(binario, destinazione) {
-  for (let i = 48; i < 56; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 48;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 function binarioInArray8(binario, destinazione) {
-  for (let i = 56; i < 64; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 56;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 flagAggiornato = 0;
@@ -481,6 +499,7 @@ function entrata() {
               binarioInArray8(colonna95bin, arrayzoneradiobatt);
               binarioInArray(colonna96bin, arraytelecombatt);
               binarioInArray2(colonna97bin, arraytelecombatt);
+              console.log("zoneAperte lunghe:", zoneAperte.length());
               switch (colonna36bin) {
                 case "01000000":
                   risultato =
