@@ -61,12 +61,20 @@ function hex2asci(hexx) {
     str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
   return str;
 }
-
 function binarioInArray(binario, destinazione) {
-  for (let i = 8; i > 0; i--) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = destinazione.length - 1; // Inizia dall'ultimo elemento di destinazione
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex--; // Riduci l'indice di destinazione
   }
 }
+// Stampa il vettore con l'ordine invertito
+// function binarioInArray(binario, destinazione) {
+//   for (let i = 0; i < binario.length; i++) {
+//     destinazione[i] = binario[i] === "1" ? 1 : 0;
+//   }
+// }
 function binarioInArray2(binario, destinazione) {
   for (let i = 8; i < 16; i++) {
     destinazione[i] = binario[i] === "1" ? 1 : 0;
