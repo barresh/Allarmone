@@ -423,9 +423,9 @@ function entrata() {
               binarioInArray2(colonna14bin, uscite);
               binarioInArray(colonna17bin, areeAperte);
               binarioInArray(colonna18bin, zoneAperte);
-              connsole.log("colonna18Bin, prime 8 zone", colonna18bin);
+              console.log("colonna18Bin, prime 8 zone", colonna18bin);
               binarioInArray2(colonna19bin, zoneAperte);
-              connsole.log("colonna19Bin, 8-16 zone", colonna19bin);
+              console.log("colonna19Bin, 8-16 zone", colonna19bin);
               binarioInArray3(colonna20bin, zoneAperte);
               binarioInArray4(colonna21bin, zoneAperte);
               binarioInArray5(colonna22bin, zoneAperte);
