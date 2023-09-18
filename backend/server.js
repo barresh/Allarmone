@@ -17,7 +17,7 @@ wss.on("connection", (ws) => {
     }
     function mandaEsito() {
       esito = a6.esito;
-      console.log("Esito che ti mando:", esito);
+      // console.log("Esito che ti mando:", esito);
       ws.send(JSON.stringify(a6.esito));
     }
     exports.mandaEsito = mandaEsito;

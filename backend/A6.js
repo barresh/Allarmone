@@ -423,7 +423,9 @@ function entrata() {
               binarioInArray2(colonna14bin, uscite);
               binarioInArray(colonna17bin, areeAperte);
               binarioInArray(colonna18bin, zoneAperte);
+              connsole.log("colonna18Bin, prime 8 zone", colonna18bin);
               binarioInArray2(colonna19bin, zoneAperte);
+              connsole.log("colonna19Bin, 8-16 zone", colonna19bin);
               binarioInArray3(colonna20bin, zoneAperte);
               binarioInArray4(colonna21bin, zoneAperte);
               binarioInArray5(colonna22bin, zoneAperte);
@@ -431,8 +433,11 @@ function entrata() {
               binarioInArray7(colonna24bin, zoneAperte);
               binarioInArray8(colonna25bin, zoneAperte);
               binarioInArray(colonna26bin, arrayareeinserite);
+              console.log("colonna26Bin, prime 8 aree inserite:", colonna26bin);
+              console.log("colonna27Bin, prime 8 zone inserite:", colonna27bin);
               binarioInArray(colonna27bin, arrayzoneinserite);
               binarioInArray2(colonna28bin, arrayzoneinserite);
+              console.log("colonna28Bin, prime 8 zone inserite:", colonna28bin);
               binarioInArray3(colonna29bin, arrayzoneinserite);
               binarioInArray4(colonna30bin, arrayzoneinserite);
               binarioInArray5(colonna31bin, arrayzoneinserite);
