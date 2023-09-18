@@ -75,7 +75,7 @@ function binarioInArray(binario, destinazione) {
 //   }
 // }
 function binarioInArray2(binario, destinazione) {
-  let destinazioneIndex = 7;
+  let destinazioneIndex = 8;
 
   for (let i = binario.length - 1; i >= 0; i--) {
     destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
