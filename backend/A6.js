@@ -62,11 +62,11 @@ function hex2asci(hexx) {
   return str;
 }
 function binarioInArray(binario, destinazione) {
-  let destinazioneIndex = 0; // Inizia dall'ultimo elemento di destinazione
+  let destinazioneIndex = 0;
 
   for (let i = binario.length - 1; i >= 0; i--) {
     destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
-    destinazioneIndex++; // Riduci l'indice di destinazione
+    destinazioneIndex++;
   }
 }
 // function binarioInArray(binario, destinazione) {
@@ -75,8 +75,11 @@ function binarioInArray(binario, destinazione) {
 //   }
 // }
 function binarioInArray2(binario, destinazione) {
-  for (let i = 8; i < 16; i++) {
-    destinazione[i] = binario[i] === "1" ? 1 : 0;
+  let destinazioneIndex = 7;
+
+  for (let i = binario.length - 1; i >= 0; i--) {
+    destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
+    destinazioneIndex++;
   }
 }
 function binarioInArray3(binario, destinazione) {
