@@ -69,6 +69,8 @@ function binarioInArray(binario, destinazione) {
     destinazioneIndex++;
   }
 }
+const result = [];
+
 // function binarioInArray(binario, destinazione) {
 //   for (let i = 0; i < binario.length; i++) {
 //     destinazione[i] = binario[i] === "1" ? 1 : 0;
@@ -228,7 +230,10 @@ function entrata() {
           if (payload == "01") {
             var completo = bufferino.slice(6, 8);
             if (completo == "00") {
-              const result = bufferino.match(/.{1,2}/g) ?? [];
+              for (let i = 0; i < bufferino.length; i += 2) {
+                const coppia = bufferino.slice(i, i + 2);
+                result.push(coppia);
+              }
               var stato1bin = hex2bin(result[3]);
               var stato2bin = hex2bin(result[4]);
               var stato3bin = hex2bin(result[5]);
