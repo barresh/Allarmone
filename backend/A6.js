@@ -230,11 +230,7 @@ function entrata() {
           if (payload == "01") {
             var completo = bufferino.slice(6, 8);
             if (completo == "00") {
-              for (let i = 0; i < bufferino.length; i += 2) {
-                const coppia = bufferino.slice(i, i + 2);
-                result.push(coppia);
-              }
-              console.log("vediamo cone splitto", result);
+              const result = bufferino.match(/.{1,2}/g) ?? [];
               var stato1bin = hex2bin(result[4]);
               var stato2bin = hex2bin(result[5]);
               var stato3bin = hex2bin(result[6]);
@@ -822,7 +818,7 @@ function entrata() {
             var risultato;
             console.log("non inserito perché aperto:", colonna6bin);
             console.log("ENTRA PAYLOAD GIUSTO");
-            switch (colonna4bin.slice(0, 3)) {
+            switch (colonna4bin) {
               case "0010":
                 tipoutente = "codice";
               case "0100":
@@ -904,7 +900,7 @@ function entrata() {
             }
             numeroutente = colonna4bin.slice(4, 7);
             console.log("utente:", tipoutente, numeroutente);
-            binarioInArray(colonna5bin, areeInserite);
+            binarioInArray(colonna5bin, areeDisinserite);
             binarioInArray(colonna6bin, areeReset);
             switch (colonna8bin) {
               case "00000100":
@@ -923,14 +919,14 @@ function entrata() {
                 motivazione = risultato;
                 break;
             }
-            function riempiEsito(areeInserite, areeReset, motivazione) {
+            function riempiEsito(areeDisinserite, areeReset, motivazione) {
               return {
-                areeDisinserite: areeInserite,
+                areeDisinserite: areeDisinserite,
                 areeReset: areeReset,
                 motivazione: motivazione,
               };
             }
-            let esito = riempiEsito(areeInserite, areeReset, motivazione);
+            let esito = riempiEsito(areeDisinserite, areeReset, motivazione);
             exports.esito = esito;
             if (esito) {
               server.mandaEsito();
@@ -970,7 +966,7 @@ function entrata() {
             var numeroutente;
             var risultato;
             if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 3)) {
+              switch (colonna4bin.slice(0, 4)) {
                 case "0010":
                   tipoutente = "codice";
                 case "0100":
@@ -980,7 +976,7 @@ function entrata() {
                 case "1000":
                   tipoutente = "chiave esterna";
               }
-              numeroutente = colonna4bin.slice(4, 7);
+              numeroutente = colonna4bin.slice(4, 8);
               console.log("utente:", tipoutente, numeroutente);
             }
             binarioInArray(colonna5bin, zoneEscluse);
