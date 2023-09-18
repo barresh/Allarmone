@@ -62,11 +62,11 @@ function hex2asci(hexx) {
   return str;
 }
 function binarioInArray(binario, destinazione) {
-  let destinazioneIndex = 7; // Inizia dall'ultimo elemento di destinazione
+  let destinazioneIndex = 0; // Inizia dall'ultimo elemento di destinazione
 
   for (let i = binario.length - 1; i >= 0; i--) {
     destinazione[destinazioneIndex] = binario[i] === "1" ? 1 : 0;
-    destinazioneIndex--; // Riduci l'indice di destinazione
+    destinazioneIndex++; // Riduci l'indice di destinazione
   }
 }
 // function binarioInArray(binario, destinazione) {
