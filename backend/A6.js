@@ -63,7 +63,7 @@ function hex2asci(hexx) {
 }
 
 function binarioInArray(binario, destinazione) {
-  for (let i = 8; i > binario.length; i--) {
+  for (let i = 8; i > 0; i--) {
     destinazione[i] = binario[i] === "1" ? 1 : 0;
   }
 }
