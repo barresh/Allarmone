@@ -581,6 +581,7 @@ function entrata() {
               }
             }
             function riempiEsito(
+              payload,
               uscite,
               areeAperte,
               zoneAperte,
@@ -604,6 +605,7 @@ function entrata() {
               arrayzonebatt
             ) {
               return {
+                payload: payload,
                 uscite: uscite,
                 areeAperte: areeAperte,
                 zoneAperte: zoneAperte,
@@ -627,6 +629,7 @@ function entrata() {
               };
             }
             let esito = riempiEsito(
+              payload,
               uscite,
               areeAperte,
               zoneAperte,
@@ -772,6 +775,7 @@ function entrata() {
             console.log("zoneD", zoneC);
             console.log("zoneD", zoneD);
             function riempiEsito(
+              payload,
               usciteAbilitate,
               usciteConFunzionamentoManuale,
               zoneAbilitate,
@@ -781,6 +785,7 @@ function entrata() {
               zoneD
             ) {
               return {
+                payload: payload,
                 usciteAbilitate: usciteAbilitate,
                 usciteConFunzionamentoManuale: usciteConFunzionamentoManuale,
                 zoneAbilitate: zoneAbilitate,
@@ -792,6 +797,7 @@ function entrata() {
             }
 
             let esito = riempiEsito(
+              payload,
               usciteAbilitate,
               usciteConFunzionamentoManuale,
               zoneAbilitate,
@@ -853,12 +859,14 @@ function entrata() {
             }
 
             function riempiEsito(
+              payload,
               areeInserite,
               areeNonInserite,
               areeReset,
               motivazione
             ) {
               return {
+                payload: payload,
                 areeInserite: areeInserite,
                 areeNonInserite: areeNonInserite,
                 areeReset: areeReset,
@@ -866,6 +874,7 @@ function entrata() {
               };
             }
             let esito = riempiEsito(
+              payload,
               areeInserite,
               areeNonInserite,
               areeReset,
@@ -919,14 +928,25 @@ function entrata() {
                 motivazione = risultato;
                 break;
             }
-            function riempiEsito(areeDisinserite, areeReset, motivazione) {
+            function riempiEsito(
+              payload,
+              areeDisinserite,
+              areeReset,
+              motivazione
+            ) {
               return {
+                payload: payload,
                 areeDisinserite: areeDisinserite,
                 areeReset: areeReset,
                 motivazione: motivazione,
               };
             }
-            let esito = riempiEsito(areeDisinserite, areeReset, motivazione);
+            let esito = riempiEsito(
+              payload,
+              areeDisinserite,
+              areeReset,
+              motivazione
+            );
             exports.esito = esito;
             if (esito) {
               server.mandaEsito();
