@@ -234,6 +234,7 @@ function entrata() {
                 const coppia = bufferino.slice(i, i + 2);
                 result.push(coppia);
               }
+              console.log("vediamo cone splitto", result);
               var stato1bin = hex2bin(result[3]);
               var stato2bin = hex2bin(result[4]);
               var stato3bin = hex2bin(result[5]);
