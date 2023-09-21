@@ -21,6 +21,7 @@ var mancanzaRispostaEspansioneRadio = [];
 var uscite = [];
 var areeAperte = [];
 var zoneAperte = [];
+var zoneAllMem = [];
 //le zone sono in ordine, in tutto sono 64 per cui il vettore da 0 a 63
 var arrayzoneinserite = [];
 //zone in allarme da 0 a 63
