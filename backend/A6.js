@@ -653,7 +653,9 @@ function entrata() {
               arrayzonebatt
             );
             exports.esito = esito;
-            server.mandaEsito();
+            if (esito) {
+              server.mandaEsito();
+            }
           }
           if (payload == 02) {
             const result = bufferino.match(/.{1,2}/g) ?? [];
