@@ -8,6 +8,12 @@ console.log("arriva", a6.aggiornamentostato);
 wss.on("connection", (ws) => {
   console.log("connessione WebSocket stabilita");
   // Ricevi i messaggi dal client Angular
+  function mandaEsito() {
+    esito = a6.esito;
+    console.log("Esito che ti mando:", esito);
+    ws.send(JSON.stringify(a6.esito));
+  }
+  exports.mandaEsito = mandaEsito;
   ws.on("message", (message) => {
     const arrivo = JSON.parse(message);
     console.log("jsonParsato", arrivo);
@@ -15,12 +21,7 @@ wss.on("connection", (ws) => {
     if (arrivo.pacchetto == 1) {
       a1.invia();
     }
-    function mandaEsito() {
-      esito = a6.esito;
-      console.log("Esito che ti mando:", esito);
-      ws.send(JSON.stringify(a6.esito));
-    }
-    exports.mandaEsito = mandaEsito;
+
     console.log("Messaggio ricevuto dal client Angular:", message);
   });
   ws.on("close", () => {
