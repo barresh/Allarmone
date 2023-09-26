@@ -1439,6 +1439,8 @@ function entrata() {
             var annoBlocco = [];
             var oreBlocco = [];
             var minutiBlocco = [];
+            var blocchetto;
+            var payloadBlocco;
             //blocco alla quale la centrale è arrivata
             var blocco = result[3];
             dato1 = hex2bin(result[4]);
@@ -1449,8 +1451,25 @@ function entrata() {
             dato6 = hex2bin(result[9]);
             dato7 = result[10];
             dato8 = hex2bin(result[11]);
+            dato9 = hex2bin(result[4]);
+            dato10 = hex2bin(result[5]);
+            dato11 = hex2bin(result[6]);
+            dato12 = hex2bin(result[7]);
+            dato13 = hex2bin(result[8]);
+            dato14 = hex2bin(result[9]);
+            dato15 = result[10];
+            dato16 = hex2bin(result[11]);
 
-            function convertiDati(dato1, dato2, dato3, dato4, dato5) {
+            function convertiDati(
+              dato1,
+              dato2,
+              dato3,
+              dato4,
+              dato5,
+              dato6,
+              dato7,
+              dato8
+            ) {
               function binToDec(binary) {
                 return parseInt(binary, 2);
               }
@@ -1459,23 +1478,96 @@ function entrata() {
                 return binToDec(dato.slice(start, end));
               }
 
+              giornoBlocco = estraiDati(dato1, 3, 8);
+              meseBlocco = estraiDati(dato2, 3, 8);
+              annoBlocco = 2000 + binToDec(dato3);
+              oreBlocco = binToDec(dato4);
+              minutiBlocco = binToDec(dato5);
+              payloadBlocco = dato7;
+              switch (payloadBlocco) {
+                case 00:
+                  evento = "Allarme zona";
+                  riferimento = binToDec(dato8);
+                  break;
+                case 01:
+                  evento = "Inserimento aree";
+                  riferimento = estraiDati(hex2bin(dato8), 4, 8);
+                  break;
+                case 02:
+                  evento = "Disinserimento aree";
+                  riferimento = estraiDati(hex2bin(dato8), 4, 8);
+                  break;
+                case 03:
+                  evento = "Inclusione linee";
+                  riferimento = binToDec(dato8);
+                  break;
+                case 04:
+                  evento = "Esclusione linee";
+                  riferimento = binToDec(dato8);
+                  break;
+                case 05:
+                  evento = "Reset allarme";
+                  riferimento = estraiDati(hex2bin(dato8), 4, 8);
+                  break;
+                case 06:
+                  evento = "Aggiunta memoria allarme zona";
+                  riferimento = binToDec(dato8);
+                  break;
+                case 07:
+                  evento = "Allarme zona programmata come H24";
+                  riferimento = binToDec(dato8);
+                  break;
+                case 08:
+                  evento = "Rapina immediata zona";
+                  riferimento = binToDec(dato8);
+                  break;
+                case 09:
+                  switch (dato8) {
+                    case 00:
+                      evento = "Allarme sabotaggio per codici falsi";
+                      break;
+                    case 01:
+                      evento = "Allarme sabotaggio per spinotti falsi";
+                      break;
+                    case 02:
+                      evento = "Allarme mancanza risposta espansione ingressi";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                  }
+              }
               return {
                 giornoBlocco,
                 meseBlocco,
                 annoBlocco,
                 oreBlocco,
                 minutiBlocco,
+                evento,
+                sestaColonna,
+                riferimento,
               };
             }
 
-            var blocchetto = convertiDati(dato1, dato2, dato3, dato4, dato5);
+            blocchetto[0] = convertiDati(
+              dato1,
+              dato2,
+              dato3,
+              dato4,
+              dato5,
+              dato6,
+              dato7,
+              dato8
+            );
+            blocchetto[1] = convertiDati(
+              dato9,
+              dato10,
+              dato11,
+              dato12,
+              dato13,
+              dato14,
+              dato15,
+              dato16
+            );
             console.log("blocchetto:", blocchetto);
-
-            // giornoBlocco[0] = binToDec(dato1.slice(3, 8));
-            // meseBlocco[0] = binToDec(dato2.slice(3, 8));
-            // annoBlocco[0] = 2000 + binToDec(dato3);
-            // oreBlocco[0] = binToDec(dato4);
-            // minutiBlocco[0] = binToDec(dato5);
           }
           if (payload == "29") {
             risultato = "alimentazione centrale bassa (<9V)";
