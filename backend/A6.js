@@ -1440,20 +1440,24 @@ function entrata() {
             var annoBlocco = [];
             var oreBlocco = [];
             var minutiBlocco = [];
-            var blocco = result[4];
-            dato1 = hex2bin(result[5]);
-            dato2 = hex2bin(result[6]);
-            dato3 = hex2bin(result[7]);
-            dato4 = hex2bin(result[8]);
-            dato5 = hex2bin(result[9]);
+            var blocco = result[3];
+            dato1 = hex2bin(result[4]);
+            dato2 = hex2bin(result[5]);
+            dato3 = hex2bin(result[6]);
+            dato4 = hex2bin(result[7]);
+            dato5 = hex2bin(result[8]);
             console.log("blocco", blocco);
             console.log("dato1", dato1);
             console.log("dato2", dato2);
-            giornoBlocco[0] = binToDec(dato1.slice(3, 8));
-            console.log("giornoBlocco0", giornoBlocco[0]);
+            giornoBlocco[0] = binToDec(dato1.slice(4, 8));
+            console.log(
+              "giornoBlocco0",
+              giornoBlocco[0] + "vediamo slice",
+              dato1.slice(4, 8)
+            );
             // secondiBlocco[0].append(dato2.slice(0, 3), dato1.slice(0, 3));
             // console.log("secondiBlocco0", secondiBlocco[0]);
-            meseBlocco[0] = binToDec(dato2.slice(3, 8));
+            meseBlocco[0] = binToDec(dato2.slice(4, 8));
             console.log("meseBlocco0", meseBlocco[0]);
             annoBlocco[0] = 2000 + binToDec(dato3);
             console.log("annoBlocco0", annoBlocco[0]);
