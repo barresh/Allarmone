@@ -1434,7 +1434,7 @@ function entrata() {
           if (payload == "28") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             //blocco alla quale la centrale è arrivata
-            var secondiBlocco;
+            var secondiBlocco = [];
             var giornoBlocco = [];
             var meseBlocco = [];
             var annoBlocco = [];
