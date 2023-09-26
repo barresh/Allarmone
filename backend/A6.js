@@ -1433,32 +1433,55 @@ function entrata() {
           }
           if (payload == "28") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
-            //blocco alla quale la centrale è arrivata
             var secondiBlocco = [];
             var giornoBlocco = [];
             var meseBlocco = [];
             var annoBlocco = [];
             var oreBlocco = [];
             var minutiBlocco = [];
+            //blocco alla quale la centrale è arrivata
             var blocco = result[3];
             dato1 = hex2bin(result[4]);
             dato2 = hex2bin(result[5]);
             dato3 = hex2bin(result[6]);
             dato4 = hex2bin(result[7]);
             dato5 = hex2bin(result[8]);
-            console.log("blocco", blocco);
-            console.log("dato1", dato1);
-            console.log("dato2", dato2);
-            giornoBlocco[0] = binToDec(dato1.slice(3, 8));
-            console.log("giornoBlocco0", giornoBlocco[0]);
-            meseBlocco[0] = binToDec(dato2.slice(3, 8));
-            console.log("meseBlocco0", meseBlocco[0]);
-            annoBlocco[0] = 2000 + binToDec(dato3);
-            console.log("annoBlocco0", annoBlocco[0]);
-            oreBlocco[0] = binToDec(dato4);
-            console.log("oraBlocco0", oreBlocco[0]);
-            minutiBlocco[0] = binToDec(dato5);
-            console.log("minutiBlocco0", minutiBlocco[0]);
+            dato6 = hex2bin(result[9]);
+            dato7 = result[10];
+            dato8 = hex2bin(result[11]);
+
+            function convertiDati(dato1, dato2, dato3, dato4, dato5) {
+              function binToDec(binary) {
+                return parseInt(binary, 2);
+              }
+
+              function estraiDati(dato, start, end) {
+                return binToDec(dato.slice(start, end));
+              }
+
+              giornoBlocco = estraiDati(dato1, 3, 8);
+              meseBlocco = estraiDati(dato2, 3, 8);
+              annoBlocco = 2000 + binToDec(dato3);
+              oreBlocco = binToDec(dato4);
+              minutiBlocco = binToDec(dato5);
+
+              return {
+                giornoBlocco,
+                meseBlocco,
+                annoBlocco,
+                oreBlocco,
+                minutiBlocco,
+              };
+            }
+
+            var blochetto = convertiDati(dato1, dato2, dato3, dato4, dato5);
+            console.log("blocchetto:", blocchetto);
+
+            // giornoBlocco[0] = binToDec(dato1.slice(3, 8));
+            // meseBlocco[0] = binToDec(dato2.slice(3, 8));
+            // annoBlocco[0] = 2000 + binToDec(dato3);
+            // oreBlocco[0] = binToDec(dato4);
+            // minutiBlocco[0] = binToDec(dato5);
           }
           if (payload == "29") {
             risultato = "alimentazione centrale bassa (<9V)";
