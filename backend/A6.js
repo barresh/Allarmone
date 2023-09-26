@@ -1446,6 +1446,7 @@ function entrata() {
             var riferimento;
             //blocco alla quale la centrale è arrivata
             var blocco = result[3];
+            //primo blocco
             dato1 = hex2bin(result[4]);
             dato2 = hex2bin(result[5]);
             dato3 = hex2bin(result[6]);
@@ -1454,6 +1455,7 @@ function entrata() {
             dato6 = hex2bin(result[9]);
             dato7 = result[10];
             dato8 = hex2bin(result[11]);
+            //secondo blocco
             dato9 = hex2bin(result[4]);
             dato10 = hex2bin(result[5]);
             dato11 = hex2bin(result[6]);
@@ -1462,6 +1464,52 @@ function entrata() {
             dato14 = hex2bin(result[9]);
             dato15 = result[10];
             dato16 = hex2bin(result[11]);
+            //terzo blocco
+            dato17 = hex2bin(result[12]);
+            dato18 = hex2bin(result[13]);
+            dato19 = hex2bin(result[14]);
+            dato20 = hex2bin(result[15]);
+            dato21 = hex2bin(result[16]);
+            dato22 = hex2bin(result[17]);
+            dato23 = result[18];
+            dato24 = hex2bin(result[19]);
+            //quarto blocco
+            dato25 = hex2bin(result[20]);
+            dato26 = hex2bin(result[21]);
+            dato27 = hex2bin(result[22]);
+            dato28 = hex2bin(result[23]);
+            dato29 = hex2bin(result[24]);
+            dato30 = hex2bin(result[25]);
+            dato31 = result[27];
+            dato32 = hex2bin(result[27]);
+            //quinto blocco
+            dato33 = hex2bin(result[28]);
+            dato34 = hex2bin(result[29]);
+            dato35 = hex2bin(result[30]);
+            dato36 = hex2bin(result[31]);
+            dato37 = hex2bin(result[32]);
+            dato38 = hex2bin(result[33]);
+            dato39 = result[34];
+            dato40 = hex2bin(result[35]);
+            // sesto blocco
+            dato41 = hex2bin(result[36]);
+            dato42 = hex2bin(result[37]);
+            dato43 = hex2bin(result[38]);
+            dato44 = hex2bin(result[39]);
+            dato45 = hex2bin(result[40]);
+            dato46 = hex2bin(result[41]);
+            dato47 = result[42];
+            dato48 = hex2bin(result[43]);
+            // settimo blocco
+            dato49 = hex2bin(result[44]);
+            dato50 = hex2bin(result[45]);
+            dato51 = hex2bin(result[46]);
+            dato52 = hex2bin(result[47]);
+            dato53 = hex2bin(result[48]);
+            dato54 = hex2bin(result[49]);
+            dato55 = result[50];
+            dato56 = hex2bin(result[51]);
+            // ottavo blocco
 
             function convertiDati(
               dato1,
@@ -1486,13 +1534,12 @@ function entrata() {
               annoBlocco = 2000 + binToDec(dato3);
               oreBlocco = binToDec(dato4);
               minutiBlocco = binToDec(dato5);
-
               switch (dato7) {
-                case 00:
+                case "00":
                   evento = "Allarme zona";
                   riferimento = binToDec(dato8);
                   break;
-                case 01:
+                case "01":
                   evento = "Inserimento aree";
                   riferimento = estraiDati(hex2bin(dato8), 4, 8);
                   break;
@@ -1500,39 +1547,39 @@ function entrata() {
                   evento = "Disinserimento aree";
                   riferimento = estraiDati(hex2bin(dato8), 4, 8);
                   break;
-                case 03:
+                case "03":
                   evento = "Inclusione linee";
                   riferimento = binToDec(dato8);
                   break;
-                case 04:
+                case "04":
                   evento = "Esclusione linee";
                   riferimento = binToDec(dato8);
                   break;
-                case 05:
+                case "05":
                   evento = "Reset allarme";
                   riferimento = estraiDati(hex2bin(dato8), 4, 8);
                   break;
-                case 06:
+                case "06":
                   evento = "Aggiunta memoria allarme zona";
                   riferimento = binToDec(dato8);
                   break;
-                case 07:
+                case "07":
                   evento = "Allarme zona programmata come H24";
                   riferimento = binToDec(dato8);
                   break;
-                case 08:
+                case "08":
                   evento = "Rapina immediata zona";
                   riferimento = binToDec(dato8);
                   break;
-                case 09:
+                case "09":
                   switch (dato8) {
-                    case 00:
+                    case "00":
                       evento = "Allarme sabotaggio per codici falsi";
                       break;
-                    case 01:
+                    case "01":
                       evento = "Allarme sabotaggio per spinotti falsi";
                       break;
-                    case 02:
+                    case "02":
                       evento = "Allarme mancanza risposta espansione ingressi";
                       sestaColonna = binToDec(dato6);
                       break;
@@ -1569,6 +1616,36 @@ function entrata() {
               dato14,
               dato15,
               dato16
+            );
+            blocchetto[2] = convertiDati(
+              dato17,
+              dato18,
+              dato19,
+              dato20,
+              dato21,
+              dato22,
+              dato23,
+              dato24
+            );
+            blocchetto[3] = convertiDati(
+              dato25,
+              dato26,
+              dato27,
+              dato28,
+              dato29,
+              dato30,
+              dato31,
+              dato32
+            );
+            blocchetto[4] = convertiDati(
+              dato33,
+              dato34,
+              dato35,
+              dato37,
+              dato38,
+              dato39,
+              dato40,
+              dato41
             );
             console.log("blocchetto:", blocchetto);
           }
