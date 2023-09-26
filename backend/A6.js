@@ -1474,7 +1474,7 @@ function entrata() {
               };
             }
 
-            var blochetto = convertiDati(dato1, dato2, dato3, dato4, dato5);
+            var blocchetto = convertiDati(dato1, dato2, dato3, dato4, dato5);
             console.log("blocchetto:", blocchetto);
 
             // giornoBlocco[0] = binToDec(dato1.slice(3, 8));
