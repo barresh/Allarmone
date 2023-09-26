@@ -2129,7 +2129,7 @@ function entrata() {
               dato127,
               dato128
             );
-            exports.esito = esito;
+            exports.esito = blocchetto;
             server.mandaEsito();
             console.log("blocchetto:", blocchetto);
           }
