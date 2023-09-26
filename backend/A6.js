@@ -72,6 +72,17 @@ function binToDec(num) {
   }
   return dec;
 }
+function binarioAdEsadecimale(binario) {
+  // Controlla se il numero binario è valido
+  if (!/^[01]+$/.test(binario)) {
+    return "Numero binario non valido";
+  }
+
+  // Converte il numero binario in esadecimale utilizzando il metodo parseInt
+  const esadecimale = parseInt(binario, 2).toString(16);
+
+  return esadecimale;
+}
 function binarioInArray(binario, destinazione) {
   let destinazioneIndex = 0;
 
@@ -1510,7 +1521,86 @@ function entrata() {
             dato55 = result[50];
             dato56 = hex2bin(result[51]);
             // ottavo blocco
-
+            dato57 = hex2bin(result[52]);
+            dato58 = hex2bin(result[53]);
+            dato59 = hex2bin(result[54]);
+            dato60 = hex2bin(result[55]);
+            dato61 = hex2bin(result[56]);
+            dato62 = hex2bin(result[57]);
+            dato63 = result[58];
+            dato64 = hex2bin(result[59]);
+            // nono blocco
+            dato65 = hex2bin(result[60]);
+            dato66 = hex2bin(result[61]);
+            dato67 = hex2bin(result[62]);
+            dato68 = hex2bin(result[63]);
+            dato69 = hex2bin(result[64]);
+            dato70 = hex2bin(result[65]);
+            dato71 = result[66];
+            dato72 = hex2bin(result[67]);
+            //decimo blocco
+            dato73 = hex2bin(result[68]);
+            dato74 = hex2bin(result[69]);
+            dato75 = hex2bin(result[70]);
+            dato76 = hex2bin(result[71]);
+            dato77 = hex2bin(result[72]);
+            dato78 = hex2bin(result[73]);
+            dato79 = result[74];
+            dato80 = hex2bin(result[75]);
+            //undicesimo blocco
+            dato81 = hex2bin(result[76]);
+            dato82 = hex2bin(result[77]);
+            dato83 = hex2bin(result[78]);
+            dato84 = hex2bin(result[79]);
+            dato85 = hex2bin(result[80]);
+            dato86 = hex2bin(result[81]);
+            dato87 = result[82];
+            dato88 = hex2bin(result[83]);
+            //dodicesimo blocco
+            dato89 = hex2bin(result[84]);
+            dato90 = hex2bin(result[85]);
+            dato91 = hex2bin(result[86]);
+            dato92 = hex2bin(result[87]);
+            dato93 = hex2bin(result[88]);
+            dato94 = hex2bin(result[89]);
+            dato95 = result[90];
+            dato96 = hex2bin(result[91]);
+            //tredicesimo blocco
+            dato97 = hex2bin(result[92]);
+            dato98 = hex2bin(result[93]);
+            dato99 = hex2bin(result[94]);
+            dato100 = hex2bin(result[95]);
+            dato101 = hex2bin(result[96]);
+            dato102 = hex2bin(result[97]);
+            dato103 = result[98];
+            dato104 = hex2bin(result[99]);
+            //quattordicesimo blocco
+            dato105 = hex2bin(result[100]);
+            dato106 = hex2bin(result[101]);
+            dato107 = hex2bin(result[102]);
+            dato108 = hex2bin(result[103]);
+            dato109 = hex2bin(result[104]);
+            dato110 = hex2bin(result[105]);
+            dato111 = result[106];
+            dato112 = hex2bin(result[106]);
+            //quindicesimo blocco
+            dato113 = hex2bin(result[107]);
+            dato114 = hex2bin(result[108]);
+            dato115 = hex2bin(result[109]);
+            dato116 = hex2bin(result[110]);
+            dato117 = hex2bin(result[111]);
+            dato118 = hex2bin(result[112]);
+            dato119 = result[113];
+            dato120 = hex2bin(result[114]);
+            //sedicesimo blocco
+            dato121 = hex2bin(result[115]);
+            dato122 = hex2bin(result[116]);
+            dato123 = hex2bin(result[117]);
+            dato124 = hex2bin(result[118]);
+            dato125 = hex2bin(result[119]);
+            dato126 = hex2bin(result[120]);
+            dato127 = result[121];
+            dato128 = hex2bin(result[122]);
             function convertiDati(
               dato1,
               dato2,
@@ -1583,7 +1673,289 @@ function entrata() {
                       evento = "Allarme mancanza risposta espansione ingressi";
                       sestaColonna = binToDec(dato6);
                       break;
+                    case "03":
+                      evento = "Allarme mancanza risposta comunicatore";
+                      break;
+                    case "04":
+                      evento = "Allarme tamper centrale";
+                      break;
+                    case "05":
+                      evento = "Allarme tamper tastiera";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "06":
+                      evento = "Allarme mancanza risposta espansione radio";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "07":
+                      evento = "Allarme tamper espansione radio";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "08":
+                      evento = "Allarme tamper espansione zone";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "09":
+                      evento = "Allarme jammer radio";
+                      break;
+                    case "10":
+                      evento = "Allarme mascheramento zone radio";
+                      sestaColonna = binToDec(dato6);
+                      break;
                   }
+                case "0A":
+                  switch (dato8) {
+                    case "00":
+                      evento = "Rapina per codice anticoercizione";
+                      break;
+                    case "01":
+                      evento = "Rapina per disinserimento";
+                      break;
+                    case "02":
+                      evento = "Rapina da telecomando";
+                      break;
+                  }
+                case "0B":
+                  switch (dato8) {
+                    case "00":
+                      evento = "Guasto mancanza rete";
+                      break;
+                    case "01":
+                      evento = "Ripristino guasto mancanza rete";
+                      break;
+                    case "02":
+                      evento = "Guasto batteria scarica";
+                      break;
+                    case "03":
+                      evento = "Ripristino guasto batteria scarica";
+                      break;
+                    case "04":
+                      evento = "Guasto fusibile";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "05":
+                      evento = "Ripristino guasto fusibile";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "06":
+                      evento = "Guasto alimentazione bassa";
+                      break;
+                    case "07":
+                      evento = "Errori su RS485";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                  }
+                case "0C":
+                  switch (dato8) {
+                    case "00":
+                      evento = "Inizio programmazione";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "01":
+                      evento = "Fine programmazione";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "02":
+                      evento = "Inizio blocco";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "03":
+                      evento = "Fine blocco";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "04":
+                      evento = "Inizio blocco sirene";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "05":
+                      evento = "Fine blocco sirene";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "06":
+                      evento = "Riavvio centrale";
+                      break;
+                    case "07":
+                      evento = "Abilitazione timer (fine blocco)";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "08":
+                      evento = "Disabilitazione timer (inizio blocco)";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "09":
+                      evento = "Abilitazione codici installatore";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "0A":
+                      evento = "Disabilitazione codici installatore";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                  }
+                case "0D":
+                  switch (dato8) {
+                    case "00":
+                      evento = "Inizio avvisi comunicatore";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "01":
+                      evento = "Fine avvisi comunicatore";
+                      sestaColonna = dato6;
+                      break;
+                    case "02":
+                      evento = "Inizio chiamata entrante comunicatore";
+                      if (dato6 == "ff") {
+                        sestaColonna = "Numero non presente";
+                      } else {
+                        sestaColonna = binToDec(dato6);
+                      }
+                      break;
+                    case "03":
+                      evento = "Fine chiamata entrante comunicatore";
+                      if (binarioAdEsadecimale(dato6) == "ff") {
+                        sestaColonna = "Numero non presente";
+                      } else {
+                        sestaColonna = binToDec(dato6);
+                      }
+                      break;
+                    case "04":
+                      evento = "Inizio segnale assente comunicatore";
+                      break;
+                    case "05":
+                      evento = "Fine segnale assente comunicatore";
+                      break;
+                    case "06":
+                      evento = "Inizio segnale basso comunicatore";
+                      break;
+                    case "07":
+                      evento = "Fine segnale basso comunicatore";
+                      break;
+                    case "08":
+                      evento = "Inizio jamming comunicatore";
+                      break;
+                    case "09":
+                      evento = "Fine jamming comunicatore";
+                      break;
+                    case "0A":
+                      evento = "Inizio ascolto ambientale comunicatore";
+                      break;
+                    case "0B":
+                      evento = "Fine ascolto ambientale";
+                      break;
+                    case "0C":
+                      evento = "Inizio credito basso comunicatore";
+                      break;
+                    case "0D":
+                      evento = "Fine credito basso comunicatore";
+                      break;
+                    case "0E":
+                      evento = "Inizio scadenza SIM comunicatore";
+                      break;
+                    case "0F":
+                      evento = "Fine scadenza SIM comunicatore";
+                      break;
+                    case "10":
+                      evento = "Inizio blocco chiamate comunicatore";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "11":
+                      evento = "Fine blocco chiamate comunicatore";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "12":
+                      evento = "Life test comunicatore";
+                      break;
+                    case "13":
+                      evento = "Connessione cloud";
+                      break;
+                    case "14":
+                      evento = "Disconnessione cloud";
+                      switch (binarioAdEsadecimale(dato6)) {
+                        case "01":
+                          sestaColonna = "rete";
+                          break;
+                        case "02":
+                          sestaColonna = "timeout";
+                          break;
+                        case "04":
+                          sestaColonna = "impianto sconosciuto";
+                          break;
+                        case "08":
+                          sestaColonna =
+                            "impianto non abilitato/impianto già connesso";
+                          break;
+                        case "10":
+                          sestaColonna = "stop da locale";
+                          break;
+                      }
+                    case "15":
+                      evento = "Blocco connessione cloud";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "16":
+                      evento = "Sblocco connessione cloud";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                  }
+                case "0E":
+                  evento = "Cancellazione storico eventi";
+                  sestaColonna = binToDec(dato6);
+                  break;
+                case "0F":
+                  evento = "Attivazione uscita";
+                  sestaColonna = binToDec(dato6);
+                  riferimento = binToDec(dato8);
+                  break;
+                case "10":
+                  evento = "Disattivazione uscita";
+                  sestaColonna = binToDec(dato6);
+                  riferimento = binToDec(dato8);
+                  break;
+                case "11":
+                  switch (dato8) {
+                    case "00":
+                      evento =
+                        "Aggiunta memoria mancanza risposta espansione ingressi";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "01":
+                      evento =
+                        "Aggiunta memoria mancanza risposta comunicatore";
+                      break;
+                    case "02":
+                      evento = "Aggiunta memoria tamper centrale";
+                      break;
+                    case "03":
+                      evento = "Aggiunta memoria tamper tastiera";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                    case "04":
+                      evento =
+                        "Aggiunta memoria mancata risposta espansione radio";
+                      sestaColonna = binToDec(dato6);
+                      break;
+                  }
+                case "12":
+                  evento = "Reinclusione tamper centrale";
+                  sestaColonna = binToDec(dato6);
+                  break;
+                case "13":
+                  evento = "Esclusione tamper centrale";
+                  sestaColonna = binToDec(dato6);
+                  break;
+                case "14":
+                  evento = "Reset preavviso inserimento in corso";
+                  sestaColonna = binToDec(dato6);
+                  riferimento = dato8;
+                  break;
+                case "15":
+                  evento = "Mancata risposta su zona radio";
+                  riferimento = dato8;
+                  break;
+                case "14":
+                  evento = "Batteria scarica su zona radio";
+                  sestaColonna = binToDec(dato6);
+                  riferimento = dato8;
+                  break;
               }
               return {
                 giornoBlocco,
@@ -1641,11 +2013,121 @@ function entrata() {
               dato33,
               dato34,
               dato35,
+              dato36,
               dato37,
               dato38,
               dato39,
-              dato40,
-              dato41
+              dato40
+            );
+            blocchetto[5] = convertiDati(
+              dato41,
+              dato42,
+              dato43,
+              dato44,
+              dato45,
+              dato46,
+              dato47,
+              dato48
+            );
+            blocchetto[6] = convertiDati(
+              dato49,
+              dato50,
+              dato51,
+              dato52,
+              dato53,
+              dato54,
+              dato55,
+              dato56
+            );
+            blocchetto[7] = convertiDati(
+              dato57,
+              dato58,
+              dato59,
+              dato60,
+              dato61,
+              dato62,
+              dato63,
+              dato64
+            );
+            blocchetto[8] = convertiDati(
+              dato65,
+              dato66,
+              dato67,
+              dato68,
+              dato69,
+              dato70,
+              dato71,
+              dato72
+            );
+            blocchetto[9] = convertiDati(
+              dato73,
+              dato74,
+              dato75,
+              dato76,
+              dato77,
+              dato78,
+              dato79,
+              dato80
+            );
+            blocchetto[10] = convertiDati(
+              dato81,
+              dato82,
+              dato83,
+              dato84,
+              dato85,
+              dato86,
+              dato87,
+              dato88
+            );
+            blocchetto[11] = convertiDati(
+              dato89,
+              dato90,
+              dato91,
+              dato92,
+              dato93,
+              dato94,
+              dato95,
+              dato96
+            );
+            blocchetto[12] = convertiDati(
+              dato97,
+              dato98,
+              dato99,
+              dato100,
+              dato101,
+              dato102,
+              dato103,
+              dato104
+            );
+            blocchetto[13] = convertiDati(
+              dato105,
+              dato106,
+              dato107,
+              dato108,
+              dato109,
+              dato110,
+              dato111,
+              dato112
+            );
+            blocchetto[14] = convertiDati(
+              dato113,
+              dato114,
+              dato115,
+              dato116,
+              dato117,
+              dato118,
+              dato119,
+              dato120
+            );
+            blocchetto[15] = convertiDati(
+              dato121,
+              dato122,
+              dato123,
+              dato124,
+              dato125,
+              dato126,
+              dato127,
+              dato128
             );
             console.log("blocchetto:", blocchetto);
           }
