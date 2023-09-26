@@ -22,6 +22,7 @@ var uscite = [];
 var areeAperte = [];
 var zoneAperte = [];
 var zoneAllMem = [];
+var dati = [];
 //le zone sono in ordine, in tutto sono 64 per cui il vettore da 0 a 63
 var arrayzoneinserite = [];
 //zone in allarme da 0 a 63
@@ -1420,6 +1421,18 @@ function entrata() {
           if (payload == "25") {
             riusltato = "fine blocco sirene";
             console.log(risultato);
+          }
+          if (payload == "28") {
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var blocco = result[4];
+            console.log("dato1", result[5]);
+            console.log("dato2", result[6]);
+            console.log("dato3", result[7]);
+            console.log("dato4", result[8]);
+            console.log("dato5", result[9]);
+            console.log("dato6", result[10]);
+            console.log("dato7", result[11]);
+            console.log("dato8", result[12]);
           }
           if (payload == "29") {
             risultato = "alimentazione centrale bassa (<9V)";
