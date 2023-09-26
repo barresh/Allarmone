@@ -1451,8 +1451,8 @@ function entrata() {
             console.log("dato2", dato2);
             giornoBlocco[0] = binToDec(dato1.slice(3, 8));
             console.log("giornoBlocco0", giornoBlocco[0]);
-            secondiBlocco[0].append(dato2.slice(0, 3), dato1.slice(0, 3));
-            console.log("secondiBlocco0", secondiBlocco[0]);
+            // secondiBlocco[0].append(dato2.slice(0, 3), dato1.slice(0, 3));
+            // console.log("secondiBlocco0", secondiBlocco[0]);
             meseBlocco[0] = binToDec(dato2.slice(3, 8));
             console.log("meseBlocco0", meseBlocco[0]);
             annoBlocco[0] = 2000 + binToDec(dato3);
