@@ -2129,6 +2129,8 @@ function entrata() {
               dato127,
               dato128
             );
+            exports.esito = esito;
+            server.mandaEsito();
             console.log("blocchetto:", blocchetto);
           }
           if (payload == "29") {
