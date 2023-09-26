@@ -1486,8 +1486,8 @@ function entrata() {
               annoBlocco = 2000 + binToDec(dato3);
               oreBlocco = binToDec(dato4);
               minutiBlocco = binToDec(dato5);
-              payloadBlocco = dato7;
-              switch (payloadBlocco) {
+
+              switch (dato7) {
                 case 00:
                   evento = "Allarme zona";
                   riferimento = binToDec(dato8);
@@ -1496,7 +1496,7 @@ function entrata() {
                   evento = "Inserimento aree";
                   riferimento = estraiDati(hex2bin(dato8), 4, 8);
                   break;
-                case 02:
+                case "02":
                   evento = "Disinserimento aree";
                   riferimento = estraiDati(hex2bin(dato8), 4, 8);
                   break;
