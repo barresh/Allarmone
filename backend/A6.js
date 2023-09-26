@@ -1439,7 +1439,7 @@ function entrata() {
             var annoBlocco = [];
             var oreBlocco = [];
             var minutiBlocco = [];
-            var blocchetto;
+            var blocchetto = [];
             var payloadBlocco;
             var evento;
             var sestaColonna;
