@@ -1442,6 +1442,7 @@ function entrata() {
             var blocchetto;
             var payloadBlocco;
             var evento;
+            var sestaColonna;
             //blocco alla quale la centrale è arrivata
             var blocco = result[3];
             dato1 = hex2bin(result[4]);
