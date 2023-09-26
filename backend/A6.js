@@ -63,6 +63,15 @@ function hex2asci(hexx) {
     str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
   return str;
 }
+function binToDec(num) {
+  let dec = 0;
+  for (let i = 0; i < num.length; i++) {
+    if (num[num.length - (i + 1)] === "1") {
+      dec += 2 ** i;
+    }
+  }
+  return dec;
+}
 function binarioInArray(binario, destinazione) {
   let destinazioneIndex = 0;
 
@@ -1424,15 +1433,34 @@ function entrata() {
           }
           if (payload == "28") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
+            //blocco alla quale la centrale è arrivata
+            var secondiBlocco;
+            var giornoBlocco;
+            var meseBlocco;
+            var annoBlocco;
+            var oreBlocco;
+            var minutiBlocco;
             var blocco = result[4];
-            console.log("dato1", result[5]);
-            console.log("dato2", result[6]);
-            console.log("dato3", result[7]);
-            console.log("dato4", result[8]);
-            console.log("dato5", result[9]);
-            console.log("dato6", result[10]);
-            console.log("dato7", result[11]);
-            console.log("dato8", result[12]);
+            dato1 = hex2bin(result[5]);
+            dato2 = hex2bin(result[6]);
+            dato3 = hex2bin(result[7]);
+            dato4 = hex2bin(result[8]);
+            dato5 = hex2bin(result[9]);
+            console.log("blocco", blocco);
+            console.log("dato1", dato1);
+            console.log("dato2", dato2);
+            giornoBlocco[0] = binToDec(dato1.slice(3, 8));
+            console.log("giornoBlocco0", giornoBlocco[0]);
+            secondiBlocco[0].append(dato2.slice(0, 3), dato1.slice(0, 3));
+            console.log("secondiBlocco0", secondiBlocco[0]);
+            meseBlocco[0] = binToDec(dato2.slice(3, 8));
+            console.log("meseBlocco0", meseBlocco[0]);
+            annoBlocco[0] = 2000 + binToDec(dato3);
+            console.log("annoBlocco0", annoBlocco[0]);
+            oreBlocco[0] = binToDec(dato4);
+            console.log("oraBlocco0", oreBlocco[0]);
+            minutiBlocco[0] = binToDec(dato5);
+            console.log("minutiBlocco0", minutiBlocco[0]);
           }
           if (payload == "29") {
             risultato = "alimentazione centrale bassa (<9V)";
