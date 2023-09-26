@@ -1459,12 +1459,6 @@ function entrata() {
                 return binToDec(dato.slice(start, end));
               }
 
-              giornoBlocco = estraiDati(dato1, 3, 8);
-              meseBlocco = estraiDati(dato2, 3, 8);
-              annoBlocco = 2000 + binToDec(dato3);
-              oreBlocco = binToDec(dato4);
-              minutiBlocco = binToDec(dato5);
-
               return {
                 giornoBlocco,
                 meseBlocco,
