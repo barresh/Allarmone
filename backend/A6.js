@@ -1435,11 +1435,11 @@ function entrata() {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             //blocco alla quale la centrale è arrivata
             var secondiBlocco;
-            var giornoBlocco;
-            var meseBlocco;
-            var annoBlocco;
-            var oreBlocco;
-            var minutiBlocco;
+            var giornoBlocco = [];
+            var meseBlocco = [];
+            var annoBlocco = [];
+            var oreBlocco = [];
+            var minutiBlocco = [];
             var blocco = result[4];
             dato1 = hex2bin(result[5]);
             dato2 = hex2bin(result[6]);
