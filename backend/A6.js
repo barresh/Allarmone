@@ -4112,13 +4112,14 @@ function entrata() {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             blocco = result[3];
             ultimoNumero = hexToDecimal(result[4]);
-            function riempiEsito(blocco, ultimoNumero) {
+            function riempiEsito(payload, blocco, ultimoNumero) {
               return {
+                payload: payload,
                 blocco: blocco,
                 ultimoNumero: ultimoNumero,
               };
             }
-            let esito = riempiEsito(blocco, ultimoNumero);
+            let esito = riempiEsito(payload, blocco, ultimoNumero);
             exports.esito = esito;
             server.mandaEsito();
           }
