@@ -2131,6 +2131,7 @@ function entrata() {
             );
             exports.esito = blocchetto;
             server.mandaEsito();
+            console.log("blocco", blocco);
           }
           if (payload == "29") {
             risultato = "alimentazione centrale bassa (<9V)";
