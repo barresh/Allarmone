@@ -630,7 +630,7 @@ function invia() {
       bloccoEventi[0] = mittente;
       bloccoEventi[1] = destinatario;
       bloccoEventi[2] = 0x14;
-      bloccoEventi[3] = arrivo.numEventi;
+      bloccoEventi[3] = "0x" + arrivo.numEventi;
       var sommaRichiestaBloccoEventi = (
         bloccoEventi[0] +
         bloccoEventi[1] +
