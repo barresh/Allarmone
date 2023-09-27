@@ -1620,6 +1620,7 @@ function entrata() {
             dato127 = result[130];
             dato128 = hex2bin(result[131]);
             function convertiDati(
+              payload,
               dato1,
               dato2,
               dato3,
@@ -1976,6 +1977,7 @@ function entrata() {
                   break;
               }
               return {
+                payload,
                 giornoBlocco,
                 meseBlocco,
                 annoBlocco,
@@ -2149,7 +2151,6 @@ function entrata() {
             );
             exports.esito = blocchetto;
             server.mandaEsito();
-            console.log("blocco", blocco);
           }
           if (payload == "29") {
             risultato = "alimentazione centrale bassa (<9V)";
@@ -3577,6 +3578,7 @@ function entrata() {
             dato127 = result[130];
             dato128 = hex2bin(result[131]);
             function convertiDati(
+              payload,
               dato1,
               dato2,
               dato3,
@@ -3933,6 +3935,7 @@ function entrata() {
                   break;
               }
               return {
+                payload,
                 giornoBlocco,
                 meseBlocco,
                 annoBlocco,
