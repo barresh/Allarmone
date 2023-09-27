@@ -634,7 +634,8 @@ function invia() {
       var sommaRichiestaBloccoEventi = (
         bloccoEventi[0] +
         bloccoEventi[1] +
-        bloccoEventi[2]
+        bloccoEventi[2] +
+        bloccoEventi[3]
       ).toString(16);
       if (sommaRichiestaBloccoEventi.length == 3) {
         sommaRichiestaBloccoEventi = sommaRichiestaBloccoEventi.slice(1, 3);
