@@ -4108,6 +4108,20 @@ function entrata() {
             server.mandaEsito();
             console.log("blocco", blocco);
           }
+          if (payload == "0d") {
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            blocco = result[3];
+            ultimoNumero = hexToDecimal(result[4]);
+            function riempiEsito(blocco, ultimoNumero) {
+              return {
+                blocco: blocco,
+                ultimoNumero: ultimoNumero,
+              };
+            }
+            let esito = riempiEsito(blocco, ultimoNumero);
+            exports.esito = esito;
+            server.mandaEsito();
+          }
         }
       }
     }
