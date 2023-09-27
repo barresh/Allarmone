@@ -3948,6 +3948,7 @@ function entrata() {
             }
 
             blocchetto[0] = convertiDati(
+              payload,
               dato1,
               dato2,
               dato3,
@@ -3958,6 +3959,7 @@ function entrata() {
               dato8
             );
             blocchetto[1] = convertiDati(
+              payload,
               dato9,
               dato10,
               dato11,
@@ -3968,6 +3970,8 @@ function entrata() {
               dato16
             );
             blocchetto[2] = convertiDati(
+              payload,
+
               dato17,
               dato18,
               dato19,
@@ -3978,6 +3982,8 @@ function entrata() {
               dato24
             );
             blocchetto[3] = convertiDati(
+              payload,
+
               dato25,
               dato26,
               dato27,
@@ -3988,6 +3994,8 @@ function entrata() {
               dato32
             );
             blocchetto[4] = convertiDati(
+              payload,
+
               dato33,
               dato34,
               dato35,
@@ -3998,6 +4006,8 @@ function entrata() {
               dato40
             );
             blocchetto[5] = convertiDati(
+              payload,
+
               dato41,
               dato42,
               dato43,
@@ -4008,6 +4018,8 @@ function entrata() {
               dato48
             );
             blocchetto[6] = convertiDati(
+              payload,
+
               dato49,
               dato50,
               dato51,
@@ -4018,6 +4030,8 @@ function entrata() {
               dato56
             );
             blocchetto[7] = convertiDati(
+              payload,
+
               dato57,
               dato58,
               dato59,
@@ -4028,6 +4042,8 @@ function entrata() {
               dato64
             );
             blocchetto[8] = convertiDati(
+              payload,
+
               dato65,
               dato66,
               dato67,
@@ -4038,6 +4054,8 @@ function entrata() {
               dato72
             );
             blocchetto[9] = convertiDati(
+              payload,
+
               dato73,
               dato74,
               dato75,
@@ -4048,6 +4066,8 @@ function entrata() {
               dato80
             );
             blocchetto[10] = convertiDati(
+              payload,
+
               dato81,
               dato82,
               dato83,
@@ -4058,6 +4078,8 @@ function entrata() {
               dato88
             );
             blocchetto[11] = convertiDati(
+              payload,
+
               dato89,
               dato90,
               dato91,
@@ -4068,6 +4090,8 @@ function entrata() {
               dato96
             );
             blocchetto[12] = convertiDati(
+              payload,
+
               dato97,
               dato98,
               dato99,
@@ -4078,6 +4102,8 @@ function entrata() {
               dato104
             );
             blocchetto[13] = convertiDati(
+              payload,
+
               dato105,
               dato106,
               dato107,
@@ -4088,6 +4114,8 @@ function entrata() {
               dato112
             );
             blocchetto[14] = convertiDati(
+              payload,
+
               dato113,
               dato114,
               dato115,
@@ -4098,6 +4126,8 @@ function entrata() {
               dato120
             );
             blocchetto[15] = convertiDati(
+              payload,
+
               dato121,
               dato122,
               dato123,
