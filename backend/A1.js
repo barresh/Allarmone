@@ -693,13 +693,7 @@ function invia() {
       numeroEventi[0] = mittente;
       numeroEventi[1] = destinatario;
       numeroEventi[2] = 0x22;
-      var sommaNumeroEventi =
-        numeroEventi[0] + numeroEventi[1] + numeroEventi[2];
-
-      if (sommaNumeroEventi.length == 3) {
-        sommaNumeroEventi = sommaNumeroEventi.slice(1, 3);
-      }
-      numeroEventi[3] = "0x" + sommaNumeroEventi;
+      numeroEventi[3] = 0x93;
       port.open(function (error) {
         console.log("CST port open");
         port.write(numeroEventi, function (err, result) {
