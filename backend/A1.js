@@ -651,9 +651,9 @@ function invia() {
           }
         });
       });
-      richiestaBloccoEventi();
-      exports.richiestaBloccoEventi = richiestaBloccoEventi;
     }
+    richiestaBloccoEventi();
+    exports.richiestaBloccoEventi = richiestaBloccoEventi;
   }
   if (arrivo.payload == 0x16) {
     function storicoEventi() {
