@@ -3399,7 +3399,7 @@ function entrata() {
               server.mandaEsito();
             }
           }
-          if (payload == "0C") {
+          if (payload == "0c") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             var secondiBlocco = [];
             var giornoBlocco = [];
