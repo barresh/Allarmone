@@ -623,7 +623,7 @@ function invia() {
     includere();
     exports.includere = includere;
   }
-  if (arrivo.paylaod == 0x14) {
+  if (arrivo.payload == 0x14) {
     function richiestaBloccoEventi() {
       var bloccoEventi = new Buffer(5);
       const arrivo = server.arrivo;
