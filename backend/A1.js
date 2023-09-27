@@ -623,6 +623,38 @@ function invia() {
     includere();
     exports.includere = includere;
   }
+  if (arrivo.paylaod == 0x14) {
+    function richiestaBloccoEventi() {
+      var bloccoEventi = new Buffer(5);
+      const arrivo = server.arrivo;
+      bloccoEventi[0] = mittente;
+      bloccoEventi[1] = destinatario;
+      bloccoEventi[2] = 0x14;
+      bloccoEventi[3] = arrivo.numEventi;
+      var sommaRichiestaBloccoEventi = (
+        bloccoEventi[0] +
+        bloccoEventi[1] +
+        bloccoEventi[2]
+      ).toString(16);
+      if (sommaRichiestaBloccoEventi.length == 3) {
+        sommaRichiestaBloccoEventi = sommaRichiestaBloccoEventi.slice(1, 3);
+      }
+      bloccoEventi[4] = "0x" + sommaRichiestaBloccoEventi;
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(bloccoEventi, function (err, result) {
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+      });
+      richiestaBloccoEventi();
+      exports.richiestaBloccoEventi = richiestaBloccoEventi;
+    }
+  }
   if (arrivo.payload == 0x16) {
     function storicoEventi() {
       var richiestaEventi = new Buffer(4);
