@@ -679,7 +679,7 @@ function entrata() {
               server.mandaEsito();
             }
           }
-          if (payload == 02) {
+          if (payload == "02") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             var colonna10bin = hex2bin(result[9]);
             var colonna11bin = hex2bin(result[10]);
@@ -1441,6 +1441,24 @@ function entrata() {
           if (payload == "25") {
             riusltato = "fine blocco sirene";
             console.log(risultato);
+          }
+          if (payload == "27") {
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            var blocco = result[3];
+            var posizione = result[4];
+            if (result[5].slice(7, 8) == "1") {
+              var risultato = "memoria piena";
+            }
+            function riempiEsito(blocco, posizione, risultato) {
+              return {
+                blocco: blocco,
+                posizione: posizione,
+                risultato: risultato,
+              };
+            }
+            let esito = riempiEsito(blocco, posizione, risultato);
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "28") {
             const result = bufferino.match(/.{1,2}/g) ?? [];

@@ -687,6 +687,33 @@ function invia() {
     storicoEventi();
     exports.storicoEventi = storicoEventi;
   }
+  if (arrivo.payload == 0x22) {
+    function richiestaNumeroEventi() {
+      var numeroEventi = new Buffer(4);
+      numeroEventi[0] = mittente;
+      numeroEventi[1] = destinatario;
+      numeroEventi[2] = 0x22;
+      var sommaNumeroEventi =
+        numeroEventi[0] + numeroEventi[1] + numeroEventi[2];
+    
+    if(sommaNumeroEventi.length==3){
+      sommaNumeroEventi=sommaNumeroEventi.slice(1,3);
+    }
+    numeroEventi[3]="0x"+sommaNumeroEventi;
+    port.open(function (error) {
+      console.log("CST port open");
+      port.write(numeroEventi, function (err, result) {
+        if (err) {
+          console.log("Error while sending message : " + err);
+        }
+        if (result) {
+          console.log("Response received after sending message : " + result);
+        }
+      });
+    });
+  }
+  richiestaNumeroEventi();
+  exports.richiestaNumeroEventi=richiestaNumeroEventi;
 }
 function includiamo() {
   var inclusione = new Buffer(8);
