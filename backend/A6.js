@@ -1620,7 +1620,6 @@ function entrata() {
             dato127 = result[130];
             dato128 = hex2bin(result[131]);
             function convertiDati(
-              payload,
               dato1,
               dato2,
               dato3,
@@ -1977,7 +1976,6 @@ function entrata() {
                   break;
               }
               return {
-                payload,
                 giornoBlocco,
                 meseBlocco,
                 annoBlocco,
@@ -2149,7 +2147,14 @@ function entrata() {
               dato127,
               dato128
             );
-            exports.esito = blocchetto;
+            function riempiEsito(payload, blocchetto) {
+              return {
+                payload: payload,
+                blocchetto: blocchetto,
+              };
+            }
+            let esito = riempiEsito(payload, blocchetto);
+            exports.esito = esito;
             server.mandaEsito();
           }
           if (payload == "29") {
