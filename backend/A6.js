@@ -2224,6 +2224,7 @@ function entrata() {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             var bloccoSwitch = result[3];
             if (bloccoSwitch[3] == "00") {
+              console.log("STat trasi");
               //dato 1 era 8,10
               var nomesms =
                 hex2asci(result[4]) +
