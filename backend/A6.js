@@ -2259,8 +2259,6 @@ function entrata() {
                   hex2asci(result[33]) +
                   hex2asci(result[34]) +
                   hex2asci(result[35]);
-                console.log("nomesms:", nomesms);
-                console.log("nomesms:", nomecentrale);
                 break;
               case "01":
                 var nomeAreaA =
@@ -2331,10 +2329,6 @@ function entrata() {
                   hex2asci(result[65]) +
                   hex2asci(result[66]) +
                   hex2asci(result[67]);
-                console.log("nomeAreaA:", nomeAreaA);
-                console.log("nomeAreaB:", nomeAreaB);
-                console.log("nomeAreaC:", nomeAreaC);
-                console.log("nomeAreaD:", nomeAreaD);
                 break;
               case "02":
                 var nomeUtenteTastiera1 =
@@ -2473,14 +2467,6 @@ function entrata() {
                   hex2asci(result[129]) +
                   hex2asci(result[130]) +
                   hex2asci(result[131]);
-                console.log("nomeUtenteTastiera1", nomeUtenteTastiera1);
-                console.log("nomeUtenteTastiera2", nomeUtenteTastiera2);
-                console.log("nomeUtenteTastiera3", nomeUtenteTastiera3);
-                console.log("nomeUtenteTastiera4", nomeUtenteTastiera4);
-                console.log("nomeUtenteTastiera5", nomeUtenteTastiera5);
-                console.log("nomeUtenteTastiera6", nomeUtenteTastiera6);
-                console.log("nomeUtenteTastiera7", nomeUtenteTastiera7);
-                console.log("nomeUtenteTastiera8", nomeUtenteTastiera8);
                 break;
               case "03":
                 var nomeUtenteTastiera9 =
@@ -2619,14 +2605,6 @@ function entrata() {
                   hex2asci(result[129]) +
                   hex2asci(result[130]) +
                   hex2asci(result[131]);
-                console.log("nomeUtenteTastiera9", nomeUtenteTastiera9);
-                console.log("nomeUtenteTastiera10", nomeUtenteTastiera10);
-                console.log("nomeUtenteTastiera11", nomeUtenteTastiera11);
-                console.log("nomeUtenteTastiera12", nomeUtenteTastiera12);
-                console.log("nomeUtenteTastiera13", nomeUtenteTastiera13);
-                console.log("nomeUtenteTastiera14", nomeUtenteTastiera14);
-                console.log("nomeUtenteTastiera15", nomeUtenteTastiera15);
-                console.log("nomeUtenteTastiera16", nomeUtenteTastiera16);
                 break;
               case "04":
                 var nomeUtenteSpinotto1 =
@@ -2765,14 +2743,6 @@ function entrata() {
                   hex2asci(result[129]) +
                   hex2asci(result[130]) +
                   hex2asci(result[131]);
-                console.log("nomeUtenteSpinotto1", nomeUtenteSpinotto1);
-                console.log("nomeUtenteSpinotto2", nomeUtenteSpinotto2);
-                console.log("nomeUtenteSpinotto3", nomeUtenteSpinotto3);
-                console.log("nomeUtenteSpinotto4", nomeUtenteSpinotto4);
-                console.log("nomeUtenteSpinotto5", nomeUtenteSpinotto5);
-                console.log("nomeUtenteSpinotto6", nomeUtenteSpinotto6);
-                console.log("nomeUtenteSpinotto7", nomeUtenteSpinotto7);
-                console.log("nomeUtenteSpinotto8", nomeUtenteSpinotto8);
                 break;
               case "05":
                 var nomeUtenteSpinotto9 =
@@ -2911,14 +2881,6 @@ function entrata() {
                   hex2asci(result[129]) +
                   hex2asci(result[130]) +
                   hex2asci(result[131]);
-                console.log("nomeUtenteSpinotto9", nomeUtenteSpinotto9);
-                console.log("nomeUtenteSpinotto10", nomeUtenteSpinotto10);
-                console.log("nomeUtenteSpinotto11", nomeUtenteSpinotto11);
-                console.log("nomeUtenteSpinotto12", nomeUtenteSpinotto12);
-                console.log("nomeUtenteSpinotto13", nomeUtenteSpinotto13);
-                console.log("nomeUtenteSpinotto14", nomeUtenteSpinotto14);
-                console.log("nomeUtenteSpinotto15", nomeUtenteSpinotto15);
-                console.log("nomeUtenteSpinotto16", nomeUtenteSpinotto16);
                 break;
               case "06":
                 var nomeUscita1 =
@@ -3057,14 +3019,6 @@ function entrata() {
                   hex2asci(result[129]) +
                   hex2asci(result[130]) +
                   hex2asci(result[131]);
-                console.log("nomeUscita1", nomeUscita1);
-                console.log("nomeUscita2", nomeUscita2);
-                console.log("nomeUscita3", nomeUscita3);
-                console.log("nomeUscita4", nomeUscita4);
-                console.log("nomeUscita5", nomeUscita5);
-                console.log("nomeUscita6", nomeUscita6);
-                console.log("nomeUscita7", nomeUscita7);
-                console.log("nomeUscita8", nomeUscita8);
                 break;
               case "07":
                 var nomeUscita9 =
@@ -3203,15 +3157,183 @@ function entrata() {
                   hex2asci(result[129]) +
                   hex2asci(result[130]) +
                   hex2asci(result[131]);
-                console.log("nomeUscita9", nomeUscita9);
-                console.log("nomeUscita10", nomeUscita10);
-                console.log("nomeUscita11", nomeUscita11);
-                console.log("nomeUscita12", nomeUscita12);
-                console.log("nomeUscita13", nomeUscita13);
-                console.log("nomeUscita14", nomeUscita14);
-                console.log("nomeUscita15", nomeUscita15);
-                console.log("nomeUscita16", nomeUscita16);
                 break;
+            }
+            function riempiEsito(
+              payload,
+              nomesms,
+              nomecentrale,
+              nomeUtenteTastiera1,
+              nomeUtenteTastiera2,
+              nomeUtenteTastiera3,
+              nomeUtenteTastiera4,
+              nomeUtenteTastiera5,
+              nomeUtenteTastiera6,
+              nomeUtenteTastiera7,
+              nomeUtenteTastiera8,
+              nomeUtenteTastiera9,
+              nomeUtenteTastiera10,
+              nomeUtenteTastiera11,
+              nomeUtenteTastiera12,
+              nomeUtenteTastiera13,
+              nomeUtenteTastiera14,
+              nomeUtenteTastiera15,
+              nomeUtenteTastiera16,
+              nomeUtenteSpinotto1,
+              nomeUtenteSpinotto2,
+              nomeUtenteSpinotto3,
+              nomeUtenteSpinotto4,
+              nomeUtenteSpinotto5,
+              nomeUtenteSpinotto6,
+              nomeUtenteSpinotto7,
+              nomeUtenteSpinotto8,
+              nomeUtenteSpinotto9,
+              nomeUtenteSpinotto10,
+              nomeUtenteSpinotto11,
+              nomeUtenteSpinotto12,
+              nomeUtenteSpinotto13,
+              nomeUtenteSpinotto14,
+              nomeUtenteSpinotto15,
+              nomeUtenteSpinotto16,
+              nomeUscita1,
+              nomeUscita2,
+              nomeUscita3,
+              nomeUscita4,
+              nomeUscita5,
+              nomeUscita6,
+              nomeUscita7,
+              nomeUscita8,
+              nomeUscita9,
+              nomeUscita10,
+              nomeUscita11,
+              nomeUscita12,
+              nomeUscita13,
+              nomeUscita14,
+              nomeUscita15,
+              nomeUscita16,
+              nomeAreaA,
+              nomeAreaB,
+              nomeAreaC,
+              nomeAreaD
+            ) {
+              return {
+                payload: payload,
+                nomesms: nomesms,
+                nomecentrale: nomecentrale,
+                nomeUtenteTastiera1: nomeUtenteTastiera1,
+                nomeUtenteTastiera2: nomeUtenteTastiera2,
+                nomeUtenteTastiera3: nomeUtenteTastiera3,
+                nomeUtenteTastiera4: nomeUtenteTastiera4,
+                nomeUtenteTastiera5: nomeUtenteTastiera5,
+                nomeUtenteTastiera6: nomeUtenteTastiera6,
+                nomeUtenteTastiera7: nomeUtenteTastiera7,
+                nomeUtenteTastiera8: nomeUtenteTastiera8,
+                nomeUtenteTastiera9: nomeUtenteTastiera9,
+                nomeUtenteTastiera10: nomeUtenteTastiera10,
+                nomeUtenteTastiera11: nomeUtenteTastiera11,
+                nomeUtenteTastiera12: nomeUtenteTastiera12,
+                nomeUtenteTastiera13: nomeUtenteTastiera13,
+                nomeUtenteTastiera14: nomeUtenteTastiera14,
+                nomeUtenteTastiera15: nomeUtenteTastiera15,
+                nomeUtenteTastiera16: nomeUtenteTastiera16,
+                nomeUtenteSpinotto1: nomeUtenteSpinotto1,
+                nomeUtenteSpinotto2: nomeUtenteSpinotto2,
+                nomeUtenteSpinotto3: nomeUtenteSpinotto3,
+                nomeUtenteSpinotto4: nomeUtenteSpinotto4,
+                nomeUtenteSpinotto5: nomeUtenteSpinotto5,
+                nomeUtenteSpinotto6: nomeUtenteSpinotto6,
+                nomeUtenteSpinotto7: nomeUtenteSpinotto7,
+                nomeUtenteSpinotto8: nomeUtenteSpinotto8,
+                nomeUtenteSpinotto9: nomeUtenteSpinotto9,
+                nomeUtenteSpinotto10: nomeUtenteSpinotto10,
+                nomeUtenteSpinotto11: nomeUtenteSpinotto11,
+                nomeUtenteSpinotto12: nomeUtenteSpinotto12,
+                nomeUtenteSpinotto13: nomeUtenteSpinotto13,
+                nomeUtenteSpinotto14: nomeUtenteSpinotto14,
+                nomeUtenteSpinotto15: nomeUtenteSpinotto15,
+                nomeUtenteSpinotto16: nomeUtenteSpinotto16,
+                nomeUscita1: nomeUscita1,
+                nomeUscita2: nomeUscita2,
+                nomeUscita3: nomeUscita3,
+                nomeUscita4: nomeUscita4,
+                nomeUscita5: nomeUscita5,
+                nomeUscita6: nomeUscita6,
+                nomeUscita7: nomeUscita7,
+                nomeUscita8: nomeUscita8,
+                nomeUscita9: nomeUscita9,
+                nomeUscita10: nomeUscita10,
+                nomeUscita11: nomeUscita11,
+                nomeUscita12: nomeUscita12,
+                nomeUscita13: nomeUscita13,
+                nomeUscita14: nomeUscita14,
+                nomeUscita15: nomeUscita15,
+                nomeUscita16: nomeUscita16,
+                nomeAreaA: nomeAreaA,
+                nomeAreaB: nomeAreaB,
+                nomeAreaC: nomeAreaC,
+                nomeAreaD: nomeAreaD,
+              };
+            }
+            let esito = riempiEsito(
+              result[3],
+              nomesms,
+              nomecentrale,
+              nomeUtenteTastiera1,
+              nomeUtenteTastiera2,
+              nomeUtenteTastiera3,
+              nomeUtenteTastiera4,
+              nomeUtenteTastiera5,
+              nomeUtenteTastiera6,
+              nomeUtenteTastiera7,
+              nomeUtenteTastiera8,
+              nomeUtenteTastiera9,
+              nomeUtenteTastiera10,
+              nomeUtenteTastiera11,
+              nomeUtenteTastiera12,
+              nomeUtenteTastiera13,
+              nomeUtenteTastiera14,
+              nomeUtenteTastiera15,
+              nomeUtenteTastiera16,
+              nomeUtenteSpinotto1,
+              nomeUtenteSpinotto2,
+              nomeUtenteSpinotto3,
+              nomeUtenteSpinotto4,
+              nomeUtenteSpinotto5,
+              nomeUtenteSpinotto6,
+              nomeUtenteSpinotto7,
+              nomeUtenteSpinotto8,
+              nomeUtenteSpinotto9,
+              nomeUtenteSpinotto10,
+              nomeUtenteSpinotto11,
+              nomeUtenteSpinotto12,
+              nomeUtenteSpinotto13,
+              nomeUtenteSpinotto14,
+              nomeUtenteSpinotto15,
+              nomeUtenteSpinotto16,
+              nomeUscita1,
+              nomeUscita2,
+              nomeUscita3,
+              nomeUscita4,
+              nomeUscita5,
+              nomeUscita6,
+              nomeUscita7,
+              nomeUscita8,
+              nomeUscita9,
+              nomeUscita10,
+              nomeUscita11,
+              nomeUscita12,
+              nomeUscita13,
+              nomeUscita14,
+              nomeUscita15,
+              nomeUscita16,
+              nomeAreaA,
+              nomeAreaB,
+              nomeAreaC,
+              nomeAreaD
+            );
+            exports.esito = esito;
+            if (esito) {
+              server.mandaEsito();
             }
           }
           if (payload == "30") {

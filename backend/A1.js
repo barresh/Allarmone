@@ -215,18 +215,7 @@ sommaSpecifica = (
   .slice(1, 3);
 configurazioneSpecifica[3] = "0x" + sommaSpecifica;
 //payload 0F
-var richiestaStringhe = new Buffer(4);
-richiestaStringhe[0] = mittente;
-richiestaStringhe[1] = destinatario;
-richiestaStringhe[2] = payload[14];
-sommaRichiestaStringhe = (
-  richiestaStringhe[0] +
-  richiestaStringhe[1] +
-  richiestaStringhe[2]
-)
-  .toString(16)
-  .slice(1, 3);
-richiestaStringhe[3] = "0x" + sommaRichiestaStringhe;
+
 //payload 10
 var richiestaTimer = new Buffer(7);
 richiestaTimer[0] = mittente;
@@ -686,6 +675,36 @@ function invia() {
     }
     storicoEventi();
     exports.storicoEventi = storicoEventi;
+  }
+  if (arrivo.payload == 0x0f) {
+    function richiediStringhe() {
+      var richiestaStringhe = new Buffer(4);
+      richiestaStringhe[0] = mittente;
+      richiestaStringhe[1] = destinatario;
+      richiestaStringhe[2] = payload[14];
+      sommaRichiestaStringhe = (
+        richiestaStringhe[0] +
+        richiestaStringhe[1] +
+        richiestaStringhe[2]
+      ).toString(16);
+      if (sommaRichiestaStringhe.length == 3) {
+        sommaRichiestaStringhe = sommaRichiestaStringhe.slice(1, 3);
+      }
+      richiestaStringhe[3] = "0x" + sommaRichiestaStringhe;
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(richiestaStringhe, function (err, result) {
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+      });
+    }
+    richiediStringhe();
+    exports.richiediStringhe = richiediStringhe;
   }
   if (arrivo.payload == 0x22) {
     function richiestaNumeroEventi() {
