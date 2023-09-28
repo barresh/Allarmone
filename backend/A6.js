@@ -2220,7 +2220,7 @@ function entrata() {
             console.log(risultato);
             //DA CAPIRE COLONNA 4
           }
-          if (payload == "2F") {
+          if (payload == "2f") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             var bloccoSwitch = result[3];
             if (bloccoSwitch[3] == "00") {
