@@ -3425,7 +3425,6 @@ function entrata() {
           }
           if (payload == "0c") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
-            var secondiBlocco = [];
             var giornoBlocco = [];
             var meseBlocco = [];
             var annoBlocco = [];
@@ -4110,13 +4109,14 @@ function entrata() {
               dato127,
               dato128
             );
-            function riempiEsito(payload, blocchetto) {
+            function riempiEsito(payload, blocco, blocchetto) {
               return {
                 payload: payload,
+                blocco: blocco,
                 blocchetto: blocchetto,
               };
             }
-            let esito = riempiEsito(payload, blocchetto);
+            let esito = riempiEsito(payload, blocco, blocchetto);
             exports.esito = esito;
             server.mandaEsito();
           }
