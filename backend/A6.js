@@ -2222,942 +2222,941 @@ function entrata() {
           }
           if (payload == "2F") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
-            switch (result[3]) {
-              case "00":
-                //dato 1 era 8,10
-                var nomesms =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomecentrale =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                break;
-              case "01":
-                var nomeAreaA =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeAreaB =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeAreaC =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeAreaD =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                break;
-              case "02":
-                var nomeUtenteTastiera1 =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeUtenteTastiera2 =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeUtenteTastiera3 =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeUtenteTastiera4 =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                var nomeUtenteTastiera5 =
-                  hex2asci(result[68]) +
-                  hex2asci(result[69]) +
-                  hex2asci(result[70]) +
-                  hex2asci(result[71]) +
-                  hex2asci(result[72]) +
-                  hex2asci(result[73]) +
-                  hex2asci(result[74]) +
-                  hex2asci(result[75]) +
-                  hex2asci(result[76]) +
-                  hex2asci(result[77]) +
-                  hex2asci(result[78]) +
-                  hex2asci(result[79]) +
-                  hex2asci(result[80]) +
-                  hex2asci(result[81]) +
-                  hex2asci(result[82]) +
-                  hex2asci(result[83]);
-                var nomeUtenteTastiera6 =
-                  hex2asci(result[84]) +
-                  hex2asci(result[85]) +
-                  hex2asci(result[86]) +
-                  hex2asci(result[87]) +
-                  hex2asci(result[88]) +
-                  hex2asci(result[89]) +
-                  hex2asci(result[90]) +
-                  hex2asci(result[91]) +
-                  hex2asci(result[92]) +
-                  hex2asci(result[93]) +
-                  hex2asci(result[94]) +
-                  hex2asci(result[95]) +
-                  hex2asci(result[96]) +
-                  hex2asci(result[97]) +
-                  hex2asci(result[98]) +
-                  hex2asci(result[99]);
-                var nomeUtenteTastiera7 =
-                  hex2asci(result[100]) +
-                  hex2asci(result[101]) +
-                  hex2asci(result[102]) +
-                  hex2asci(result[103]) +
-                  hex2asci(result[104]) +
-                  hex2asci(result[105]) +
-                  hex2asci(result[106]) +
-                  hex2asci(result[107]) +
-                  hex2asci(result[108]) +
-                  hex2asci(result[109]) +
-                  hex2asci(result[110]) +
-                  hex2asci(result[111]) +
-                  hex2asci(result[112]) +
-                  hex2asci(result[113]) +
-                  hex2asci(result[114]) +
-                  hex2asci(result[115]);
-                var nomeUtenteTastiera8 =
-                  hex2asci(result[116]) +
-                  hex2asci(result[117]) +
-                  hex2asci(result[118]) +
-                  hex2asci(result[119]) +
-                  hex2asci(result[120]) +
-                  hex2asci(result[121]) +
-                  hex2asci(result[122]) +
-                  hex2asci(result[123]) +
-                  hex2asci(result[124]) +
-                  hex2asci(result[125]) +
-                  hex2asci(result[126]) +
-                  hex2asci(result[127]) +
-                  hex2asci(result[128]) +
-                  hex2asci(result[129]) +
-                  hex2asci(result[130]) +
-                  hex2asci(result[131]);
-                break;
-              case "03":
-                var nomeUtenteTastiera9 =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeUtenteTastiera10 =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeUtenteTastiera11 =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeUtenteTastiera12 =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                var nomeUtenteTastiera13 =
-                  hex2asci(result[68]) +
-                  hex2asci(result[69]) +
-                  hex2asci(result[70]) +
-                  hex2asci(result[71]) +
-                  hex2asci(result[72]) +
-                  hex2asci(result[73]) +
-                  hex2asci(result[74]) +
-                  hex2asci(result[75]) +
-                  hex2asci(result[76]) +
-                  hex2asci(result[77]) +
-                  hex2asci(result[78]) +
-                  hex2asci(result[79]) +
-                  hex2asci(result[80]) +
-                  hex2asci(result[81]) +
-                  hex2asci(result[82]) +
-                  hex2asci(result[83]);
-                var nomeUtenteTastiera14 =
-                  hex2asci(result[84]) +
-                  hex2asci(result[85]) +
-                  hex2asci(result[86]) +
-                  hex2asci(result[87]) +
-                  hex2asci(result[88]) +
-                  hex2asci(result[89]) +
-                  hex2asci(result[90]) +
-                  hex2asci(result[91]) +
-                  hex2asci(result[92]) +
-                  hex2asci(result[93]) +
-                  hex2asci(result[94]) +
-                  hex2asci(result[95]) +
-                  hex2asci(result[96]) +
-                  hex2asci(result[97]) +
-                  hex2asci(result[98]) +
-                  hex2asci(result[99]);
-                var nomeUtenteTastiera15 =
-                  hex2asci(result[100]) +
-                  hex2asci(result[101]) +
-                  hex2asci(result[102]) +
-                  hex2asci(result[103]) +
-                  hex2asci(result[104]) +
-                  hex2asci(result[105]) +
-                  hex2asci(result[106]) +
-                  hex2asci(result[107]) +
-                  hex2asci(result[108]) +
-                  hex2asci(result[109]) +
-                  hex2asci(result[110]) +
-                  hex2asci(result[111]) +
-                  hex2asci(result[112]) +
-                  hex2asci(result[113]) +
-                  hex2asci(result[114]) +
-                  hex2asci(result[115]);
-                var nomeUtenteTastiera16 =
-                  hex2asci(result[116]) +
-                  hex2asci(result[117]) +
-                  hex2asci(result[118]) +
-                  hex2asci(result[119]) +
-                  hex2asci(result[120]) +
-                  hex2asci(result[121]) +
-                  hex2asci(result[122]) +
-                  hex2asci(result[123]) +
-                  hex2asci(result[124]) +
-                  hex2asci(result[125]) +
-                  hex2asci(result[126]) +
-                  hex2asci(result[127]) +
-                  hex2asci(result[128]) +
-                  hex2asci(result[129]) +
-                  hex2asci(result[130]) +
-                  hex2asci(result[131]);
-                break;
-              case "04":
-                var nomeUtenteSpinotto1 =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeUtenteSpinotto2 =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeUtenteSpinotto3 =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeUtenteSpinotto4 =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                var nomeUtenteSpinotto5 =
-                  hex2asci(result[68]) +
-                  hex2asci(result[69]) +
-                  hex2asci(result[70]) +
-                  hex2asci(result[71]) +
-                  hex2asci(result[72]) +
-                  hex2asci(result[73]) +
-                  hex2asci(result[74]) +
-                  hex2asci(result[75]) +
-                  hex2asci(result[76]) +
-                  hex2asci(result[77]) +
-                  hex2asci(result[78]) +
-                  hex2asci(result[79]) +
-                  hex2asci(result[80]) +
-                  hex2asci(result[81]) +
-                  hex2asci(result[82]) +
-                  hex2asci(result[83]);
-                var nomeUtenteSpinotto6 =
-                  hex2asci(result[84]) +
-                  hex2asci(result[85]) +
-                  hex2asci(result[86]) +
-                  hex2asci(result[87]) +
-                  hex2asci(result[88]) +
-                  hex2asci(result[89]) +
-                  hex2asci(result[90]) +
-                  hex2asci(result[91]) +
-                  hex2asci(result[92]) +
-                  hex2asci(result[93]) +
-                  hex2asci(result[94]) +
-                  hex2asci(result[95]) +
-                  hex2asci(result[96]) +
-                  hex2asci(result[97]) +
-                  hex2asci(result[98]) +
-                  hex2asci(result[99]);
-                var nomeUtenteSpinotto7 =
-                  hex2asci(result[100]) +
-                  hex2asci(result[101]) +
-                  hex2asci(result[102]) +
-                  hex2asci(result[103]) +
-                  hex2asci(result[104]) +
-                  hex2asci(result[105]) +
-                  hex2asci(result[106]) +
-                  hex2asci(result[107]) +
-                  hex2asci(result[108]) +
-                  hex2asci(result[109]) +
-                  hex2asci(result[110]) +
-                  hex2asci(result[111]) +
-                  hex2asci(result[112]) +
-                  hex2asci(result[113]) +
-                  hex2asci(result[114]) +
-                  hex2asci(result[115]);
-                var nomeUtenteSpinotto8 =
-                  hex2asci(result[116]) +
-                  hex2asci(result[117]) +
-                  hex2asci(result[118]) +
-                  hex2asci(result[119]) +
-                  hex2asci(result[120]) +
-                  hex2asci(result[121]) +
-                  hex2asci(result[122]) +
-                  hex2asci(result[123]) +
-                  hex2asci(result[124]) +
-                  hex2asci(result[125]) +
-                  hex2asci(result[126]) +
-                  hex2asci(result[127]) +
-                  hex2asci(result[128]) +
-                  hex2asci(result[129]) +
-                  hex2asci(result[130]) +
-                  hex2asci(result[131]);
-                break;
-              case "05":
-                var nomeUtenteSpinotto9 =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeUtenteSpinotto10 =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeUtenteSpinotto11 =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeUtenteSpinotto12 =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                var nomeUtenteSpinotto13 =
-                  hex2asci(result[68]) +
-                  hex2asci(result[69]) +
-                  hex2asci(result[70]) +
-                  hex2asci(result[71]) +
-                  hex2asci(result[72]) +
-                  hex2asci(result[73]) +
-                  hex2asci(result[74]) +
-                  hex2asci(result[75]) +
-                  hex2asci(result[76]) +
-                  hex2asci(result[77]) +
-                  hex2asci(result[78]) +
-                  hex2asci(result[79]) +
-                  hex2asci(result[80]) +
-                  hex2asci(result[81]) +
-                  hex2asci(result[82]) +
-                  hex2asci(result[83]);
-                var nomeUtenteSpinotto14 =
-                  hex2asci(result[84]) +
-                  hex2asci(result[85]) +
-                  hex2asci(result[86]) +
-                  hex2asci(result[87]) +
-                  hex2asci(result[88]) +
-                  hex2asci(result[89]) +
-                  hex2asci(result[90]) +
-                  hex2asci(result[91]) +
-                  hex2asci(result[92]) +
-                  hex2asci(result[93]) +
-                  hex2asci(result[94]) +
-                  hex2asci(result[95]) +
-                  hex2asci(result[96]) +
-                  hex2asci(result[97]) +
-                  hex2asci(result[98]) +
-                  hex2asci(result[99]);
-                var nomeUtenteSpinotto15 =
-                  hex2asci(result[100]) +
-                  hex2asci(result[101]) +
-                  hex2asci(result[102]) +
-                  hex2asci(result[103]) +
-                  hex2asci(result[104]) +
-                  hex2asci(result[105]) +
-                  hex2asci(result[106]) +
-                  hex2asci(result[107]) +
-                  hex2asci(result[108]) +
-                  hex2asci(result[109]) +
-                  hex2asci(result[110]) +
-                  hex2asci(result[111]) +
-                  hex2asci(result[112]) +
-                  hex2asci(result[113]) +
-                  hex2asci(result[114]) +
-                  hex2asci(result[115]);
-                var nomeUtenteSpinotto16 =
-                  hex2asci(result[116]) +
-                  hex2asci(result[117]) +
-                  hex2asci(result[118]) +
-                  hex2asci(result[119]) +
-                  hex2asci(result[120]) +
-                  hex2asci(result[121]) +
-                  hex2asci(result[122]) +
-                  hex2asci(result[123]) +
-                  hex2asci(result[124]) +
-                  hex2asci(result[125]) +
-                  hex2asci(result[126]) +
-                  hex2asci(result[127]) +
-                  hex2asci(result[128]) +
-                  hex2asci(result[129]) +
-                  hex2asci(result[130]) +
-                  hex2asci(result[131]);
-                break;
-              case "06":
-                var nomeUscita1 =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeUscita2 =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeUscita3 =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeUscita4 =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                var nomeUscita5 =
-                  hex2asci(result[68]) +
-                  hex2asci(result[69]) +
-                  hex2asci(result[70]) +
-                  hex2asci(result[71]) +
-                  hex2asci(result[72]) +
-                  hex2asci(result[73]) +
-                  hex2asci(result[74]) +
-                  hex2asci(result[75]) +
-                  hex2asci(result[76]) +
-                  hex2asci(result[77]) +
-                  hex2asci(result[78]) +
-                  hex2asci(result[79]) +
-                  hex2asci(result[80]) +
-                  hex2asci(result[81]) +
-                  hex2asci(result[82]) +
-                  hex2asci(result[83]);
-                var nomeUscita6 =
-                  hex2asci(result[84]) +
-                  hex2asci(result[85]) +
-                  hex2asci(result[86]) +
-                  hex2asci(result[87]) +
-                  hex2asci(result[88]) +
-                  hex2asci(result[89]) +
-                  hex2asci(result[90]) +
-                  hex2asci(result[91]) +
-                  hex2asci(result[92]) +
-                  hex2asci(result[93]) +
-                  hex2asci(result[94]) +
-                  hex2asci(result[95]) +
-                  hex2asci(result[96]) +
-                  hex2asci(result[97]) +
-                  hex2asci(result[98]) +
-                  hex2asci(result[99]);
-                var nomeUscita7 =
-                  hex2asci(result[100]) +
-                  hex2asci(result[101]) +
-                  hex2asci(result[102]) +
-                  hex2asci(result[103]) +
-                  hex2asci(result[104]) +
-                  hex2asci(result[105]) +
-                  hex2asci(result[106]) +
-                  hex2asci(result[107]) +
-                  hex2asci(result[108]) +
-                  hex2asci(result[109]) +
-                  hex2asci(result[110]) +
-                  hex2asci(result[111]) +
-                  hex2asci(result[112]) +
-                  hex2asci(result[113]) +
-                  hex2asci(result[114]) +
-                  hex2asci(result[115]);
-                var nomeUscita8 =
-                  hex2asci(result[116]) +
-                  hex2asci(result[117]) +
-                  hex2asci(result[118]) +
-                  hex2asci(result[119]) +
-                  hex2asci(result[120]) +
-                  hex2asci(result[121]) +
-                  hex2asci(result[122]) +
-                  hex2asci(result[123]) +
-                  hex2asci(result[124]) +
-                  hex2asci(result[125]) +
-                  hex2asci(result[126]) +
-                  hex2asci(result[127]) +
-                  hex2asci(result[128]) +
-                  hex2asci(result[129]) +
-                  hex2asci(result[130]) +
-                  hex2asci(result[131]);
-                break;
-              case "07":
-                var nomeUscita9 =
-                  hex2asci(result[4]) +
-                  hex2asci(result[5]) +
-                  hex2asci(result[6]) +
-                  hex2asci(result[7]) +
-                  hex2asci(result[8]) +
-                  hex2asci(result[9]) +
-                  hex2asci(result[10]) +
-                  hex2asci(result[11]) +
-                  hex2asci(result[12]) +
-                  hex2asci(result[13]) +
-                  hex2asci(result[14]) +
-                  hex2asci(result[15]) +
-                  hex2asci(result[16]) +
-                  hex2asci(result[17]) +
-                  hex2asci(result[18]) +
-                  hex2asci(result[19]);
-                var nomeUscita10 =
-                  hex2asci(result[20]) +
-                  hex2asci(result[21]) +
-                  hex2asci(result[22]) +
-                  hex2asci(result[23]) +
-                  hex2asci(result[24]) +
-                  hex2asci(result[25]) +
-                  hex2asci(result[26]) +
-                  hex2asci(result[27]) +
-                  hex2asci(result[28]) +
-                  hex2asci(result[29]) +
-                  hex2asci(result[30]) +
-                  hex2asci(result[31]) +
-                  hex2asci(result[32]) +
-                  hex2asci(result[33]) +
-                  hex2asci(result[34]) +
-                  hex2asci(result[35]);
-                var nomeUscita11 =
-                  hex2asci(result[36]) +
-                  hex2asci(result[37]) +
-                  hex2asci(result[38]) +
-                  hex2asci(result[39]) +
-                  hex2asci(result[40]) +
-                  hex2asci(result[41]) +
-                  hex2asci(result[42]) +
-                  hex2asci(result[43]) +
-                  hex2asci(result[44]) +
-                  hex2asci(result[45]) +
-                  hex2asci(result[46]) +
-                  hex2asci(result[47]) +
-                  hex2asci(result[48]) +
-                  hex2asci(result[49]) +
-                  hex2asci(result[50]) +
-                  hex2asci(result[51]);
-                var nomeUscita12 =
-                  hex2asci(result[52]) +
-                  hex2asci(result[53]) +
-                  hex2asci(result[54]) +
-                  hex2asci(result[55]) +
-                  hex2asci(result[56]) +
-                  hex2asci(result[57]) +
-                  hex2asci(result[58]) +
-                  hex2asci(result[59]) +
-                  hex2asci(result[60]) +
-                  hex2asci(result[61]) +
-                  hex2asci(result[62]) +
-                  hex2asci(result[63]) +
-                  hex2asci(result[64]) +
-                  hex2asci(result[65]) +
-                  hex2asci(result[66]) +
-                  hex2asci(result[67]);
-                var nomeUscita13 =
-                  hex2asci(result[68]) +
-                  hex2asci(result[69]) +
-                  hex2asci(result[70]) +
-                  hex2asci(result[71]) +
-                  hex2asci(result[72]) +
-                  hex2asci(result[73]) +
-                  hex2asci(result[74]) +
-                  hex2asci(result[75]) +
-                  hex2asci(result[76]) +
-                  hex2asci(result[77]) +
-                  hex2asci(result[78]) +
-                  hex2asci(result[79]) +
-                  hex2asci(result[80]) +
-                  hex2asci(result[81]) +
-                  hex2asci(result[82]) +
-                  hex2asci(result[83]);
-                var nomeUscita14 =
-                  hex2asci(result[84]) +
-                  hex2asci(result[85]) +
-                  hex2asci(result[86]) +
-                  hex2asci(result[87]) +
-                  hex2asci(result[88]) +
-                  hex2asci(result[89]) +
-                  hex2asci(result[90]) +
-                  hex2asci(result[91]) +
-                  hex2asci(result[92]) +
-                  hex2asci(result[93]) +
-                  hex2asci(result[94]) +
-                  hex2asci(result[95]) +
-                  hex2asci(result[96]) +
-                  hex2asci(result[97]) +
-                  hex2asci(result[98]) +
-                  hex2asci(result[99]);
-                var nomeUscita15 =
-                  hex2asci(result[100]) +
-                  hex2asci(result[101]) +
-                  hex2asci(result[102]) +
-                  hex2asci(result[103]) +
-                  hex2asci(result[104]) +
-                  hex2asci(result[105]) +
-                  hex2asci(result[106]) +
-                  hex2asci(result[107]) +
-                  hex2asci(result[108]) +
-                  hex2asci(result[109]) +
-                  hex2asci(result[110]) +
-                  hex2asci(result[111]) +
-                  hex2asci(result[112]) +
-                  hex2asci(result[113]) +
-                  hex2asci(result[114]) +
-                  hex2asci(result[115]);
-                var nomeUscita16 =
-                  hex2asci(result[116]) +
-                  hex2asci(result[117]) +
-                  hex2asci(result[118]) +
-                  hex2asci(result[119]) +
-                  hex2asci(result[120]) +
-                  hex2asci(result[121]) +
-                  hex2asci(result[122]) +
-                  hex2asci(result[123]) +
-                  hex2asci(result[124]) +
-                  hex2asci(result[125]) +
-                  hex2asci(result[126]) +
-                  hex2asci(result[127]) +
-                  hex2asci(result[128]) +
-                  hex2asci(result[129]) +
-                  hex2asci(result[130]) +
-                  hex2asci(result[131]);
-                break;
+            var bloccoSwitch = result[3];
+            if (bloccoSwitch[3] == "00") {
+              //dato 1 era 8,10
+              var nomesms =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomecentrale =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+            }
+            if (bloccoSwitch == "01") {
+              var nomeAreaA =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeAreaB =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeAreaC =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeAreaD =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+            }
+            if (bloccoSwitch == "02") {
+              var nomeUtenteTastiera1 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeUtenteTastiera2 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeUtenteTastiera3 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeUtenteTastiera4 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeUtenteTastiera5 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeUtenteTastiera6 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeUtenteTastiera7 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeUtenteTastiera8 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "04") {
+              var nomeUtenteTastiera9 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeUtenteTastiera10 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeUtenteTastiera11 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeUtenteTastiera12 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeUtenteTastiera13 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeUtenteTastiera14 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeUtenteTastiera15 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeUtenteTastiera16 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "04") {
+              var nomeUtenteSpinotto1 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeUtenteSpinotto2 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeUtenteSpinotto3 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeUtenteSpinotto4 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeUtenteSpinotto5 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeUtenteSpinotto6 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeUtenteSpinotto7 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeUtenteSpinotto8 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "05") {
+              var nomeUtenteSpinotto9 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeUtenteSpinotto10 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeUtenteSpinotto11 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeUtenteSpinotto12 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeUtenteSpinotto13 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeUtenteSpinotto14 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeUtenteSpinotto15 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeUtenteSpinotto16 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "06") {
+              var nomeUscita1 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeUscita2 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeUscita3 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeUscita4 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeUscita5 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeUscita6 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeUscita7 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeUscita8 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "07") {
+              var nomeUscita9 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeUscita10 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeUscita11 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeUscita12 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeUscita13 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeUscita14 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeUscita15 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeUscita16 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
             }
             function riempiEsito(
               payload,
