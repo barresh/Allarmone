@@ -3161,6 +3161,7 @@ function entrata() {
             }
             function riempiEsito(
               payload,
+              bloccoSwitch,
               nomesms,
               nomecentrale,
               nomeUtenteTastiera1,
@@ -3218,6 +3219,7 @@ function entrata() {
             ) {
               return {
                 payload: payload,
+                bloccoSwitch: bloccoSwitch,
                 nomesms: nomesms,
                 nomecentrale: nomecentrale,
                 nomeUtenteTastiera1: nomeUtenteTastiera1,
@@ -3275,7 +3277,8 @@ function entrata() {
               };
             }
             let esito = riempiEsito(
-              result[3],
+              payload,
+              bloccoSwitch,
               nomesms,
               nomecentrale,
               nomeUtenteTastiera1,
