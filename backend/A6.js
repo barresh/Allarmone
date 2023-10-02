@@ -3159,6 +3159,1110 @@ function entrata() {
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
             }
+            if (bloccoSwitch == "08") {
+              var nomeZona1 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona2 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona3 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona4 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona5 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona6 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona7 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona8 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "09") {
+              var nomeZona9 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona10 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona11 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona12 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona13 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona14 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona15 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona16 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "10") {
+              var nomeZona17 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona18 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona19 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona20 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona21 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona22 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona23 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona24 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "11") {
+              var nomeZona25 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona26 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona27 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona28 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona29 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona30 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona31 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona32 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "12") {
+              var nomeZona33 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona34 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona35 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona36 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona37 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona38 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona39 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona40 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "13") {
+              var nomeZona41 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona42 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona43 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona44 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona45 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona46 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona47 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona48 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "14") {
+              var nomeZona49 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona50 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona51 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona52 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona53 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona54 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona55 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona56 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
+            if (bloccoSwitch == "15") {
+              var nomeZona57 =
+                hex2asci(result[4]) +
+                hex2asci(result[5]) +
+                hex2asci(result[6]) +
+                hex2asci(result[7]) +
+                hex2asci(result[8]) +
+                hex2asci(result[9]) +
+                hex2asci(result[10]) +
+                hex2asci(result[11]) +
+                hex2asci(result[12]) +
+                hex2asci(result[13]) +
+                hex2asci(result[14]) +
+                hex2asci(result[15]) +
+                hex2asci(result[16]) +
+                hex2asci(result[17]) +
+                hex2asci(result[18]) +
+                hex2asci(result[19]);
+              var nomeZona58 =
+                hex2asci(result[20]) +
+                hex2asci(result[21]) +
+                hex2asci(result[22]) +
+                hex2asci(result[23]) +
+                hex2asci(result[24]) +
+                hex2asci(result[25]) +
+                hex2asci(result[26]) +
+                hex2asci(result[27]) +
+                hex2asci(result[28]) +
+                hex2asci(result[29]) +
+                hex2asci(result[30]) +
+                hex2asci(result[31]) +
+                hex2asci(result[32]) +
+                hex2asci(result[33]) +
+                hex2asci(result[34]) +
+                hex2asci(result[35]);
+              var nomeZona59 =
+                hex2asci(result[36]) +
+                hex2asci(result[37]) +
+                hex2asci(result[38]) +
+                hex2asci(result[39]) +
+                hex2asci(result[40]) +
+                hex2asci(result[41]) +
+                hex2asci(result[42]) +
+                hex2asci(result[43]) +
+                hex2asci(result[44]) +
+                hex2asci(result[45]) +
+                hex2asci(result[46]) +
+                hex2asci(result[47]) +
+                hex2asci(result[48]) +
+                hex2asci(result[49]) +
+                hex2asci(result[50]) +
+                hex2asci(result[51]);
+              var nomeZona60 =
+                hex2asci(result[52]) +
+                hex2asci(result[53]) +
+                hex2asci(result[54]) +
+                hex2asci(result[55]) +
+                hex2asci(result[56]) +
+                hex2asci(result[57]) +
+                hex2asci(result[58]) +
+                hex2asci(result[59]) +
+                hex2asci(result[60]) +
+                hex2asci(result[61]) +
+                hex2asci(result[62]) +
+                hex2asci(result[63]) +
+                hex2asci(result[64]) +
+                hex2asci(result[65]) +
+                hex2asci(result[66]) +
+                hex2asci(result[67]);
+              var nomeZona61 =
+                hex2asci(result[68]) +
+                hex2asci(result[69]) +
+                hex2asci(result[70]) +
+                hex2asci(result[71]) +
+                hex2asci(result[72]) +
+                hex2asci(result[73]) +
+                hex2asci(result[74]) +
+                hex2asci(result[75]) +
+                hex2asci(result[76]) +
+                hex2asci(result[77]) +
+                hex2asci(result[78]) +
+                hex2asci(result[79]) +
+                hex2asci(result[80]) +
+                hex2asci(result[81]) +
+                hex2asci(result[82]) +
+                hex2asci(result[83]);
+              var nomeZona62 =
+                hex2asci(result[84]) +
+                hex2asci(result[85]) +
+                hex2asci(result[86]) +
+                hex2asci(result[87]) +
+                hex2asci(result[88]) +
+                hex2asci(result[89]) +
+                hex2asci(result[90]) +
+                hex2asci(result[91]) +
+                hex2asci(result[92]) +
+                hex2asci(result[93]) +
+                hex2asci(result[94]) +
+                hex2asci(result[95]) +
+                hex2asci(result[96]) +
+                hex2asci(result[97]) +
+                hex2asci(result[98]) +
+                hex2asci(result[99]);
+              var nomeZona63 =
+                hex2asci(result[100]) +
+                hex2asci(result[101]) +
+                hex2asci(result[102]) +
+                hex2asci(result[103]) +
+                hex2asci(result[104]) +
+                hex2asci(result[105]) +
+                hex2asci(result[106]) +
+                hex2asci(result[107]) +
+                hex2asci(result[108]) +
+                hex2asci(result[109]) +
+                hex2asci(result[110]) +
+                hex2asci(result[111]) +
+                hex2asci(result[112]) +
+                hex2asci(result[113]) +
+                hex2asci(result[114]) +
+                hex2asci(result[115]);
+              var nomeZona64 =
+                hex2asci(result[116]) +
+                hex2asci(result[117]) +
+                hex2asci(result[118]) +
+                hex2asci(result[119]) +
+                hex2asci(result[120]) +
+                hex2asci(result[121]) +
+                hex2asci(result[122]) +
+                hex2asci(result[123]) +
+                hex2asci(result[124]) +
+                hex2asci(result[125]) +
+                hex2asci(result[126]) +
+                hex2asci(result[127]) +
+                hex2asci(result[128]) +
+                hex2asci(result[129]) +
+                hex2asci(result[130]) +
+                hex2asci(result[131]);
+            }
             function riempiEsito(
               payload,
               bloccoSwitch,
@@ -3212,6 +4316,70 @@ function entrata() {
               nomeUscita14,
               nomeUscita15,
               nomeUscita16,
+              nomeZona1,
+              nomeZona2,
+              nomeZona3,
+              nomeZona4,
+              nomeZona5,
+              nomeZona6,
+              nomeZona7,
+              nomeZona8,
+              nomeZona9,
+              nomeZona10,
+              nomeZona11,
+              nomeZona12,
+              nomeZona13,
+              nomeZona14,
+              nomeZona15,
+              nomeZona16,
+              nomeZona17,
+              nomeZona18,
+              nomeZona19,
+              nomeZona20,
+              nomeZona21,
+              nomeZona22,
+              nomeZona23,
+              nomeZona24,
+              nomeZona25,
+              nomeZona26,
+              nomeZona27,
+              nomeZona28,
+              nomeZona29,
+              nomeZona30,
+              nomeZona31,
+              nomeZona32,
+              nomeZona33,
+              nomeZona34,
+              nomeZona35,
+              nomeZona36,
+              nomeZona37,
+              nomeZona38,
+              nomeZona39,
+              nomeZona40,
+              nomeZona41,
+              nomeZona42,
+              nomeZona43,
+              nomeZona44,
+              nomeZona45,
+              nomeZona46,
+              nomeZona47,
+              nomeZona48,
+              nomeZona49,
+              nomeZona50,
+              nomeZona51,
+              nomeZona52,
+              nomeZona53,
+              nomeZona54,
+              nomeZona55,
+              nomeZona56,
+              nomeZona57,
+              nomeZona58,
+              nomeZona59,
+              nomeZona60,
+              nomeZona61,
+              nomeZona62,
+              nomeZona63,
+              nomeZona64,
               nomeAreaA,
               nomeAreaB,
               nomeAreaC,
@@ -3270,6 +4438,70 @@ function entrata() {
                 nomeUscita14: nomeUscita14,
                 nomeUscita15: nomeUscita15,
                 nomeUscita16: nomeUscita16,
+                nomeZona1: nomeZona1,
+                nomeZona2: nomeZona2,
+                nomeZona3: nomeZona3,
+                nomeZona4: nomeZona4,
+                nomeZona5: nomeZona5,
+                nomeZona6: nomeZona6,
+                nomeZona7: nomeZona7,
+                nomeZona8: nomeZona8,
+                nomeZona9: nomeZona9,
+                nomeZona10: nomeZona10,
+                nomeZona11: nomeZona11,
+                nomeZona12: nomeZona12,
+                nomeZona13: nomeZona13,
+                nomeZona14: nomeZona14,
+                nomeZona15: nomeZona15,
+                nomeZona16: nomeZona16,
+                nomeZona17: nomeZona17,
+                nomeZona18: nomeZona18,
+                nomeZona19: nomeZona19,
+                nomeZona20: nomeZona20,
+                nomeZona21: nomeZon21,
+                nomeZona22: nomeZona22,
+                nomeZona23: nomeZona23,
+                nomeZona24: nomeZona24,
+                nomeZona25: nomeZona25,
+                nomeZona26: nomeZona26,
+                nomeZona27: nomeZona27,
+                nomeZona28: nomeZona28,
+                nomeZona29: nomeZona29,
+                nomeZona30: nomeZona30,
+                nomeZona31: nomeZona31,
+                nomeZona32: nomeZona32,
+                nomeZona33: nomeZona33,
+                nomeZona34: nomeZona34,
+                nomeZona35: nomeZona35,
+                nomeZona36: nomeZona36,
+                nomeZona37: nomeZona37,
+                nomeZona38: nomeZona38,
+                nomeZona39: nomeZona39,
+                nomeZona40: nomeZona40,
+                nomeZona41: nomeZona41,
+                nomeZona42: nomeZona42,
+                nomeZona43: nomeZona43,
+                nomeZona44: nomeZona44,
+                nomeZona45: nomeZona45,
+                nomeZona46: nomeZona46,
+                nomeZona47: nomeZona47,
+                nomeZona48: nomeZona48,
+                nomeZona49: nomeZona49,
+                nomeZona50: nomeZona50,
+                nomeZona51: nomeZona51,
+                nomeZona52: nomeZona52,
+                nomeZona53: nomeZona53,
+                nomeZona54: nomeZona54,
+                nomeZona55: nomeZona55,
+                nomeZona56: nomeZona56,
+                nomeZona57: nomeZona57,
+                nomeZona58: nomeZona58,
+                nomeZona59: nomeZona59,
+                nomeZona60: nomeZona60,
+                nomeZona61: nomeZona61,
+                nomeZona62: nomeZona62,
+                nomeZona63: nomeZona63,
+                nomeZona64: nomeZona64,
                 nomeAreaA: nomeAreaA,
                 nomeAreaB: nomeAreaB,
                 nomeAreaC: nomeAreaC,
@@ -3329,6 +4561,70 @@ function entrata() {
               nomeUscita14,
               nomeUscita15,
               nomeUscita16,
+              nomeZona1,
+              nomeZona2,
+              nomeZona3,
+              nomeZona4,
+              nomeZona5,
+              nomeZona6,
+              nomeZona7,
+              nomeZona8,
+              nomeZona9,
+              nomeZona10,
+              nomeZona11,
+              nomeZona12,
+              nomeZona13,
+              nomeZona14,
+              nomeZona15,
+              nomeZona16,
+              nomeZona17,
+              nomeZona18,
+              nomeZona19,
+              nomeZona20,
+              nomeZona21,
+              nomeZona22,
+              nomeZona23,
+              nomeZona24,
+              nomeZona25,
+              nomeZona26,
+              nomeZona27,
+              nomeZona28,
+              nomeZona29,
+              nomeZona30,
+              nomeZona31,
+              nomeZona32,
+              nomeZona33,
+              nomeZona34,
+              nomeZona35,
+              nomeZona36,
+              nomeZona37,
+              nomeZona38,
+              nomeZona39,
+              nomeZona40,
+              nomeZona41,
+              nomeZona42,
+              nomeZona43,
+              nomeZona44,
+              nomeZona45,
+              nomeZona46,
+              nomeZona47,
+              nomeZona48,
+              nomeZona49,
+              nomeZona50,
+              nomeZona51,
+              nomeZona52,
+              nomeZona53,
+              nomeZona54,
+              nomeZona55,
+              nomeZona56,
+              nomeZona57,
+              nomeZona58,
+              nomeZona59,
+              nomeZona60,
+              nomeZona61,
+              nomeZona62,
+              nomeZona63,
+              nomeZona64,
               nomeAreaA,
               nomeAreaB,
               nomeAreaC,
