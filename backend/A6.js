@@ -4458,7 +4458,7 @@ function entrata() {
                 nomeZona18: nomeZona18,
                 nomeZona19: nomeZona19,
                 nomeZona20: nomeZona20,
-                nomeZona21: nomeZon21,
+                nomeZona21: nomeZona21,
                 nomeZona22: nomeZona22,
                 nomeZona23: nomeZona23,
                 nomeZona24: nomeZona24,
