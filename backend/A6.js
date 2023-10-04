@@ -800,6 +800,7 @@ function entrata() {
             console.log("zoneD", zoneD);
             function riempiEsito(
               payload,
+              areeAbilitate,
               usciteAbilitate,
               usciteConFunzionamentoManuale,
               zoneAbilitate,
@@ -810,6 +811,7 @@ function entrata() {
             ) {
               return {
                 payload: payload,
+                areeAbilitate: areeAbilitate,
                 usciteAbilitate: usciteAbilitate,
                 usciteConFunzionamentoManuale: usciteConFunzionamentoManuale,
                 zoneAbilitate: zoneAbilitate,
@@ -822,6 +824,7 @@ function entrata() {
 
             let esito = riempiEsito(
               payload,
+              areeAbilitate,
               usciteAbilitate,
               usciteConFunzionamentoManuale,
               zoneAbilitate,
