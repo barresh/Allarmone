@@ -583,7 +583,7 @@ function invia() {
       } else {
         inclusione[5] = 0xff;
       }
-      inclusione[6] = "0x" + arrivo.aree;
+      inclusione[6] = "0x" + arrivo.zone;
       var sommaInclusione = (
         inclusione[0] +
         inclusione[1] +
