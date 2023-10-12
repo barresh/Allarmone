@@ -4832,12 +4832,18 @@ function entrata() {
         } else if (destinatario == "60") {
           if (payload == "01") {
             console.log("qui arriviamo");
-            esito = 1;
-            console.log("esito di conferma", esito);
-            if (esito == 1) {
-              exports.esito = esito;
-              server.mandaEsito();
+            conferma = 1;
+            payload = "mio";
+            function riempiEsito(payload, conferma) {
+              return {
+                payload,
+                conferma,
+              };
             }
+            let esito = riempiEsito(payload, conferma);
+            console.log("esito di conferma", conferma);
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "02") {
             esito = 0;
