@@ -4832,7 +4832,7 @@ function entrata() {
         } else if (destinatario == "60") {
           if (payload == "01") {
             console.log("qui arriviamo");
-            conferma = 1;
+            conferma = "1";
             payload = "mio";
             function riempiEsito(payload, conferma) {
               return {
@@ -4846,12 +4846,18 @@ function entrata() {
             server.mandaEsito();
           }
           if (payload == "02") {
-            esito = 0;
-            console.log("esito di conferma", esito);
-            if (esito == 0) {
-              exports.esito = esito;
-              server.mandaEsito();
+            conferma = "0";
+            payload = "mio";
+            function riempiEsito(payload, conferma) {
+              return {
+                payload,
+                conferma,
+              };
             }
+            let esito = riempiEsito(payload, conferma);
+            console.log("esito di conferma", conferma);
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "0c") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
