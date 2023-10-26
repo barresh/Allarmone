@@ -1110,10 +1110,10 @@ function entrata() {
             binarioInArray8(colonna11bin, arrayzonetamp);
           }
           if (payload == "0C") {
-            risultato = "notifica cancellazione memoria allarme";
+            risultato = 1;
             var tipoutente;
             var numeroutente;
-            var risultato;
+
             var colonna4 = bufferino.slice(6, 8);
             var colonna4bin = hex2bin(colonna4);
             if (colonna4 != "00") {
@@ -1129,6 +1129,18 @@ function entrata() {
               }
               numeroutente = colonna4bin.slice(4, 7);
               console.log("utente:", tipoutente, numeroutente);
+            }
+            function riempiEsito(risultato, tipoutente, numeroutente) {
+              return {
+                risultato: risultato,
+                tipoutente: tipoutente,
+                numeroutente: numeroutente,
+              };
+            }
+            let esito = riempiEsito(risultato, tipoutente, numeroutente);
+            exports.esito = esito;
+            if (esito) {
+              server.mandaEsito();
             }
           }
           if (payload == "0D") {

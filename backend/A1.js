@@ -76,24 +76,7 @@ var sommaRapido = (
   .slice(1, 3);
 accendirapido[4] = "0x" + sommaRapido;
 //PAYLOAD 6
-var cancellazioneMemoria = new Buffer(7);
-cancellazioneMemoria[0] = mittente;
-cancellazioneMemoria[1] = destinatario;
-cancellazioneMemoria[2] = payload[5];
-cancellazioneMemoria[3] = codice[0];
-cancellazioneMemoria[4] = codice[1];
-cancellazioneMemoria[5] = codice[2];
-var sommaCancellazione = (
-  cancellazioneMemoria[0] +
-  cancellazioneMemoria[1] +
-  cancellazioneMemoria[2] +
-  cancellazioneMemoria[3] +
-  cancellazioneMemoria[4] +
-  cancellazioneMemoria[5]
-)
-  .toString(16)
-  .slice(1, 3);
-cancellazioneMemoria[6] = "0x" + sommaCancellazione;
+
 //PAYLOAD 7
 var resetAllarmi = new Buffer(7);
 resetAllarmi[0] = mittente;
@@ -611,6 +594,42 @@ function invia() {
     }
     includere();
     exports.includere = includere;
+  }
+  if (arrivo.payload == 0x06) {
+    function cancellaMemoria() {
+      var cancellazioneMemoria = new Buffer(7);
+      cancellazioneMemoria[0] = mittente;
+      cancellazioneMemoria[1] = destinatario;
+      cancellazioneMemoria[2] = payload[5];
+      cancellazioneMemoria[3] = "0x" + arrivo.pin.slice(0, 2);
+      cancellazioneMemoria[4] = "0x" + arrivo.pin.slice(2, 4);
+      cancellazioneMemoria[5] = "0x" + arrivo.pin.slice(4, 6);
+      var sommaCancellazione = (
+        cancellazioneMemoria[0] +
+        cancellazioneMemoria[1] +
+        cancellazioneMemoria[2] +
+        cancellazioneMemoria[3] +
+        cancellazioneMemoria[4] +
+        cancellazioneMemoria[5]
+      ).toString(16);
+      if (sommaCancellazione.length == 3) {
+        sommaCancellazione = sommaCancellazione.slice(1, 3);
+      }
+      cancellazioneMemoria[6] = "0x" + sommaCancellazione;
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(cancellazioneMemoria, function (err, result) {
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+      });
+    }
+    cancellaMemoria();
+    exports.cancellaMemoria = cancellaMemoria;
   }
   if (arrivo.payload == 0x14) {
     function richiestaBloccoEventi() {
