@@ -603,7 +603,11 @@ function invia() {
       cancellazioneMemoria[2] = payload[5];
       cancellazioneMemoria[3] = "0x" + arrivo.pin.slice(0, 2);
       cancellazioneMemoria[4] = "0x" + arrivo.pin.slice(2, 4);
-      cancellazioneMemoria[5] = "0x" + arrivo.pin.slice(4, 6);
+      if (!!arrivo.pin.slice(4, 6)) {
+        cancellazioneMemoria[5] = "0x" + arrivo.pin.slice(4, 6);
+      } else {
+        cancellazioneMemoria[5] = 0xff;
+      }
       var sommaCancellazione = (
         cancellazioneMemoria[0] +
         cancellazioneMemoria[1] +
