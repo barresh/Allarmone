@@ -4905,6 +4905,16 @@ function entrata() {
                   "Impianto inserito (va prima disinserito da parte di utente non installatore)";
                 break;
             }
+            function riempiEsito(payload, risultato) {
+              return {
+                payload,
+                risultato,
+              };
+            }
+            let esito = riempiEsito(payload, risultato);
+            console.log("esito di conferma", conferma);
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "0c") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
