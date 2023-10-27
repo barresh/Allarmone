@@ -1130,18 +1130,23 @@ function entrata() {
               numeroutente = colonna4bin.slice(4, 7);
               console.log("utente:", tipoutente, numeroutente);
             }
-            function riempiEsito(risultato, tipoutente, numeroutente) {
+            function riempiEsito(payload, risultato, tipoutente, numeroutente) {
               return {
+                payload: payload,
                 risultato: risultato,
                 tipoutente: tipoutente,
                 numeroutente: numeroutente,
               };
             }
-            let esito = riempiEsito(risultato, tipoutente, numeroutente);
+            let esito = riempiEsito(
+              payload,
+              risultato,
+              tipoutente,
+              numeroutente
+            );
             exports.esito = esito;
-            if (esito) {
-              server.mandaEsito();
-            }
+
+            server.mandaEsito();
           }
           if (payload == "0D") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
