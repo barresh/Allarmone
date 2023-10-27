@@ -1109,11 +1109,11 @@ function entrata() {
             binarioInArray7(colonna10bin, arrayzonetamp);
             binarioInArray8(colonna11bin, arrayzonetamp);
           }
-          if (payload == "0C") {
+          if (payload == "0c") {
             risultato = 1;
             var tipoutente;
             var numeroutente;
-
+            console.log("entra qui");
             var colonna4 = bufferino.slice(6, 8);
             var colonna4bin = hex2bin(colonna4);
             if (colonna4 != "00") {
