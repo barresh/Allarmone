@@ -4876,6 +4876,36 @@ function entrata() {
             exports.esito = esito;
             server.mandaEsito();
           }
+          if (payload == "03") {
+            const result = bufferino.match(/.{1,2}/g) ?? [];
+            switch (result[3]) {
+              case "01":
+                risultato = "Codice non abilitato";
+                break;
+              case "02":
+                risultato = "Codice errato";
+                break;
+              case "03":
+                risultato = "Numero zona errato";
+                break;
+              case "04":
+                riusltato = "Comando disabilitato";
+                break;
+              case "05":
+                riusltato = "Numero uscita errato";
+                break;
+              case "06":
+                riusltato = "Aree già inserite";
+                break;
+              case "07":
+                riusltato = "Codice già presente";
+                break;
+              case "08":
+                riusltato =
+                  "Impianto inserito (va prima disinserito da parte di utente non installatore)";
+                break;
+            }
+          }
           if (payload == "0c") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
             var giornoBlocco = [];
