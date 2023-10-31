@@ -4912,7 +4912,6 @@ function entrata() {
               };
             }
             let esito = riempiEsito(payload, risultato);
-            console.log("esito di conferma", conferma);
             exports.esito = esito;
             server.mandaEsito();
           }

@@ -4,9 +4,13 @@ const a6 = require("./A6");
 const a1 = require("./A1");
 a6.entrata();
 console.log("arriva", a6.aggiornamentostato);
+var connesso = false;
 
 wss.on("connection", (ws) => {
   console.log("connessione WebSocket stabilita");
+  connesso = true;
+  console.log("connesso:", connesso);
+  exports.connesso = connesso;
   // Ricevi i messaggi dal client Angular
   function mandaEsito() {
     esito = a6.esito;
@@ -26,5 +30,9 @@ wss.on("connection", (ws) => {
   });
   ws.on("close", () => {
     console.log("Client disconnected");
+    connesso = false;
+    console.log("connesso:", connesso);
+
+    exports.connesso = connesso;
   });
 });
