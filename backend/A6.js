@@ -4880,7 +4880,7 @@ function entrata() {
             var risultato;
             const result = bufferino.match(/.{1,2}/g) ?? [];
             switch (result[3]) {
-              case 01:
+              case "01":
                 risultato = "Codice non abilitato";
                 break;
               case "02":
@@ -4890,27 +4890,21 @@ function entrata() {
                 risultato = "Numero zona errato";
                 break;
               case "04":
-                riusltato = "Comando disabilitato";
+                risultato = "Comando disabilitato";
                 break;
               case "05":
-                riusltato = "Numero uscita errato";
+                risultato = "Numero uscita errato";
                 break;
               case "06":
-                riusltato = "Aree già inserite";
+                risultato = "Aree già inserite";
                 break;
               case "07":
-                riusltato = "Codice già presente";
+                risultato = "Codice già presente";
                 break;
-              case 08:
-                riusltato =
+              case "08":
+                risultato =
                   "Impianto inserito (va prima disinserito da parte di utente non installatore)";
                 break;
-            }
-            console.log("result3", result[3]);
-            if (result[3] == "08") {
-              riusltato =
-                "Impianto inserito (va prima disinserito da parte di utente non installatore)";
-              console.log("ed entro nell'if");
             }
             function riempiEsito(payload, risultato) {
               return {
