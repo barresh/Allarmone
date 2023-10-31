@@ -4877,9 +4877,10 @@ function entrata() {
             server.mandaEsito();
           }
           if (payload == "03") {
+            var risultato;
             const result = bufferino.match(/.{1,2}/g) ?? [];
             switch (result[3]) {
-              case "01":
+              case 01:
                 risultato = "Codice non abilitato";
                 break;
               case "02":
@@ -4900,7 +4901,7 @@ function entrata() {
               case "07":
                 riusltato = "Codice già presente";
                 break;
-              case "08":
+              case 08:
                 riusltato =
                   "Impianto inserito (va prima disinserito da parte di utente non installatore)";
                 break;
