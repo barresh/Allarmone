@@ -4906,6 +4906,10 @@ function entrata() {
                   "Impianto inserito (va prima disinserito da parte di utente non installatore)";
                 break;
             }
+            if (result[3] == "08") {
+              riusltato =
+                "Impianto inserito (va prima disinserito da parte di utente non installatore)";
+            }
             function riempiEsito(payload, risultato) {
               return {
                 payload,
