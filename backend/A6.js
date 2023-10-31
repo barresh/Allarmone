@@ -4910,6 +4910,7 @@ function entrata() {
             if (result[3] == "08") {
               riusltato =
                 "Impianto inserito (va prima disinserito da parte di utente non installatore)";
+              console.log("ed entro nell'if");
             }
             function riempiEsito(payload, risultato) {
               return {
