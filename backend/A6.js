@@ -1662,10 +1662,39 @@ function entrata() {
               annoBlocco = 2000 + binToDec(dato3);
               oreBlocco = binToDec(dato4);
               minutiBlocco = binToDec(dato5);
+              if (minutiBlocco.length == 1) {
+                minutiBlocco = "0" + minutiBlocco;
+              }
               switch (dato7) {
                 case "00":
                   evento = "Allarme zona";
-                  riferimento = binToDec(dato8);
+                  switch (dato8) {
+                    case "01":
+                      riferimento = nomeZona1;
+                      break;
+                    case "02":
+                      riferimento = nomeZona1;
+                      break;
+                    case "03":
+                      riferimento = nomeZona1;
+                      break;
+                    case "04":
+                      riferimento = nomeZona1;
+                      break;
+                    case "05":
+                      riferimento = nomeZona1;
+                      break;
+                    case "06":
+                      riferimento = nomeZona1;
+                      break;
+                    case "07":
+                      riferimento = nomeZona1;
+                      break;
+                    case "08":
+                      riferimento = nomeZona1;
+                      break;
+                  }
+
                   break;
                 case "01":
                   evento = "Inserimento aree";
