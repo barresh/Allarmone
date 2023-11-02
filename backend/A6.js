@@ -1678,31 +1678,34 @@ function entrata() {
                 case "01":
                   evento = "Inserimento aree";
                   if (dato8.slice(7, 8) == "1") {
-                    riferimento = riferimento + nomeAreaA;
+                    riferimento = nomeAreaA;
                   }
                   if (dato8.slice(6, 7) == "1") {
-                    riferimento = riferimento + nomeAreaB;
+                    riferimento = nomeAreaB;
                   }
                   if (dato8.slice(5, 6) == "1") {
-                    riferimento = riferimento + nomeAreaC;
+                    riferimento = nomeAreaC;
                   }
                   if (dato8.slice(4, 5) == "1") {
-                    riferimento = riferimento + nomeAreaD;
+                    riferimento = nomeAreaD;
+                  }
+                  if (dato8.slice(4, 5) == "1" && dato8.slice(5, 6) == "1") {
+                    riferimento = nomeAreaC + nomeAreaD;
                   }
                   break;
                 case "02":
                   evento = "Disinserimento aree";
                   if (dato8.slice(7, 8) == "1") {
-                    riferimento = riferimento + nomeAreaA;
+                    riferimento = nomeAreaA;
                   }
                   if (dato8.slice(6, 7) == "1") {
-                    riferimento = riferimento + nomeAreaB;
+                    riferimento = nomeAreaB;
                   }
                   if (dato8.slice(5, 6) == "1") {
-                    riferimento = riferimento + nomeAreaC;
+                    riferimento = nomeAreaC;
                   }
                   if (dato8.slice(4, 5) == "1") {
-                    riferimento = riferimento + nomeAreaD;
+                    riferimento = nomeAreaD;
                   }
                   break;
                 case "03":
