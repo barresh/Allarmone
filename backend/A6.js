@@ -2369,6 +2369,10 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
+              nomeAreaA = nomeAreaA.replace(/ÿ/g, "");
+              nomeAreaB = nomeAreaB.replace(/ÿ/g, "");
+              nomeAreaC = nomeAreaC.replace(/ÿ/g, "");
+              nomeAreaD = nomeAreaD.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "02") {
               var nomeUtenteTastiera1 =
@@ -4302,10 +4306,7 @@ function entrata() {
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
             }
-            nomeAreaA = nomeAreaA.replace(/ÿ/g, "");
-            nomeAreaB = nomeAreaB.replace(/ÿ/g, "");
-            nomeAreaC = nomeAreaC.replace(/ÿ/g, "");
-            nomeAreaD = nomeAreaD.replace(/ÿ/g, "");
+
             function riempiEsito(
               payload,
               bloccoSwitch,
