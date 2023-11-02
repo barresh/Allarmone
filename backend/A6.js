@@ -1673,38 +1673,37 @@ function entrata() {
                 case "00":
                   evento = "Allarme zona";
                   riferimento = binToDec(dato8);
-
                   break;
                 case "01":
                   evento = "Inserimento aree";
                   riferimento = "";
                   if (dato8.slice(7, 8) == "1") {
-                    riferimento = riferimento + nomeAreaA;
+                    riferimento = riferimento + nomeAreaA + " ";
                   }
                   if (dato8.slice(6, 7) == "1") {
-                    riferimento = riferimento + nomeAreaB;
+                    riferimento = riferimento + nomeAreaB + " ";
                   }
                   if (dato8.slice(5, 6) == "1") {
-                    riferimento = riferimento + nomeAreaC;
+                    riferimento = riferimento + nomeAreaC + " ";
                   }
                   if (dato8.slice(4, 5) == "1") {
-                    riferimento = riferimento + nomeAreaD;
+                    riferimento = riferimento + nomeAreaD + " ";
                   }
                   break;
                 case "02":
                   riferimento = "";
                   evento = "Disinserimento aree";
                   if (dato8.slice(7, 8) == "1") {
-                    riferimento = riferimento + nomeAreaA;
+                    riferimento = riferimento + nomeAreaA + " ";
                   }
                   if (dato8.slice(6, 7) == "1") {
-                    riferimento = riferimento + nomeAreaB;
+                    riferimento = riferimento + nomeAreaB + " ";
                   }
                   if (dato8.slice(5, 6) == "1") {
-                    riferimento = riferimento + nomeAreaC;
+                    riferimento = riferimento + nomeAreaC + " ";
                   }
                   if (dato8.slice(4, 5) == "1") {
-                    riferimento = riferimento + nomeAreaD;
+                    riferimento = riferimento + nomeAreaD + " ";
                   }
                   break;
                 case "03":
