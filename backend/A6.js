@@ -12,6 +12,10 @@ var bufferino;
 var zoneEscluse = [];
 var zoneIncluse = [];
 var arrayzonetamp = [];
+var nomeAreaA;
+var nomeAreaB;
+var nomeAreaC;
+var nomeAreaD;
 //array dello stato delle zone
 var arrayzone = [];
 var arrayaree = [];
@@ -2297,7 +2301,7 @@ function entrata() {
                 hex2asci(result[35]);
             }
             if (bloccoSwitch == "01") {
-              var nomeAreaA =
+              nomeAreaA =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -2314,7 +2318,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeAreaB =
+              nomeAreaB =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -2331,7 +2335,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeAreaC =
+              nomeAreaC =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -2348,7 +2352,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeAreaD =
+              nomeAreaD =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
