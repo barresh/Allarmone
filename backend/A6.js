@@ -1668,40 +1668,16 @@ function entrata() {
               switch (dato7) {
                 case "00":
                   evento = "Allarme zona";
-                  if (dato8 == 1) {
-                    riferimento = nomeZona1;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 2) {
-                    riferimento = nomeZona2;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 3) {
-                    riferimento = nomeZona3;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 4) {
-                    riferimento = nomeZona4;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 5) {
-                    riferimento = nomeZona5;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 6) {
-                    riferimento = nomeZona6;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 7) {
-                    riferimento = nomeZona7;
-                    console.log("RIFERIMENTO:", riferimento);
-                  } else if (dato8 == 8) {
-                    riferimento = nomeZona8;
-                    console.log("RIFERIMENTO:", riferimento);
-                  }
+                  riferimento = binToDec(dato8);
 
                   break;
                 case "01":
                   evento = "Inserimento aree";
-                  riferimento = estraiDati(hex2bin(dato8), 4, 8);
+                  riferimento = dato8;
                   break;
                 case "02":
                   evento = "Disinserimento aree";
-                  riferimento = estraiDati(hex2bin(dato8), 4, 8);
+                  riferimento = dato8;
                   break;
                 case "03":
                   evento = "Inclusione linee";
