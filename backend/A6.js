@@ -1740,28 +1740,28 @@ function entrata() {
                   riferimento = "";
                   dato8 = binToDec(dato8);
                   switch (dato8) {
-                    case "1":
+                    case 1:
                       riferimento = riferimento + nomeZona1 + " ";
                       break;
-                    case "2":
+                    case 2:
                       riferimento = riferimento + nomeZona2 + " ";
                       break;
-                    case "3":
+                    case 3:
                       riferimento = riferimento + nomeZona3 + " ";
                       break;
-                    case "4":
+                    case 4:
                       riferimento = riferimento + nomeZona4 + " ";
                       break;
-                    case "5":
+                    case 5:
                       riferimento = riferimento + nomeZona5 + " ";
                       break;
-                    case "6":
+                    case 6:
                       riferimento = riferimento + nomeZona6 + " ";
                       break;
-                    case "7":
+                    case 7:
                       riferimento = riferimento + nomeZona7 + " ";
                       break;
-                    case "8":
+                    case 8:
                       riferimento = riferimento + nomeZona8 + " ";
                       break;
                   }
