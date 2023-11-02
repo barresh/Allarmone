@@ -16,6 +16,71 @@ var nomeAreaA;
 var nomeAreaB;
 var nomeAreaC;
 var nomeAreaD;
+var nomeZona1;
+var nomeZona2;
+var nomeZona3;
+var nomeZona4;
+var nomeZona5;
+var nomeZona6;
+var nomeZona7;
+var nomeZona8;
+var nomeZona9;
+var nomeZona10;
+var nomeZona11;
+var nomeZona12;
+var nomeZona13;
+var nomeZona14;
+var nomeZona15;
+var nomeZona16;
+var nomeZona17;
+var nomeZona18;
+var nomeZona19;
+var nomeZona20;
+var nomeZona21;
+var nomeZona22;
+var nomeZona23;
+var nomeZona24;
+var nomeZona25;
+var nomeZona26;
+var nomeZona27;
+var nomeZona28;
+var nomeZona29;
+var nomeZona30;
+var nomeZona31;
+var nomeZona32;
+var nomeZona33;
+var nomeZona34;
+var nomeZona35;
+var nomeZona36;
+var nomeZona37;
+var nomeZona38;
+var nomeZona39;
+var nomeZona40;
+var nomeZona41;
+var nomeZona42;
+var nomeZona43;
+var nomeZona44;
+var nomeZona45;
+var nomeZona46;
+var nomeZona47;
+var nomeZona48;
+var nomeZona49;
+var nomeZona50;
+var nomeZona51;
+var nomeZona52;
+var nomeZona53;
+var nomeZona54;
+var nomeZona55;
+var nomeZona56;
+var nomeZona57;
+var nomeZona58;
+var nomeZona59;
+var nomeZona60;
+var nomeZona61;
+var nomeZona62;
+var nomeZona63;
+var nomeZona64;
+
 //array dello stato delle zone
 var arrayzone = [];
 var arrayaree = [];
@@ -1672,7 +1737,34 @@ function entrata() {
               switch (dato7) {
                 case "00":
                   evento = "Allarme zona";
-                  riferimento = dato8;
+                  riferimento = "";
+                  dato8 = binToDec(dato8);
+                  switch (dato8) {
+                    case "1":
+                      riferimento = riferimento + nomeZona1 + " ";
+                      break;
+                    case "2":
+                      riferimento = riferimento + nomeZona2 + " ";
+                      break;
+                    case "3":
+                      riferimento = riferimento + nomeZona3 + " ";
+                      break;
+                    case "4":
+                      riferimento = riferimento + nomeZona4 + " ";
+                      break;
+                    case "5":
+                      riferimento = riferimento + nomeZona5 + " ";
+                      break;
+                    case "6":
+                      riferimento = riferimento + nomeZona6 + " ";
+                      break;
+                    case "7":
+                      riferimento = riferimento + nomeZona7 + " ";
+                      break;
+                    case "8":
+                      riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                  }
                   break;
                 case "01":
                   evento = "Inserimento aree";
@@ -3215,7 +3307,7 @@ function entrata() {
                 hex2asci(result[131]);
             }
             if (bloccoSwitch == "08") {
-              var nomeZona1 =
+              nomeZona1 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -3232,7 +3324,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona2 =
+              nomeZona2 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -3249,7 +3341,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona3 =
+              nomeZona3 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -3283,7 +3375,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona5 =
+              nomeZona5 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -3300,7 +3392,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona6 =
+              nomeZona6 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -3317,7 +3409,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona7 =
+              nomeZona7 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -3334,7 +3426,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona8 =
+              nomeZona8 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -3351,9 +3443,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona1 = nomeZona1.replace(/ÿ/g, "");
+              nomeZona2 = nomeZona2.replace(/ÿ/g, "");
+              nomeZona3 = nomeZona3.replace(/ÿ/g, "");
+              nomeZona4 = nomeZona4.replace(/ÿ/g, "");
+              nomeZona5 = nomeZona5.replace(/ÿ/g, "");
+              nomeZona6 = nomeZona6.replace(/ÿ/g, "");
+              nomeZona7 = nomeZona7.replace(/ÿ/g, "");
+              nomeZona8 = nomeZona8.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "09") {
-              var nomeZona9 =
+              nomeZona9 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -3370,7 +3470,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona10 =
+              nomeZona10 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -3387,7 +3487,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona11 =
+              nomeZona11 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -3404,7 +3504,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona12 =
+              nomeZona12 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -3421,7 +3521,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona13 =
+              nomeZona13 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -3438,7 +3538,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona14 =
+              nomeZona14 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -3455,7 +3555,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona15 =
+              nomeZona15 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -3472,7 +3572,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona16 =
+              nomeZona16 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
