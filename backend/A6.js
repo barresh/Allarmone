@@ -1692,7 +1692,18 @@ function entrata() {
                   break;
                 case "02":
                   evento = "Disinserimento aree";
-                  riferimento = dato8;
+                  if (dato8.slice(7, 8) == "1") {
+                    riferimento = riferimento + nomeAreaA;
+                  }
+                  if (dato8.slice(6, 7) == "1") {
+                    riferimento = riferimento + nomeAreaB;
+                  }
+                  if (dato8.slice(5, 6) == "1") {
+                    riferimento = riferimento + nomeAreaC;
+                  }
+                  if (dato8.slice(4, 5) == "1") {
+                    riferimento = riferimento + nomeAreaD;
+                  }
                   break;
                 case "03":
                   evento = "Inclusione linee";
