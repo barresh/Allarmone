@@ -1672,7 +1672,7 @@ function entrata() {
               switch (dato7) {
                 case "00":
                   evento = "Allarme zona";
-                  riferimento = binToDec(dato8);
+                  riferimento = dato8;
                   break;
                 case "01":
                   evento = "Inserimento aree";
