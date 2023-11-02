@@ -1668,31 +1668,9 @@ function entrata() {
               switch (dato7) {
                 case "00":
                   evento = "Allarme zona";
-                  switch (dato8) {
-                    case 1:
-                      riferimento = nomeZona1;
-                      break;
-                    case 2:
-                      riferimento = nomeZona2;
-                      break;
-                    case 3:
-                      riferimento = nomeZona3;
-                      break;
-                    case 4:
-                      riferimento = nomeZona4;
-                      break;
-                    case 5:
-                      riferimento = nomeZona5;
-                      break;
-                    case 6:
-                      riferimento = nomeZona6;
-                      break;
-                    case 7:
-                      riferimento = nomeZona7;
-                      break;
-                    case 8:
-                      riferimento = nomeZona8;
-                      break;
+                  if (dato8 == 1) {
+                    riferimento = nomeZona1;
+                    console.log("RIFERIMENTO:", riferimento);
                   }
 
                   break;
