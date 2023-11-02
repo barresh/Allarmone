@@ -1669,28 +1669,28 @@ function entrata() {
                 case "00":
                   evento = "Allarme zona";
                   switch (dato8) {
-                    case "01":
+                    case 1:
                       riferimento = nomeZona1;
                       break;
-                    case "02":
+                    case 2:
                       riferimento = nomeZona2;
                       break;
-                    case "03":
+                    case 3:
                       riferimento = nomeZona3;
                       break;
-                    case "04":
+                    case 4:
                       riferimento = nomeZona4;
                       break;
-                    case "05":
+                    case 5:
                       riferimento = nomeZona5;
                       break;
-                    case "06":
+                    case 6:
                       riferimento = nomeZona6;
                       break;
-                    case "07":
+                    case 7:
                       riferimento = nomeZona7;
                       break;
-                    case "08":
+                    case 8:
                       riferimento = nomeZona8;
                       break;
                   }
