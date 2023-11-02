@@ -1800,11 +1800,65 @@ function entrata() {
                   break;
                 case "03":
                   evento = "Inclusione linee";
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  dato8 = binToDec(dato8);
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeZona1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeZona2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeZona3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeZona4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeZona5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeZona6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeZona7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                  }
                   break;
                 case "04":
                   evento = "Esclusione linee";
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  dato8 = binToDec(dato8);
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeZona1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeZona2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeZona3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeZona4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeZona5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeZona6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeZona7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                  }
                   break;
                 case "05":
                   evento = "Reset allarme";
@@ -1812,15 +1866,96 @@ function entrata() {
                   break;
                 case "06":
                   evento = "Aggiunta memoria allarme zona";
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  dato8 = binToDec(dato8);
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeZona1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeZona2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeZona3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeZona4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeZona5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeZona6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeZona7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                  }
                   break;
                 case "07":
                   evento = "Allarme zona programmata come H24";
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  dato8 = binToDec(dato8);
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeZona1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeZona2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeZona3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeZona4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeZona5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeZona6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeZona7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                  }
                   break;
                 case "08":
                   evento = "Rapina immediata zona";
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  dato8 = binToDec(dato8);
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeZona1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeZona2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeZona3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeZona4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeZona5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeZona6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeZona7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                  }
                   break;
                 case "09":
                   switch (dato8) {
