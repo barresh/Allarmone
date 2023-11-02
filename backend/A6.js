@@ -1673,25 +1673,25 @@ function entrata() {
                       riferimento = nomeZona1;
                       break;
                     case "02":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona2;
                       break;
                     case "03":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona3;
                       break;
                     case "04":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona4;
                       break;
                     case "05":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona5;
                       break;
                     case "06":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona6;
                       break;
                     case "07":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona7;
                       break;
                     case "08":
-                      riferimento = nomeZona1;
+                      riferimento = nomeZona8;
                       break;
                   }
 
