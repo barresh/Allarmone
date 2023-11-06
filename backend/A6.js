@@ -1725,7 +1725,14 @@ function entrata() {
               function estraiDati(dato, start, end) {
                 return binToDec(dato.slice(start, end));
               }
+              function binaryToAscii(str) {
+                var binString = "";
 
+                str.split(" ").map(function (bin) {
+                  binString += String.fromCharCode(parseInt(bin, 2));
+                });
+                return binString;
+              }
               giornoBlocco = estraiDati(dato1, 3, 8);
               meseBlocco = estraiDati(dato2, 3, 8);
               annoBlocco = 2000 + binToDec(dato3);
@@ -1935,8 +1942,24 @@ function entrata() {
                   }
                   break;
                 case "01":
+                  sestaColonna = "";
                   evento = "Inserimento aree";
                   riferimento = "";
+                  switch (dato6.slice(0, 4)) {
+                    case "0010":
+                      sestaColonna = "Codice:";
+                      break;
+                    case "0100":
+                      sestaColonna = "Spinotto:";
+                      break;
+                    case "0110":
+                      sestaColonna = "Comunicatore:";
+                      break;
+                    case "1000":
+                      sestaColonna = "Chiave esterna:";
+                      break;
+                  }
+                  sestaColonna = sestaColonna + dato6.slice(4, 8);
                   if (dato8.slice(7, 8) == "1") {
                     riferimento = riferimento + nomeAreaA + " ";
                   }
@@ -3033,6 +3056,7 @@ function entrata() {
                       dato6;
                       break;
                   }
+                  break;
                 case "0A":
                   switch (dato8) {
                     case "00":
@@ -3045,6 +3069,7 @@ function entrata() {
                       evento = "Rapina da telecomando";
                       break;
                   }
+                  break;
                 case "0B":
                   switch (dato8) {
                     case "00":
@@ -3075,6 +3100,7 @@ function entrata() {
                       sestaColonna = binToDec(dato6);
                       break;
                   }
+                  break;
                 case "0C":
                   switch (dato8) {
                     case "00":
@@ -3121,6 +3147,7 @@ function entrata() {
                       sestaColonna = binToDec(dato6);
                       break;
                   }
+                  break;
                 case "0D":
                   switch (dato8) {
                     case "00":
@@ -3226,6 +3253,7 @@ function entrata() {
                       sestaColonna = binToDec(dato6);
                       break;
                   }
+                  break;
                 case "0E":
                   evento = "Cancellazione storico eventi";
                   sestaColonna = binToDec(dato6);
@@ -3284,7 +3312,6 @@ function entrata() {
                       break;
                   }
                   break;
-
                 case "10":
                   evento = "Disattivazione uscita";
                   riferimento = "";
@@ -3363,6 +3390,7 @@ function entrata() {
                       sestaColonna = binToDec(dato6);
                       break;
                   }
+                  break;
                 case "12":
                   evento = "Reinclusione tamper centrale";
                   sestaColonna = binToDec(dato6);
@@ -3373,14 +3401,25 @@ function entrata() {
                   break;
                 case "14":
                   evento = "Reset preavviso inserimento in corso";
-                  sestaColonna = binToDec(dato6);
-                  riferimento = dato8;
+                  riferimento = "";
+                  if (dato8.slice(7, 8) == "1") {
+                    riferimento = riferimento + nomeAreaA + " ";
+                  }
+                  if (dato8.slice(6, 7) == "1") {
+                    riferimento = riferimento + nomeAreaB + " ";
+                  }
+                  if (dato8.slice(5, 6) == "1") {
+                    riferimento = riferimento + nomeAreaC + " ";
+                  }
+                  if (dato8.slice(4, 5) == "1") {
+                    riferimento = riferimento + nomeAreaD + " ";
+                  }
                   break;
                 case "15":
                   evento = "Mancata risposta su zona radio";
                   riferimento = dato8;
                   break;
-                case "14":
+                case "16":
                   evento = "Batteria scarica su zona radio";
                   sestaColonna = binToDec(dato6);
                   riferimento = dato8;
