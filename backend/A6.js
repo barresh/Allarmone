@@ -2113,6 +2113,10 @@ function entrata() {
                         break;
                     }
                   }
+                  if (appoggino == 4) {
+                    sestaColonna =
+                      "Chiave esterna: " + hexToDecimal(dato6.slice(4, 8));
+                  }
                   if (dato8.slice(7, 8) == "1") {
                     riferimento = riferimento + nomeAreaA + " ";
                   }
@@ -2130,6 +2134,129 @@ function entrata() {
                   sestaColonna = "";
                   riferimento = "";
                   evento = "Disinserimento aree";
+                  var appoggino;
+                  switch (dato6.slice(0, 4)) {
+                    case "0010":
+                      appoggino = 1;
+                      break;
+                    case "0100":
+                      appoggino = 2;
+                      break;
+                    case "0110":
+                      appoggino = 3;
+                      break;
+                    case "1000":
+                      appoggino = 4;
+                      break;
+                  }
+                  if (appoggino == 1) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteTastiera1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteTastiera2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteTastiera3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteTastiera4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteTastiera5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteTastiera6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteTastiera7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteTastiera8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteTastiera9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteTastiera10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteTastiera11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteTastiera12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteTastiera13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteTastiera14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteTastiera15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteTastiera16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 2) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteSpinotto1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteSpinotto2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteSpinotto3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteSpinotto4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteSpinotto5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteSpinotto6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteSpinotto7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteSpinotto8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteSpinotto9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteSpinotto10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteSpinotto11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteSpinotto12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteSpinotto13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteSpinotto14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteSpinotto15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteSpinotto16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 4) {
+                    sestaColonna =
+                      "Chiave esterna: " + hexToDecimal(dato6.slice(4, 8));
+                  }
                   if (dato8.slice(7, 8) == "1") {
                     riferimento = riferimento + nomeAreaA + " ";
                   }
@@ -2147,6 +2274,129 @@ function entrata() {
                   sestaColonna = "";
                   evento = "Inclusione linee";
                   riferimento = "";
+                  var appoggino;
+                  switch (dato6.slice(0, 4)) {
+                    case "0010":
+                      appoggino = 1;
+                      break;
+                    case "0100":
+                      appoggino = 2;
+                      break;
+                    case "0110":
+                      appoggino = 3;
+                      break;
+                    case "1000":
+                      appoggino = 4;
+                      break;
+                  }
+                  if (appoggino == 1) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteTastiera1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteTastiera2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteTastiera3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteTastiera4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteTastiera5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteTastiera6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteTastiera7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteTastiera8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteTastiera9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteTastiera10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteTastiera11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteTastiera12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteTastiera13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteTastiera14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteTastiera15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteTastiera16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 2) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteSpinotto1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteSpinotto2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteSpinotto3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteSpinotto4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteSpinotto5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteSpinotto6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteSpinotto7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteSpinotto8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteSpinotto9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteSpinotto10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteSpinotto11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteSpinotto12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteSpinotto13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteSpinotto14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteSpinotto15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteSpinotto16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 4) {
+                    sestaColonna =
+                      "Chiave esterna: " + hexToDecimal(dato6.slice(4, 8));
+                  }
                   dato8 = binToDec(dato8);
                   switch (dato8) {
                     case 1:
@@ -2347,6 +2597,129 @@ function entrata() {
                   sestaColonna = "";
                   evento = "Esclusione linee";
                   riferimento = "";
+                  var appoggino;
+                  switch (dato6.slice(0, 4)) {
+                    case "0010":
+                      appoggino = 1;
+                      break;
+                    case "0100":
+                      appoggino = 2;
+                      break;
+                    case "0110":
+                      appoggino = 3;
+                      break;
+                    case "1000":
+                      appoggino = 4;
+                      break;
+                  }
+                  if (appoggino == 1) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteTastiera1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteTastiera2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteTastiera3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteTastiera4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteTastiera5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteTastiera6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteTastiera7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteTastiera8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteTastiera9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteTastiera10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteTastiera11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteTastiera12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteTastiera13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteTastiera14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteTastiera15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteTastiera16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 2) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteSpinotto1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteSpinotto2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteSpinotto3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteSpinotto4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteSpinotto5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteSpinotto6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteSpinotto7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteSpinotto8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteSpinotto9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteSpinotto10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteSpinotto11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteSpinotto12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteSpinotto13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteSpinotto14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteSpinotto15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteSpinotto16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 4) {
+                    sestaColonna =
+                      "Chiave esterna: " + hexToDecimal(dato6.slice(4, 8));
+                  }
                   dato8 = binToDec(dato8);
                   switch (dato8) {
                     case 1:
@@ -2547,6 +2920,129 @@ function entrata() {
                   sestaColonna = "";
                   evento = "Reset allarme";
                   riferimento = "";
+                  var appoggino;
+                  switch (dato6.slice(0, 4)) {
+                    case "0010":
+                      appoggino = 1;
+                      break;
+                    case "0100":
+                      appoggino = 2;
+                      break;
+                    case "0110":
+                      appoggino = 3;
+                      break;
+                    case "1000":
+                      appoggino = 4;
+                      break;
+                  }
+                  if (appoggino == 1) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteTastiera1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteTastiera2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteTastiera3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteTastiera4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteTastiera5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteTastiera6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteTastiera7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteTastiera8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteTastiera9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteTastiera10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteTastiera11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteTastiera12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteTastiera13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteTastiera14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteTastiera15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteTastiera16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 2) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteSpinotto1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteSpinotto2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteSpinotto3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteSpinotto4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteSpinotto5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteSpinotto6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteSpinotto7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteSpinotto8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteSpinotto9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteSpinotto10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteSpinotto11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteSpinotto12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteSpinotto13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteSpinotto14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteSpinotto15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteSpinotto16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 4) {
+                    sestaColonna =
+                      "Chiave esterna: " + hexToDecimal(dato6.slice(4, 8));
+                  }
                   if (dato8.slice(1, 2) == "1") {
                     riferimento =
                       riferimento + "Reset di allami sabotaggio" + " ";
@@ -3262,49 +3758,162 @@ function entrata() {
                   }
                   break;
                 case "0C":
+                  var appoggino;
+                  switch (dato6.slice(0, 4)) {
+                    case "0010":
+                      appoggino = 1;
+                      break;
+                    case "0100":
+                      appoggino = 2;
+                      break;
+                    case "0110":
+                      appoggino = 3;
+                      break;
+                    case "1000":
+                      appoggino = 4;
+                      break;
+                  }
+                  if (appoggino == 1) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteTastiera1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteTastiera2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteTastiera3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteTastiera4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteTastiera5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteTastiera6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteTastiera7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteTastiera8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteTastiera9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteTastiera10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteTastiera11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteTastiera12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteTastiera13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteTastiera14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteTastiera15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteTastiera16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 2) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
+                      case 0:
+                        sestaColonna = nomeUtenteSpinotto1;
+                        break;
+                      case 1:
+                        sestaColonna = nomeUtenteSpinotto2;
+                        break;
+                      case 2:
+                        sestaColonna = nomeUtenteSpinotto3;
+                        break;
+                      case 3:
+                        sestaColonna = nomeUtenteSpinotto4;
+                        break;
+                      case 4:
+                        sestaColonna = nomeUtenteSpinotto5;
+                        break;
+                      case 5:
+                        sestaColonna = nomeUtenteSpinotto6;
+                        break;
+                      case 6:
+                        sestaColonna = nomeUtenteSpinotto7;
+                        break;
+                      case 7:
+                        sestaColonna = nomeUtenteSpinotto8;
+                        break;
+                      case 8:
+                        sestaColonna = nomeUtenteSpinotto9;
+                        break;
+                      case 9:
+                        sestaColonna = nomeUtenteSpinotto10;
+                        break;
+                      case 10:
+                        sestaColonna = nomeUtenteSpinotto11;
+                        break;
+                      case 11:
+                        sestaColonna = nomeUtenteSpinotto12;
+                        break;
+                      case 12:
+                        sestaColonna = nomeUtenteSpinotto13;
+                        break;
+                      case 13:
+                        sestaColonna = nomeUtenteSpinotto14;
+                        break;
+                      case 14:
+                        sestaColonna = nomeUtenteSpinotto15;
+                        break;
+                      case 15:
+                        sestaColonna = nomeUtenteSpinotto16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 4) {
+                    sestaColonna =
+                      "Chiave esterna: " + hexToDecimal(dato6.slice(4, 8));
+                  }
                   switch (dato8) {
                     case "00":
                       evento = "Inizio programmazione";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "01":
                       evento = "Fine programmazione";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "02":
                       evento = "Inizio blocco";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "03":
                       evento = "Fine blocco";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "04":
                       evento = "Inizio blocco sirene";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "05":
                       evento = "Fine blocco sirene";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "06":
                       evento = "Riavvio centrale";
                       break;
                     case "07":
                       evento = "Abilitazione timer (fine blocco)";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "08":
                       evento = "Disabilitazione timer (inizio blocco)";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "09":
                       evento = "Abilitazione codici installatore";
-                      sestaColonna = binToDec(dato6);
                       break;
                     case "0A":
                       evento = "Disabilitazione codici installatore";
-                      sestaColonna = binToDec(dato6);
                       break;
                   }
                   break;
