@@ -1745,6 +1745,7 @@ function entrata() {
                 case "00":
                   evento = "Allarme zona";
                   riferimento = "";
+                  sestaColonna = "";
                   dato8 = binToDec(dato8);
                   switch (dato8) {
                     case 1:
@@ -1974,6 +1975,7 @@ function entrata() {
                   }
                   break;
                 case "02":
+                  sestaColonna = "";
                   riferimento = "";
                   evento = "Disinserimento aree";
                   if (dato8.slice(7, 8) == "1") {
@@ -1990,6 +1992,7 @@ function entrata() {
                   }
                   break;
                 case "03":
+                  sestaColonna = "";
                   evento = "Inclusione linee";
                   riferimento = "";
                   dato8 = binToDec(dato8);
@@ -2189,6 +2192,7 @@ function entrata() {
                   }
                   break;
                 case "04":
+                  sestaColonna = "";
                   evento = "Esclusione linee";
                   riferimento = "";
                   dato8 = binToDec(dato8);
@@ -2388,6 +2392,7 @@ function entrata() {
                   }
                   break;
                 case "05":
+                  sestaColonna = "";
                   evento = "Reset allarme";
                   riferimento = "";
                   if (dato8.slice(1, 2) == "1") {
@@ -2418,6 +2423,7 @@ function entrata() {
                   }
                   break;
                 case "06":
+                  sestaColonna = "";
                   evento = "Aggiunta memoria allarme zona";
                   riferimento = "";
                   dato8 = binToDec(dato8);
@@ -2617,9 +2623,9 @@ function entrata() {
                   }
                   break;
                 case "07":
+                  sestaColonna = "";
                   evento = "Allarme zona programmata come H24";
                   riferimento = "";
-                  dato8 = binToDec(dato8);
                   switch (dato8) {
                     case 1:
                       riferimento = riferimento + nomeZona1 + " ";
@@ -2818,7 +2824,7 @@ function entrata() {
                 case "08":
                   evento = "Rapina immediata zona";
                   riferimento = "";
-                  dato8 = binToDec(dato8);
+                  sestaColonna = "";
                   switch (dato8) {
                     case 1:
                       riferimento = riferimento + nomeZona1 + " ";
@@ -3015,6 +3021,7 @@ function entrata() {
                   }
                   break;
                 case "09":
+                  sestaColonna = "";
                   switch (dato8) {
                     case "00":
                       evento = "Allarme sabotaggio per codici falsi";
