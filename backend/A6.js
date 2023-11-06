@@ -80,6 +80,54 @@ var nomeZona61;
 var nomeZona62;
 var nomeZona63;
 var nomeZona64;
+var nomeUscita1;
+var nomeUscita2;
+var nomeUscita3;
+var nomeUscita4;
+var nomeUscita5;
+var nomeUscita6;
+var nomeUscita7;
+var nomeUscita8;
+var nomeUscita9;
+var nomeUscita10;
+var nomeUscita11;
+var nomeUscita12;
+var nomeUscita13;
+var nomeUscita14;
+var nomeUscita15;
+var nomeUscita16;
+var nomeUtenteTastiera1;
+var nomeUtenteTastiera2;
+var nomeUtenteTastiera3;
+var nomeUtenteTastiera4;
+var nomeUtenteTastiera5;
+var nomeUtenteTastiera6;
+var nomeUtenteTastiera7;
+var nomeUtenteTastiera8;
+var nomeUtenteTastiera9;
+var nomeUtenteTastiera10;
+var nomeUtenteTastiera11;
+var nomeUtenteTastiera12;
+var nomeUtenteTastiera13;
+var nomeUtenteTastiera14;
+var nomeUtenteTastiera15;
+var nomeUtenteTastiera16;
+var nomeUtenteSpinotto1;
+var nomeUtenteSpinotto2;
+var nomeUtenteSpinotto3;
+var nomeUtenteSpinotto4;
+var nomeUtenteSpinotto5;
+var nomeUtenteSpinotto6;
+var nomeUtenteSpinotto7;
+var nomeUtenteSpinotto8;
+var nomeUtenteSpinotto9;
+var nomeUtenteSpinotto10;
+var nomeUtenteSpinotto11;
+var nomeUtenteSpinotto12;
+var nomeUtenteSpinotto13;
+var nomeUtenteSpinotto14;
+var nomeUtenteSpinotto15;
+var nomeUtenteSpinotto16;
 
 //array dello stato delle zone
 var arrayzone = [];
@@ -2626,6 +2674,7 @@ function entrata() {
                   sestaColonna = "";
                   evento = "Allarme zona programmata come H24";
                   riferimento = "";
+                  dato8 = binToDec(dato8);
                   switch (dato8) {
                     case 1:
                       riferimento = riferimento + nomeZona1 + " ";
@@ -3793,7 +3842,7 @@ function entrata() {
               nomeAreaD = nomeAreaD.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "02") {
-              var nomeUtenteTastiera1 =
+              nomeUtenteTastiera1 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -3810,7 +3859,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeUtenteTastiera2 =
+              nomeUtenteTastiera2 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -3827,7 +3876,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeUtenteTastiera3 =
+              nomeUtenteTastiera3 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -3844,7 +3893,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeUtenteTastiera4 =
+              nomeUtenteTastiera4 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -3861,7 +3910,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeUtenteTastiera5 =
+              nomeUtenteTastiera5 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -3878,7 +3927,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeUtenteTastiera6 =
+              nomeUtenteTastiera6 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -3895,7 +3944,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeUtenteTastiera7 =
+              nomeUtenteTastiera7 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -3912,7 +3961,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeUtenteTastiera8 =
+              nomeUtenteTastiera8 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -3929,9 +3978,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeUtenteTastiera1 = nomeUtenteTastiera1.replace(/ÿ/g, "");
+              nomeUtenteTastiera2 = nomeUtenteTastiera2.replace(/ÿ/g, "");
+              nomeUtenteTastiera3 = nomeUtenteTastiera3.replace(/ÿ/g, "");
+              nomeUtenteTastiera4 = nomeUtenteTastiera4.replace(/ÿ/g, "");
+              nomeUtenteTastiera5 = nomeUtenteTastiera5.replace(/ÿ/g, "");
+              nomeUtenteTastiera6 = nomeUtenteTastiera6.replace(/ÿ/g, "");
+              nomeUtenteTastiera7 = nomeUtenteTastiera7.replace(/ÿ/g, "");
+              nomeUtenteTastiera8 = nomeUtenteTastiera8.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "04") {
-              var nomeUtenteTastiera9 =
+              nomeUtenteTastiera9 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -3948,7 +4005,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeUtenteTastiera10 =
+              nomeUtenteTastiera10 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -3965,7 +4022,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeUtenteTastiera11 =
+              nomeUtenteTastiera11 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -3982,7 +4039,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeUtenteTastiera12 =
+              nomeUtenteTastiera12 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -3999,7 +4056,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeUtenteTastiera13 =
+              nomeUtenteTastiera13 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -4016,7 +4073,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeUtenteTastiera14 =
+              nomeUtenteTastiera14 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -4033,7 +4090,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeUtenteTastiera15 =
+              nomeUtenteTastiera15 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -4050,7 +4107,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeUtenteTastiera16 =
+              nomeUtenteTastiera16 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -4067,9 +4124,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeUtenteTastiera9 = nomeUtenteTastiera9.replace(/ÿ/g, "");
+              nomeUtenteTastiera10 = nomeUtenteTastiera10.replace(/ÿ/g, "");
+              nomeUtenteTastiera11 = nomeUtenteTastiera11.replace(/ÿ/g, "");
+              nomeUtenteTastiera12 = nomeUtenteTastiera12.replace(/ÿ/g, "");
+              nomeUtenteTastiera13 = nomeUtenteTastiera13.replace(/ÿ/g, "");
+              nomeUtenteTastiera14 = nomeUtenteTastiera14.replace(/ÿ/g, "");
+              nomeUtenteTastiera15 = nomeUtenteTastiera15.replace(/ÿ/g, "");
+              nomeUtenteTastiera16 = nomeUtenteTastiera16.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "04") {
-              var nomeUtenteSpinotto1 =
+              nomeUtenteSpinotto1 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -4086,7 +4151,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeUtenteSpinotto2 =
+              nomeUtenteSpinotto2 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -4103,7 +4168,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeUtenteSpinotto3 =
+              nomeUtenteSpinotto3 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -4120,7 +4185,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeUtenteSpinotto4 =
+              nomeUtenteSpinotto4 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -4137,7 +4202,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeUtenteSpinotto5 =
+              nomeUtenteSpinotto5 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -4154,7 +4219,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeUtenteSpinotto6 =
+              nomeUtenteSpinotto6 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -4171,7 +4236,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeUtenteSpinotto7 =
+              nomeUtenteSpinotto7 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -4188,7 +4253,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeUtenteSpinotto8 =
+              nomeUtenteSpinotto8 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -4205,9 +4270,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeUtenteSpinotto1 = nomeUtenteSpinotto1.replace(/ÿ/g, "");
+              nomeUtenteSpinotto2 = nomeUtenteSpinotto2.replace(/ÿ/g, "");
+              nomeUtenteSpinotto3 = nomeUtenteSpinotto3.replace(/ÿ/g, "");
+              nomeUtenteSpinotto4 = nomeUtenteSpinotto4.replace(/ÿ/g, "");
+              nomeUtenteSpinotto5 = nomeUtenteSpinotto5.replace(/ÿ/g, "");
+              nomeUtenteSpinotto6 = nomeUtenteSpinotto6.replace(/ÿ/g, "");
+              nomeUtenteSpinotto7 = nomeUtenteSpinotto7.replace(/ÿ/g, "");
+              nomeUtenteSpinotto8 = nomeUtenteSpinotto8.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "05") {
-              var nomeUtenteSpinotto9 =
+              nomeUtenteSpinotto9 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -4224,7 +4297,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeUtenteSpinotto10 =
+              nomeUtenteSpinotto10 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -4241,7 +4314,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeUtenteSpinotto11 =
+              nomeUtenteSpinotto11 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -4258,7 +4331,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeUtenteSpinotto12 =
+              nomeUtenteSpinotto12 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -4275,7 +4348,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeUtenteSpinotto13 =
+              nomeUtenteSpinotto13 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -4292,7 +4365,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeUtenteSpinotto14 =
+              nomeUtenteSpinotto14 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -4309,7 +4382,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeUtenteSpinotto15 =
+              nomeUtenteSpinotto15 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -4326,7 +4399,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeUtenteSpinotto16 =
+              nomeUtenteSpinotto16 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -4343,9 +4416,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeUtenteSpinotto9 = nomeUtenteSpinotto9.replace(/ÿ/g, "");
+              nomeUtenteSpinotto10 = nomeUtenteSpinotto10.replace(/ÿ/g, "");
+              nomeUtenteSpinotto11 = nomeUtenteSpinotto11.replace(/ÿ/g, "");
+              nomeUtenteSpinotto12 = nomeUtenteSpinotto12.replace(/ÿ/g, "");
+              nomeUtenteSpinotto13 = nomeUtenteSpinotto13.replace(/ÿ/g, "");
+              nomeUtenteSpinotto14 = nomeUtenteSpinotto14.replace(/ÿ/g, "");
+              nomeUtenteSpinotto15 = nomeUtenteSpinotto15.replace(/ÿ/g, "");
+              nomeUtenteSpinotto16 = nomeUtenteSpinotto16.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "06") {
-              var nomeUscita1 =
+              nomeUscita1 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -4362,7 +4443,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeUscita2 =
+              nomeUscita2 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -4379,7 +4460,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeUscita3 =
+              nomeUscita3 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -4396,7 +4477,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeUscita4 =
+              nomeUscita4 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -4413,7 +4494,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeUscita5 =
+              nomeUscita5 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -4430,7 +4511,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeUscita6 =
+              nomeUscita6 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -4447,7 +4528,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeUscita7 =
+              nomeUscita7 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -4464,7 +4545,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeUscita8 =
+              nomeUscita8 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -4481,9 +4562,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeUscita1 = nomeUscita1.replace(/ÿ/g, "");
+              nomeUscita2 = nomeUscita2.replace(/ÿ/g, "");
+              nomeUscita3 = nomeUscita3.replace(/ÿ/g, "");
+              nomeUscita4 = nomeUscita4.replace(/ÿ/g, "");
+              nomeUscita5 = nomeUscita5.replace(/ÿ/g, "");
+              nomeUscita6 = nomeUscita6.replace(/ÿ/g, "");
+              nomeUscita7 = nomeUscita7.replace(/ÿ/g, "");
+              nomeUscita8 = nomeUscita8.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "07") {
-              var nomeUscita9 =
+              nomeUscita9 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -4500,7 +4589,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeUscita10 =
+              nomeUscita10 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -4517,7 +4606,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeUscita11 =
+              nomeUscita11 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -4534,7 +4623,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeUscita12 =
+              nomeUscita12 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -4551,7 +4640,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeUscita13 =
+              nomeUscita13 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -4568,7 +4657,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeUscita14 =
+              nomeUscita14 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -4585,7 +4674,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeUscita15 =
+              nomeUscita15 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -4602,7 +4691,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeUscita16 =
+              nomeUscita16 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -4619,6 +4708,14 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeUscita9 = nomeUscita9.replace(/ÿ/g, "");
+              nomeUscita10 = nomeUscita10.replace(/ÿ/g, "");
+              nomeUscita11 = nomeUscita11.replace(/ÿ/g, "");
+              nomeUscita12 = nomeUscita12.replace(/ÿ/g, "");
+              nomeUscita13 = nomeUscita13.replace(/ÿ/g, "");
+              nomeUscita14 = nomeUscita14.replace(/ÿ/g, "");
+              nomeUscita15 = nomeUscita15.replace(/ÿ/g, "");
+              nomeUscita16 = nomeUscita16.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "08") {
               nomeZona1 =
@@ -4672,7 +4769,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona4 =
+              nomeZona4 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -4903,9 +5000,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona9 = nomeZona9.replace(/ÿ/g, "");
+              nomeZona10 = nomeZona10.replace(/ÿ/g, "");
+              nomeZona11 = nomeZona11.replace(/ÿ/g, "");
+              nomeZona12 = nomeZona12.replace(/ÿ/g, "");
+              nomeZona13 = nomeZona13.replace(/ÿ/g, "");
+              nomeZona14 = nomeZona14.replace(/ÿ/g, "");
+              nomeZona15 = nomeZona15.replace(/ÿ/g, "");
+              nomeZona16 = nomeZona16.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "10") {
-              var nomeZona17 =
+              nomeZona17 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -4922,7 +5027,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona18 =
+              nomeZona18 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -4939,7 +5044,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona19 =
+              nomeZona19 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -4956,7 +5061,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona20 =
+              nomeZona20 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -4973,7 +5078,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona21 =
+              nomeZona21 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -4990,7 +5095,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona22 =
+              nomeZona22 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -5007,7 +5112,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona23 =
+              nomeZona23 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -5024,7 +5129,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona24 =
+              nomeZona24 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -5041,9 +5146,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona17 = nomeZona17.replace(/ÿ/g, "");
+              nomeZona18 = nomeZona18.replace(/ÿ/g, "");
+              nomeZona19 = nomeZona19.replace(/ÿ/g, "");
+              nomeZona20 = nomeZona20.replace(/ÿ/g, "");
+              nomeZona21 = nomeZona21.replace(/ÿ/g, "");
+              nomeZona22 = nomeZona22.replace(/ÿ/g, "");
+              nomeZona23 = nomeZona23.replace(/ÿ/g, "");
+              nomeZona24 = nomeZona24.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "11") {
-              var nomeZona25 =
+              nomeZona25 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -5060,7 +5173,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona26 =
+              nomeZona26 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -5077,7 +5190,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona27 =
+              nomeZona27 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -5094,7 +5207,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona28 =
+              nomeZona28 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -5111,7 +5224,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona29 =
+              nomeZona29 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -5128,7 +5241,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona30 =
+              nomeZona30 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -5145,7 +5258,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona31 =
+              nomeZona31 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -5162,7 +5275,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona32 =
+              nomeZona32 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -5179,9 +5292,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona25 = nomeZona25.replace(/ÿ/g, "");
+              nomeZona26 = nomeZona26.replace(/ÿ/g, "");
+              nomeZona27 = nomeZona27.replace(/ÿ/g, "");
+              nomeZona28 = nomeZona28.replace(/ÿ/g, "");
+              nomeZona29 = nomeZona29.replace(/ÿ/g, "");
+              nomeZona30 = nomeZona30.replace(/ÿ/g, "");
+              nomeZona31 = nomeZona31.replace(/ÿ/g, "");
+              nomeZona32 = nomeZona32.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "12") {
-              var nomeZona33 =
+              nomeZona33 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -5198,7 +5319,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona34 =
+              nomeZona34 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -5215,7 +5336,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona35 =
+              nomeZona35 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -5232,7 +5353,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona36 =
+              nomeZona36 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -5249,7 +5370,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona37 =
+              nomeZona37 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -5266,7 +5387,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona38 =
+              nomeZona38 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -5283,7 +5404,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona39 =
+              nomeZona39 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -5300,7 +5421,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona40 =
+              nomeZona40 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -5317,9 +5438,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona33 = nomeZona33.replace(/ÿ/g, "");
+              nomeZona34 = nomeZona34.replace(/ÿ/g, "");
+              nomeZona35 = nomeZona35.replace(/ÿ/g, "");
+              nomeZona36 = nomeZona36.replace(/ÿ/g, "");
+              nomeZona37 = nomeZona37.replace(/ÿ/g, "");
+              nomeZona38 = nomeZona38.replace(/ÿ/g, "");
+              nomeZona39 = nomeZona39.replace(/ÿ/g, "");
+              nomeZona40 = nomeZona40.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "13") {
-              var nomeZona41 =
+              nomeZona41 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -5336,7 +5465,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona42 =
+              nomeZona42 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -5353,7 +5482,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona43 =
+              nomeZona43 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -5370,7 +5499,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona44 =
+              nomeZona44 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -5387,7 +5516,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona45 =
+              nomeZona45 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -5404,7 +5533,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona46 =
+              nomeZona46 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -5421,7 +5550,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona47 =
+              nomeZona47 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -5438,7 +5567,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona48 =
+              nomeZona48 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -5455,9 +5584,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona41 = nomeZona41.replace(/ÿ/g, "");
+              nomeZona42 = nomeZona42.replace(/ÿ/g, "");
+              nomeZona43 = nomeZona43.replace(/ÿ/g, "");
+              nomeZona44 = nomeZona44.replace(/ÿ/g, "");
+              nomeZona45 = nomeZona45.replace(/ÿ/g, "");
+              nomeZona46 = nomeZona46.replace(/ÿ/g, "");
+              nomeZona47 = nomeZona47.replace(/ÿ/g, "");
+              nomeZona48 = nomeZona48.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "14") {
-              var nomeZona49 =
+              nomeZona49 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -5474,7 +5611,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona50 =
+              nomeZona50 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -5491,7 +5628,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona51 =
+              nomeZona51 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -5508,7 +5645,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona52 =
+              nomeZona52 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -5525,7 +5662,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona53 =
+              nomeZona53 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -5542,7 +5679,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona54 =
+              nomeZona54 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -5559,7 +5696,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona55 =
+              nomeZona55 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -5576,7 +5713,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona56 =
+              nomeZona56 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -5593,9 +5730,17 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona49 = nomeZona49.replace(/ÿ/g, "");
+              nomeZona50 = nomeZona50.replace(/ÿ/g, "");
+              nomeZona51 = nomeZona51.replace(/ÿ/g, "");
+              nomeZona52 = nomeZona52.replace(/ÿ/g, "");
+              nomeZona53 = nomeZona53.replace(/ÿ/g, "");
+              nomeZona54 = nomeZona54.replace(/ÿ/g, "");
+              nomeZona55 = nomeZona55.replace(/ÿ/g, "");
+              nomeZona56 = nomeZona56.replace(/ÿ/g, "");
             }
             if (bloccoSwitch == "15") {
-              var nomeZona57 =
+              nomeZona57 =
                 hex2asci(result[4]) +
                 hex2asci(result[5]) +
                 hex2asci(result[6]) +
@@ -5612,7 +5757,7 @@ function entrata() {
                 hex2asci(result[17]) +
                 hex2asci(result[18]) +
                 hex2asci(result[19]);
-              var nomeZona58 =
+              nomeZona58 =
                 hex2asci(result[20]) +
                 hex2asci(result[21]) +
                 hex2asci(result[22]) +
@@ -5629,7 +5774,7 @@ function entrata() {
                 hex2asci(result[33]) +
                 hex2asci(result[34]) +
                 hex2asci(result[35]);
-              var nomeZona59 =
+              nomeZona59 =
                 hex2asci(result[36]) +
                 hex2asci(result[37]) +
                 hex2asci(result[38]) +
@@ -5646,7 +5791,7 @@ function entrata() {
                 hex2asci(result[49]) +
                 hex2asci(result[50]) +
                 hex2asci(result[51]);
-              var nomeZona60 =
+              nomeZona60 =
                 hex2asci(result[52]) +
                 hex2asci(result[53]) +
                 hex2asci(result[54]) +
@@ -5663,7 +5808,7 @@ function entrata() {
                 hex2asci(result[65]) +
                 hex2asci(result[66]) +
                 hex2asci(result[67]);
-              var nomeZona61 =
+              nomeZona61 =
                 hex2asci(result[68]) +
                 hex2asci(result[69]) +
                 hex2asci(result[70]) +
@@ -5680,7 +5825,7 @@ function entrata() {
                 hex2asci(result[81]) +
                 hex2asci(result[82]) +
                 hex2asci(result[83]);
-              var nomeZona62 =
+              nomeZona62 =
                 hex2asci(result[84]) +
                 hex2asci(result[85]) +
                 hex2asci(result[86]) +
@@ -5697,7 +5842,7 @@ function entrata() {
                 hex2asci(result[97]) +
                 hex2asci(result[98]) +
                 hex2asci(result[99]);
-              var nomeZona63 =
+              nomeZona63 =
                 hex2asci(result[100]) +
                 hex2asci(result[101]) +
                 hex2asci(result[102]) +
@@ -5714,7 +5859,7 @@ function entrata() {
                 hex2asci(result[113]) +
                 hex2asci(result[114]) +
                 hex2asci(result[115]);
-              var nomeZona64 =
+              nomeZona64 =
                 hex2asci(result[116]) +
                 hex2asci(result[117]) +
                 hex2asci(result[118]) +
@@ -5731,6 +5876,14 @@ function entrata() {
                 hex2asci(result[129]) +
                 hex2asci(result[130]) +
                 hex2asci(result[131]);
+              nomeZona57 = nomeZona57.replace(/ÿ/g, "");
+              nomeZona58 = nomeZona58.replace(/ÿ/g, "");
+              nomeZona59 = nomeZona59.replace(/ÿ/g, "");
+              nomeZona60 = nomeZona60.replace(/ÿ/g, "");
+              nomeZona61 = nomeZona61.replace(/ÿ/g, "");
+              nomeZona62 = nomeZona62.replace(/ÿ/g, "");
+              nomeZona63 = nomeZona63.replace(/ÿ/g, "");
+              nomeZona63 = nomeZona64.replace(/ÿ/g, "");
             }
 
             function riempiEsito(
