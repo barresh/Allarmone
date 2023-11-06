@@ -2010,106 +2010,106 @@ function entrata() {
                       break;
                   }
                   if (appoggino == 1) {
-                    switch (hexToDecimal(dato6)) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
                       case 0:
-                        riferimento = nomeUtenteTastiera1;
+                        sestaColonna = nomeUtenteTastiera1;
                         break;
                       case 1:
-                        riferimento = nomeUtenteTastiera2;
+                        sestaColonna = nomeUtenteTastiera2;
                         break;
                       case 2:
-                        riferimento = nomeUtenteTastiera3;
+                        sestaColonna = nomeUtenteTastiera3;
                         break;
                       case 3:
-                        riferimento = nomeUtenteTastiera4;
+                        sestaColonna = nomeUtenteTastiera4;
                         break;
                       case 4:
-                        riferimento = nomeUtenteTastiera5;
+                        sestaColonna = nomeUtenteTastiera5;
                         break;
                       case 5:
-                        riferimento = nomeUtenteTastiera6;
+                        sestaColonna = nomeUtenteTastiera6;
                         break;
                       case 6:
-                        riferimento = nomeUtenteTastiera7;
+                        sestaColonna = nomeUtenteTastiera7;
                         break;
                       case 7:
-                        riferimento = nomeUtenteTastiera8;
+                        sestaColonna = nomeUtenteTastiera8;
                         break;
                       case 8:
-                        riferimento = nomeUtenteTastiera9;
+                        sestaColonna = nomeUtenteTastiera9;
                         break;
                       case 9:
-                        riferimento = nomeUtenteTastiera10;
+                        sestaColonna = nomeUtenteTastiera10;
                         break;
                       case 10:
-                        riferimento = nomeUtenteTastiera11;
+                        sestaColonna = nomeUtenteTastiera11;
                         break;
                       case 11:
-                        riferimento = nomeUtenteTastiera12;
+                        sestaColonna = nomeUtenteTastiera12;
                         break;
                       case 12:
-                        riferimento = nomeUtenteTastiera13;
+                        sestaColonna = nomeUtenteTastiera13;
                         break;
                       case 13:
-                        riferimento = nomeUtenteTastiera14;
+                        sestaColonna = nomeUtenteTastiera14;
                         break;
                       case 14:
-                        riferimento = nomeUtenteTastiera15;
+                        sestaColonna = nomeUtenteTastiera15;
                         break;
                       case 15:
-                        riferimento = nomeUtenteTastiera16;
+                        sestaColonna = nomeUtenteTastiera16;
                         break;
                     }
                   }
                   if (appoggino == 2) {
-                    switch (hexToDecimal(dato6)) {
+                    switch (hexToDecimal(dato6.slice(4, 8))) {
                       case 0:
-                        riferimento = nomeUtenteSpinotto1;
+                        sestaColonna = nomeUtenteSpinotto1;
                         break;
                       case 1:
-                        riferimento = nomeUtenteSpinotto2;
+                        sestaColonna = nomeUtenteSpinotto2;
                         break;
                       case 2:
-                        riferimento = nomeUtenteSpinotto3;
+                        sestaColonna = nomeUtenteSpinotto3;
                         break;
                       case 3:
-                        riferimento = nomeUtenteSpinotto4;
+                        sestaColonna = nomeUtenteSpinotto4;
                         break;
                       case 4:
-                        riferimento = nomeUtenteSpinotto5;
+                        sestaColonna = nomeUtenteSpinotto5;
                         break;
                       case 5:
-                        riferimento = nomeUtenteSpinotto6;
+                        sestaColonna = nomeUtenteSpinotto6;
                         break;
                       case 6:
-                        riferimento = nomeUtenteSpinotto7;
+                        sestaColonna = nomeUtenteSpinotto7;
                         break;
                       case 7:
-                        riferimento = nomeUtenteSpinotto8;
+                        sestaColonna = nomeUtenteSpinotto8;
                         break;
                       case 8:
-                        riferimento = nomeUtenteSpinotto9;
+                        sestaColonna = nomeUtenteSpinotto9;
                         break;
                       case 9:
-                        riferimento = nomeUtenteSpinotto10;
+                        sestaColonna = nomeUtenteSpinotto10;
                         break;
                       case 10:
-                        riferimento = nomeUtenteSpinotto11;
+                        sestaColonna = nomeUtenteSpinotto11;
                         break;
                       case 11:
-                        riferimento = nomeUtenteSpinotto12;
+                        sestaColonna = nomeUtenteSpinotto12;
                         break;
                       case 12:
-                        riferimento = nomeUtenteSpinotto13;
+                        sestaColonna = nomeUtenteSpinotto13;
                         break;
                       case 13:
-                        riferimento = nomeUtenteSpinotto14;
+                        sestaColonna = nomeUtenteSpinotto14;
                         break;
                       case 14:
-                        riferimento = nomeUtenteSpinotto15;
+                        sestaColonna = nomeUtenteSpinotto15;
                         break;
                       case 15:
-                        riferimento = nomeUtenteSpinotto16;
+                        sestaColonna = nomeUtenteSpinotto16;
                         break;
                     }
                   }
