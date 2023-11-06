@@ -1994,21 +1994,125 @@ function entrata() {
                   sestaColonna = "";
                   evento = "Inserimento aree";
                   riferimento = "";
+                  var appoggino;
                   switch (dato6.slice(0, 4)) {
                     case "0010":
-                      sestaColonna = "Codice:";
+                      appoggino = 1;
                       break;
                     case "0100":
-                      sestaColonna = "Spinotto:";
+                      appoggino = 2;
                       break;
                     case "0110":
-                      sestaColonna = "Comunicatore:";
+                      appoggino = 3;
                       break;
                     case "1000":
-                      sestaColonna = "Chiave esterna:";
+                      appoggino = 4;
                       break;
                   }
-                  sestaColonna = sestaColonna + dato6.slice(4, 8);
+                  if (appoggino == 1) {
+                    switch (hexToDecimal(dato6)) {
+                      case 0:
+                        riferimento = nomeUtenteTastiera1;
+                        break;
+                      case 1:
+                        riferimento = nomeUtenteTastiera2;
+                        break;
+                      case 2:
+                        riferimento = nomeUtenteTastiera3;
+                        break;
+                      case 3:
+                        riferimento = nomeUtenteTastiera4;
+                        break;
+                      case 4:
+                        riferimento = nomeUtenteTastiera5;
+                        break;
+                      case 5:
+                        riferimento = nomeUtenteTastiera6;
+                        break;
+                      case 6:
+                        riferimento = nomeUtenteTastiera7;
+                        break;
+                      case 7:
+                        riferimento = nomeUtenteTastiera8;
+                        break;
+                      case 8:
+                        riferimento = nomeUtenteTastiera9;
+                        break;
+                      case 9:
+                        riferimento = nomeUtenteTastiera10;
+                        break;
+                      case 10:
+                        riferimento = nomeUtenteTastiera11;
+                        break;
+                      case 11:
+                        riferimento = nomeUtenteTastiera12;
+                        break;
+                      case 12:
+                        riferimento = nomeUtenteTastiera13;
+                        break;
+                      case 13:
+                        riferimento = nomeUtenteTastiera14;
+                        break;
+                      case 14:
+                        riferimento = nomeUtenteTastiera15;
+                        break;
+                      case 15:
+                        riferimento = nomeUtenteTastiera16;
+                        break;
+                    }
+                  }
+                  if (appoggino == 2) {
+                    switch (hexToDecimal(dato6)) {
+                      case 0:
+                        riferimento = nomeUtenteSpinotto1;
+                        break;
+                      case 1:
+                        riferimento = nomeUtenteSpinotto2;
+                        break;
+                      case 2:
+                        riferimento = nomeUtenteSpinotto3;
+                        break;
+                      case 3:
+                        riferimento = nomeUtenteSpinotto4;
+                        break;
+                      case 4:
+                        riferimento = nomeUtenteSpinotto5;
+                        break;
+                      case 5:
+                        riferimento = nomeUtenteSpinotto6;
+                        break;
+                      case 6:
+                        riferimento = nomeUtenteSpinotto7;
+                        break;
+                      case 7:
+                        riferimento = nomeUtenteSpinotto8;
+                        break;
+                      case 8:
+                        riferimento = nomeUtenteSpinotto9;
+                        break;
+                      case 9:
+                        riferimento = nomeUtenteSpinotto10;
+                        break;
+                      case 10:
+                        riferimento = nomeUtenteSpinotto11;
+                        break;
+                      case 11:
+                        riferimento = nomeUtenteSpinotto12;
+                        break;
+                      case 12:
+                        riferimento = nomeUtenteSpinotto13;
+                        break;
+                      case 13:
+                        riferimento = nomeUtenteSpinotto14;
+                        break;
+                      case 14:
+                        riferimento = nomeUtenteSpinotto15;
+                        break;
+                      case 15:
+                        riferimento = nomeUtenteSpinotto16;
+                        break;
+                    }
+                  }
                   if (dato8.slice(7, 8) == "1") {
                     riferimento = riferimento + nomeAreaA + " ";
                   }
