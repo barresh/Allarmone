@@ -1764,6 +1764,174 @@ function entrata() {
                     case 8:
                       riferimento = riferimento + nomeZona8 + " ";
                       break;
+                    case 9:
+                      riferimento = riferimento + nomeZona9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeZona10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeZona11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeZona12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeZona13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeZona14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeZona15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeZona16 + " ";
+                      break;
+                    case 17:
+                      riferimento = riferimento + nomeZona17 + " ";
+                      break;
+                    case 18:
+                      riferimento = riferimento + nomeZona18 + " ";
+                      break;
+                    case 19:
+                      riferimento = riferimento + nomeZona19 + " ";
+                      break;
+                    case 20:
+                      riferimento = riferimento + nomeZona20 + " ";
+                      break;
+                    case 21:
+                      riferimento = riferimento + nomeZona21 + " ";
+                      break;
+                    case 22:
+                      riferimento = riferimento + nomeZona22 + " ";
+                      break;
+                    case 23:
+                      riferimento = riferimento + nomeZona23 + " ";
+                      break;
+                    case 24:
+                      riferimento = riferimento + nomeZona24 + " ";
+                      break;
+                    case 25:
+                      riferimento = riferimento + nomeZona25 + " ";
+                      break;
+                    case 26:
+                      riferimento = riferimento + nomeZona26 + " ";
+                      break;
+                    case 27:
+                      riferimento = riferimento + nomeZona27 + " ";
+                      break;
+                    case 28:
+                      riferimento = riferimento + nomeZona28 + " ";
+                      break;
+                    case 29:
+                      riferimento = riferimento + nomeZona29 + " ";
+                      break;
+                    case 30:
+                      riferimento = riferimento + nomeZona30 + " ";
+                      break;
+                    case 31:
+                      riferimento = riferimento + nomeZona31 + " ";
+                      break;
+                    case 32:
+                      riferimento = riferimento + nomeZona32 + " ";
+                      break;
+                    case 33:
+                      riferimento = riferimento + nomeZona33 + " ";
+                      break;
+                    case 34:
+                      riferimento = riferimento + nomeZona34 + " ";
+                      break;
+                    case 35:
+                      riferimento = riferimento + nomeZona35 + " ";
+                      break;
+                    case 36:
+                      riferimento = riferimento + nomeZona36 + " ";
+                      break;
+                    case 37:
+                      riferimento = riferimento + nomeZona37 + " ";
+                      break;
+                    case 38:
+                      riferimento = riferimento + nomeZona38 + " ";
+                      break;
+                    case 39:
+                      riferimento = riferimento + nomeZona39 + " ";
+                      break;
+                    case 40:
+                      riferimento = riferimento + nomeZona40 + " ";
+                      break;
+                    case 41:
+                      riferimento = riferimento + nomeZona41 + " ";
+                      break;
+                    case 42:
+                      riferimento = riferimento + nomeZona42 + " ";
+                      break;
+                    case 43:
+                      riferimento = riferimento + nomeZona43 + " ";
+                      break;
+                    case 44:
+                      riferimento = riferimento + nomeZona44 + " ";
+                      break;
+                    case 45:
+                      riferimento = riferimento + nomeZona45 + " ";
+                      break;
+                    case 46:
+                      riferimento = riferimento + nomeZona46 + " ";
+                      break;
+                    case 47:
+                      riferimento = riferimento + nomeZona47 + " ";
+                      break;
+                    case 48:
+                      riferimento = riferimento + nomeZona48 + " ";
+                      break;
+                    case 49:
+                      riferimento = riferimento + nomeZona49 + " ";
+                      break;
+                    case 50:
+                      riferimento = riferimento + nomeZona50 + " ";
+                      break;
+                    case 51:
+                      riferimento = riferimento + nomeZona51 + " ";
+                      break;
+                    case 52:
+                      riferimento = riferimento + nomeZona52 + " ";
+                      break;
+                    case 53:
+                      riferimento = riferimento + nomeZona53 + " ";
+                      break;
+                    case 54:
+                      riferimento = riferimento + nomeZona54 + " ";
+                      break;
+                    case 55:
+                      riferimento = riferimento + nomeZona55 + " ";
+                      break;
+                    case 56:
+                      riferimento = riferimento + nomeZona56 + " ";
+                      break;
+                    case 57:
+                      riferimento = riferimento + nomeZona57 + " ";
+                      break;
+                    case 58:
+                      riferimento = riferimento + nomeZona58 + " ";
+                      break;
+                    case 59:
+                      riferimento = riferimento + nomeZona59 + " ";
+                      break;
+                    case 60:
+                      riferimento = riferimento + nomeZona60 + " ";
+                      break;
+                    case 61:
+                      riferimento = riferimento + nomeZona61 + " ";
+                      break;
+                    case 62:
+                      riferimento = riferimento + nomeZona62 + " ";
+                      break;
+                    case 63:
+                      riferimento = riferimento + nomeZona63 + " ";
+                      break;
+                    case 64:
+                      riferimento = riferimento + nomeZona64 + " ";
+                      break;
                   }
                   break;
                 case "01":
@@ -1827,6 +1995,174 @@ function entrata() {
                     case 8:
                       riferimento = riferimento + nomeZona8 + " ";
                       break;
+                    case 9:
+                      riferimento = riferimento + nomeZona9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeZona10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeZona11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeZona12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeZona13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeZona14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeZona15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeZona16 + " ";
+                      break;
+                    case 17:
+                      riferimento = riferimento + nomeZona17 + " ";
+                      break;
+                    case 18:
+                      riferimento = riferimento + nomeZona18 + " ";
+                      break;
+                    case 19:
+                      riferimento = riferimento + nomeZona19 + " ";
+                      break;
+                    case 20:
+                      riferimento = riferimento + nomeZona20 + " ";
+                      break;
+                    case 21:
+                      riferimento = riferimento + nomeZona21 + " ";
+                      break;
+                    case 22:
+                      riferimento = riferimento + nomeZona22 + " ";
+                      break;
+                    case 23:
+                      riferimento = riferimento + nomeZona23 + " ";
+                      break;
+                    case 24:
+                      riferimento = riferimento + nomeZona24 + " ";
+                      break;
+                    case 25:
+                      riferimento = riferimento + nomeZona25 + " ";
+                      break;
+                    case 26:
+                      riferimento = riferimento + nomeZona26 + " ";
+                      break;
+                    case 27:
+                      riferimento = riferimento + nomeZona27 + " ";
+                      break;
+                    case 28:
+                      riferimento = riferimento + nomeZona28 + " ";
+                      break;
+                    case 29:
+                      riferimento = riferimento + nomeZona29 + " ";
+                      break;
+                    case 30:
+                      riferimento = riferimento + nomeZona30 + " ";
+                      break;
+                    case 31:
+                      riferimento = riferimento + nomeZona31 + " ";
+                      break;
+                    case 32:
+                      riferimento = riferimento + nomeZona32 + " ";
+                      break;
+                    case 33:
+                      riferimento = riferimento + nomeZona33 + " ";
+                      break;
+                    case 34:
+                      riferimento = riferimento + nomeZona34 + " ";
+                      break;
+                    case 35:
+                      riferimento = riferimento + nomeZona35 + " ";
+                      break;
+                    case 36:
+                      riferimento = riferimento + nomeZona36 + " ";
+                      break;
+                    case 37:
+                      riferimento = riferimento + nomeZona37 + " ";
+                      break;
+                    case 38:
+                      riferimento = riferimento + nomeZona38 + " ";
+                      break;
+                    case 39:
+                      riferimento = riferimento + nomeZona39 + " ";
+                      break;
+                    case 40:
+                      riferimento = riferimento + nomeZona40 + " ";
+                      break;
+                    case 41:
+                      riferimento = riferimento + nomeZona41 + " ";
+                      break;
+                    case 42:
+                      riferimento = riferimento + nomeZona42 + " ";
+                      break;
+                    case 43:
+                      riferimento = riferimento + nomeZona43 + " ";
+                      break;
+                    case 44:
+                      riferimento = riferimento + nomeZona44 + " ";
+                      break;
+                    case 45:
+                      riferimento = riferimento + nomeZona45 + " ";
+                      break;
+                    case 46:
+                      riferimento = riferimento + nomeZona46 + " ";
+                      break;
+                    case 47:
+                      riferimento = riferimento + nomeZona47 + " ";
+                      break;
+                    case 48:
+                      riferimento = riferimento + nomeZona48 + " ";
+                      break;
+                    case 49:
+                      riferimento = riferimento + nomeZona49 + " ";
+                      break;
+                    case 50:
+                      riferimento = riferimento + nomeZona50 + " ";
+                      break;
+                    case 51:
+                      riferimento = riferimento + nomeZona51 + " ";
+                      break;
+                    case 52:
+                      riferimento = riferimento + nomeZona52 + " ";
+                      break;
+                    case 53:
+                      riferimento = riferimento + nomeZona53 + " ";
+                      break;
+                    case 54:
+                      riferimento = riferimento + nomeZona54 + " ";
+                      break;
+                    case 55:
+                      riferimento = riferimento + nomeZona55 + " ";
+                      break;
+                    case 56:
+                      riferimento = riferimento + nomeZona56 + " ";
+                      break;
+                    case 57:
+                      riferimento = riferimento + nomeZona57 + " ";
+                      break;
+                    case 58:
+                      riferimento = riferimento + nomeZona58 + " ";
+                      break;
+                    case 59:
+                      riferimento = riferimento + nomeZona59 + " ";
+                      break;
+                    case 60:
+                      riferimento = riferimento + nomeZona60 + " ";
+                      break;
+                    case 61:
+                      riferimento = riferimento + nomeZona61 + " ";
+                      break;
+                    case 62:
+                      riferimento = riferimento + nomeZona62 + " ";
+                      break;
+                    case 63:
+                      riferimento = riferimento + nomeZona63 + " ";
+                      break;
+                    case 64:
+                      riferimento = riferimento + nomeZona64 + " ";
+                      break;
                   }
                   break;
                 case "04":
@@ -1858,11 +2194,205 @@ function entrata() {
                     case 8:
                       riferimento = riferimento + nomeZona8 + " ";
                       break;
+                    case 9:
+                      riferimento = riferimento + nomeZona9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeZona10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeZona11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeZona12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeZona13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeZona14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeZona15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeZona16 + " ";
+                      break;
+                    case 17:
+                      riferimento = riferimento + nomeZona17 + " ";
+                      break;
+                    case 18:
+                      riferimento = riferimento + nomeZona18 + " ";
+                      break;
+                    case 19:
+                      riferimento = riferimento + nomeZona19 + " ";
+                      break;
+                    case 20:
+                      riferimento = riferimento + nomeZona20 + " ";
+                      break;
+                    case 21:
+                      riferimento = riferimento + nomeZona21 + " ";
+                      break;
+                    case 22:
+                      riferimento = riferimento + nomeZona22 + " ";
+                      break;
+                    case 23:
+                      riferimento = riferimento + nomeZona23 + " ";
+                      break;
+                    case 24:
+                      riferimento = riferimento + nomeZona24 + " ";
+                      break;
+                    case 25:
+                      riferimento = riferimento + nomeZona25 + " ";
+                      break;
+                    case 26:
+                      riferimento = riferimento + nomeZona26 + " ";
+                      break;
+                    case 27:
+                      riferimento = riferimento + nomeZona27 + " ";
+                      break;
+                    case 28:
+                      riferimento = riferimento + nomeZona28 + " ";
+                      break;
+                    case 29:
+                      riferimento = riferimento + nomeZona29 + " ";
+                      break;
+                    case 30:
+                      riferimento = riferimento + nomeZona30 + " ";
+                      break;
+                    case 31:
+                      riferimento = riferimento + nomeZona31 + " ";
+                      break;
+                    case 32:
+                      riferimento = riferimento + nomeZona32 + " ";
+                      break;
+                    case 33:
+                      riferimento = riferimento + nomeZona33 + " ";
+                      break;
+                    case 34:
+                      riferimento = riferimento + nomeZona34 + " ";
+                      break;
+                    case 35:
+                      riferimento = riferimento + nomeZona35 + " ";
+                      break;
+                    case 36:
+                      riferimento = riferimento + nomeZona36 + " ";
+                      break;
+                    case 37:
+                      riferimento = riferimento + nomeZona37 + " ";
+                      break;
+                    case 38:
+                      riferimento = riferimento + nomeZona38 + " ";
+                      break;
+                    case 39:
+                      riferimento = riferimento + nomeZona39 + " ";
+                      break;
+                    case 40:
+                      riferimento = riferimento + nomeZona40 + " ";
+                      break;
+                    case 41:
+                      riferimento = riferimento + nomeZona41 + " ";
+                      break;
+                    case 42:
+                      riferimento = riferimento + nomeZona42 + " ";
+                      break;
+                    case 43:
+                      riferimento = riferimento + nomeZona43 + " ";
+                      break;
+                    case 44:
+                      riferimento = riferimento + nomeZona44 + " ";
+                      break;
+                    case 45:
+                      riferimento = riferimento + nomeZona45 + " ";
+                      break;
+                    case 46:
+                      riferimento = riferimento + nomeZona46 + " ";
+                      break;
+                    case 47:
+                      riferimento = riferimento + nomeZona47 + " ";
+                      break;
+                    case 48:
+                      riferimento = riferimento + nomeZona48 + " ";
+                      break;
+                    case 49:
+                      riferimento = riferimento + nomeZona49 + " ";
+                      break;
+                    case 50:
+                      riferimento = riferimento + nomeZona50 + " ";
+                      break;
+                    case 51:
+                      riferimento = riferimento + nomeZona51 + " ";
+                      break;
+                    case 52:
+                      riferimento = riferimento + nomeZona52 + " ";
+                      break;
+                    case 53:
+                      riferimento = riferimento + nomeZona53 + " ";
+                      break;
+                    case 54:
+                      riferimento = riferimento + nomeZona54 + " ";
+                      break;
+                    case 55:
+                      riferimento = riferimento + nomeZona55 + " ";
+                      break;
+                    case 56:
+                      riferimento = riferimento + nomeZona56 + " ";
+                      break;
+                    case 57:
+                      riferimento = riferimento + nomeZona57 + " ";
+                      break;
+                    case 58:
+                      riferimento = riferimento + nomeZona58 + " ";
+                      break;
+                    case 59:
+                      riferimento = riferimento + nomeZona59 + " ";
+                      break;
+                    case 60:
+                      riferimento = riferimento + nomeZona60 + " ";
+                      break;
+                    case 61:
+                      riferimento = riferimento + nomeZona61 + " ";
+                      break;
+                    case 62:
+                      riferimento = riferimento + nomeZona62 + " ";
+                      break;
+                    case 63:
+                      riferimento = riferimento + nomeZona63 + " ";
+                      break;
+                    case 64:
+                      riferimento = riferimento + nomeZona64 + " ";
+                      break;
                   }
                   break;
                 case "05":
                   evento = "Reset allarme";
-                  riferimento = estraiDati(hex2bin(dato8), 4, 8);
+                  riferimento = "";
+                  if (dato8.slice(1, 2) == "1") {
+                    riferimento =
+                      riferimento + "Reset di allami sabotaggio" + " ";
+                  }
+                  if (dato8.slice(2, 3) == "1") {
+                    riferimento =
+                      riferimento + "Reset di condizione rapina" + " ";
+                  }
+                  if (dato8.slice(3, 4) == "1") {
+                    riferimento =
+                      riferimento +
+                      "Reset di condizione preallarme rapina" +
+                      " ";
+                  }
+                  if (dato8.slice(7, 8) == "1") {
+                    riferimento = riferimento + nomeAreaA + " ";
+                  }
+                  if (dato8.slice(6, 7) == "1") {
+                    riferimento = riferimento + nomeAreaB + " ";
+                  }
+                  if (dato8.slice(5, 6) == "1") {
+                    riferimento = riferimento + nomeAreaC + " ";
+                  }
+                  if (dato8.slice(4, 5) == "1") {
+                    riferimento = riferimento + nomeAreaD + " ";
+                  }
                   break;
                 case "06":
                   evento = "Aggiunta memoria allarme zona";
@@ -1892,6 +2422,174 @@ function entrata() {
                       break;
                     case 8:
                       riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                    case 9:
+                      riferimento = riferimento + nomeZona9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeZona10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeZona11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeZona12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeZona13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeZona14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeZona15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeZona16 + " ";
+                      break;
+                    case 17:
+                      riferimento = riferimento + nomeZona17 + " ";
+                      break;
+                    case 18:
+                      riferimento = riferimento + nomeZona18 + " ";
+                      break;
+                    case 19:
+                      riferimento = riferimento + nomeZona19 + " ";
+                      break;
+                    case 20:
+                      riferimento = riferimento + nomeZona20 + " ";
+                      break;
+                    case 21:
+                      riferimento = riferimento + nomeZona21 + " ";
+                      break;
+                    case 22:
+                      riferimento = riferimento + nomeZona22 + " ";
+                      break;
+                    case 23:
+                      riferimento = riferimento + nomeZona23 + " ";
+                      break;
+                    case 24:
+                      riferimento = riferimento + nomeZona24 + " ";
+                      break;
+                    case 25:
+                      riferimento = riferimento + nomeZona25 + " ";
+                      break;
+                    case 26:
+                      riferimento = riferimento + nomeZona26 + " ";
+                      break;
+                    case 27:
+                      riferimento = riferimento + nomeZona27 + " ";
+                      break;
+                    case 28:
+                      riferimento = riferimento + nomeZona28 + " ";
+                      break;
+                    case 29:
+                      riferimento = riferimento + nomeZona29 + " ";
+                      break;
+                    case 30:
+                      riferimento = riferimento + nomeZona30 + " ";
+                      break;
+                    case 31:
+                      riferimento = riferimento + nomeZona31 + " ";
+                      break;
+                    case 32:
+                      riferimento = riferimento + nomeZona32 + " ";
+                      break;
+                    case 33:
+                      riferimento = riferimento + nomeZona33 + " ";
+                      break;
+                    case 34:
+                      riferimento = riferimento + nomeZona34 + " ";
+                      break;
+                    case 35:
+                      riferimento = riferimento + nomeZona35 + " ";
+                      break;
+                    case 36:
+                      riferimento = riferimento + nomeZona36 + " ";
+                      break;
+                    case 37:
+                      riferimento = riferimento + nomeZona37 + " ";
+                      break;
+                    case 38:
+                      riferimento = riferimento + nomeZona38 + " ";
+                      break;
+                    case 39:
+                      riferimento = riferimento + nomeZona39 + " ";
+                      break;
+                    case 40:
+                      riferimento = riferimento + nomeZona40 + " ";
+                      break;
+                    case 41:
+                      riferimento = riferimento + nomeZona41 + " ";
+                      break;
+                    case 42:
+                      riferimento = riferimento + nomeZona42 + " ";
+                      break;
+                    case 43:
+                      riferimento = riferimento + nomeZona43 + " ";
+                      break;
+                    case 44:
+                      riferimento = riferimento + nomeZona44 + " ";
+                      break;
+                    case 45:
+                      riferimento = riferimento + nomeZona45 + " ";
+                      break;
+                    case 46:
+                      riferimento = riferimento + nomeZona46 + " ";
+                      break;
+                    case 47:
+                      riferimento = riferimento + nomeZona47 + " ";
+                      break;
+                    case 48:
+                      riferimento = riferimento + nomeZona48 + " ";
+                      break;
+                    case 49:
+                      riferimento = riferimento + nomeZona49 + " ";
+                      break;
+                    case 50:
+                      riferimento = riferimento + nomeZona50 + " ";
+                      break;
+                    case 51:
+                      riferimento = riferimento + nomeZona51 + " ";
+                      break;
+                    case 52:
+                      riferimento = riferimento + nomeZona52 + " ";
+                      break;
+                    case 53:
+                      riferimento = riferimento + nomeZona53 + " ";
+                      break;
+                    case 54:
+                      riferimento = riferimento + nomeZona54 + " ";
+                      break;
+                    case 55:
+                      riferimento = riferimento + nomeZona55 + " ";
+                      break;
+                    case 56:
+                      riferimento = riferimento + nomeZona56 + " ";
+                      break;
+                    case 57:
+                      riferimento = riferimento + nomeZona57 + " ";
+                      break;
+                    case 58:
+                      riferimento = riferimento + nomeZona58 + " ";
+                      break;
+                    case 59:
+                      riferimento = riferimento + nomeZona59 + " ";
+                      break;
+                    case 60:
+                      riferimento = riferimento + nomeZona60 + " ";
+                      break;
+                    case 61:
+                      riferimento = riferimento + nomeZona61 + " ";
+                      break;
+                    case 62:
+                      riferimento = riferimento + nomeZona62 + " ";
+                      break;
+                    case 63:
+                      riferimento = riferimento + nomeZona63 + " ";
+                      break;
+                    case 64:
+                      riferimento = riferimento + nomeZona64 + " ";
                       break;
                   }
                   break;
@@ -1924,6 +2622,174 @@ function entrata() {
                     case 8:
                       riferimento = riferimento + nomeZona8 + " ";
                       break;
+                    case 9:
+                      riferimento = riferimento + nomeZona9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeZona10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeZona11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeZona12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeZona13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeZona14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeZona15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeZona16 + " ";
+                      break;
+                    case 17:
+                      riferimento = riferimento + nomeZona17 + " ";
+                      break;
+                    case 18:
+                      riferimento = riferimento + nomeZona18 + " ";
+                      break;
+                    case 19:
+                      riferimento = riferimento + nomeZona19 + " ";
+                      break;
+                    case 20:
+                      riferimento = riferimento + nomeZona20 + " ";
+                      break;
+                    case 21:
+                      riferimento = riferimento + nomeZona21 + " ";
+                      break;
+                    case 22:
+                      riferimento = riferimento + nomeZona22 + " ";
+                      break;
+                    case 23:
+                      riferimento = riferimento + nomeZona23 + " ";
+                      break;
+                    case 24:
+                      riferimento = riferimento + nomeZona24 + " ";
+                      break;
+                    case 25:
+                      riferimento = riferimento + nomeZona25 + " ";
+                      break;
+                    case 26:
+                      riferimento = riferimento + nomeZona26 + " ";
+                      break;
+                    case 27:
+                      riferimento = riferimento + nomeZona27 + " ";
+                      break;
+                    case 28:
+                      riferimento = riferimento + nomeZona28 + " ";
+                      break;
+                    case 29:
+                      riferimento = riferimento + nomeZona29 + " ";
+                      break;
+                    case 30:
+                      riferimento = riferimento + nomeZona30 + " ";
+                      break;
+                    case 31:
+                      riferimento = riferimento + nomeZona31 + " ";
+                      break;
+                    case 32:
+                      riferimento = riferimento + nomeZona32 + " ";
+                      break;
+                    case 33:
+                      riferimento = riferimento + nomeZona33 + " ";
+                      break;
+                    case 34:
+                      riferimento = riferimento + nomeZona34 + " ";
+                      break;
+                    case 35:
+                      riferimento = riferimento + nomeZona35 + " ";
+                      break;
+                    case 36:
+                      riferimento = riferimento + nomeZona36 + " ";
+                      break;
+                    case 37:
+                      riferimento = riferimento + nomeZona37 + " ";
+                      break;
+                    case 38:
+                      riferimento = riferimento + nomeZona38 + " ";
+                      break;
+                    case 39:
+                      riferimento = riferimento + nomeZona39 + " ";
+                      break;
+                    case 40:
+                      riferimento = riferimento + nomeZona40 + " ";
+                      break;
+                    case 41:
+                      riferimento = riferimento + nomeZona41 + " ";
+                      break;
+                    case 42:
+                      riferimento = riferimento + nomeZona42 + " ";
+                      break;
+                    case 43:
+                      riferimento = riferimento + nomeZona43 + " ";
+                      break;
+                    case 44:
+                      riferimento = riferimento + nomeZona44 + " ";
+                      break;
+                    case 45:
+                      riferimento = riferimento + nomeZona45 + " ";
+                      break;
+                    case 46:
+                      riferimento = riferimento + nomeZona46 + " ";
+                      break;
+                    case 47:
+                      riferimento = riferimento + nomeZona47 + " ";
+                      break;
+                    case 48:
+                      riferimento = riferimento + nomeZona48 + " ";
+                      break;
+                    case 49:
+                      riferimento = riferimento + nomeZona49 + " ";
+                      break;
+                    case 50:
+                      riferimento = riferimento + nomeZona50 + " ";
+                      break;
+                    case 51:
+                      riferimento = riferimento + nomeZona51 + " ";
+                      break;
+                    case 52:
+                      riferimento = riferimento + nomeZona52 + " ";
+                      break;
+                    case 53:
+                      riferimento = riferimento + nomeZona53 + " ";
+                      break;
+                    case 54:
+                      riferimento = riferimento + nomeZona54 + " ";
+                      break;
+                    case 55:
+                      riferimento = riferimento + nomeZona55 + " ";
+                      break;
+                    case 56:
+                      riferimento = riferimento + nomeZona56 + " ";
+                      break;
+                    case 57:
+                      riferimento = riferimento + nomeZona57 + " ";
+                      break;
+                    case 58:
+                      riferimento = riferimento + nomeZona58 + " ";
+                      break;
+                    case 59:
+                      riferimento = riferimento + nomeZona59 + " ";
+                      break;
+                    case 60:
+                      riferimento = riferimento + nomeZona60 + " ";
+                      break;
+                    case 61:
+                      riferimento = riferimento + nomeZona61 + " ";
+                      break;
+                    case 62:
+                      riferimento = riferimento + nomeZona62 + " ";
+                      break;
+                    case 63:
+                      riferimento = riferimento + nomeZona63 + " ";
+                      break;
+                    case 64:
+                      riferimento = riferimento + nomeZona64 + " ";
+                      break;
                   }
                   break;
                 case "08":
@@ -1954,6 +2820,174 @@ function entrata() {
                       break;
                     case 8:
                       riferimento = riferimento + nomeZona8 + " ";
+                      break;
+                    case 9:
+                      riferimento = riferimento + nomeZona9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeZona10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeZona11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeZona12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeZona13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeZona14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeZona15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeZona16 + " ";
+                      break;
+                    case 17:
+                      riferimento = riferimento + nomeZona17 + " ";
+                      break;
+                    case 18:
+                      riferimento = riferimento + nomeZona18 + " ";
+                      break;
+                    case 19:
+                      riferimento = riferimento + nomeZona19 + " ";
+                      break;
+                    case 20:
+                      riferimento = riferimento + nomeZona20 + " ";
+                      break;
+                    case 21:
+                      riferimento = riferimento + nomeZona21 + " ";
+                      break;
+                    case 22:
+                      riferimento = riferimento + nomeZona22 + " ";
+                      break;
+                    case 23:
+                      riferimento = riferimento + nomeZona23 + " ";
+                      break;
+                    case 24:
+                      riferimento = riferimento + nomeZona24 + " ";
+                      break;
+                    case 25:
+                      riferimento = riferimento + nomeZona25 + " ";
+                      break;
+                    case 26:
+                      riferimento = riferimento + nomeZona26 + " ";
+                      break;
+                    case 27:
+                      riferimento = riferimento + nomeZona27 + " ";
+                      break;
+                    case 28:
+                      riferimento = riferimento + nomeZona28 + " ";
+                      break;
+                    case 29:
+                      riferimento = riferimento + nomeZona29 + " ";
+                      break;
+                    case 30:
+                      riferimento = riferimento + nomeZona30 + " ";
+                      break;
+                    case 31:
+                      riferimento = riferimento + nomeZona31 + " ";
+                      break;
+                    case 32:
+                      riferimento = riferimento + nomeZona32 + " ";
+                      break;
+                    case 33:
+                      riferimento = riferimento + nomeZona33 + " ";
+                      break;
+                    case 34:
+                      riferimento = riferimento + nomeZona34 + " ";
+                      break;
+                    case 35:
+                      riferimento = riferimento + nomeZona35 + " ";
+                      break;
+                    case 36:
+                      riferimento = riferimento + nomeZona36 + " ";
+                      break;
+                    case 37:
+                      riferimento = riferimento + nomeZona37 + " ";
+                      break;
+                    case 38:
+                      riferimento = riferimento + nomeZona38 + " ";
+                      break;
+                    case 39:
+                      riferimento = riferimento + nomeZona39 + " ";
+                      break;
+                    case 40:
+                      riferimento = riferimento + nomeZona40 + " ";
+                      break;
+                    case 41:
+                      riferimento = riferimento + nomeZona41 + " ";
+                      break;
+                    case 42:
+                      riferimento = riferimento + nomeZona42 + " ";
+                      break;
+                    case 43:
+                      riferimento = riferimento + nomeZona43 + " ";
+                      break;
+                    case 44:
+                      riferimento = riferimento + nomeZona44 + " ";
+                      break;
+                    case 45:
+                      riferimento = riferimento + nomeZona45 + " ";
+                      break;
+                    case 46:
+                      riferimento = riferimento + nomeZona46 + " ";
+                      break;
+                    case 47:
+                      riferimento = riferimento + nomeZona47 + " ";
+                      break;
+                    case 48:
+                      riferimento = riferimento + nomeZona48 + " ";
+                      break;
+                    case 49:
+                      riferimento = riferimento + nomeZona49 + " ";
+                      break;
+                    case 50:
+                      riferimento = riferimento + nomeZona50 + " ";
+                      break;
+                    case 51:
+                      riferimento = riferimento + nomeZona51 + " ";
+                      break;
+                    case 52:
+                      riferimento = riferimento + nomeZona52 + " ";
+                      break;
+                    case 53:
+                      riferimento = riferimento + nomeZona53 + " ";
+                      break;
+                    case 54:
+                      riferimento = riferimento + nomeZona54 + " ";
+                      break;
+                    case 55:
+                      riferimento = riferimento + nomeZona55 + " ";
+                      break;
+                    case 56:
+                      riferimento = riferimento + nomeZona56 + " ";
+                      break;
+                    case 57:
+                      riferimento = riferimento + nomeZona57 + " ";
+                      break;
+                    case 58:
+                      riferimento = riferimento + nomeZona58 + " ";
+                      break;
+                    case 59:
+                      riferimento = riferimento + nomeZona59 + " ";
+                      break;
+                    case 60:
+                      riferimento = riferimento + nomeZona60 + " ";
+                      break;
+                    case 61:
+                      riferimento = riferimento + nomeZona61 + " ";
+                      break;
+                    case 62:
+                      riferimento = riferimento + nomeZona62 + " ";
+                      break;
+                    case 63:
+                      riferimento = riferimento + nomeZona63 + " ";
+                      break;
+                    case 64:
+                      riferimento = riferimento + nomeZona64 + " ";
                       break;
                   }
                   break;
@@ -1994,9 +3028,9 @@ function entrata() {
                     case "09":
                       evento = "Allarme jammer radio";
                       break;
-                    case "10":
+                    case "0A":
                       evento = "Allarme mascheramento zone radio";
-                      sestaColonna = binToDec(dato6);
+                      dato6;
                       break;
                   }
                 case "0A":
