@@ -3232,13 +3232,112 @@ function entrata() {
                   break;
                 case "0F":
                   evento = "Attivazione uscita";
-                  sestaColonna = binToDec(dato6);
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeUscita1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeUscita2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeUscita3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeUscita4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeUscita5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeUscita6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeUscita7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeUscita8 + " ";
+                      break;
+                    case 9:
+                      riferimento = riferimento + nomeUscita9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeUscita10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeUscita11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeUscita12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeUscita13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeUscita14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeUscita15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeUscita16 + " ";
+                      break;
+                  }
                   break;
+
                 case "10":
                   evento = "Disattivazione uscita";
-                  sestaColonna = binToDec(dato6);
-                  riferimento = binToDec(dato8);
+                  riferimento = "";
+                  switch (dato8) {
+                    case 1:
+                      riferimento = riferimento + nomeUscita1 + " ";
+                      break;
+                    case 2:
+                      riferimento = riferimento + nomeUscita2 + " ";
+                      break;
+                    case 3:
+                      riferimento = riferimento + nomeUscita3 + " ";
+                      break;
+                    case 4:
+                      riferimento = riferimento + nomeUscita4 + " ";
+                      break;
+                    case 5:
+                      riferimento = riferimento + nomeUscita5 + " ";
+                      break;
+                    case 6:
+                      riferimento = riferimento + nomeUscita6 + " ";
+                      break;
+                    case 7:
+                      riferimento = riferimento + nomeUscita7 + " ";
+                      break;
+                    case 8:
+                      riferimento = riferimento + nomeUscita8 + " ";
+                      break;
+                    case 9:
+                      riferimento = riferimento + nomeUscita9 + " ";
+                      break;
+                    case 10:
+                      riferimento = riferimento + nomeUscita10 + " ";
+                      break;
+                    case 11:
+                      riferimento = riferimento + nomeUscita11 + " ";
+                      break;
+                    case 12:
+                      riferimento = riferimento + nomeUscita12 + " ";
+                      break;
+                    case 13:
+                      riferimento = riferimento + nomeUscita13 + " ";
+                      break;
+                    case 14:
+                      riferimento = riferimento + nomeUscita14 + " ";
+                      break;
+                    case 15:
+                      riferimento = riferimento + nomeUscita15 + " ";
+                      break;
+                    case 16:
+                      riferimento = riferimento + nomeUscita16 + " ";
+                      break;
+                  }
                   break;
                 case "11":
                   switch (dato8) {
