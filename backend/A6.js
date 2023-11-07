@@ -1296,20 +1296,37 @@ function entrata() {
             var colonna4bin = hex2bin(colonna4);
             var colonna5 = bufferino.slice(8, 10);
             if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 3)) {
+              switch (colonna4bin.slice(0, 4)) {
                 case "0010":
-                  tipoutente = "codice";
+                  tipoutente = "Codice";
                 case "0100":
-                  tipoutente = "spinotto";
+                  tipoutente = "Spinotto";
                 case "0110":
-                  tipoutente = "comunicatore";
+                  tipoutente = "Comunicatore";
                 case "1000":
-                  tipoutente = "chiave esterna";
+                  tipoutente = "Chiave esterna";
               }
-              numeroutente = colonna4bin.slice(4, 7);
+              numeroutente = colonna4bin.slice(4, 8);
               console.log("utente:", tipoutente, numeroutente);
-              var uscita = colonna5;
-              console.log("uscita:", uscita);
+              var uscita = hexToDecimal(colonna5);
+              function riempiEsito(payload, tipoutente, numeroutente, uscita) {
+                return {
+                  payload: payload,
+                  tipoutente: tipoutente,
+                  numeroutente: numeroutente,
+                  uscita: uscita,
+                };
+              }
+              let esito = riempiEsito(
+                payload,
+                tipoutente,
+                numeroutente,
+                uscita
+              );
+              exports.esito = esito;
+              if (esito) {
+                server.mandaEsito();
+              }
             }
           }
           if (payload == "0F") {
@@ -1320,7 +1337,7 @@ function entrata() {
             var colonna4bin = hex2bin(colonna4);
             var colonna5 = bufferino.slice(8, 10);
             if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 3)) {
+              switch (colonna4bin.slice(0, 4)) {
                 case "0010":
                   tipoutente = "codice";
                 case "0100":
@@ -1330,10 +1347,27 @@ function entrata() {
                 case "1000":
                   tipoutente = "chiave esterna";
               }
-              numeroutente = colonna4bin.slice(4, 7);
+              numeroutente = colonna4bin.slice(4, 8);
               console.log("utente:", tipoutente, numeroutente);
-              var uscita = colonna5;
-              console.log("uscita:", uscita);
+              var uscita = hexToDecimal(colonna5);
+              function riempiEsito(payload, tipoutente, numeroutente, uscita) {
+                return {
+                  payload: payload,
+                  tipoutente: tipoutente,
+                  numeroutente: numeroutente,
+                  uscita: uscita,
+                };
+              }
+              let esito = riempiEsito(
+                payload,
+                tipoutente,
+                numeroutente,
+                uscita
+              );
+              exports.esito = esito;
+              if (esito) {
+                server.mandaEsito();
+              }
             }
           }
           if (payload == "10") {

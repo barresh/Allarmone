@@ -729,6 +729,48 @@ function invia() {
     richiediStringhe();
     exports.richiediStringhe = richiediStringhe;
   }
+  if (arrivo.paylaod == 0x0a) {
+    function attivaUscite() {
+      var attivazioneUscite = new Buffer(8);
+      attivazioneUscite[0] = mittente;
+      attivazioneUscite[1] = destinatario;
+      attivazioneUscite[2] = payload[9];
+      attivazioneUscite[3] = "0x" + arrivo.pin.slice(0, 2);
+      attivazioneUscite[4] = "0x" + arrivo.pin.slice(2, 4);
+      if (!!arrivo.pin.slice(4, 6)) {
+        attivazioneUscite[5] = "0x" + arrivo.pin.slice(4, 6);
+      } else {
+        attivazioneUscite[5] = 0xff;
+      }
+      attivazioneUscite[6] = arrivo.numeroUscita;
+      var sommaAttivazione = (
+        attivazioneUscite[0] +
+        attivazioneUscite[1] +
+        attivazioneUscite[2] +
+        attivazioneUscite[3] +
+        attivazioneUscite[4] +
+        attivazioneUscite[5] +
+        attivazioneUscite[6]
+      ).toString(16);
+      if (sommaAttivazione.length == 3) {
+        sommaAttivazione = sommaAttivazione.slice(1, 3);
+      }
+      attivazioneUscite[7] = "0x" + sommaAttivazione;
+      port.open(function (error) {
+        console.log("CST port open");
+        port.write(attivazioneUscite, function (err, result) {
+          if (err) {
+            console.log("Error while sending message : " + err);
+          }
+          if (result) {
+            console.log("Response received after sending message : " + result);
+          }
+        });
+      });
+      attivaUscite();
+      exports.attivaUscite = attivaUscite;
+    }
+  }
   if (arrivo.payload == 0x22) {
     function richiestaNumeroEventi() {
       var numeroEventi = new Buffer(4);
@@ -750,42 +792,6 @@ function invia() {
     }
     richiestaNumeroEventi();
     exports.richiestaNumeroEventi = richiestaNumeroEventi;
-  }
-  function includiamo() {
-    var inclusione = new Buffer(8);
-    inclusione[0] = mittente;
-    inclusione[1] = destinatario;
-    inclusione[2] = payload[3];
-    inclusione[3] = 0x12;
-    inclusione[4] = 0x34;
-
-    inclusione[5] = 0xff;
-
-    inclusione[6] = 0x01;
-    var sommaInclusione = (
-      inclusione[0] +
-      inclusione[1] +
-      inclusione[2] +
-      inclusione[3] +
-      inclusione[4] +
-      inclusione[5] +
-      inclusione[6]
-    ).toString(16);
-    if (sommaInclusione.length == 3) {
-      sommaInclusione = sommaInclusione.slice(1, 3);
-    }
-    inclusione[7] = "0x" + sommaInclusione;
-    port.open(function (error) {
-      console.log("CST port open");
-      port.write(inclusione, function (err, result) {
-        if (err) {
-          console.log("Error while sending message : " + err);
-        }
-        if (result) {
-          console.log("Response received after sending message : " + result);
-        }
-      });
-    });
   }
 }
 exports.invia = invia;
