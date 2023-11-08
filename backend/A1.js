@@ -767,9 +767,9 @@ function invia() {
           }
         });
       });
-      attivaUscite();
-      exports.attivaUscite = attivaUscite;
     }
+    attivaUscite();
+    exports.attivaUscite = attivaUscite;
   }
   if (arrivo.payload == 0x22) {
     function richiestaNumeroEventi() {
