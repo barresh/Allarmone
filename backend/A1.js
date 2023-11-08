@@ -729,7 +729,7 @@ function invia() {
     richiediStringhe();
     exports.richiediStringhe = richiediStringhe;
   }
-  if (arrivo.paylaod == 0x0a) {
+  if (arrivo.payload == 0x0a) {
     function attivaUscite() {
       var attivazioneUscite = new Buffer(8);
       attivazioneUscite[0] = mittente;
