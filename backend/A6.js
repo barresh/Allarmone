@@ -272,9 +272,9 @@ function binarioInArray8(binario, destinazione) {
   }
 }
 flagAggiornato = 0;
-const connesso = server.connesso;
+let connesso = server.connesso;
 function entrata() {
-  if (connesso == true) {
+  if ((connesso = true)) {
     port.on("readable", function () {
       bufferino = port.read().toString("hex");
       console.log("letto:", bufferino);
@@ -8009,5 +8009,6 @@ function entrata() {
     });
   }
 }
+
 exports.entrata = entrata;
 exports.port = port;
