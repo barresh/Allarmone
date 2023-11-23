@@ -2,7 +2,6 @@ const WebSocket = require("ws");
 const wss = new WebSocket.Server({ port: 8080 });
 const a6 = require("./A6");
 const a1 = require("./A1");
-a6.entrata();
 console.log("arriva", a6.aggiornamentostato);
 var connesso = false;
 
@@ -11,6 +10,7 @@ wss.on("connection", (ws) => {
   connesso = true;
   console.log("connesso:", connesso);
   exports.connesso = connesso;
+  a6.entrata();
   // Ricevi i messaggi dal client Angular
   function mandaEsito() {
     esito = a6.esito;
