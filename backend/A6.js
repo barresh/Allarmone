@@ -271,55 +271,88 @@ function binarioInArray8(binario, destinazione) {
   }
 }
 flagAggiornato = 0;
-
-const port = require("bluetooth-serial");
-
-const address = "00:80:E1:27:B3:CF"; // Sostituisci con l'indirizzo Bluetooth del dispositivo di destinazione
-
-console.log("Connesso con successo al dispositivo Bluetooth");
-
 let connesso = server.connesso;
 function entrata() {
-  port.connect(address, 1, function () {
-    if ((connesso = true)) {
-      port.on("readable", function () {
-        bufferino = port.read().toString("hex");
-        console.log("letto:", bufferino);
-        var mittente = bufferino.slice(0, 2);
-        var destinatario = bufferino.slice(2, 4);
-        var payload = bufferino.slice(4, 6);
-        var lunghezzabuffer = bufferino.length;
-        var checksum = bufferino.slice(lunghezzabuffer - 2, lunghezzabuffer);
-        var bufferinodiviso = [];
-        var a = 0;
-        var i = 0;
-        for (i = 0; i < lunghezzabuffer - 2; i++) {
-          bufferinodiviso[a] = "0x" + bufferino.slice(i, i + 2);
-          a++;
-          i++;
-          var bufferinodivisonumeri = bufferinodiviso.map(Number);
-        }
-        let somma = 0;
-        bufferinodivisonumeri.forEach((item) => {
-          somma += item;
-        });
-        let sommahex = somma.toString(16);
-        var lunghezzasommahex = sommahex.length;
-        sommahex = sommahex.slice(lunghezzasommahex - 2, lunghezzasommahex);
-        if (sommahex == checksum) {
-          console.log("mittente", mittente);
-          if (mittente == "11") {
-            if (destinatario == "ff") {
-              if (payload == "26") {
-                const result = bufferino.match(/.{1,2}/g) ?? [];
-                const giorniSettimana = {
-                  Domenica: "Domenica",
-                  Lunedi: "Lunedi",
-                  Martedi: "Martedi",
-                  Mercoledi: "Mercoledi",
-                  Giovedi: "Giovedi",
-                  Venerdi: "Venerdi",
-                  Sabato: "Sabato",
+  if ((connesso = true)) {
+    port.on("readable", function () {
+      bufferino = port.read().toString("hex");
+      console.log("letto:", bufferino);
+      var mittente = bufferino.slice(0, 2);
+      var destinatario = bufferino.slice(2, 4);
+      var payload = bufferino.slice(4, 6);
+      var lunghezzabuffer = bufferino.length;
+      var checksum = bufferino.slice(lunghezzabuffer - 2, lunghezzabuffer);
+      var bufferinodiviso = [];
+      var a = 0;
+      var i = 0;
+      for (i = 0; i < lunghezzabuffer - 2; i++) {
+        bufferinodiviso[a] = "0x" + bufferino.slice(i, i + 2);
+        a++;
+        i++;
+        var bufferinodivisonumeri = bufferinodiviso.map(Number);
+      }
+      let somma = 0;
+      bufferinodivisonumeri.forEach((item) => {
+        somma += item;
+      });
+      let sommahex = somma.toString(16);
+      var lunghezzasommahex = sommahex.length;
+      sommahex = sommahex.slice(lunghezzasommahex - 2, lunghezzasommahex);
+      if (sommahex == checksum) {
+        console.log("mittente", mittente);
+        if (mittente == "11") {
+          if (destinatario == "ff") {
+            if (payload == "26") {
+              const result = bufferino.match(/.{1,2}/g) ?? [];
+              const giorniSettimana = {
+                Domenica: "Domenica",
+                Lunedi: "Lunedi",
+                Martedi: "Martedi",
+                Mercoledi: "Mercoledi",
+                Giovedi: "Giovedi",
+                Venerdi: "Venerdi",
+                Sabato: "Sabato",
+              };
+              switch (result[9]) {
+                case "00":
+                  weekday = giorniSettimana.Domenica;
+                  break;
+                case "01":
+                  weekday = giorniSettimana.Lunedi;
+                  break;
+                case "02":
+                  weekday = giorniSettimana.Martedi;
+                  break;
+                case "03":
+                  weekday = giorniSettimana.Mercoledi;
+                  break;
+                case "04":
+                  weekday = giorniSettimana.Giovedi;
+                  break;
+                case "05":
+                  weekday = giorniSettimana.Venerdi;
+                  break;
+                case "06":
+                  weekday = giorniSettimana.Sabato;
+                  break;
+              }
+              function riempiAggiornamento(
+                giorno,
+                mese,
+                anno,
+                ora,
+                minuti,
+                secondi,
+                weekday
+              ) {
+                return {
+                  giorno: giorno,
+                  mese: mese,
+                  anno: anno,
+                  ora: ora,
+                  minuti: minuti,
+                  secondi: secondi,
+                  weekday: weekday,
                 };
                 switch (result[9]) {
                   case "00":
