@@ -7,7 +7,7 @@
 const { BluetoothSerialPort } = require("bluetooth-serial-port");
 const port = new BluetoothSerialPort();
 
-const address = "F4:F3:09:3E:2B:AB"; // Sostituisci con l'indirizzo Bluetooth del dispositivo di destinazione
+const address = "00:80:E1:27:B3:CF"; // Sostituisci con l'indirizzo Bluetooth del dispositivo di destinazione
 
 bluetoothSerial.connect(address, 1, function () {
   console.log("Connesso con successo al dispositivo Bluetooth");
