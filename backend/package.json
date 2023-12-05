@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bluetooth-serial": "^1.0.0",
     "serialport": "^11.0.1",
     "ws": "^8.13.0"
   }
