@@ -4,8 +4,7 @@
 //   baudRate: 57600,
 // });
 const a6 = require("./A6");
-const { BluetoothSerialPort } = require("bluetooth-serial-port");
-const port = new BluetoothSerialPort();
+const port = require("bluetooth-serial");
 
 const address = "00:80:E1:27:B3:CF"; // Sostituisci con l'indirizzo Bluetooth del dispositivo di destinazione
 exports.port = port;

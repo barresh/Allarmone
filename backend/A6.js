@@ -272,8 +272,7 @@ function binarioInArray8(binario, destinazione) {
 }
 flagAggiornato = 0;
 
-const { BluetoothSerialPort } = require("bluetooth-serial-port");
-const port = new BluetoothSerialPort();
+const port = require("bluetooth-serial");
 
 const address = "00:80:E1:27:B3:CF"; // Sostituisci con l'indirizzo Bluetooth del dispositivo di destinazione
 
