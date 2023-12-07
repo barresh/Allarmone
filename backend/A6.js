@@ -1129,40 +1129,17 @@ function entrata() {
             server.mandaEsito();
           }
           if (payload == "09") {
-            const result = bufferino.match(/.{1,2}/g) ?? [];
-            var colonna4bin = hex2bin(result[3]);
-            var colonna5bin = hex2bin(result[4]);
-            var colonna6bin = hex2bin(result[5]);
-            var colonna7bin = hex2bin(result[6]);
-            var colonna8bin = hex2bin(result[7]);
-            var colonna9bin = hex2bin(result[8]);
-            var colonna10bin = hex2bin(result[9]);
-            var colonna11bin = hex2bin(result[10]);
-            var colonna12bin = hex2bin(result[11]);
-            var tipoutente;
-            var numeroutente;
-            var risultato;
-            switch (colonna4bin.slice(0, 3)) {
-              case "0010":
-                tipoutente = "codice";
-              case "0100":
-                tipoutente = "spinotto";
-              case "0110":
-                tipoutente = "comunicatore";
-              case "1000":
-                tipoutente = "chiave esterna";
+            conferma = "1";
+            function riempiEsito(payload, conferma) {
+              return {
+                payload,
+                conferma,
+              };
             }
-            numeroutente = colonna4bin.slice(4, 7);
-            console.log("utente:", tipoutente, numeroutente);
-
-            binarioInArray(colonna5bin, zoneIncluse);
-            binarioInArray2(colonna6bin, zoneIncluse);
-            binarioInArray3(colonna7bin, zoneIncluse);
-            binarioInArray4(colonna8bin, zoneIncluse);
-            binarioInArray5(colonna9bin, zoneIncluse);
-            binarioInArray6(colonna10bin, zoneIncluse);
-            binarioInArray7(colonna11bin, zoneIncluse);
-            binarioInArray8(colonna12bin, zoneIncluse);
+            let esito = riempiEsito(payload, conferma);
+            console.log("esito di conferma", conferma);
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "0A") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
