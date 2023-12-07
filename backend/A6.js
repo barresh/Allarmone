@@ -1116,41 +1116,17 @@ function entrata() {
             binarioInArray8(colonna11bin, zoneAllMem);
           }
           if (payload == "08") {
-            const result = bufferino.match(/.{1,2}/g) ?? [];
-            var colonna4bin = hex2bin(result[3]);
-            var colonna5bin = hex2bin(result[4]);
-            var colonna6bin = hex2bin(result[5]);
-            var colonna7bin = hex2bin(result[6]);
-            var colonna8bin = hex2bin(result[7]);
-            var colonna9bin = hex2bin(result[8]);
-            var colonna10bin = hex2bin(result[9]);
-            var colonna11bin = hex2bin(result[10]);
-            var colonna12bin = hex2bin(result[11]);
-            var tipoutente;
-            var numeroutente;
-            var risultato;
-            if (colonna4 != "00") {
-              switch (colonna4bin.slice(0, 4)) {
-                case "0010":
-                  tipoutente = "codice";
-                case "0100":
-                  tipoutente = "spinotto";
-                case "0110":
-                  tipoutente = "comunicatore";
-                case "1000":
-                  tipoutente = "chiave esterna";
-              }
-              numeroutente = colonna4bin.slice(4, 8);
-              console.log("utente:", tipoutente, numeroutente);
+            conferma = "1";
+            function riempiEsito(payload, conferma) {
+              return {
+                payload,
+                conferma,
+              };
             }
-            binarioInArray(colonna5bin, zoneEscluse);
-            binarioInArray2(colonna6bin, zoneEscluse);
-            binarioInArray3(colonna7bin, zoneEscluse);
-            binarioInArray4(colonna8bin, zoneEscluse);
-            binarioInArray5(colonna9bin, zoneEscluse);
-            binarioInArray6(colonna10bin, zoneEscluse);
-            binarioInArray7(colonna11bin, zoneEscluse);
-            binarioInArray8(colonna12bin, zoneEscluse);
+            let esito = riempiEsito(payload, conferma);
+            console.log("esito di conferma", conferma);
+            exports.esito = esito;
+            server.mandaEsito();
           }
           if (payload == "09") {
             const result = bufferino.match(/.{1,2}/g) ?? [];
@@ -7982,19 +7958,6 @@ function entrata() {
       } else if (mittente == "60") {
         if (destinatario == "ff") {
           if (payload == "09") {
-            conferma = "1";
-            function riempiEsito(payload, conferma) {
-              return {
-                payload,
-                conferma,
-              };
-            }
-            let esito = riempiEsito(payload, conferma);
-            console.log("esito di conferma", conferma);
-            exports.esito = esito;
-            server.mandaEsito();
-          }
-          if (payload == "08") {
             conferma = "1";
             function riempiEsito(payload, conferma) {
               return {
