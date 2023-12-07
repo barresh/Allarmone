@@ -7979,6 +7979,22 @@ function entrata() {
             server.mandaEsito();
           }
         }
+      } else if (mittente == "60") {
+        if (destinatario == "ff") {
+          if (payload == "09") {
+            conferma = "1";
+            function riempiEsito(payload, conferma) {
+              return {
+                payload,
+                conferma,
+              };
+            }
+            let esito = riempiEsito(payload, conferma);
+            console.log("esito di conferma", conferma);
+            exports.esito = esito;
+            server.mandaEsito();
+          }
+        }
       }
     }
   });
